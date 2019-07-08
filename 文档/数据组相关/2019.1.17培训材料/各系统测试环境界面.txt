@@ -1,0 +1,19 @@
+crm测试环境
+http://10.7.68.22/ecommunications_chs/start.swe
+帐号：SHENJ    密码：SHENJ
+
+P7测试环境
+http://10.145.206.49:5001/OrderManagement/Login.jsp
+帐号：oms-automation      密码：passw0rd
+
+wop测试环境
+http://10.145.206.52:8001/wop
+帐号：wfptest  密码：111111
+
+综资测试环境
+http://10.145.206.11:9280/purdo/index.jsp
+帐号：dntest   密码：654321
+
+客保测试环境
+http://10.145.206.7:9082/baf/jsp/uiframe/login.xhtml
+帐号：sa       密码：888888
