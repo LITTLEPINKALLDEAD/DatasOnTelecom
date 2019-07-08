@@ -1,0 +1,40 @@
+import os
+
+FList = ['2-DUJ4RLE'
+,'2-DUJ4RM4'
+,'2-DUJ4RO5'
+,'2-DUJ4RPC'
+,'2-DUJ5WNK'
+,'2-DUJ5WOR'
+,'2-DUJ5WQR'
+,'2-DUJ5WR9'
+,'2-DUJ5WUN'
+,'2-DUJ5WUO'
+,'2-DUJ5WUP'
+,'2-DUJ5WUQ'
+,'2-DUJ5WW9'
+,'2-DUJ5WWD'
+,'2-DUJ5WWH'
+,'2-DUJ5WWL'
+,'2-DUJ5WZ1'
+,'2-DUJ5WZR'
+,'2-DUJ5X1S'
+,'2-DUJ5X2Z'
+,'2-DUJ5X4Z'
+,'2-DUJ5X66'
+,'2-DUJ5X86'
+,'2-DUJ5X8O'
+,'2-DUJ5X9E'
+,'2-DUJ5X9F'
+,'2-DUJ5X9G'
+,'2-DUJ5X9H'
+,'2-DUJ5XB0'
+,'2-DUJ5XB4'
+,'2-DUJ5XB8'
+,'2-DUJ5XBC']
+
+
+for ItemsNum in FList:
+    print ("|"+ItemsNum ,end='')
+    
+print ("|")

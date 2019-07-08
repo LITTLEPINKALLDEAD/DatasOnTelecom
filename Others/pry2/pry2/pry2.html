@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/animate.css"/>
+    <script src="js/lib/jquery-1.12.4.min.js"></script>
+    <script src="js/lib/common.js"></script>
+    <script src="js/index.js"></script>
+	
+	<script type="text/javascript">
+function rand()
+{
+//num = 1;
+//document.getElementById('txtNum').value=num;
+$("#txtNum").val("1");
+}
+f();
+function rand2()
+{
+//num = 1;
+//document.getElementById('txtNum').value=num;
+$("#txtNum").val("2");
+}
+f();
+function rand3()
+{
+//num = 1;
+//document.getElementById('txtNum').value=num;
+$("#txtNum").val("3");
+}
+f();
+function rand12()
+{
+//num = 1;
+//document.getElementById('txtNum').value=num;
+$("#txtNum").val("12");
+}
+f();
+</script>
+	<style type="text/css">
+		#leftside {
+			width:300px;
+			height:600px;
+			position:absolute;
+			top:50%;
+			left:40%;
+			margin:-300px auto auto -400px;
+		}
+		body #res{
+			position:relative;
+		}
+		div #gift{
+		position: absolute;
+			top: 30%;
+			left:20%;			
+		}
+		#rightside {
+			width:300px;
+			height:600px;
+			position:absolute;
+			top:50%;
+			right:18%;
+			margin:-300px auto auto -400px;
+
+		}
+		
+		
+		#leftside > #gift > button{
+			position: relative;
+			border: 1px solid white;
+			border-radius: 2px;
+			font-family: Muli,'Helvetica Neue','Hiragino Sans GB','WenQuanYi Micro Hei','Microsoft Yahei',sans-serif !important;
+			background-color: transparent;
+			text-decoration: none;
+			text-align: center;
+			display: inline-block;
+			font-size: 18px;
+		}
+	</style>
+</head>
+<body>
+<div id = "leftside">
+	<div id = "gift">
+	<button onClick = "rand12()" style="width:150px;"  name="three">三等奖<br>1000元购物卡</button>
+	<br>
+	<button onClick = "rand2()" style="width:150px;margin-top:10px;"  name="two1">二等奖<br>2000元购物卡</button>
+	<br>
+	<button onClick = "rand3()" style="width:150px;margin-top:10px;"  name="two2">二等奖<br>平衡车</button>
+	<br>
+	<button onClick = "rand()"  style="width:150px;margin-top:10px;" name="two3">二等奖<br>ipadmini 64G</button>
+	<br>
+	<button onClick = "rand()"  style="width:150px;margin-top:10px;" name="two4">二等奖<br>iwatch 38mm</button>
+	<br>
+	<button onClick = "rand()"  style="width:150px;margin-top:10px;" name="one">一等奖<br>ipad 128G</button>
+	<br>
+	<button onClick = "rand()" style="width:150px;margin-top:10px;" name="special" />特等奖<br>5000元现金</button>
+	</div>
+
+</div>
+<div id = "main">
+    <header>
+        <div></div>
+    </header>
+    <section>
+        <div class="hide" id="luckyDrawing"><input id="showName" readonly type="text"></div>
+        <div class="hide" id="result">
+            <div></div>
+        </div>
+    </section>
+    <footer>
+        <div><input type="number" id="txtNum" value="" readonly placeholder="请输入中奖人数">
+            <button id="btnStart">开始</button>
+            <button id="btnReset">&nbsp;</button>
+        </div>
+    </footer>
+
+</div>
+<div id="bgLuckyDrawEnd"></div>
+<div id="iconDiv" class="animated fadeIn"><span><img src="css/img/icon/01.png"> </span><span><img
+        src="css/img/icon/02.png"> </span><span><img src="css/img/icon/03.png"> </span><span><img
+        src="css/img/icon/04.png"> </span><span><img src="css/img/icon/05.png"> </span><span><img
+        src="css/img/icon/06.png"> </span></div>
+		
+<div id = "rightside">
+
+        <div id="res">
+            <div></div>
+        </div>
+
+
+</div>
+</body>
+</html>

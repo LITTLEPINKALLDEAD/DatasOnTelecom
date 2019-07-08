@@ -1,0 +1,36 @@
+crm
+http://10.7.68.22/ecommunications_chs/start.swe
+http://10.145.205.19/ecommunications_chs/start.swe
+账号：SHENJ   密码：SHENJ
+
+仿真CRM
+http://10.145.199.138/ecommunications_chs/start.swe
+账号：MAJJ 密码：MAJUNJIE..
+
+p6（因升级到P7,P6不再使用）
+http://10.7.3.94:5001/oms
+账号密码：omsadmin forxmlapi
+
+wop
+http://10.145.206.52:8001/wop/
+123 abc
+wfptest  111111(新密码：w0ptest*)
+
+综资
+http://10.145.206.10:9280/purdo/login.jsp
+test 654321
+（地址失效）
+
+http://10.145.206.11:9280/purdo/index.jsp    
+旧：test  123456
+新：test 654321
+
+客保
+http://10.145.206.7:9082/baf/jsp/uiframe/login.xhtml
+通用权限sa
+密码都是888888
+
+p7
+http://10.145.206.49:5001/OrderManagement/control/runPFVQuery
+用户名：oms-automation
+密码：passw0rd

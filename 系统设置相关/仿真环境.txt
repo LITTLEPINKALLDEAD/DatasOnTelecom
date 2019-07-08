@@ -1,0 +1,3 @@
+P6(oms):http://10.145.213.33:5001/oms/
+ÓÃ»§Ãû:omsadmin
+ÃÜÂë£ºomsadmin

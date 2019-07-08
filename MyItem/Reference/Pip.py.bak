@@ -1,0 +1,13 @@
+import os
+import commands
+
+#os.system('pip list')
+
+output = os.popen('pip list')
+if 'WMI' in output.read():
+    print "WMI has been installed on this PC"
+else:
+    os.system('pip install wmi')
+#print output.read()
+
+
