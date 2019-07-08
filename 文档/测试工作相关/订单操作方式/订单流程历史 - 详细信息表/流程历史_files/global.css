@@ -1,0 +1,1314 @@
+/* this file contains MetaSolv defined CSS classes. 
+ * DO NOT MODIFY THE CONTENTS OF THIS FILE
+ * if you want to change the definition of one or more of these CSS classes
+ * or add new CSS classes, please do so in the customScreen.css or customPrint.css
+ * as appropriate.
+ */ 
+
+/* global style defining the font-family we use everywhere 
+ */
+* {
+	FONT-FAMILY: Tahoma,Verdana,Helvetica,sans-serif;
+}
+
+body{
+	
+	background-color: Window;
+}
+
+A:hover		{
+	TEXT-DECORATION: underline
+    }
+
+
+#tabmenu a, a.active {
+	FONT-FAMILY: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	cursor:			Default;
+	display:		inline;
+	margin:			1px -2px 1px 2px;
+	float:			left;
+	padding:		2px 5px 3px 5px;
+	border:			0;
+	border-color:	ThreeDHighlight ThreeDDarkShadow
+					ThreeDDarkShadow ThreeDHighlight;
+    	BACKGROUND-COLOR: #dde2f0;
+	TEXT-DECORATION: none;
+	border-bottom:	0;
+	z-index:		1;
+	position:		relative;
+	top:			0; 
+	color: WindowText;}
+
+#tabmenu a.active {
+	font-weight: bold;
+	margin:			0px 0px 0px 0px;
+	BACKGROUND: ThreeDFace;
+	BACKGROUND-COLOR: #dde2f0;
+	border: 2px solid;
+	border-color:	ThreeDHighlight ThreeDDarkShadow
+					ThreeDDarkShadow ThreeDHighlight;
+	border-bottom:	2px;
+	z-index:		3;
+	}
+
+#tabmenu a:hover {
+	border-bottom:	0;
+	z-index:		0;
+	padding:		2px 6px 5px 7px;
+	margin:			1px -3px -2px 0px;
+	top:			0; }
+
+#tabmenu a:visited {
+	TEXT-DECORATION: none
+	color: WindowText; }
+
+#tabmenu a.active:hover {
+	Color: Highlight;
+	TEXT-DECORATION: underline; }
+
+.dynamic-tab-pane-control .tab-page {
+	height:		50;
+}
+
+.dynamic-tab-pane-control .tab-page .dynamic-tab-pane-control .tab-page {
+	height:		10;
+}
+
+
+.dynamic-tab-pane-control.tab-pane {
+	position:	relative;
+	width:		100%;
+}
+
+.dynamic-tab-pane-control .tab-row .tab {
+	FONT-FAMILY: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	cursor:			Default;
+	display:		inline;
+	margin:			1px -2px 1px 2px;
+	float:			left;
+	padding:		2px 5px 3px 5px;
+	background:		ThreeDFace;
+	border:			1px solid;
+	border-color:	ThreeDHighlight ThreeDDarkShadow
+					ThreeDDarkShadow ThreeDHighlight;
+    BACKGROUND-COLOR: ThreeDShadow;
+	TEXT-DECORATION: none;
+	border-bottom:	0;
+	z-index:		1;
+	position:		relative;
+	top:			0;
+}
+
+.dynamic-tab-pane-control .tab-row .tab.selected {
+	border-bottom:	0;
+	z-index:		3;
+	padding:		2px 6px 5px 7px;
+	margin:			1px -3px -2px 0px;
+	top:			-2px;
+}
+
+.dynamic-tab-pane-control .tab-row .tab a {
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	color:				WindowText;
+	text-decoration:	none;
+	cursor:				default;
+}
+
+.dynamic-tab-pane-control .tab-row .hover a {
+	color: Highlight;
+	TEXT-DECORATION: none;
+}
+
+.dynamic-tab-pane-control .tab-page {
+	clear:			both;
+	border:			1px solid;
+	border-color:	ThreeDHighlight ThreeDDarkShadow
+					ThreeDDarkShadow ThreeDHighlight;
+	background:		ThreeDFace;
+	z-index:		2;
+	position:		relative;
+	top:			-2px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	color:			WindowText;
+	text-decoration: none;
+	padding:		10px;
+}
+
+.dynamic-tab-pane-control .tab-row {
+	z-index:		1;
+	white-space:	nowrap;
+}
+
+.oeCriticalMessage, .oeErrorMessage, .oeWarningMessage, .oeInfoMessage, .oeFalloutMessage, .oeGroupNodeLabel, .oeAttachmentNodeLabel, .oeRemarkNodeLabel,
+	.oeHelpTopic, .oeHelp, .oeHelpMenu, .oeHelpLink, .oeHelpLinkHead {
+	FONT-SIZE: 10pt;
+}
+
+.oeHelpLink:link, .menutext:link, .oeHelpLink:visited, .menutext:visited {
+	color: Highlight;
+}
+
+.oeHelpLink:hover, .menutext:hover {
+	TEXT-DECORATION: underline
+}
+
+.oeHelpLink, .oeHelp {
+	color: WindowText;
+}
+
+/* Order Editor: Used to display View Framework Constraint Rule messages 
+ */
+.oeCriticalMessage, .oeErrorMessage, .oeWarningMessage, .oeInfoMessage, .oeFalloutMessage {
+    BORDER-STYLE: solid;
+    BORDER-WIDTH: 2px;
+	text-indent: 5px;
+	display:block;	
+	font-weight: normal;
+}
+
+.oeCriticalMessage, .oeErrorMessage {
+    BACKGROUND-COLOR: #FFDDDD;
+    BORDER-COLOR: #FF0000;
+	color:#FF0000;
+}
+
+.oeCriticalMessage {
+	FONT-WEIGHT:Bold;
+}
+
+.oeWarningMessage, .foundResults {
+    BORDER-COLOR: #EE7500;
+	color:#EE7500;
+BACKGROUND-COLOR: #FFFFDD;
+}
+
+.oeInfoMessage {
+    BACKGROUND-COLOR: #DDFFDD;
+    BORDER-COLOR: #006600;
+	color:#006600;
+}
+
+.oeFalloutMessage {
+    BACKGROUND-COLOR: #FFD9B9;
+    BORDER-COLOR: #EE9700;
+	color:#CD8200;
+}
+/* Order Editor: Used for the separation line between navigation links at error messages
+ */
+.oeNavigationLinkSeparator {
+	zoom:1; 
+	border-left:1px dotted #BDBDBD; 
+	line-height:.8em; 
+	vertical-align:middle; 
+	visibility:visible; 
+	margin:0px 5px;
+}
+
+/* Order Editor: Used to display View Framework Constraint Rule messages if the message has > 1 message 
+ */
+.oeCriticalMessage li, .oeErrorMessage li, .oeWarningMessage li, .oeInfoMessage li, .oeFalloutMessage li {
+	list-style-position: inside;
+	list-style-type: disc;
+	font-weight: normal;
+}
+
+/* Order Editor: Used to display an image indicating a value is required 
+ */
+.oeRequiredNodeFlag {
+}
+
+
+/* Order Editor: used to display value nodes */
+.oeValueNode, .oeValueNodeLabel, .oeHelp {
+	FONT-SIZE: 10pt;
+	color: WindowText;
+}
+
+.oeValueNodeReadOnly {
+    FONT-SIZE: 10pt;
+	color: #C0C0C0;
+    /*BACKGROUND-COLOR: ThreeDFace;
+    border: 1px solid;
+    border-color: lightgrey;*/
+}
+
+.oeHeaderValue, .oeHeaderLabel {
+	FONT-SIZE: 10pt;
+	color: WindowText;
+}
+
+
+input.oeValueNode, select.oeValueNode {
+	color: WindowText;
+}
+
+/* Order Editor: used to display value nodes */
+.oeHelp {
+	FONT-SIZE: 10pt;
+	color: WindowText;
+}
+
+
+.oeHeaderLabel, .oeHelpTopic, .oeHelpLinkHead {
+	font-weight: bold;
+}
+
+.oeHelpTopic, .oeHelpLinkHead, .oeHelpLink, .oeHelp {
+	PADDING-RIGHT: 0.5em; 
+	PADDING-LEFT: 0.9em; 
+	MARGIN-BOTTOM: 0.8em; 
+	PADDING-TOP: 0.6em; 
+	PADDING-BOTTOM: 0em; 
+	MARGIN-LEFT: 0em; 
+	}
+
+
+.oeHelpLinks p, .oeHelpLinkHead {
+	MARGIN-TOP: 0.6em; 
+	MARGIN-BOTTOM: 0.6em;
+}
+
+/* the following elements all control the various parts of OMS where
+ * a shaded background is used -  to change the background, just modify
+ * this style definition
+ */ 
+.dynamic-tab-pane-control .tab-page, .dynamic-tab-pane-control .tab-row .tab.selected, .oeContainerElement, .oeGroupNode, .buttonBar, .tableActionHeader, .resultsheader, .workstreamMessage, .oeHelpBar, .oeHelpTopic, .tableHeader {
+/*    BACKGROUND-COLOR: #EFEFFA;*/
+    BACKGROUND-COLOR: ThreeDFace;
+}
+
+.oeHelpTopic {
+	PADDING-RIGHT: 0.5em; 
+	PADDING-LEFT: 0.9em; 
+	MARGIN-BOTTOM: 0.8em; 
+	PADDING-TOP: 0.6em; 
+	PADDING-BOTTOM: 0.6em; 
+	MARGIN-LEFT: 0em; 
+	COLOR: WindowText; 
+	MARGIN-RIGHT: -1em; 
+	BORDER-BOTTOM: #a0b4e0 1px solid; 
+	BORDER-TOP: #a0b4e0 1px solid; 
+}
+
+
+/* OrderEditor: used for the background within groups and workstream message screen
+ */
+.oeGroupNode, .workstreamMessage {
+    BORDER-STYLE: groove;
+}
+
+.oeGroupNode {
+    WIDTH: 100%;
+}
+
+/* Order Editor: used for group and multi-instance labels 
+ */
+.oeGroupNodeLabel {
+	FONT-SIZE: 10pt;
+	color: WindowText;
+}
+
+a:hover .oeGroupNodeLabel{
+	color: Highlight;
+}
+
+a:hover .oeValueNodeLabel{
+	color: Highlight;
+}
+
+.workstreamMessage {
+	text-align: center;
+}
+
+
+.buttonBar {
+    WIDTH: 100%;
+	text-align: left;
+}
+
+/* OrderEditor: used as a borderless conainer for group nodes 
+ */
+.oeContainerElement {
+      COLOR: WindowText;
+      BORDER-STYLE: none;
+      WIDTH: 100%;
+}
+
+/* Order Editor: Element that surrounds all messages for a given node 
+ */
+.oeAllMessageGroup {
+	WIDTH: 3%;
+}
+
+.mask {
+        behavior: url("./mask.htc");
+  FONT-SIZE: 8pt;
+  COLOR: WindowText;
+      }
+
+TEXTAREA { behavior: url("/oms/maxlength.htc");     /*because "./maxlength.htc" doesn't work*/
+         }
+
+TH    {
+        BACKGROUND-COLOR: ButtonFace;
+        BORDER-BOTTOM-COLOR: #808080;
+        BORDER-BOTTOM-STYLE: outset;
+        BORDER-LEFT-COLOR: Window;
+        BORDER-LEFT-STYLE: outset;
+        BORDER-RIGHT-COLOR: #808080;
+        BORDER-RIGHT-STYLE: outset;
+        BORDER-TOP-COLOR: Window;
+        BORDER-TOP-STYLE: outset;
+      }
+
+.prefImage   {
+        border-top-width: 0;
+        border-right-width: 0;
+        border-bottom-width: 0;
+        border-left-width: 0;
+        border-width: 0;
+        border-color: 0;
+        border-style: 0;
+        border-top: 0;
+        border-right: 0;
+        border-bottom: 0;
+        border-left: 0;
+        border: 0;
+
+        padding-top: 0;
+        padding-left: 0;
+        padding-bottom: 0;
+        padding-right: 0;
+        padding: 0;
+      }
+
+
+/* The following set of styles control the worklist and other tables within OMS
+ *
+ */
+.foundResults, .dirtyResults, .tableCell, .results, .dirtyNumericResults, .numericResults, .tableAction, .tableActionHeader, .resultsheader {
+  FONT-SIZE: 8pt
+}
+
+.tableActionHeader, .resultsheader, .tableHeader {
+  color: ButtonText; 
+}
+
+.tableHeader {
+    text-align: left;
+    FONT-SIZE: 10pt;
+    FONT-WEIGHT: normal;
+    text-align: center;
+	border:			1px solid;
+	border-color:	ThreeDHighlight ThreeDDarkShadow
+					ThreeDDarkShadow ThreeDHighlight;
+    BACKGROUND-COLOR: ButtonFace;
+}
+
+.tableCell {
+    border-width: 1px;
+    border-style: ridge;
+    padding-top: 0;
+    padding-left: 0;
+    padding-bottom: 0;
+    padding-right: 0;
+    padding: 0;
+    color: WindowText;
+    background-color: Window;
+    FONT-SIZE: 10pt;
+    text-align: left;
+    vertical-align: top;
+}
+
+.foundResults, .dirtyResults, .results, .dirtyNumericResults, .numericResults {
+  padding-left: 3px;
+  padding-right: 3px;
+  color: WindowText;
+}
+
+.foundResults, .dirtyResults, .dirtyNumericResults {
+  FONT-WEIGHT:Bold;
+  font-style: italic;
+}
+
+.foundResults {	
+	border-top-style: solid;
+	border-top-color: WindowFrame;
+	border-top-width: 2px;
+	border-bottom-style: solid;
+	border-bottom-color: WindowFrame;
+	border-bottom-width: 2px;
+}
+
+.dirtyResults, .results, .dirtyNumericResults, .numericResults {
+  background-color: Window; 
+}
+	  
+.results { 
+  FONT-WEIGHT:normal;
+}
+
+.dirtyNumericResults, .numericResults {
+  text-align: right
+}
+
+.tableActionHeader, .tableAction, .resultsheader { 
+  text-align: center;
+}
+
+.tableAction { 
+  FONT-WEIGHT:normal;
+}
+
+.tableActionHeader, .resultsheader { 
+  FONT-WEIGHT:bold;
+}
+
+.resultsheader  { 
+  padding-left: 3px; 
+  padding-right: 3px
+}
+
+.futureOrderStyle {
+  position: relative; 		/* this element is important for properly displaying tooltips */
+  font-weight: bold;
+}
+
+span.tooltip {
+  display: none;
+}
+
+/* .futureOrderStyle:hover { */
+/*   background-color: yellow; */
+/* } */
+
+/* Style for tooltip element on elements associated with future orders */
+/* <span class='futureOrderStyle'>{value}<span class='tooltip'>{localised value for 'Future Order'}</span></span> */
+.futureOrderStyle:hover span.tooltip {
+  display: block;
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  font-weight: normal;
+  background-color: #FBEAA0;
+  padding: 1px;
+  border-style: solid;
+  border-width: 1px;
+}
+
+/* The following are general purpose styles used in various parts of the application
+ */
+.login {
+	FONT-SIZE:xx-small;
+	FONT-VARIANT:small-caps;
+	COLOR: 0078DE;
+}
+
+.formHeader, .aboutHeader {
+	FONT-SIZE:9pt;
+	FONT-WEIGHT:Bold;
+	COLOR: WindowText;
+}
+
+.formElement, .tableElement {	
+	FONT-SIZE: 8pt;
+	COLOR: WindowText;
+	BORDER-STYLE: none;
+}
+
+.Menu {	
+	background: url("images/sidebg2.gif");
+}
+
+.menutext, .loginFailed {
+	FONT-SIZE: 10pt;
+}
+
+.menutext {
+	color: ButtonText;
+}
+
+.loginFailed {
+	color: #FF0000;
+	text-align: center;
+}
+
+.userIDLabel, .userID {
+	font-size: xx-small;
+}
+
+.userIDLabel {
+	color: WindowText;
+}
+
+.summary	{	
+	FONT-SIZE: 8pt;
+	FONT-WEIGHT: Bold;
+	COLOR: WindowText;
+}
+
+.large, .largebold {	
+	FONT-SIZE: 14pt;
+	COLOR: WindowText;
+}
+
+.largebold	{	
+	FONT-WEIGHT: Bold;
+}
+
+
+.button, .input {
+	FONT-SIZE: 8pt;
+	COLOR: ButtonText;
+}
+
+.button {
+	Background-color: ButtonFace;
+}
+
+.button:disabled {
+	color: #808080;
+}
+.pageTitle {
+	FONT-SIZE:12pt;
+	FONT-WEIGHT:Bold;
+	COLOR: WindowText;
+}
+
+.radioInput {
+	FONT-SIZE: 9pt;
+	FONT-WEIGHT:Bold;
+}
+
+.paging, .pagingCurrent {
+	FONT-SIZE: 8pt;
+	COLOR: WindowText;
+}
+
+.paging:visited {
+	color: red;
+}
+
+.pagingCurrent {
+	FONT-SIZE: 9pt;
+	FONT-WEIGHT:Bold;
+}
+
+.readonly {
+	font-weight: normal;
+}
+
+.footer {
+	font-size:.7em;
+	color:#ADADAD;
+	margin:0px 5px;
+
+}
+
+
+
+
+/* ---------------------------------------------
+	NEW OE
+	--------------------------------------------- */
+/*
+	 buttons
+*/
+.oeButtonBar {
+	border-top:1px solid #FF0000;
+	border-bottom:1px solid #FF0000;
+	padding-left:5px;
+	padding-right:5px;
+	padding-top:5px;
+	padding-bottom:6px; /* needs extra pixel to look even (?) */
+}
+.oeButtonBar .navButton, .oeButtonBar .navButton:active {
+	vertical-align:middle;
+	padding-top:0px;
+	padding-bottom:0px;
+}
+.oeButtonBar .navButton + .navButton {
+	margin-left:5px;
+}
+.oeButtonBar .navButton /* > */ span {
+	background:url('images/css/icons.gif') no-repeat;
+	padding-left:21px;
+	/* background-position:2px; */
+	font-size:.8em;
+}
+.oeButtonBar .navButton[disabled] /* > */  span {
+	background-image:none;
+}
+
+#printPreviewButton /* > */  span {
+	background-position:0px -650px;
+}
+#fullPreviewButton /* > */  span {
+	background-position:0px -650px;
+}
+#processHistoryButton /* > */  span {
+	background-position:0px -550px;
+}
+#saveButton /* > */  span {
+	background-position:0px -700px;
+}
+#changeStateStatusButton /* > */  span {
+	background-position:0px -750px;
+}
+#addRemarkButton /* > */  span {
+	background-position:0px -600px;
+}
+#viewRemarksButton /* > */  span {
+	background-position:0px -400px;
+}
+#viewReasonsButton /* > */  span {
+	background-position:0px -400px;
+}
+#processExceptionButton /* > */  span {
+	background-position:0px -500px;
+}
+#completeTaskButton /* > */  span {
+	background-position:0px -450px;
+}
+
+/*
+	 expand/collapse widgets
+*/
+a.expandAnchor, a.collapseAnchor {
+	cursor:pointer;
+	text-decoration:none;
+	background:url('images/css/triangles.gif') no-repeat;
+}
+a.expandAnchor span, a.collapseAnchor span {
+ 	/* hide the (required) text */
+ 	visibility:hidden;
+ }
+a.expandAnchor {
+	background-position:0px -44px;
+}
+a.expandAnchor:hover {
+	background-position:0px -144px;
+}
+a.collapseAnchor {
+	background-position:0px -94px;
+}
+a.collapseAnchor:hover {
+	background-position:0px -194px;
+}
+
+/*
+	box with gray rounded corners and hatched background
+*/
+.grayBox /* > */  .top {
+	background:url('images/css/graydot.gif') top left repeat-x;
+}
+.grayBox /* > */  .top /* > */  .bottom {
+	background:url('images/css/graydot.gif') bottom left repeat-x;
+}
+.grayBox /* > */  .top /* > */  .bottom /* > */  .left {
+	background:url('images/css/graydot.gif') top left repeat-y;
+}
+.grayBox /* > */  .top /* > */  .bottom /* > */  .left /* > */  .right {
+	background:url('images/css/graydot.gif') top right repeat-y;
+}
+.grayBox /* > */  .top /* > */  .bottom /* > */  .left /* > */  .right /* > */  .bottomleft {
+	background:url('images/css/graybox_bottom_left.gif') bottom left no-repeat;
+}
+.grayBox /* > */  .top /* > */  .bottom /* > */  .left /* > */  .right /* > */  .bottomleft /* > */  .bottomright {
+	background:url('images/css/graybox_bottom_right.gif') bottom right no-repeat;
+}
+.grayBox /* > */  .top /* > */  .bottom /* > */  .left /* > */  .right /* > */  .bottomleft /* > */  .bottomright /* > */  .topleft {
+	background:url('images/css/graybox_top_left.gif') top left no-repeat;
+}
+.grayBox /* > */  .top /* > */  .bottom /* > */  .left /* > */  .right /* > */  .bottomleft /* > */  .bottomright /* > */  .topleft /* > */  .topright {
+	background:url('images/css/graybox_top_right.gif') top right no-repeat;
+}
+
+/*
+	 view title/order data header
+*/
+#oeHeader {
+	background-color:#FFFFFF;
+	margin:0px 0px 15px 0px;
+	padding:0px;
+}
+#oeHeader a:link, #oeHeader a:visited,  #oeHeader a:active {
+	color:#292929;
+	text-decoration:none;
+}
+#oeHeader a:hover {
+	text-decoration:underline;
+	color:#FF0000;
+}
+#oeHeader .top .left {
+	background:url('images/css/headingbox_top_left.gif') no-repeat; 
+	height:16px;
+	width:7px;
+}
+#oeHeader .top .center {
+	background:url('images/css/headingbox_top_center.gif') repeat-x;
+	height:16px;
+}
+#oeHeader .top .right {
+	background:url('images/css/headingbox_top_right.gif') no-repeat;
+	height:16px;
+	width:3px;
+}
+#oeHeader .contentArea .left {
+	background:url('images/css/headingbox_left.gif') repeat-y;
+	width:7px;
+}
+#oeHeader .contentArea .content {
+	padding-left:10px;
+}
+#oeHeader .contentArea .content h1 {
+	color:#292929;
+	display:inline;
+	font-size:.9em;
+	font-weight:bold;
+	letter-spacing:normal;
+	word-spacing:normal;
+	white-space:nowrap;
+	padding:0px;
+	margin:0px;
+}
+#oeHeader.minimized .contentArea .content h1 {
+	font-size:.8em;
+}
+/* move image offset to comp. for larger font */
+#oeHeader a.expandAnchor {
+	background-position:0px -45px;
+}
+#oeHeader a.expandAnchor:hover {
+	background-position:0px -145px;
+}
+#oeHeader.minimized a.collapseAnchor {
+	background-position:0px -95px;
+}
+#oeHeader.minimized a.collapseAnchor:hover {
+	background-position:0px -195px;
+}
+#oeHeader .contentArea .right {
+	background:url('images/css/headingbox_right.gif') repeat-y;
+	width:3px;
+}
+#oeHeader .bottom .left {
+	background:url('images/css/headingbox_bottom_left.gif') no-repeat;
+}
+#oeHeader .bottom .center {
+	background:url('images/css/headingbox_bottom_center.gif') repeat-x;
+	height:10px; 
+}
+#oeHeader .bottom .right {
+	background:url('images/css/headingbox_bottom_right.gif') no-repeat;
+}
+
+/*
+	list of order data (order ID, process, ...) in header
+*/
+.oeHeaderListContainer {
+	padding-top:15px;
+}
+.oeHeaderList {
+	list-style-type:none;
+	margin:0px;
+	padding:0px;
+}
+.oeHeaderList li {
+	display:inline;
+	border-left:1px dotted #AAAAAA;
+	margin-left:5px;
+	padding-left:10px;
+	color:#292929;
+	font-size:11px;
+	font-weight:bold;
+	vertical-align:middle;
+}
+.oeHeaderList li input, .oeHeaderList li select {
+	/* color:#3D3D3D; */
+	font-size:11px;
+	vertical-align:middle;
+}
+.oeHeaderList li.readonly {
+	color:#828282;
+	font-weight:normal;
+}
+.oeHeaderList li.readonly .value {
+	color:#FF0000;
+	font-weight:normal;
+}
+.oeHeaderList li.noDecorate {
+	border-width:0px;
+	margin:0px;
+	padding:0px;
+}
+
+/*
+	window (group) container
+*/
+.window {
+	border-style:solid;
+	border-color:#9C9C9C;
+	border-width:0px 1px 1px 1px;
+	margin:10px 0px;
+}
+.windowTitle {
+	background:url('images/css/window_title_center.gif') repeat-x #F4F6F4;
+	padding-left:8px;
+	padding-right:5px;
+	height:1.8em;
+}
+.windowTitle h2 {
+	font-size:.9em;
+	font-weight:bold;
+	letter-spacing:normal;
+	word-spacing:normal;
+	padding:0px;
+	margin:0px;
+	display:inline;
+	line-height:1em;
+}
+.windowContent {
+	background-color:#FFFFFF;
+	border-top:1px solid #9C9C9C;
+	padding-bottom:3px;
+}
+	
+
+/*
+	group label icons
+*/
+.currentAllowed{
+FONT-SIZE: 10pt;
+color: WindowText;
+font-weight:bold;
+}
+.window .iconBar span {
+ 	/* hide the (required) text */
+ 	visibility:hidden;
+ }
+ .window .iconBar .leftPipe,  .window .iconBar .rightPipe {
+	zoom:1;
+	border-left:1px dotted #BDBDBD;
+	line-height:.8em;
+	vertical-align:middle;
+	visibility:visible;
+	margin:0px 5px;
+ }
+ .window .iconBar .rightPipe {
+	margin-right:15px;
+ }
+.window .addGroupIcon, .window .deleteGroupIcon, .window .helpIcon {
+	cursor:pointer;
+	font-size:1.1em;
+	text-decoration:none;
+	background:url('images/css/icons.gif') no-repeat;
+	/* margin:0px 2px; */
+}
+.window .addGroupIcon {
+	background-position:0px -70px;
+}
+.window .addGroupIcon:hover {
+	background-position:0px -95px;
+}
+.window .deleteGroupIcon {
+	background-position:0px -17px;
+}
+.window .deleteGroupIcon:hover {
+	background-position:0px -42px;
+}
+.window .helpIcon {
+	font-size:1.4em; /* icon is a little bigger */
+	background-position:0px -118px;
+}
+.window .helpIcon:hover {
+	background-position:0px -153px;
+	cursor:help;
+}
+
+/*
+	fields with data history decorator
+*/
+a.viewDataHistory, a.groupDataHistory, a.fieldDataHistory {
+	text-decoration:none;
+	color:#292929;
+}
+a.groupDataHistory {
+	border-bottom:1px dashed #BDBDBD;
+}
+a.groupDataHistory:hover, .fieldDataHistory:hover {
+	color:#FF0000;
+	text-decoration:none;
+}
+a.groupDataHistory:hover {
+	border-bottom-color:#FF0000;
+}
+
+/*
+	mandatory field decorator
+*/
+.oeMandatoryFieldDecorator {
+	color:#FF0000;
+	cursor:help;
+	font-size:14px;
+	font-weight:900;
+	margin-left:2px;
+}
+
+/*
+	value nodes (fields)
+*/
+.oeValueNodeContainer {
+	display:inline;
+	vertical-align:text-top;
+	margin-right:20px;
+	margin-bottom:10px;
+}
+.oeValueNodeLabelContainer {
+
+}
+.oeValueNodeContainer img {
+	cursor:pointer;
+	text-decoration:none;
+	border:0px;
+	vertical-align:bottom;
+}
+.oeValueNodeContainer input + img {
+	margin-left:5px
+}
+
+/*
+	table layout
+*/
+.oeTableContainer {
+	margin-top:10px;
+}
+.oeTableContainer img {
+	cursor:pointer;
+	text-decoration:none;
+	border:0px;
+	margin-right:5px;
+
+}
+.oeTableContainer td.rowControl img {
+	/* only offset delete row, help */
+	margin-bottom:-3px;
+	margin-left:5px;
+	margin-right:0px;
+	vertical-align:bottom;
+}
+.oeTableCaption {
+	font-size:12px;
+	margin-top:10px;
+	text-align:left;
+}
+.oeTableHeader {
+	color:#000000;
+	background-color:#EFEFEF;
+	border:1px outset #EFEFEF;
+	font-family:arial,helvetica;
+	font-size:9pt;
+	font-weight:bold;
+	padding:0px 5px 0px 5px;
+}
+.oeTableCell {
+    font-size:10pt;
+    text-align:left;
+    vertical-align:top;   
+}
+.oeTableOuterRow  {
+	/* for table layouts that have inner tables; this is for outer tables' rows */
+	border-bottom:1px solid #BDBDBD;
+}
+.oeTableInnerRow {
+	/* for table layouts that have inner tables; this is for inner tables' rows */
+	margin-bottom:1px; /* doesn't work in FF */
+}
+
+/*
+	misc.
+*/
+.templateContainer {
+	/* table in Tempate.jsp */
+	/* table-layout:fixed; commented out due to CR#342400 */
+}
+#oeCanvas  {
+	background:url('/oms/images/css/hatch.gif') repeat #FFFFFF;
+}
+#oeCanvas  /* > */  .top /* > */  .bottom /* > */  .left /* > */  .right /* > */  .bottomleft /* > */  .bottomright /* > */  .topleft /* > */  .topright /* > */  .content {
+	padding:5px 10px;
+}
+div.oeLineBreak {
+	/* separator div lines of fields */
+	clear:both;
+	/* height:10px; */
+}
+
+.oeListNode {
+	padding:5px 5px 2px 5px;
+}	
+
+
+/*
+	overridden from prior declarations
+*/
+.oeValueNodeLabel {
+	font-size:.8em;
+	font-weight:normal;
+	/* margin-right:3px; */
+	color:#292929;
+}
+
+.oeValueNode {
+	margin-right:0px;
+	margin-left:0px;
+}
+.oeGroupNode {
+	background-color:#FFFFFF;
+	border-style:none;
+	padding:5px 5px 2px 5px;
+		/*width:auto;*/
+	width:100%
+	
+}
+.dynamic-tab-pane-control .tab-row .tab {
+	background-color:#CCCCCC;
+	border-color:#9C9C9C;
+}
+.dynamic-tab-pane-control .tab-row .tab.selected {
+	background-color:#F5F5F5;
+}
+.dynamic-tab-pane-control .tab-row .tab a {
+	color:	#292929;
+}
+
+.dynamic-tab-pane-control .tab-row .hover a {
+	color:#FF0000;
+}
+
+.dynamic-tab-pane-control .tab-page {
+	border-style:solid;
+	border-width:1px 2px 2px 1px;
+	border-color:#9C9C9C;
+	background:#F7F7F7;
+	color:#292929;
+}
+
+/* Order hierarchy
+*/
+.context .top .left {
+	background:url('images/css/headingbox_top_left.gif') no-repeat; 
+	height:16px;
+	width:7px;
+}
+.context .top .center {
+	background:url('images/css/headingbox_top_center.gif') repeat-x;
+	height:16px;
+}
+.context .top .right {
+	background:url('images/css/headingbox_top_right.gif') no-repeat;
+	height:16px;
+	width:3px;
+}
+.context .contentArea .left {
+	background:url('images/css/headingbox_left.gif') repeat-y;
+	width:7px;
+}
+
+.context .contentArea .content {
+	padding-left:10px;
+}
+
+.context .contentArea .content h2 {
+	font-size:.9em;
+}
+.context .contentArea .right {
+	background:url('images/css/headingbox_right.gif') repeat-y;
+	width:3px;
+}
+	
+.order-tree-item { 
+	padding-left: 20px;  
+	background-image: url(images/css/file.png); 
+	background-repeat:no-repeat;
+	font-size: 10pt
+}
+
+.order-tree-item-selected { 
+	background-color: #0055aa;  
+	color: #ffffff;
+}
+
+.order-relationship-container-cell {
+	border-style:solid; 
+	border-color:red; 
+	border-width: 1px
+}
+
+.order-details-include-cell {
+	border-bottom-style:solid; 
+	border-bottom-color:red; 
+	border-bottom-width: 1px;
+	border-top-style:solid; 
+	border-top-color:red; 
+	border-top-width: 1px
+}
+
+.textAreaValueNode {
+	color: #C0C0C0;
+}
+
+.exceptionMessage {
+FONT-FAMILY: Arial;
+font-size: 12pt;
+}
+
+
+.brandingleft{
+	background-image: url(images/new_branding_whitegradient_.png);
+	background-position:left;
+	background-repeat:repeat-y;
+	border-bottom:1px solid #61A1EF;
+}
+.brandingright{
+	background-image: url(images/new_branding_right_bg.png);
+	background-position:right;
+	background-repeat:repeat-y;
+	border-bottom:1px solid #61A1EF;
+}
+.banner{
+	background-color:#0D4988;
+}
+.logo{
+	border-bottom:1px solid #61A1EF;
+	background-color:#FFFFFF;
+}
+.links{
+
+	font-family:Tahoma;
+	font-size:11px;
+	font-weight:normal;
+	color:#C5FFFF;
+	white-space:nowrap;
+	padding-right:12px;
+}
+
+.bottomborder{border-bottom:1px solid #61A1EF;}
+.appname{
+	font-family:Tahoma;
+	font-size:17px;
+	font-weight:bold;
+	color: #093E7D;
+	white-space:nowrap;
+	padding-right:12px;
+	width:250px;
+
+	}
+.anchorTag{
+	color:#A9DFF5; font-family:	Tahoma,Verdana,Helvetica,sans-serif; font-size:	11px ; font-weight:normal; TEXT-DECORATION: none
+}
+
+.Copyright {
+	position:absolute; top: 50%; left:50%; margin: 98px 0 0 -206px; width:400px; padding-top:1px; padding-left:10px; padding-right:5px; vertical-align:middle; text-align:left; font-family:tahoma; font-size:7pt; color:#AAAAAA;
+}
+.ProductName {
+    position:absolute; top: 50%; left:50%; margin: -68px 0 0 -190px; font-family:Tahoma; font-weight:bold; font-size:18pt;
+}
+.UserNameComponent {
+    position:absolute; top: 50%; left:50%; margin: -6px 0 0 -19px; color:Black; font-size:8pt; font-family:tahoma; vertical-align:middle;
+}
+.PasswordComponent {
+    position:absolute; top: 50%; left:50%; margin: 14px 0 0 -19px; color:Black; font-size:8pt; font-family:tahoma; vertical-align:middle;
+}
+.UserName {
+    position:absolute; top: 50%; left:50%; margin: -5px 0 0 -78px; color:Black; font-size:8pt; font-family:tahoma; vertical-align:middle;
+}
+.Password {
+    position:absolute; top: 50%; left:50%; margin: 15px 0 0 -78px; color:Black;  font-size:8pt;  font-family:tahoma; vertical-align:middle;
+}
+.LoginText {
+    color:Black; font-size:8pt; font-family:tahoma; vertical-align:middle;
+}
+#LoginFields {
+    position:absolute; margin: 75px 0 0 190px; color:Black; font-size:8pt; font-family:tahoma; vertical-align:middle; float:right;
+}
+#LoginButtons {
+    position:relative; margin: 90px 0 0 158px;
+}
+.InvalidLogin {
+    position:absolute; top: 50%; left:50%; margin: -38px 0 0 -190px; color:Red; font-size:8pt; font-family:tahoma; vertical-align:middle;
+}
+
+/*The below styles are required for the About Page in OSM. These have been taken from the ADF Framework */
+
+.xyo {
+	FONT-WEIGHT: normal; 	FONT-SIZE: 11px; 	FONT-FAMILY: Tahoma, Verdana, Helvetica, sans-serif; MARGIN-TOP: 8px
+}
+
+.xyo.p_AFMaximized {
+	PADDING-RIGHT: 0px;	PADDING-LEFT: 0px;	LEFT: 0px;	PADDING-BOTTOM: 0px;	MARGIN: 0px;	WIDTH: 100%;	BORDER-TOP-STYLE: none;	PADDING-TOP: 0px;
+
+	BORDER-RIGHT-STYLE: none;	BORDER-LEFT-STYLE: none;	POSITION: absolute;	TOP: 0px;	HEIGHT: 100%;	BORDER-BOTTOM-STYLE: none
+}
+
+[theme='dark'].xyo {
+
+	BACKGROUND-IMAGE: url('images/r_bg_global.png');	COLOR: #ffffff;	BACKGROUND-REPEAT: repeat-y;	BACKGROUND-COLOR: #0d4988
+}
+
+HTML.p_AFMaximized {
+
+	OVERFLOW: auto
+
+}
+.x11g {
+	Z-INDEX: 2; 	WIDTH: 100%;	POSITION: relative
+}
+.x11q {
+	PADDING-RIGHT: 7px;	PADDING-LEFT: 7px;	PADDING-BOTTOM: 10px;	PADDING-TOP: 10px;	BACKGROUND-COLOR: #ffffff
+}
+
+
+.DetailedCopyright {
+	BORDER-RIGHT: thin solid;	BORDER-TOP: thin solid;	FONT-SIZE: 8pt;	LEFT: 50%;	MARGIN: -18px 0px 0px -189px;
+	VERTICAL-ALIGN: middle;	BORDER-LEFT: thin solid;	WIDTH: 350px;	COLOR: gray;	BORDER-BOTTOM: thin solid;
+	FONT-FAMILY: tahoma;	POSITION: absolute;	TOP: 50%;	HEIGHT: 50px;	font-color: Gray
+}
+.x25 {
+	BORDER-RIGHT: #b9b9b4 1px solid;	PADDING-RIGHT: 2px;	BORDER-TOP: #b9b9b4 1px solid;	OVERFLOW-Y: auto;
+	PADDING-LEFT: 3px;	FONT-WEIGHT: normal;	FONT-SIZE: 11px;	OVERFLOW-X: hidden;	PADDING-BOTTOM: 1px;
+	MARGIN: 1px;	BORDER-LEFT: #b9b9b4 1px solid;	WIDTH: 170px;	COLOR: #000000;	PADDING-TOP: 1px;
+	BORDER-BOTTOM: #b9b9b4 1px solid;	FONT-FAMILY: Tahoma, Verdana, Helvetica, sans-serif
+}
+.x1u.p_AFReadOnly .x25 {
+	BORDER-TOP-WIDTH: 0px;	PADDING-RIGHT: 2px;	PADDING-LEFT: 2px;	BORDER-LEFT-WIDTH: 0px;	BORDER-BOTTOM-WIDTH: 0px;	PADDING-BOTTOM: 1px;	PADDING-TOP: 0px;	BORDER-RIGHT-WIDTH: 0px
+}
+
+.xu {
+	PADDING-RIGHT: 6px;	PADDING-LEFT: 0px;	FONT-WEIGHT: normal;	FONT-SIZE: 11px;	PADDING-BOTTOM: 0px;	COLOR: #704a00;	PADDING-TOP: 0px;	FONT-FAMILY: Tahoma, Verdana, Helvetica, sans-serif;	TEXT-ALIGN: right
+}
+
+.VersionText {
+	FONT-SIZE: 8pt;	LEFT: 50%;	MARGIN: -42px 0px 0px -190px;	VERTICAL-ALIGN: middle;	COLOR: black;	FONT-FAMILY: tahoma;	POSITION: absolute;	TOP: 50%
+}
+
+.BuildNumberText {
+	FONT-SIZE: 8pt;	LEFT: 50%;	MARGIN: -30px 0px 0px -190px;	VERTICAL-ALIGN: middle;	COLOR: black;	FONT-FAMILY: tahoma;	POSITION: absolute;	TOP: 50%
+}
+.ProductNameText {
+	FONT-WEIGHT: bold;	FONT-SIZE: 18pt;	LEFT: 50%;	MARGIN: -68px 0px 0px -190px;	FONT-FAMILY: Tahoma;	POSITION: absolute;	TOP: 50%
+}
+
+.x11i {
+
+	FONT-SIZE: 0px; 	BACKGROUND-IMAGE: url('images/dialog-header-left.png');	WIDTH: 4px;	BORDER-BOTTOM: #b9c1d4 1px solid;	HEIGHT: 20px
+
+}

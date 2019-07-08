@@ -1,0 +1,29 @@
+/* this file is for custom css definitions that override or add to css definitions found in
+ * global.css.
+ */
+
+/*
+The following are some sample style customizations - currently commented out so they are disabled.
+ 
+*/
+
+/* import the global.css stylesheet so that we can just refine the standard styles
+ * don't import this if you wish to completely redefine all the styles from scratch
+ */
+/*@import url(oms/global.css);*/
+
+/* change the default font to Tahoma
+ */
+ 
+/*
+* {
+	FONT-FAMILY: Tahoma, Arial, Helvetica, sans-serif;
+}
+*/
+ 
+/* make the border thicker on error messages */
+/*
+.oeCriticalMessage, .oeErrorMessage, .oeWarningMessage, .oeInfoMessage, .oeFalloutMessage {
+    BORDER-WIDTH: 5px;
+} 
+*/

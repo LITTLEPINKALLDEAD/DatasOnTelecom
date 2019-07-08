@@ -1,0 +1,28 @@
+收件人：'liuyong' <liuyong@ccssoft.com.cn>; 'wuchuqiu' <wuchuqiu@ccssoft.com.cn>; 'wuyuecong' <wuyuecong@ccssoft.com.cn>; '邵丽炯' <shaolijiong@sanss.com>; '史希洋-客保' <shixiyang@ccssoft.com.cn>; '温宪强' <wenxianqiang@ccssoft.com.cn>; '彭军' <pengjun@ccssoft.com.cn>;
+'彭昭晔'<pengzhaoye@ccssoft.com.cn>;'马珺洁'<majunjie@ccssoft.com.cn>
+
+
+抄送：'臧敏捷' <zangminjie@shtel.com.cn>; '马文斌_中通软' <pocket007@ccssoft.com.cn>; '李少颖' <lishaoying@sanss.com>; '江敏' <jiangmin@ccssoft.com.cn>; '曹小波' <caoxiaobo@shtel.com.cn>; '沈健' <jian.shen@ape-tech.com>; '沈明欣_中通软' <shenmingxin@ccssoft.com.cn>
+
+标题：交换整合联调测试记录 - 2018071X
+
+正文：
+各位好，
+目前测试中发现未解决的问题如下：
+	1. 在新增AG工程管理定单中发现"定单拆分的传输单提交后IBP未收到调度成功消息"的问题
+	2. 在新增基站链路配置定单中发现"定单拆分的传输单，未能成功发送"的问题
+	3. 在新增AG工程管理定单中发现"返回的资源信息缺少字段"的问题
+
+以上问题请综资尽快解决！
+
+附件中包含目前交换整合联调测试的记录，请注意查收！
+ 
+张轶晟
+2018.7.14
+
+
+3.  在新增AG工程管理定单中发现"定单拆分的传输单提交后IBP未收到调度成功消息"的问题，该问题已5天未解决
+4.  在新增基站链路配置定单中发现"定单拆分的传输单，未能成功发送"的问题，该问题已7天未解决
+5.  在新增AG工程管理定单中发现"返回的资源信息缺少部分字段"的问题，该问题已7天未解决
+
+这几个问题应该是都解决了，问题3今天解决了，问题4是我自己测试方法错误，后来都是成功的，问题5 也已经解决了

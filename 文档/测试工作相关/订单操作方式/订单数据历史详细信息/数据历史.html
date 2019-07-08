@@ -1,0 +1,6349 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0061)http://10.145.206.49:5001/OrderManagement/control/dataHistory -->
+<html style="visibility: visible;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<link rel="StyleSheet" href="./数据历史_files/global.css" type="text/css" media="screen">
+		<link rel="StyleSheet" href="./数据历史_files/customScreen.css" type="text/css" media="screen">
+		<link rel="StyleSheet" href="./数据历史_files/global.css" type="text/css" media="print">
+		<link rel="StyleSheet" href="./数据历史_files/print.css" type="text/css" media="print">
+		<link rel="StyleSheet" href="./数据历史_files/customPrint.css" type="text/css" media="print">
+		<link rel="StyleSheet" href="./数据历史_files/winxp.css" type="text/css">
+		<link rel="StyleSheet" href="./数据历史_files/system.css" type="text/css">
+		<link rel="shortcut icon" href="http://10.145.206.49:5001/oms/images/favicon.ico" type="image/x-icon">
+		
+		  
+		<title>
+		  数据历史
+		</title>
+		
+		
+		<script type="text/javascript">
+			
+			var sessionInterval = 2700;
+			var logoutTime = sessionInterval * 1000;
+			
+			var offset = 5
+			var offsetSecs = offset * 60;
+			var warningTime = Math.max(0, (sessionInterval - offsetSecs) * 1000);
+			var msgTimeoutID;
+			var redirectTimeoutID;
+			
+			setSessionTimeouts(); 
+			
+			function setSessionTimeouts() {
+				// alert the user of impending session timeout x mins. prior
+				if (offset > 0) {
+					msgTimeoutID = setTimeout("showSessionTimeoutWarning();", warningTime);
+				}
+				
+				// automatically log the user out after session timeout
+				redirectTimeoutID =  setTimeout("logout()", logoutTime);
+			}
+			
+			function clearSessionTimeouts() {
+				if (offset > 0) {
+					clearTimeout(msgTimeoutID);
+				}
+				clearTimeout(redirectTimeoutID);
+			}
+			
+			function resetSessionTimeouts() {
+				clearSessionTimeouts();
+				setSessionTimeouts();
+			}
+			
+			function showSessionTimeoutWarning() {
+				
+				
+				var warningText = "WARNING: You will be automatically logged out in 5 minutes.\n\nAs a security precaution, sessions are ended after 45 minutes of inactivity.";
+				alert("Order and Service Management\n\n[" + new Date() + "]  " + warningText);
+			} 
+			
+			function logout() {
+				window.location = "/OrderManagement/Logout.jsp";
+			}
+		</script>
+		
+		<style type="text/css">
+			html, body, table.templateContainer {height:100%;}
+			body {margin:0px;}
+		</style>
+		<style>
+			html {visibility:hidden;}
+		</style>
+		<script>
+			if (self==top) {
+			   document.documentElement.style.visibility='visible';
+			} else {
+			   top.location=self.location;
+			}
+		</script>		
+	</head>
+	<body>
+		
+		<table class="templateContainer" width="100%" border="0" cellpadding="0" cellspacing="0">
+			<tbody><tr valign="top">
+				<td>
+			  		<div id="Banner">
+			  			
+
+<script language="JavaScript">
+function openAbout(){
+var returnModal = window.showModalDialog('/OrderManagement/About.jsp','','dialogTitle:About;dialogHeight: 300px; dialogWidth: 430px; center: yes: help:no; unadorned: yes; status: no; resizable: no;');
+}
+</script>
+
+<table class="banner" width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tbody><tr>
+    <td id="logoCell" width="119" height="25" valign="top" class="logo"><img src="./数据历史_files/oracle_logo.png" width="119" height="25" border="0"></td>
+
+    <td width="*" class="bottomborder" align="left" valign="top"><img id="whiteGrad" src="./数据历史_files/new_branding_whitegradient_.png" width="100%" height="25"><span style="position:absolute; top:2px; left:120px; valign=center" class="appname">Communications Order and Service Management</span></td>
+	<td class="bottomborder links" align="right">Username: &nbsp;oms-automation<!--Bug#12793723-->
+	</td>
+    <td class="bottomborder links" align="right"><a class="anchorTag" href="http://10.145.206.49:5001/OrderManagement/control/dataHistory#" onclick="javascript:openAbout()">
+          About</a>
+	<img src="./数据历史_files/navPane_gSeparator.png" width="2" height="17" border="0" style="padding-left:6px;padding-right:6px;vertical-align:middle" alt="">
+	<a href="http://10.145.206.49:5001/OrderManagement/Logout.jsp" class="anchorTag">
+          Logout oms-automation</a> </td>
+  </tr>
+  <tr>
+    <td width="100%" colspan="3" height="1"><img src="./数据历史_files/spacer.gif" width="150" height="1" border="0"></td>
+  </tr>
+</tbody></table>
+
+			  		</div>
+			  		<div id="TopIndex">
+			  			
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+<script language="javascript1.2" src="./数据历史_files/mainMenu.js"></script>
+
+
+<table cellspacing="0" cellpadding="2" width="100%" border="0">
+  <tbody><tr>
+    <td>
+      <div style="visibility:hidden;width:500px;align:right" id="spanHTML" class="oeErrorMessage" width="300px"> </div>
+    </td>    
+  </tr>
+</tbody></table>
+
+<table border="0" align="top" width="100%">
+  <tbody>
+    <tr bgcolor="#999999">
+      <td><img height="2" src="./数据历史_files/spacer.gif" width="15"></td>
+    </tr>
+    <tr bgcolor="#cccccc">
+      <td border="0" align="left">
+        <a href="http://10.145.206.49:5001/OrderManagement/control/newOrder?_osm.ctrl-state=2K20lZoztHN7VwgiKPDVHD1xpJ8XK4" onmouseover="rollIn(&#39;/OrderManagement&#39;,&#39;new_order_&#39;)" onmouseout="rollOut(&#39;/OrderManagement&#39;,&#39;new_order_&#39;)">
+          <img src="./数据历史_files/new_order_b.jpg" align="middle" alt="创建定单" border="0" name="new_order_"></a>
+        <a href="http://10.145.206.49:5001/OrderManagement/control/worklist.do?pageAction=refresh" onmouseover="rollIn(&#39;/OrderManagement&#39;,&#39;worklist_&#39;)" onmouseout="rollOut(&#39;/OrderManagement&#39;,&#39;worklist_&#39;)" onclick="disableInputs()">
+          <img src="./数据历史_files/worklist_b.jpg" align="middle" alt="转到工作列表" border="0" name="worklist_"></a>
+        <a href="http://10.145.206.49:5001/OrderManagement/control/queryOption?_osm.ctrl-state=2K20lZoztHN7VwgiKPDVHD1xpJ8XK4" onmouseover="rollIn(&#39;/OrderManagement&#39;,&#39;query_&#39;)" onmouseout="rollOut(&#39;/OrderManagement&#39;,&#39;query_&#39;)" onclick="disableInputs()">
+          <img src="./数据历史_files/query_b.jpg" align="middle" alt="查看查询结果" border="0" name="query_"></a>
+        
+        <a href="http://10.145.206.49:5001/OrderManagement/control/pendingOrdersMenu?_osm.ctrl-state=2K20lZoztHN7VwgiKPDVHD1xpJ8XK4" onmouseover="rollIn(&#39;/OrderManagement&#39;,&#39;reporting_&#39;)" onmouseout="rollOut(&#39;/OrderManagement&#39;,&#39;reporting_&#39;)">
+          <img src="./数据历史_files/reporting_b.jpg" align="middle" alt="概要/统计报表" border="0" name="reporting_"></a>
+        
+        <a href="http://10.145.206.49:5001/OrderManagement/control/notifications.do" onmouseover="rollIn(&#39;/OrderManagement&#39;,&#39;notifications_&#39;)" onmouseout="rollOut(&#39;/OrderManagement&#39;,&#39;notifications_&#39;)">
+          <img src="./数据历史_files/notifications_b.jpg" align="middle" alt="查看通知" border="0" name="notifications_"></a>
+        <a href="http://10.145.206.49:5001/OrderManagement/control/options?_osm.ctrl-state=2K20lZoztHN7VwgiKPDVHD1xpJ8XK4" onmouseover="rollIn(&#39;/OrderManagement&#39;,&#39;options_&#39;)" onmouseout="rollOut(&#39;/OrderManagement&#39;,&#39;options_&#39;)">
+          <img src="./数据历史_files/options_b.jpg" align="middle" alt="用户选项" border="0" name="options_"></a>
+            
+      </td>
+    </tr>
+    <tr bgcolor="#999999">
+      <td><img height="2" src="./数据历史_files/spacer.gif" width="15"></td>
+    </tr>
+  </tbody>
+</table>
+
+
+			  		</div>
+			  		<div id="BodyIndex">
+			  			
+			  		</div>
+			  		<div id="Body">
+			  			
+
+
+
+
+
+
+
+
+
+<table width="100%" class="buttonBar">
+<tbody><tr>
+ <td>
+        <input class="button" type="button" align="center" name="EditOrder" value="编辑订单" onclick="EditOrder()">
+</td>
+</tr>
+</tbody></table>	
+
+
+<script type="text/javascript">CONTEXT_ROOT = '/OrderManagement'</script>
+<script type="text/javascript" src="./数据历史_files/oeScript.js"></script>
+
+<form name="dataHistory" action="http://10.145.206.49:5001/OrderManagement/control/dataHistory" method="POST">
+<input type="hidden" id="_osm.ctrl-state" name="_osm.ctrl-state" value="2K20lZoztHN7VwgiKPDVHD1xpJ8XK4">
+<b class="pageTitle">&nbsp;&nbsp;数据历史</b>
+<blockquote>
+
+<table class="formElement" border="0" cellpadding="0" cellspacing="0" width="90%">
+  <tbody><tr class="formHeader">
+    <td class="formHeader">定单 ID: 6500
+    &nbsp;&nbsp;&nbsp;参考编号: 2-29508612650
+    </td>
+  </tr>
+</tbody></table>
+
+<br>
+
+
+
+
+
+ 
+
+    <table bgcolor="#999999" border="0" cellpadding="0" cellspacing="0" width="90%">
+      <tbody><tr width="100%">
+        <td>
+          <table border="0" cellpadding="1" cellspacing="1" width="100%">
+              <tbody><tr class="resultsheader" nowrap="true">
+              <td class="resultheader" nowrap="true">字段</td>
+              <td class="resultheader" nowrap="true">值</td>
+              <td class="resultheader" nowrap="true">时标</td>
+              <td class="resultheader" nowrap="true">用户</td>
+              <td class="resultheader" nowrap="true">操作</td>
+              </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        新服务
+                </td>
+                
+                <td class="results" nowrap="true">
+                        &nbsp;
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;客户信息
+                </td>
+                
+                <td class="results" nowrap="true">
+                        &nbsp;
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;&nbsp;&nbsp;客户名称
+                </td>
+                
+                <td class="results" nowrap="true">
+                        宋震国
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;&nbsp;&nbsp;产权客户
+                </td>
+                
+                <td class="results" nowrap="true">
+                        宋震国
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;&nbsp;&nbsp;使用客户标示
+                </td>
+                
+                <td class="results" nowrap="true">
+                        202111172812
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;&nbsp;&nbsp;客户类型
+                </td>
+                
+                <td class="results" nowrap="true">
+                        住宅
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;&nbsp;&nbsp;客户子类型
+                </td>
+                
+                <td class="results" nowrap="true">
+                        普通住宅
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;&nbsp;&nbsp;客户标示
+                </td>
+                
+                <td class="results" nowrap="true">
+                        202111172812
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;&nbsp;&nbsp;证件编号
+                </td>
+                
+                <td class="results" nowrap="true">
+                        330682197507146478
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;&nbsp;&nbsp;证件类型
+                </td>
+                
+                <td class="results" nowrap="true">
+                        身份证
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;&nbsp;&nbsp;客户等级
+                </td>
+                
+                <td class="results" nowrap="true">
+                        2B
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;&nbsp;&nbsp;星级服务
+                </td>
+                
+                <td class="results" nowrap="true">
+                        7星
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;地址
+                </td>
+                
+                <td class="results" nowrap="true">
+                        &nbsp;
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;&nbsp;&nbsp;地址全称
+                </td>
+                
+                <td class="results" nowrap="true">
+                        国庆路34号
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;&nbsp;&nbsp;路名编码
+                </td>
+                
+                <td class="results" nowrap="true">
+                        1240
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;&nbsp;&nbsp;门牌号
+                </td>
+                
+                <td class="results" nowrap="true">
+                        34
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;&nbsp;&nbsp;邮编
+                </td>
+                
+                <td class="results" nowrap="true">
+                        200070
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;&nbsp;&nbsp;标准地址ID
+                </td>
+                
+                <td class="results" nowrap="true">
+                        41809721
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;联系方式
+                </td>
+                
+                <td class="results" nowrap="true">
+                        &nbsp;
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;&nbsp;&nbsp;联系人
+                </td>
+                
+                <td class="results" nowrap="true">
+                        11
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;&nbsp;&nbsp;联系电话
+                </td>
+                
+                <td class="results" nowrap="true">
+                        13321835775
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;产品名称
+                </td>
+                
+                <td class="results" nowrap="true">
+                        专网上网
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;产品编码
+                </td>
+                
+                <td class="results" nowrap="true">
+                        专网上网
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;营销活动
+                </td>
+                
+                <td class="results" nowrap="true">
+                        2@67383488|
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:21 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        更新
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;&nbsp;
+                </td>
+                
+                <td class="results" nowrap="true">
+                        2@67383488
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;销售品资产集成编号
+                </td>
+                
+                <td class="results" nowrap="true">
+                        2-DJZXXVP
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;公免标志
+                </td>
+                
+                <td class="results" nowrap="true">
+                        N
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;区局
+                </td>
+                
+                <td class="results" nowrap="true">
+                        西区
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;分局
+                </td>
+                
+                <td class="results" nowrap="true">
+                        恒丰
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;备注
+                </td>
+                
+                <td class="results" nowrap="true">
+                        ||
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;组合营销ID
+                </td>
+                
+                <td class="results" nowrap="true">
+                        2-DJZXXVP
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;初始密码
+                </td>
+                
+                <td class="results" nowrap="true">
+                        146478
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;专网上网接入方式
+                </td>
+                
+                <td class="results" nowrap="true">
+                        EPON
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;专网接入类型
+                </td>
+                
+                <td class="results" nowrap="true">
+                        光纤
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;申请编号
+                </td>
+                
+                <td class="results" nowrap="true">
+                        S201805281
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;FTTO联系人Email
+                </td>
+                
+                <td class="results" nowrap="true">
+                        ABC@qq.com
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;FTTO IP地址数
+                </td>
+                
+                <td class="results" nowrap="true">
+                        1个公网地址
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;是否加载延伸服务
+                </td>
+                
+                <td class="results" nowrap="true">
+                        否
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;是否开放DMZ功能
+                </td>
+                
+                <td class="results" nowrap="true">
+                        否
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;SLA服务等级
+                </td>
+                
+                <td class="results" nowrap="true">
+                        普通
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;FTTO速率
+                </td>
+                
+                <td class="results" nowrap="true">
+                        10M
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;是否换终端
+                </td>
+                
+                <td class="results" nowrap="true">
+                        N
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:23 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;IP信息
+                </td>
+                
+                <td class="results" nowrap="true">
+                        &nbsp;
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:17:21 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;&nbsp;&nbsp;子网掩码
+                </td>
+                
+                <td class="results" nowrap="true">
+                        255.255.255.0
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:35:45 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        更新
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </td>
+                
+                <td class="results" nowrap="true">
+                        255.255.255.0
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:54 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        更新
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </td>
+                
+                <td class="results" nowrap="true">
+                        255.255.255.0
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:17:21 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;&nbsp;&nbsp;IP地址
+                </td>
+                
+                <td class="results" nowrap="true">
+                        192.168.1.28
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:35:45 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        更新
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </td>
+                
+                <td class="results" nowrap="true">
+                        192.168.1.37
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:54 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        更新
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </td>
+                
+                <td class="results" nowrap="true">
+                        192.168.1.37
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:17:21 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;LAN资源信息
+                </td>
+                
+                <td class="results" nowrap="true">
+                        &nbsp;
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;&nbsp;&nbsp;A/B平面标志
+                </td>
+                
+                <td class="results" nowrap="true">
+                        B平面
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;&nbsp;&nbsp;宽带接入方式
+                </td>
+                
+                <td class="results" nowrap="true">
+                        FTTH
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;&nbsp;&nbsp;区局
+                </td>
+                
+                <td class="results" nowrap="true">
+                        西区
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;&nbsp;&nbsp;共建共享标志
+                </td>
+                
+                <td class="results" nowrap="true">
+                        否
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;&nbsp;&nbsp;设备安装地址
+                </td>
+                
+                <td class="results" nowrap="true">
+                        南星路50号12楼
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;&nbsp;&nbsp;上行方式
+                </td>
+                
+                <td class="results" nowrap="true">
+                        A8-C
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;&nbsp;&nbsp;IPTV VLAN编号
+                </td>
+                
+                <td class="results" nowrap="true">
+                        3170
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;&nbsp;&nbsp;是否10G-EPON
+                </td>
+                
+                <td class="results" nowrap="true">
+                        否
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;&nbsp;&nbsp;是否ONU最后用户
+                </td>
+                
+                <td class="results" nowrap="true">
+                        Y
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;&nbsp;&nbsp;光分路器编号/端口
+                </td>
+                
+                <td class="results" nowrap="true">
+                        XQGF00872/0028/OBD01|006
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;&nbsp;&nbsp;MDU
+                </td>
+                
+                <td class="results" nowrap="true">
+                        XQ/ZTE-ONT1026925/0/1/1(FE)
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;&nbsp;&nbsp;原是否ONU最后用户
+                </td>
+                
+                <td class="results" nowrap="true">
+                        N
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;&nbsp;&nbsp;OLT设备英文名称
+                </td>
+                
+                <td class="results" nowrap="true">
+                        BYC/T1/ZTEC220-OLT06
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;&nbsp;&nbsp;OLT IP地址
+                </td>
+                
+                <td class="results" nowrap="true">
+                        203.7.159.230
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;&nbsp;&nbsp;OLT模式
+                </td>
+                
+                <td class="results" nowrap="true">
+                        C+
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;&nbsp;&nbsp;OLT PON类型
+                </td>
+                
+                <td class="results" nowrap="true">
+                        EPON
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;&nbsp;&nbsp;OLT 类型
+                </td>
+                
+                <td class="results" nowrap="true">
+                        ZXA10 C220
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;&nbsp;&nbsp;ONU逻辑编号
+                </td>
+                
+                <td class="results" nowrap="true">
+                        0050189307
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;&nbsp;&nbsp;ONU名称
+                </td>
+                
+                <td class="results" nowrap="true">
+                        XQ/ZTE-ONT1026925
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;&nbsp;&nbsp;ONU网管注册ID
+                </td>
+                
+                <td class="results" nowrap="true">
+                        24
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;&nbsp;&nbsp;6509设备号
+                </td>
+                
+                <td class="results" nowrap="true">
+                        不夜城T1/ZTEC220-OLT06|武宁E320/V2|江苏E320/V1
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;&nbsp;&nbsp;6509端口号
+                </td>
+                
+                <td class="results" nowrap="true">
+                        0/03/0n/01|13/0/2|13/0/2
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;&nbsp;&nbsp;PON设备编号
+                </td>
+                
+                <td class="results" nowrap="true">
+                        XQ/ZTE-ONT1026925
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;&nbsp;&nbsp;PON OLT设备号
+                </td>
+                
+                <td class="results" nowrap="true">
+                        不夜城T1/ZTEC220-OLT06
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;&nbsp;&nbsp;PON OLT端口号
+                </td>
+                
+                <td class="results" nowrap="true">
+                        0/03/0n/01
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;&nbsp;&nbsp;PON端口编号
+                </td>
+                
+                <td class="results" nowrap="true">
+                        XQ/ZTE-ONT1026925/0/1/1(FE)
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;&nbsp;&nbsp;小区地址
+                </td>
+                
+                <td class="results" nowrap="true">
+                        天目中路460号
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;&nbsp;&nbsp;小区ID
+                </td>
+                
+                <td class="results" nowrap="true">
+                        850649
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;&nbsp;&nbsp;小区名称
+                </td>
+                
+                <td class="results" nowrap="true">
+                        天目中路460号
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;&nbsp;&nbsp;分局
+                </td>
+                
+                <td class="results" nowrap="true">
+                        恒丰
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;&nbsp;&nbsp;VLAN编号
+                </td>
+                
+                <td class="results" nowrap="true">
+                        e320-wn-v2/13-0-5-0970-0492
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;&nbsp;&nbsp;VOIP VLAN
+                </td>
+                
+                <td class="results" nowrap="true">
+                        2170
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;&nbsp;&nbsp;终端信息
+                </td>
+                
+                <td class="results" nowrap="true">
+                        &nbsp;
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;二级分类代码
+                </td>
+                
+                <td class="results" nowrap="true">
+                        1729
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;二级分类名称
+                </td>
+                
+                <td class="results" nowrap="true">
+                        A8-C（8网口+8语音）
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;二级分类数量
+                </td>
+                
+                <td class="results" nowrap="true">
+                        1
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;接入类型
+                </td>
+                
+                <td class="results" nowrap="true">
+                        PON
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;合作模式
+                </td>
+                
+                <td class="results" nowrap="true">
+                        全投资
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;宽带接入方式
+                </td>
+                
+                <td class="results" nowrap="true">
+                        FTTH
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;ONU自动激活结果
+                </td>
+                
+                <td class="results" nowrap="true">
+                        Y
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:40:09 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        更新
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;&nbsp;
+                </td>
+                
+                <td class="results" nowrap="true">
+                        N
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:28:09 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        客户信息
+                </td>
+                
+                <td class="results" nowrap="true">
+                        &nbsp;
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;客户名称
+                </td>
+                
+                <td class="results" nowrap="true">
+                        宋震国
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;产权客户
+                </td>
+                
+                <td class="results" nowrap="true">
+                        宋震国
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;使用客户标示
+                </td>
+                
+                <td class="results" nowrap="true">
+                        202111172812
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;客户类型
+                </td>
+                
+                <td class="results" nowrap="true">
+                        住宅
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;客户子类型
+                </td>
+                
+                <td class="results" nowrap="true">
+                        普通住宅
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;客户标示
+                </td>
+                
+                <td class="results" nowrap="true">
+                        202111172812
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;证件编号
+                </td>
+                
+                <td class="results" nowrap="true">
+                        330682197507146478
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;证件类型
+                </td>
+                
+                <td class="results" nowrap="true">
+                        身份证
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;客户等级
+                </td>
+                
+                <td class="results" nowrap="true">
+                        2B
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;星级服务
+                </td>
+                
+                <td class="results" nowrap="true">
+                        7星
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        客户名称
+                </td>
+                
+                <td class="results" nowrap="true">
+                        宋震国
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        产权客户
+                </td>
+                
+                <td class="results" nowrap="true">
+                        宋震国
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        使用客户标示
+                </td>
+                
+                <td class="results" nowrap="true">
+                        202111172812
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        客户类型
+                </td>
+                
+                <td class="results" nowrap="true">
+                        住宅
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        客户子类型
+                </td>
+                
+                <td class="results" nowrap="true">
+                        普通住宅
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        客户标示
+                </td>
+                
+                <td class="results" nowrap="true">
+                        202111172812
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        证件编号
+                </td>
+                
+                <td class="results" nowrap="true">
+                        330682197507146478
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        证件类型
+                </td>
+                
+                <td class="results" nowrap="true">
+                        身份证
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        客户等级
+                </td>
+                
+                <td class="results" nowrap="true">
+                        2B
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        星级服务
+                </td>
+                
+                <td class="results" nowrap="true">
+                        7星
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        地址
+                </td>
+                
+                <td class="results" nowrap="true">
+                        &nbsp;
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;地址全称
+                </td>
+                
+                <td class="results" nowrap="true">
+                        国庆路34号
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;路名编码
+                </td>
+                
+                <td class="results" nowrap="true">
+                        1240
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;门牌号
+                </td>
+                
+                <td class="results" nowrap="true">
+                        34
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;邮编
+                </td>
+                
+                <td class="results" nowrap="true">
+                        200070
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;标准地址ID
+                </td>
+                
+                <td class="results" nowrap="true">
+                        41809721
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        地址全称
+                </td>
+                
+                <td class="results" nowrap="true">
+                        国庆路34号
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        路名编码
+                </td>
+                
+                <td class="results" nowrap="true">
+                        1240
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        门牌号
+                </td>
+                
+                <td class="results" nowrap="true">
+                        34
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        邮编
+                </td>
+                
+                <td class="results" nowrap="true">
+                        200070
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        标准地址ID
+                </td>
+                
+                <td class="results" nowrap="true">
+                        41809721
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        联系方式
+                </td>
+                
+                <td class="results" nowrap="true">
+                        &nbsp;
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;联系人
+                </td>
+                
+                <td class="results" nowrap="true">
+                        11
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;联系电话
+                </td>
+                
+                <td class="results" nowrap="true">
+                        13321835775
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        联系人
+                </td>
+                
+                <td class="results" nowrap="true">
+                        11
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        联系电话
+                </td>
+                
+                <td class="results" nowrap="true">
+                        13321835775
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        产品名称
+                </td>
+                
+                <td class="results" nowrap="true">
+                        专网上网
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        产品编码
+                </td>
+                
+                <td class="results" nowrap="true">
+                        专网上网
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        营销活动
+                </td>
+                
+                <td class="results" nowrap="true">
+                        2@67383488|
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:21 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        更新
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;
+                </td>
+                
+                <td class="results" nowrap="true">
+                        2@67383488
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        销售品资产集成编号
+                </td>
+                
+                <td class="results" nowrap="true">
+                        2-DJZXXVP
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        公免标志
+                </td>
+                
+                <td class="results" nowrap="true">
+                        N
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        区局
+                </td>
+                
+                <td class="results" nowrap="true">
+                        西区
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        分局
+                </td>
+                
+                <td class="results" nowrap="true">
+                        恒丰
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        备注
+                </td>
+                
+                <td class="results" nowrap="true">
+                        ||
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        组合营销ID
+                </td>
+                
+                <td class="results" nowrap="true">
+                        2-DJZXXVP
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        初始密码
+                </td>
+                
+                <td class="results" nowrap="true">
+                        146478
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        专网上网接入方式
+                </td>
+                
+                <td class="results" nowrap="true">
+                        EPON
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        专网接入类型
+                </td>
+                
+                <td class="results" nowrap="true">
+                        光纤
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        申请编号
+                </td>
+                
+                <td class="results" nowrap="true">
+                        S201805281
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        FTTO联系人Email
+                </td>
+                
+                <td class="results" nowrap="true">
+                        ABC@qq.com
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        FTTO IP地址数
+                </td>
+                
+                <td class="results" nowrap="true">
+                        1个公网地址
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        是否加载延伸服务
+                </td>
+                
+                <td class="results" nowrap="true">
+                        否
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        是否开放DMZ功能
+                </td>
+                
+                <td class="results" nowrap="true">
+                        否
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        SLA服务等级
+                </td>
+                
+                <td class="results" nowrap="true">
+                        普通
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        FTTO速率
+                </td>
+                
+                <td class="results" nowrap="true">
+                        10M
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:04 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        admin
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        是否换终端
+                </td>
+                
+                <td class="results" nowrap="true">
+                        N
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:12:23 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        IP信息
+                </td>
+                
+                <td class="results" nowrap="true">
+                        &nbsp;
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:17:21 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;子网掩码
+                </td>
+                
+                <td class="results" nowrap="true">
+                        255.255.255.0
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:35:45 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        更新
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;&nbsp;
+                </td>
+                
+                <td class="results" nowrap="true">
+                        255.255.255.0
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:54 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        更新
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;&nbsp;
+                </td>
+                
+                <td class="results" nowrap="true">
+                        255.255.255.0
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:17:21 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;IP地址
+                </td>
+                
+                <td class="results" nowrap="true">
+                        192.168.1.28
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:35:45 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        更新
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;&nbsp;
+                </td>
+                
+                <td class="results" nowrap="true">
+                        192.168.1.37
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:54 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        更新
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;&nbsp;
+                </td>
+                
+                <td class="results" nowrap="true">
+                        192.168.1.37
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:17:21 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        子网掩码
+                </td>
+                
+                <td class="results" nowrap="true">
+                        255.255.255.0
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:35:45 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        更新
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;
+                </td>
+                
+                <td class="results" nowrap="true">
+                        255.255.255.0
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:54 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        更新
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;
+                </td>
+                
+                <td class="results" nowrap="true">
+                        255.255.255.0
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:17:21 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        IP地址
+                </td>
+                
+                <td class="results" nowrap="true">
+                        192.168.1.28
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:35:45 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        更新
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;
+                </td>
+                
+                <td class="results" nowrap="true">
+                        192.168.1.37
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:54 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        更新
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;
+                </td>
+                
+                <td class="results" nowrap="true">
+                        192.168.1.37
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:17:21 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        LAN资源信息
+                </td>
+                
+                <td class="results" nowrap="true">
+                        &nbsp;
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;A/B平面标志
+                </td>
+                
+                <td class="results" nowrap="true">
+                        B平面
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;宽带接入方式
+                </td>
+                
+                <td class="results" nowrap="true">
+                        FTTH
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;区局
+                </td>
+                
+                <td class="results" nowrap="true">
+                        西区
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;共建共享标志
+                </td>
+                
+                <td class="results" nowrap="true">
+                        否
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;设备安装地址
+                </td>
+                
+                <td class="results" nowrap="true">
+                        南星路50号12楼
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;上行方式
+                </td>
+                
+                <td class="results" nowrap="true">
+                        A8-C
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;IPTV VLAN编号
+                </td>
+                
+                <td class="results" nowrap="true">
+                        3170
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;是否10G-EPON
+                </td>
+                
+                <td class="results" nowrap="true">
+                        否
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;是否ONU最后用户
+                </td>
+                
+                <td class="results" nowrap="true">
+                        Y
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;光分路器编号/端口
+                </td>
+                
+                <td class="results" nowrap="true">
+                        XQGF00872/0028/OBD01|006
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;MDU
+                </td>
+                
+                <td class="results" nowrap="true">
+                        XQ/ZTE-ONT1026925/0/1/1(FE)
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;原是否ONU最后用户
+                </td>
+                
+                <td class="results" nowrap="true">
+                        N
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;OLT设备英文名称
+                </td>
+                
+                <td class="results" nowrap="true">
+                        BYC/T1/ZTEC220-OLT06
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;OLT IP地址
+                </td>
+                
+                <td class="results" nowrap="true">
+                        203.7.159.230
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;OLT模式
+                </td>
+                
+                <td class="results" nowrap="true">
+                        C+
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;OLT PON类型
+                </td>
+                
+                <td class="results" nowrap="true">
+                        EPON
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;OLT 类型
+                </td>
+                
+                <td class="results" nowrap="true">
+                        ZXA10 C220
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;ONU逻辑编号
+                </td>
+                
+                <td class="results" nowrap="true">
+                        0050189307
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;ONU名称
+                </td>
+                
+                <td class="results" nowrap="true">
+                        XQ/ZTE-ONT1026925
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;ONU网管注册ID
+                </td>
+                
+                <td class="results" nowrap="true">
+                        24
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;6509设备号
+                </td>
+                
+                <td class="results" nowrap="true">
+                        不夜城T1/ZTEC220-OLT06|武宁E320/V2|江苏E320/V1
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;6509端口号
+                </td>
+                
+                <td class="results" nowrap="true">
+                        0/03/0n/01|13/0/2|13/0/2
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;PON设备编号
+                </td>
+                
+                <td class="results" nowrap="true">
+                        XQ/ZTE-ONT1026925
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;PON OLT设备号
+                </td>
+                
+                <td class="results" nowrap="true">
+                        不夜城T1/ZTEC220-OLT06
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;PON OLT端口号
+                </td>
+                
+                <td class="results" nowrap="true">
+                        0/03/0n/01
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;PON端口编号
+                </td>
+                
+                <td class="results" nowrap="true">
+                        XQ/ZTE-ONT1026925/0/1/1(FE)
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;小区地址
+                </td>
+                
+                <td class="results" nowrap="true">
+                        天目中路460号
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;小区ID
+                </td>
+                
+                <td class="results" nowrap="true">
+                        850649
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;小区名称
+                </td>
+                
+                <td class="results" nowrap="true">
+                        天目中路460号
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;分局
+                </td>
+                
+                <td class="results" nowrap="true">
+                        恒丰
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;VLAN编号
+                </td>
+                
+                <td class="results" nowrap="true">
+                        e320-wn-v2/13-0-5-0970-0492
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;VOIP VLAN
+                </td>
+                
+                <td class="results" nowrap="true">
+                        2170
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;终端信息
+                </td>
+                
+                <td class="results" nowrap="true">
+                        &nbsp;
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;&nbsp;&nbsp;二级分类代码
+                </td>
+                
+                <td class="results" nowrap="true">
+                        1729
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;&nbsp;&nbsp;二级分类名称
+                </td>
+                
+                <td class="results" nowrap="true">
+                        A8-C（8网口+8语音）
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;&nbsp;&nbsp;二级分类数量
+                </td>
+                
+                <td class="results" nowrap="true">
+                        1
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        A/B平面标志
+                </td>
+                
+                <td class="results" nowrap="true">
+                        B平面
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        宽带接入方式
+                </td>
+                
+                <td class="results" nowrap="true">
+                        FTTH
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        区局
+                </td>
+                
+                <td class="results" nowrap="true">
+                        西区
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        共建共享标志
+                </td>
+                
+                <td class="results" nowrap="true">
+                        否
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        设备安装地址
+                </td>
+                
+                <td class="results" nowrap="true">
+                        南星路50号12楼
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        上行方式
+                </td>
+                
+                <td class="results" nowrap="true">
+                        A8-C
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        IPTV VLAN编号
+                </td>
+                
+                <td class="results" nowrap="true">
+                        3170
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        是否10G-EPON
+                </td>
+                
+                <td class="results" nowrap="true">
+                        否
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        是否ONU最后用户
+                </td>
+                
+                <td class="results" nowrap="true">
+                        Y
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        光分路器编号/端口
+                </td>
+                
+                <td class="results" nowrap="true">
+                        XQGF00872/0028/OBD01|006
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        MDU
+                </td>
+                
+                <td class="results" nowrap="true">
+                        XQ/ZTE-ONT1026925/0/1/1(FE)
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        原是否ONU最后用户
+                </td>
+                
+                <td class="results" nowrap="true">
+                        N
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        OLT设备英文名称
+                </td>
+                
+                <td class="results" nowrap="true">
+                        BYC/T1/ZTEC220-OLT06
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        OLT IP地址
+                </td>
+                
+                <td class="results" nowrap="true">
+                        203.7.159.230
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        OLT模式
+                </td>
+                
+                <td class="results" nowrap="true">
+                        C+
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        OLT PON类型
+                </td>
+                
+                <td class="results" nowrap="true">
+                        EPON
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        OLT 类型
+                </td>
+                
+                <td class="results" nowrap="true">
+                        ZXA10 C220
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        ONU逻辑编号
+                </td>
+                
+                <td class="results" nowrap="true">
+                        0050189307
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        ONU名称
+                </td>
+                
+                <td class="results" nowrap="true">
+                        XQ/ZTE-ONT1026925
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        ONU网管注册ID
+                </td>
+                
+                <td class="results" nowrap="true">
+                        24
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        6509设备号
+                </td>
+                
+                <td class="results" nowrap="true">
+                        不夜城T1/ZTEC220-OLT06|武宁E320/V2|江苏E320/V1
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        6509端口号
+                </td>
+                
+                <td class="results" nowrap="true">
+                        0/03/0n/01|13/0/2|13/0/2
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        PON设备编号
+                </td>
+                
+                <td class="results" nowrap="true">
+                        XQ/ZTE-ONT1026925
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        PON OLT设备号
+                </td>
+                
+                <td class="results" nowrap="true">
+                        不夜城T1/ZTEC220-OLT06
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        PON OLT端口号
+                </td>
+                
+                <td class="results" nowrap="true">
+                        0/03/0n/01
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        PON端口编号
+                </td>
+                
+                <td class="results" nowrap="true">
+                        XQ/ZTE-ONT1026925/0/1/1(FE)
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        小区地址
+                </td>
+                
+                <td class="results" nowrap="true">
+                        天目中路460号
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        小区ID
+                </td>
+                
+                <td class="results" nowrap="true">
+                        850649
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        小区名称
+                </td>
+                
+                <td class="results" nowrap="true">
+                        天目中路460号
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        分局
+                </td>
+                
+                <td class="results" nowrap="true">
+                        恒丰
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        VLAN编号
+                </td>
+                
+                <td class="results" nowrap="true">
+                        e320-wn-v2/13-0-5-0970-0492
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        VOIP VLAN
+                </td>
+                
+                <td class="results" nowrap="true">
+                        2170
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        接入类型
+                </td>
+                
+                <td class="results" nowrap="true">
+                        PON
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        合作模式
+                </td>
+                
+                <td class="results" nowrap="true">
+                        全投资
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        宽带接入方式
+                </td>
+                
+                <td class="results" nowrap="true">
+                        FTTH
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        终端信息
+                </td>
+                
+                <td class="results" nowrap="true">
+                        &nbsp;
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;二级分类代码
+                </td>
+                
+                <td class="results" nowrap="true">
+                        1729
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;二级分类名称
+                </td>
+                
+                <td class="results" nowrap="true">
+                        A8-C（8网口+8语音）
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;&nbsp;二级分类数量
+                </td>
+                
+                <td class="results" nowrap="true">
+                        1
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        二级分类代码
+                </td>
+                
+                <td class="results" nowrap="true">
+                        1729
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        二级分类名称
+                </td>
+                
+                <td class="results" nowrap="true">
+                        A8-C（8网口+8语音）
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        二级分类数量
+                </td>
+                
+                <td class="results" nowrap="true">
+                        1
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:24:52 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        ONU自动激活结果
+                </td>
+                
+                <td class="results" nowrap="true">
+                        Y
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:40:09 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        更新
+                </td>
+                
+            </tr>
+            
+            <tr>
+                
+                
+                <td class="results" nowrap="true">
+                        &nbsp;
+                </td>
+                
+                <td class="results" nowrap="true">
+                        N
+                </td>
+                
+                <td class="results" nowrap="true">
+                        05/28/2018 02:28:09 下午
+                </td>
+                
+                <td class="results" nowrap="true">
+                        oms-automation
+                </td>
+                
+                <td class="results" nowrap="true">
+                        创建
+                </td>
+                
+            </tr>
+            
+
+          </tbody></table>
+        </td>
+      </tr>
+    </tbody></table>
+
+<input type="hidden" name="OrderID" value="6500">
+<input type="hidden" name="OrderHistID" value="-1"> 
+
+</blockquote>
+</form>
+
+
+
+
+
+
+			  		</div>
+  				</td>
+  			</tr>
+  			<tr>
+  				<td>
+  					<div id="Footer">
+  						
+
+
+
+
+
+<div class="footer">
+<span>Copyright © 1998, 2014, Oracle. All rights reserved. Oracle is a registered trademark of Oracle Corporation and/or its affiliates. Other names may be trademarks of their respective owners.</span>
+</div>
+
+  					</div>
+  				</td>
+  			</tr>
+  		</tbody></table>
+	
+<a id="ext_btt" href="http://10.145.206.49:5001/OrderManagement/control/dataHistory#"><img src="chrome-extension://alpoeaffjpfnidlkiidponkainlnfhnl/images/icon.png"></a></body></html>
