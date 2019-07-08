@@ -1,0 +1,16 @@
+安装Django: pip install Django (-U是更新版本)
+
+创建新项目: django-admin startproject (项目名如：mysite)
+
+创建新App: 先进入创建的项目文件夹内,（如：mysite) python manage.py startapp (新App名，如MyApp)
+
+启动本地服务器运行: python manage.py runserver(默认为8000端口，如需指定端口，则跟上0.0.0.0:XXXX,XXXX为指定端口，如8088)
+
+设置说明：
+已新创建项目mysite，并在其项目内创建了新app：myapp
+1.需要在mysite/mysite/settings.py中添加app名myapp
+2.返回myapp，打开views.py，在里面对其进行方法的实现
+3.在mysite/mysite/url.py设置url相关，保证能够打开指定的页面并能看到views.py返回的值
+4，启动本地服务器运行，并在浏览器中输入网址查看结果
+
+templates

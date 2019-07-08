@@ -1,0 +1,15 @@
+Django<1.9
+django_compressor==1.6
+django-grappelli==2.7.2
+django-redis==3.8.3
+django-appconf
+baidubce
+lxml
+requests
+html5lib
+pyquery
+beautifulsoup4
+Pygments
+wechat-sdk
+python-memcached
+MySQL-python
