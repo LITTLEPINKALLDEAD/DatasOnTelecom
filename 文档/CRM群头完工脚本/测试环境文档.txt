@@ -1,0 +1,58 @@
+CRM测试环境：http://10.7.68.22/ecommunications_chs/start.swe
+帐号：SHENJ    密码：SHENJ
+客户标识：202113267241
+
+WOP测试环境：http://10.145.206.52:8001/wop/
+帐号：wfptest   密码：111111
+
+P7测试环境：http://10.145.206.49:5001/OrderManagement/Login.jsp 
+帐号：oms-automation                  密码：passw0rd
+
+测试数据：
+30DB PRA   方案定单编号：4730      2019DK04730-002-04
+30DB SIP     方案定单编号：4733
+DID PRA      方案定单编号：4734
+DID SIP        方案定单编号：4735
+DID E1          方案定单编号：4736
+
+CRM测试数据库
+UAT22=
+  (description=
+  (address_list=
+    (address=(protocol=tcp)(host=10.145.196.67)(port=1521))
+  )
+  (connect_data=
+    (server = dedicated)
+    (service_name = siebeldb2)
+    (sid = siebeldb2)
+  )
+) 
+
+ update siebel.s_order_item set status_cd='97完成',processed_flg='N',EAI_EXPRT_STAT_CD='待完工处理' 
+where row_id in
+(select row_id from siebel.S_ORDER_ITEM 
+where ORDER_ID in
+(select row_id from siebel.S_ORDER where ORDER_NUM in 
+('2-30001343631')) and 
+PAR_ORDER_ITEM_ID is null and
+(PROCESSED_FLG <> 'Y' or STATUS_CD='97完成') and
+ACTION_CD<>'现有的')--所有行项目刷成97完成
+
+select row_id,PROCESSED_FLG,STATUS_CD,service_num from siebel.S_ORDER_ITEM 
+where ORDER_ID in
+(select row_id from siebel.S_ORDER where ORDER_NUM in 
+('2-30001343631')) and 
+PAR_ORDER_ITEM_ID is null and
+(PROCESSED_FLG <> 'Y' or STATUS_CD='97完成') and
+ACTION_CD<>'现有的'--查询所有行项目ID
+ 
+
+先将行项目刷成97完成状态，再查询所有行项目的ID，在模拟器中运行
+
+
+
+
+
+
+
+
