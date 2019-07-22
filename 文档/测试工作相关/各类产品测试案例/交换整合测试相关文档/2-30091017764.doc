@@ -1,0 +1,325 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title></title>
+</head>
+<script type="text/javascript"  src="../../../../resource/JsBarcode.all.js"></script>
+<script type="text/javascript"  src="../../../../resource/jquery-1.11.1.js"></script>
+<script type="text/javascript"  src="../../../../resource/jquery.qrcode.js"></script>
+<style type="text/css" media="print">
+<!-- 
+	.PageNext{page-break-after: always;}
+	.noprint {display:none;}
+-->
+</style>
+<SCRIPT LANGUAGE="VBScript">
+Sub window_onunload
+  On Error Resume Next
+  Set WB = nothing
+End Sub
+ 
+ 
+Sub vbPrintPage ( x , y , z )
+  //OLECMDID_PRINT = 6
+  OLECMDEXECOPT_DODEFAULT = 0
+  OLECMDEXECOPT_PROMPTUSER = 1
+  OLECMDEXECOPT_DONTPROMPTUSER = 2
+  On Error Resume Next
+  WebBrowser.ExecWB x, y, z, 0
+End Sub
+ 
+</SCRIPT>
+<body>
+<center>
+  ﻿
+<TABLE width=650 align=center border="0"  cellpadding="0" cellspacing="0">
+  <TBODY>
+    <TR>
+      <TD><TABLE cellSpacing=0 cellPadding=2 width="100%" border=0>
+          <TBODY>
+            <TR>
+             
+              <TD  height="25"  width="60%"><h2 align="center"> <FONT face=宋体> 上海市电信公司IPPBX工单</h2></TD>
+            </TR>
+          </TBODY>
+        </TABLE></TD>
+    </TR>  
+    <TR>
+      <TD>
+        <TABLE style="FONT-SIZE: x-small; BORDER-COLLAPSE: collapse"
+								borderColor=#111111 cellSpacing=0 cellPadding=2 width="100%"
+								border=1>
+          <TBODY>
+            <tr>
+              <td align="right"> 需求来源： </td>
+              <td colspan="3" height=30>中区</td>  
+            </tr>
+            <tr>
+              <td align="right"> 操作类型： </td>
+              <td colspan="3" height=30>新装</td>  
+            </tr>
+            <tr>
+              <td align="right"> 客户名称： </td>
+              <td  height=30 width="25%">生命线政企</td>
+              <td align="right"> 客户类型： </td>
+              <td  height=30 width="25%" >政企 </td>
+            </tr>
+             <tr>
+              <td align="right"> 安装地址： </td>
+              <td  height=30> 南京西路44弄</td>
+              <td align="right"> 邮编： </td>
+              <td  height=30 > 200000 </td>
+            </tr>
+             <tr>
+              <td align="right"> 联系人： </td>
+              <td  height=30> ASDEW</td>
+              <td align="right">联系电话: </td>
+              <td  height=30 > 67890110 </td>
+            </tr>
+             <tr>
+              <td align="right"> 电路编号： </td>
+              <td  height=30> M1323128</td>
+              <td align="right"> 相关电路编号： </td>
+              <td  height=30 >  </td>
+            </tr>
+            <tr>
+              <td align="right"> 接入方式： </td>
+              <td colspan="3" height=30>SIP</td>  
+            </tr>   
+             <tr>
+              <td align="right">链路保护模式： </td>
+              <td  height=30> </td>
+              <td align="right">主备标识： </td>
+              <td  height=30 >  </td>
+            </tr>
+             <tr>
+              <td align="right" > B设备端口： </td>
+              <td  height=30 colspan="3"> 云南9000/B5 0/0/1/4;福建9000/B5 0/0/1/11;</td>
+            </tr>
+            <tr>
+              <td align="right" >VRF名称： </td>
+              <td  height=30 colspan="3"> CTVPN191-SH; </td>
+            </tr>
+            <tr>
+              <td align="right">传输链路编号： </td>
+              <td  height=30 colspan="3" > 南仓街40弄-云南/F00029;南仓街40弄-福建/F00042;</td>
+            </tr>
+             <tr>
+              <td align="right">Import-RT： </td>
+              <td  height=30 >  4134:141500;</td>
+              <td align="right">Export-RT： </td>
+              <td  height=30 > 4134:141501; </td>
+            </tr>
+            <tr>
+              <td align="right">RD： </td>
+              <td  height=30 >  4134:1415;</td>
+              <td align="right">速率： </td>
+              <td  height=30 > 1000M(GE); </td>
+            </tr>
+            <tr>
+          		 <td align="right">端口IP地址： </td>
+            	  <td  height=30 colspan="3"> 191.131.121.160/30;191.131.121.164/30; </td>
+             </tr>
+             <tr>
+          		 <td align="right">用户IP地址： </td>
+            	  <td  height=30 colspan="3"> 191.1.22.96/29; </td>
+             </tr>
+            <tr>
+          		 <td align="right">用户IP地址2： </td>
+            	  <td  height=30 colspan="3"> |||; </td>
+             </tr>     
+              <tr>
+              <td align="right">机房： </td>
+              <td  height=30 >  </td>
+              <td align="right">局向： </td>
+              <td  height=30 >  </td>
+            </tr>
+             <tr>
+              <td align="right"> 施工部门： </td>
+              <td  height=30 colspan="3"> </td>
+              </tr>
+               <tr>
+              <td align="right"> 电路维护等级： </td>
+              <td  height=30 colspan="3"> </td>
+              </tr>
+               <tr>
+              <td align="right"> 业务开通等级： </td>
+              <td  height=30 colspan="3"></td>
+              </tr>
+                <tr>
+              <td align="right"> 客户服务等级： </td>
+              <td  height=30 colspan="3"></td>
+              </tr>
+              
+                   <td  height=30 colspan="4"></td>
+                <tr>
+              <td align="right"> 资产编号： </td>
+              <td  height=30> </td>
+              <td align="right"> 集团流水编号： </td>
+              <td  height=30> </td>
+              </tr>
+                <tr>
+              <td align="right"> 产品编码： </td>
+              <td  height=30> 277</td>
+              <td align="right"> 产品名称： </td>
+              <td  height=30> 30B+D</td>
+              </tr>
+              <tr>
+              <td align="right"> 公免标志： </td>
+              <td  height=30> N</td>
+              <td align="right">子产品名称：</td>
+               <td  height=30></td>
+              </tr>
+              <tr>
+              <td align="right"> 区局： </td>
+              <td  height=30> 中区局</td>
+              <td align="right"> 分局： </td>
+              <td  height=30> 华山</td>
+              </tr>
+              <tr>
+              <td align="right"> 备注： </td>
+              <td  height=30 colspan="3"> ||</td>
+              </tr>
+               <tr>
+              <td align="right"> 客户经理： </td>
+              <td  height=30 colspan="3"> 11</td>
+              </tr>
+              <tr>
+              <td align="right"> 客户经理联系方式： </td>
+              <td  height=30 colspan="3"> 33</td>
+              </tr>
+            </TBODY>
+        </TABLE>
+       </TD>
+    </TR>
+ </TBODY>
+</TABLE>
+<br/>
+<table style="border:none; width:100%;">
+	<tr style="border:none;">
+		<td style="border:none; text-align:center;">
+			<input type="button" class="noprint rich-button" accesskey="P" value="打印(P)" onclick="javascript:window.print(); "/>
+			<input type="button" class="noprint rich-button" accesskey="C" value="关闭(C)" onclick="javascript:window.close();"/>
+			  <input type="button" id="p1" value="条码打印" onclick="print1()" />
+			
+		</td>
+	</tr>
+</table>
+</center>
+</body>
+<script type="text/javascript">
+	 	function print1() { 
+	 	var data="<?xml version=\"1.0\" encoding=\"utf-8\" ?><Data>";	 	
+	 	 	var input = document.getElementsByName('receiving'); 
+	 	    var receive=new Array();
+	 	    var receive1=new Array();
+ 		    for(var i=0;i<input.length;i++){
+    				var re=input[i].value;
+    				receive.push(re);
+    				receive1.push(re);
+    		}
+    		var send=new Array();
+    		var send1=new Array();
+    		var input2 = document.getElementsByName('sending');
+   			for(var i=0;i<input.length;i++){
+    			var se=input2[i].value;
+    			send.push(se);
+    			send1.push(se);
+    		}
+    		var input = document.getElementsByName('raiseDevice');
+    		var raise=new Array();
+    		var raise1=new Array();
+ 		    for(var i=0;i<input.length;i++){
+    				var ra=input[i].innerText;	
+    				var ra1=input[i].innerText;	
+    				var start=ra.indexOf("---->");
+    				if(start>0){
+    				  ra=ra.substring(0,start);	
+    				  ra1=ra1.substring(start+5,ra1.length);	
+    				  raise.push(ra);
+    				  raise1.push(ra1);
+    				}else{
+    				  start=ra.indexOf("<----"); 
+    				  ra=ra.substring(start+5,ra.length);	
+    				  ra1=ra1.substring(0,start);	
+    				  raise.push(ra);
+    				  raise1.push(ra1);
+    				}
+    		}
+    		var input = document.getElementsByName('sinkDevice');
+    		var sink=new Array();
+    		var sink1=new Array();
+ 		    for(var i=0;i<input.length;i++){
+    				var si=input[i].innerText;
+    				var si1=input[i].innerText;
+    				var last=si.indexOf("<----");
+    				if(last>0){
+    				si=si.substring(last+5,si.length);
+    				si1=si1.substring(0,last);
+    				sink.push(si);
+    				sink1.push(si1);
+    				}else{
+    				last=si.indexOf("---->");
+    				si=si.substring(0,last);
+    				si1=si1.substring(last+5,si1.length);
+    				sink.push(si);
+    				sink1.push(si1);
+    				}
+    		}
+    		var inputNO = document.getElementsByName('circuitNo');	
+    		var inputType = document.getElementsByName('jt_bc_code');
+    		var inputName = document.getElementsByName('uDeviceName1');
+    		var inputNOs=new Array();
+    		var texts=new Array();
+    		if(inputNO.length>0){
+    		var text=inputNO[0].value+inputType[0].value+inputName[0].value;
+    		}
+    		for(var i=0;i<inputNO.length;i++){
+    	 	  inputNOs.push(inputNO[i].value);
+    	      texts.push(text);
+    	    }		 
+    		var printTime=document.getElementById('printTime');
+    		var ptime=printTime.innerHTML;
+    		var pt=ptime.lastIndexOf("-");
+    		ptime=ptime.substring(0,pt+3);
+    		var Print="";
+    		for(var i=0;i<receive.length;i++){
+    		var QRCode="<Print><QRCode>"+receive[i]+"</QRCode><PrintType>1001</PrintType><Text>"+receive[i]+ptime+"</Text><Text>"+raise[i]+"</Text></Print>"+
+    		           "<Print><QRCode>"+receive1[i]+"</QRCode><PrintType>1001</PrintType><Text>"+receive1[i]+ptime+"</Text><Text>"+raise1[i]+"</Text></Print>"+
+    		           "<Print><QRCode>"+send[i]+"</QRCode><PrintType>1001</PrintType><Text>"+send[i]+ptime+"</Text><Text>"+sink[i]+"</Text></Print>"+
+    		           "<Print><QRCode>"+send1[i]+"</QRCode><PrintType>1001</PrintType><Text>"+send1[i]+ptime+"</Text><Text>"+sink1[i]+"</Text></Print>";
+    		Print=Print+QRCode;
+    		}
+    		for(var i=0;i<inputNOs.length;i++){
+    		var QRCode="<Print><QRCode>"+inputNOs[i]+"</QRCode><PrintType>1001</PrintType><Text>"+inputNOs[i]+ptime+"</Text><Text>"+texts[i]+"</Text></Print>"   ; 
+    		 Print=Print+QRCode;
+    		}
+    		var  xml=data+Print+"</Data>";
+			loadXML(xml);
+		}
+	</script>
+	<script type="text/javascript">
+		function loadXML(xml) {
+			var openUrl = "LabelPrint.html?r=" + Math.random();
+			var targetWindowStyle = "dialogHeight: 550px; dialogWidth: 550px; center: Yes; help: No; resizable: yes; status: yes; scroll:yes";
+			if (window.navigator.userAgent.indexOf("Chrome") >= 1) {			
+	 			window.open(openUrl,new String(xml),targetWindowStyle);
+	  	  	} else {
+	 			window.showModalDialog(openUrl, new String(xml), targetWindowStyle);
+	  	  	}
+		}
+</script>
+
+<SCRIPT LANGUAGE="VBScript">
+vbPrintPage 6, 2, 3
+</SCRIPT>
+
+
+<script LANGUAGE="JavaScript"> 
+window.opener.printNext();
+window.close();
+</script>
+
+</html>

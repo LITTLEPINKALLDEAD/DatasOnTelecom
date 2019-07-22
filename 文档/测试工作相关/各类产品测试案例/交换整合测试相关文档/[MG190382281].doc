@@ -1,0 +1,414 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title></title>
+</head>
+<script type="text/javascript"  src="../../../../resource/JsBarcode.all.js"></script>
+<script type="text/javascript"  src="../../../../resource/jquery-1.11.1.js"></script>
+<script type="text/javascript"  src="../../../../resource/jquery.qrcode.js"></script>
+<style type="text/css" media="print">
+<!-- 
+	.PageNext{page-break-after: always;}
+	.noprint {display:none;}
+-->
+</style>
+<SCRIPT LANGUAGE="VBScript">
+Sub window_onunload
+  On Error Resume Next
+  Set WB = nothing
+End Sub
+ 
+ 
+Sub vbPrintPage ( x , y , z )
+  //OLECMDID_PRINT = 6
+  OLECMDEXECOPT_DODEFAULT = 0
+  OLECMDEXECOPT_PROMPTUSER = 1
+  OLECMDEXECOPT_DONTPROMPTUSER = 2
+  On Error Resume Next
+  WebBrowser.ExecWB x, y, z, 0
+End Sub
+ 
+</SCRIPT>
+<body>
+<center>
+  
+<TABLE width=650 align=center border="0"  cellpadding="0" cellspacing="0">
+  <TBODY>
+    <TR>
+      <TD><TABLE cellSpacing=0 cellPadding=2 width="100%" border=0>
+          <TBODY>
+            <TR>  
+              <TD align=center height="25"  width="60%"><h2> <FONT face=宋体>交换工程任务单 </FONT> </h2></TD>
+            </TR>
+          </TBODY>
+        </TABLE></TD>
+    </TR>
+     <TD align=center  width="80%">
+       <table  width="100%">
+          <TR>
+            <TD height=10 align="right" width="60%" >&nbsp;</TD>
+            <TD height=22 align="right" width="40%" ><FONT face=宋体> 网话编号2-30014671252  </FONT> </TD>
+          </TR>
+         
+        </TABLE>
+        <TABLE style="FONT-SIZE: x-small; BORDER-COLLAPSE: collapse"
+								borderColor=#111111 cellSpacing=0 cellPadding=2 width="100%"
+								border=1>
+          <TBODY>
+            <tr>
+              <td align="right"> 工单标题 </td>
+              <td colspan="7" height=30> 生命线政企|30B+D|合群 </td> 
+            </tr>
+            <tr>
+              <td align="right"> 工单编号 </td>
+              <td colspan="7" height=30> MG190382281 </td> 
+            </tr>
+             <tr>
+              <td align="center"> 工单<br>
+                设计内容<br>
+                与要求 </td>
+              <td colspan="7"  height="220">  </td>
+            </tr>
+             <tr>
+              <td align="center"> 备注 </td>
+              <td colspan="7" height="20"> || </td>
+            </tr>
+            <tr>
+              <td align="right"> 调度完成日期 </td>
+              <td  height=30  width="12%"> 2019-03-30-14 </td>
+              <td align="right"> 传输编号 </td>
+              <td height=30  width="12%">  </td>
+               <td align="right" >联系人 </td>
+              <td  height=30  width="12%"> ASDEW </td>
+              <td align="right">联系电话 </td>
+              <td  height=30  width="12%"> 67890110 </td>
+            </tr>
+           <tr>
+              <td align="right"> 设计人 </td>
+              <td  height=30> admin </td>
+              <td align="right"> 设计日期 </td>
+              <td height=30 > 2019-03-28 14:29:04.0 </td>
+               <td align="right">交换室审核 </td>
+              <td  height=30>  </td>
+              <td align="right">审核日期 </td>
+              <td  height=30>  </td>
+            </tr>
+           <tr>
+              <td align="right"> 任务来源 </td>
+              <td  height=30> 大客户 </td>
+              <td align="right">  </td>
+              <td height=30 >  </td>
+               <td align="right">运维处审核 </td>
+              <td  height=30>  </td>
+              <td align="right">审核日期 </td>
+              <td  height=30>  </td>
+            </tr>
+           <tr>
+              <td align="right"> 抄送单位 </td>
+              <td colspan="7" height=30>  </td> 
+            </tr>
+            <TBODY>                   
+        </table>
+          			  <TABLE style="FONT-SIZE: x-small; BORDER-COLLAPSE: collapse"
+                borderColor=#111111 cellSpacing=0 cellPadding=2 width="100%"
+                border=1 a>
+           
+               <TBODY>
+          <tr height=30 ></tr>
+            </TBODY>
+            <TBODY>
+             <tr>
+            <td align=center colspan="12"> 30B+D模块链路信息 </td>
+             </tr>
+            <tr>
+            <td align="center" width="2%">    </td>
+               <td align="center"  width="3%"> 序号 </td> 
+               <td align="center" width="5%">操作方式</td>
+              <td align="center" width="10%">   局名 </td>
+               <td align="center" width="10%"> 局号 </td>    
+                <td align="center" width="5%"> 模块编号 </td>
+                <td align="center" width="10%"> 模块类型 </td>  
+                 <td align="center" width="15%">   群引示号码(逻辑号) </td>    
+                 <td align="center" width="10%">   对应方向 </td>
+               <td align="center" width="10%">   30BD链路系统号 </td>    
+                <td align="center" width="10%">短号码 </td>
+                <td align="center" width="10%">  备注 </td>     
+            </tr>       
+                    <tr>      
+                      <td>新</td>    
+                        <td> 1 </td>                         
+                          <td>新装</td>                        
+                          <td>漕溪NGN</td>                        
+                          <td>4TG1</td>                        
+                          <td>C07-04-07-45</td>                        
+                          <td>PRA</td>                        
+                          <td>98764345</td>                        
+                          <td>生命线政企</td>                        
+                          <td>3</td>                        
+                          <td></td>                        
+                          <td></td>                        
+                    </tr>
+                    <tr>      
+                      <td>新</td>    
+                        <td> 1 </td>                         
+                          <td>新装</td>                        
+                          <td>漕溪NGN</td>                        
+                          <td>4TG1</td>                        
+                          <td>C08-04-01-44</td>                        
+                          <td>PRA</td>                        
+                          <td>98764345</td>                        
+                          <td>生命线政企</td>                        
+                          <td>4</td>                        
+                          <td></td>                        
+                          <td></td>                        
+                    </tr>
+                    <tr>      
+                      <td>新</td>    
+                        <td> 1 </td>                         
+                          <td></td>                        
+                          <td>漕溪NGN</td>                        
+                          <td>4TG1</td>                        
+                          <td>C05-04-01-48</td>                        
+                          <td>PRA</td>                        
+                          <td>98764345</td>                        
+                          <td>生命线政企</td>                        
+                          <td>1</td>                        
+                          <td></td>                        
+                          <td></td>                        
+                    </tr>
+                    <tr>      
+                      <td>新</td>    
+                        <td> 1 </td>                         
+                          <td></td>                        
+                          <td>漕溪NGN</td>                        
+                          <td>4TG1</td>                        
+                          <td>C04-01-07-16</td>                        
+                          <td>PRA</td>                        
+                          <td>98764345</td>                        
+                          <td>生命线政企</td>                        
+                          <td>2</td>                        
+                          <td></td>                        
+                          <td></td>                        
+                    </tr>
+                    <tr>  
+                    <td>旧</td>     
+                       <td> 1 </td>
+                          <td></td>
+                          <td>4TG1</td>
+                          <td></td>
+                          <td>C05-04-01-48</td>
+                          <td>PRA</td>
+                          <td>98764345</td>
+                          <td>生命线政企</td>
+                          <td>1</td>
+                          <td></td>
+                          <td></td>
+                    </tr>
+                    <tr>  
+                    <td>旧</td>     
+                       <td> 1 </td>
+                          <td></td>
+                          <td>4TG1</td>
+                          <td></td>
+                          <td>C04-01-07-16</td>
+                          <td>PRA</td>
+                          <td>98764345</td>
+                          <td>生命线政企</td>
+                          <td>2</td>
+                          <td></td>
+                          <td></td>
+                    </tr>
+           </TBODY>
+          
+               <TBODY>
+          <tr height=30 ></tr>
+            </TBODY>
+            <TBODY>
+             <tr>
+            <td align=center colspan="14"> 号码信息 </td>
+             </tr>
+            <tr>
+            <td align="center" width="2%">    </td>
+               <td align="center"  width="3%"> 序号 </td> 
+                <td align="center"  width="3%"> 操作方式 </td> 
+              <td align="center" width="10%">    最终号码段 </td>
+               <td align="center" width="10%">  群引示号码(逻辑号) </td>    
+                <td align="center" width="3%"> 号码容量 </td>
+                <td align="center" width="10%">  本次号码操作段 </td>  
+                 <td align="center" width="6%">   计费方式 </td>    
+                 <td align="center" width="10%">   客户名称 </td>
+               <td align="center" width="10%">   初始呼入呼出关系 </td>    
+                <td align="center" width="10%">区局 </td>
+                <td align="center" width="10%">  号码用途 </td>  
+                 <td align="center" width="9%">控制层网元</td>
+                 <td align="center" width="14%">备注</td>
+            </tr>       
+                    <tr>      
+                      <td>新</td>    
+                        <td> 1 </td>                         
+                          <td>新增</td>                        
+                          <td>98764335-98764339,98764345-98764349</td>                        
+                          <td>98764345</td>                        
+                          <td>5</td>                        
+                          <td>98764335-98764339</td>                        
+                          <td></td>                        
+                          <td></td>                        
+                          <td></td>                        
+                          <td></td>                        
+                          <td></td>                        
+                          <td></td>                        
+                          <td></td>                        
+                    </tr>
+                    <tr>  
+                    <td>旧</td>     
+                       <td> 1 </td>
+                          <td></td>
+                          <td>98764345-98764349</td>
+                          <td>98764345</td>
+                          <td></td>
+                          <td>98764345-98764349</td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                    </tr>
+           </TBODY>
+          
+            
+            
+            <TBODY>
+          <tr height=30 ></tr>
+            </TBODY>  
+        </table>
+        
+        <table width="100%">
+          <TR>
+            <TD height=30 width="15%" align="right"><FONT face=宋体>打印人</FONT> </TD>
+            <TD height=30 width="35%" align="left"><FONT face=宋体></FONT> </TD>
+            <TD height=30 align="right" width="25%"><FONT face=宋体>打印时间</FONT> </TD>
+            <TD height=30 align="left" width="25%">  </TD>
+          </TR>
+        </TABLE>
+        </TD>
+  </TBODY>
+</TABLE><br/>
+<table style="border:none; width:100%;">
+	<tr style="border:none;">
+		<td style="border:none; text-align:center;">
+			<input type="button" class="noprint rich-button" accesskey="P" value="打印(P)" onclick="javascript:window.print(); "/>
+			<input type="button" class="noprint rich-button" accesskey="C" value="关闭(C)" onclick="javascript:window.close();"/>
+			  <input type="button" id="p1" value="条码打印" onclick="print1()" />
+			
+		</td>
+	</tr>
+</table>
+</center>
+</body>
+<script type="text/javascript">
+	 	function print1() { 
+	 	var data="<?xml version=\"1.0\" encoding=\"utf-8\" ?><Data>";	 	
+	 	 	var input = document.getElementsByName('receiving'); 
+	 	    var receive=new Array();
+	 	    var receive1=new Array();
+ 		    for(var i=0;i<input.length;i++){
+    				var re=input[i].value;
+    				receive.push(re);
+    				receive1.push(re);
+    		}
+    		var send=new Array();
+    		var send1=new Array();
+    		var input2 = document.getElementsByName('sending');
+   			for(var i=0;i<input.length;i++){
+    			var se=input2[i].value;
+    			send.push(se);
+    			send1.push(se);
+    		}
+    		var input = document.getElementsByName('raiseDevice');
+    		var raise=new Array();
+    		var raise1=new Array();
+ 		    for(var i=0;i<input.length;i++){
+    				var ra=input[i].innerText;	
+    				var ra1=input[i].innerText;	
+    				var start=ra.indexOf("---->");
+    				if(start>0){
+    				  ra=ra.substring(0,start);	
+    				  ra1=ra1.substring(start+5,ra1.length);	
+    				  raise.push(ra);
+    				  raise1.push(ra1);
+    				}else{
+    				  start=ra.indexOf("<----"); 
+    				  ra=ra.substring(start+5,ra.length);	
+    				  ra1=ra1.substring(0,start);	
+    				  raise.push(ra);
+    				  raise1.push(ra1);
+    				}
+    		}
+    		var input = document.getElementsByName('sinkDevice');
+    		var sink=new Array();
+    		var sink1=new Array();
+ 		    for(var i=0;i<input.length;i++){
+    				var si=input[i].innerText;
+    				var si1=input[i].innerText;
+    				var last=si.indexOf("<----");
+    				if(last>0){
+    				si=si.substring(last+5,si.length);
+    				si1=si1.substring(0,last);
+    				sink.push(si);
+    				sink1.push(si1);
+    				}else{
+    				last=si.indexOf("---->");
+    				si=si.substring(0,last);
+    				si1=si1.substring(last+5,si1.length);
+    				sink.push(si);
+    				sink1.push(si1);
+    				}
+    		}
+    		var inputNO = document.getElementsByName('circuitNo');	
+    		var inputType = document.getElementsByName('jt_bc_code');
+    		var inputName = document.getElementsByName('uDeviceName1');
+    		var inputNOs=new Array();
+    		var texts=new Array();
+    		if(inputNO.length>0){
+    		var text=inputNO[0].value+inputType[0].value+inputName[0].value;
+    		}
+    		for(var i=0;i<inputNO.length;i++){
+    	 	  inputNOs.push(inputNO[i].value);
+    	      texts.push(text);
+    	    }		 
+    		var printTime=document.getElementById('printTime');
+    		var ptime=printTime.innerHTML;
+    		var pt=ptime.lastIndexOf("-");
+    		ptime=ptime.substring(0,pt+3);
+    		var Print="";
+    		for(var i=0;i<receive.length;i++){
+    		var QRCode="<Print><QRCode>"+receive[i]+"</QRCode><PrintType>1001</PrintType><Text>"+receive[i]+ptime+"</Text><Text>"+raise[i]+"</Text></Print>"+
+    		           "<Print><QRCode>"+receive1[i]+"</QRCode><PrintType>1001</PrintType><Text>"+receive1[i]+ptime+"</Text><Text>"+raise1[i]+"</Text></Print>"+
+    		           "<Print><QRCode>"+send[i]+"</QRCode><PrintType>1001</PrintType><Text>"+send[i]+ptime+"</Text><Text>"+sink[i]+"</Text></Print>"+
+    		           "<Print><QRCode>"+send1[i]+"</QRCode><PrintType>1001</PrintType><Text>"+send1[i]+ptime+"</Text><Text>"+sink1[i]+"</Text></Print>";
+    		Print=Print+QRCode;
+    		}
+    		for(var i=0;i<inputNOs.length;i++){
+    		var QRCode="<Print><QRCode>"+inputNOs[i]+"</QRCode><PrintType>1001</PrintType><Text>"+inputNOs[i]+ptime+"</Text><Text>"+texts[i]+"</Text></Print>"   ; 
+    		 Print=Print+QRCode;
+    		}
+    		var  xml=data+Print+"</Data>";
+			loadXML(xml);
+		}
+	</script>
+	<script type="text/javascript">
+		function loadXML(xml) {
+			var openUrl = "LabelPrint.html?r=" + Math.random();
+			var targetWindowStyle = "dialogHeight: 550px; dialogWidth: 550px; center: Yes; help: No; resizable: yes; status: yes; scroll:yes";
+			if (window.navigator.userAgent.indexOf("Chrome") >= 1) {			
+	 			window.open(openUrl,new String(xml),targetWindowStyle);
+	  	  	} else {
+	 			window.showModalDialog(openUrl, new String(xml), targetWindowStyle);
+	  	  	}
+		}
+</script>
+</html>

@@ -1,0 +1,2369 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title></title>
+</head>
+<script type="text/javascript"  src="../../../../resource/JsBarcode.all.js"></script>
+<script type="text/javascript"  src="../../../../resource/jquery-1.11.1.js"></script>
+<script type="text/javascript"  src="../../../../resource/jquery.qrcode.js"></script>
+<style type="text/css" media="print">
+<!-- 
+	.PageNext{page-break-after: always;}
+	.noprint {display:none;}
+-->
+</style>
+<SCRIPT LANGUAGE="VBScript">
+Sub window_onunload
+  On Error Resume Next
+  Set WB = nothing
+End Sub
+ 
+ 
+Sub vbPrintPage ( x , y , z )
+  //OLECMDID_PRINT = 6
+  OLECMDEXECOPT_DODEFAULT = 0
+  OLECMDEXECOPT_PROMPTUSER = 1
+  OLECMDEXECOPT_DONTPROMPTUSER = 2
+  On Error Resume Next
+  WebBrowser.ExecWB x, y, z, 0
+End Sub
+ 
+</SCRIPT>
+<body>
+<center>
+  ﻿
+<TABLE width=650 align=center border="0"  cellpadding="0" cellspacing="0">
+  <TBODY>
+    <TR>
+      <TD><TABLE cellSpacing=0 cellPadding=2 width="100%" border=0>
+          <TBODY>
+            <TR>
+              <TD align=left height="25" width="40%"><br/>
+                WLYX/F/JL/A/ KX -002-2011 </TD>
+              <TD align=left height="25"  width="60%"><h2> <FONT face=宋体> 工  单  设  计
+                   </FONT> </h2></TD>
+            </TR>
+          </TBODY>
+        </TABLE></TD>
+    </TR>
+    <TR>
+      <TD><table  width="100%">
+      	 <TR>
+            <TD height=10 align="right" width="50%" >&nbsp;</TD>
+            <TD height=22 align="right" width="50%" ><FONT face=宋体> 链路名称：
+              澳尼路88号-南汇信息园区30N0006</FONT> </TD>
+          </TR>
+     	 <TR>
+            <TD height=10 align="right" width="50%" >&nbsp;</TD>
+            <TD height=22 align="right" width="50%" ><FONT face=宋体> 链路编号：
+              M1130001 </FONT> </TD>
+          </TR>
+          <TR>
+            <TD height=10 align="right" width="40%" >&nbsp;</TD>
+            <TD height=22 align="right" width="60%" ><FONT face=宋体> 订单编号：
+              2-234780675189 </FONT> </TD>
+          </TR>
+        </TABLE>
+        <TABLE style="FONT-SIZE: x-small; BORDER-COLLAPSE: collapse"
+								borderColor=#111111 cellSpacing=0 cellPadding=2 width="100%"
+								border=1>
+          <TBODY>
+            <tr>
+              <td align="right"> 工程项目名称： </td>
+              <td colspan="3" height=30>中国农业银行股份有限公司信用卡中心</td>
+              <td align="right"> 工单编号: </td>
+              <td height=30> JG190834197 </td>
+            </tr>
+            <tr>
+              <td align="right"> 集团流水号： </td>
+              <td  height=30>&nbsp;&nbsp;</td>
+              <td align="right"> 工程编号： </td>
+              <td height=30 > </td>
+              <td align="right"> 长途工单号： </td>
+              <td height=30 > </td>
+            </tr>
+            <tr>
+              <td align="right"> 定单类型： </td>
+              <td  height=30>DID </td>
+              <td align="right"> 业务类型： </td>
+              <td height=30 >移机</td>
+              <td align="right"> 放装编号： </td>
+              <td height=30 ></td>
+            </tr>
+            <tr>
+              <td align="right"> 紧急程度： </td>
+              <td  height=30> </td>
+              <td align="right"> 申请日期： </td>
+              <td height=30>2019-07-17 16:13:16 </td>
+              <td align="right" nowrap> 要求完成日期： </td>
+              <td height=30 >2019-04-25 23:59:59 </td>
+            </tr>
+            <tr>
+              <td align="right"  width="15%" nowrap> 客户联系人： </td>
+              <td height=30  width="20%"> 李赟靖<br/>
+                13817052346</td>
+              <td align="right"  width="10%" nowrap> 项目经理： </td>
+              <td height=30  width="20%">马骊<br/>
+                18901847779</td>
+              <td align="right"  width="10%" nowrap> 申请部门联系人： </td>
+              <td height=30  width="20%"><br/>
+                </td>
+            </tr>
+            <tr>
+              <td align="right"  width="15%" nowrap> 客户经理： </td>
+              <td height=30  width="20%"><br/>
+                </td>
+			  <td align="right"  width="10%" nowrap> MTU数值： </td>
+              <td height=30  width="20%"><br/>
+                </td>
+			  <td align="right"  width="15%" nowrap> 金卡编号： </td>
+              <td height=30  width="20%" colspan="3"></td>
+            </tr>
+             <tr>
+              <td align="right"  width="15%" nowrap> 金卡编号： </td>
+              <td height=30  width="20%"></td>
+			  <td align="right"  width="10%" nowrap> 集团分群一层： </td>
+              <td height=30  width="20%">行业客户</td>
+			  <td align="right"  width="15%" nowrap> 集团分群二层： </td>
+              <td height=30  width="20%" colspan="3">特大型客户</td>
+            </tr>
+            <tr>
+              <td align="right"  width="15%" nowrap> A端联系人： </td>
+              <td height=30  width="20%"><br/>
+                </td>
+			  <td align="right"  width="10%" nowrap> Z端联系人： </td>
+              <td height=30  width="20%"colspan=3 ></td>
+            </tr>
+            <tr>
+              <td align="right"  width="15%" nowrap> A端联系电话： </td>
+              <td height=30  width="20%"><br/>
+                </td>
+			  <td align="right"  width="10%" nowrap> Z端联系电话： </td>
+              <td height=30  width="20%"colspan=3 ></td>
+            </tr>
+            <tr>
+              <td align="right"  width="15%" nowrap> 工单来源： </td>
+              <td height=30 colspan=5 width="20%">政企客户部交付与服务支撑中心</td>
+            </tr>
+                     <tr>
+          		   			<td align="right"   width="15%" nowrap>用户端口需求： </td>
+            	 			 <td  height=30 colspan=5 width="20%">  </td>
+             		</tr>
+            <tr>
+              <td align="center"> 工单<br>
+                设计内容<br>
+                与要求： </td>
+              <td colspan="5"  height="120"></td>
+            </tr>
+            <tr>
+              <td align="center"> 备注： </td>
+              <td colspan="5" height="120">CRM备注:<br/>调度备注:||<br/>
+                  调度人:<br/>
+				&nbsp;&nbsp;
+				
+              </td>
+            </tr>
+        </table>
+        <table width="100%">
+          <TR>
+            <TD height=30 width="15%" align="right"><FONT face=宋体>打印人：</FONT> </TD>
+            <TD height=30 width="35%" align="left"><FONT face=宋体>史希洋</FONT> </TD>
+            <TD height=30 align="right" width="25%"><FONT face=宋体>打印时间：</FONT> </TD>
+            <TD height=30 align="left" width="25%">2019-07-17 19:04:57 </TD>
+          </TR>
+        </TABLE></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+	<div class="PageNext"></div>
+﻿
+<TABLE cellSpacing=0 cellPadding=0 width=630 align=center border=0>
+  <TBODY>
+    <TR>
+      <TD><TABLE cellSpacing=0 cellPadding=2 width="100%" border=0>
+          <TBODY>
+            <TR>
+              <TD align=center height="25"  width="100%"><h2> <FONT face="宋体">传输业务长途工单附件信息</FONT></h2></TD>
+            </TR>
+          </TBODY>
+        </TABLE></TD>
+    </TR>
+    <TR>
+      <TD>
+      <TABLE  width="100%">
+          <tr>
+              <td align="right"  width="15%" nowrap> 金卡编号： </td>
+              <td height=30  width="20%"></td>
+			  <td align="right"  width="10%" nowrap> 集团分群一层： </td>
+              <td height=30  width="20%">行业客户</td>
+			  <td align="right"  width="15%" nowrap> 集团分群二层： </td>
+              <td height=30  width="20%" colspan="3">特大型客户</td>
+            </tr>
+            </TABLE>
+      <table  width="100%">
+          <TR>
+            <TD height=22 align="left" width="20%" ><FONT face=宋体>调度单基本信息：</FONT></TD>
+          </TR>
+        </TABLE>
+        <TABLE style="FONT-SIZE: x-small; BORDER-COLLAPSE: collapse"
+								borderColor=#111111 cellSpacing=0 cellPadding=2 width="100%"
+								border=1>
+          <TBODY>
+            <tr  height=30>
+              <td width="50%" align="center"  > 调度文号 </td>
+              <td width="50%" align="center"  > 正文 </td>
+            </tr>
+            <tr height=30>
+              <td align="center"></td>
+              <td align="center"></td>
+            </tr>
+        </table>
+        <table  width="100%">
+          <TR>
+            <TD height=22 align="left" width="20%" ><FONT face=宋体> 定单内容：</FONT></TD>
+          </TR>
+        </TABLE>
+        <TABLE style="FONT-SIZE: x-small; BORDER-COLLAPSE: collapse"
+								borderColor=#111111 cellSpacing=0 cellPadding=2 width="100%"
+								border=1>
+          <TBODY>
+            <tr  height=30>
+              <td width="20%" align="center"  nowrap> 城市A </td>
+              <td width="20%" align="center"  nowrap> A端装机地址 </td>
+              <td width="20%" align="center" nowrap > A端联系人 </td>
+              <td width="20%" align="center"  nowrap> A端联系电话 </td>
+              <td width="20%" align="center"  nowrap> A端端口类型 </td>
+            </tr>
+            <tr height=30>
+              <td align="center"></td>
+              <td align="center"></td>
+              <td align="center"></td>
+              <td align="center"></td>
+              <td align="center"></td>
+            </tr>
+            <tr  height=30>
+              <td width="20%" align="center"  nowrap> 城市Z </td>
+              <td width="20%" align="center" nowrap > Z端装机地址 </td>
+              <td width="20%" align="center"  nowrap> Z端联系人 </td>
+              <td width="20%" align="center"  nowrap> Z端联系电话 </td>
+              <td width="20%" align="center"  nowrap> Z端端口类型 </td>
+            </tr>
+            <tr height=30>
+              <td align="center"></td>
+              <td align="center"></td>
+              <td align="center"></td>
+              <td align="center"></td>
+              <td align="center"></td>
+            </tr>
+        </table>
+		<table  width="100%">
+          <TR>
+            <TD height=22 align="left" width="20%" ><FONT face=宋体> 调单业务信息：</FONT></TD>
+          </TR>
+        </TABLE>
+        <TABLE style="FONT-SIZE: x-small; BORDER-COLLAPSE: collapse"
+								borderColor=#111111 cellSpacing=0 cellPadding=2 width="100%"
+								border=1>
+          <TBODY>
+            <tr  height=30>
+              <td width="25%" align="center"  nowrap> 资源代号 </td>
+              <td width="25%" align="center" nowrap > 调度类型 </td>
+              <td width="25%" align="center"  nowrap> 速率 </td>
+              <td width="25%" align="center"  nowrap> 客户名称 </td>
+            </tr>
+            <tr height=30>
+              <td align="center"></td>
+              <td align="center">移机</td>
+              <td align="center"></td>
+              <td align="center"></td>
+            </tr>
+			<tr  height=30>
+              <td width="25%" align="center"  nowrap> 群次路由 </td>
+			  <td width="25%" align="center" nowrap > 终端点A </td>
+              <td width="25%" align="center"  nowrap> 终端点Z </td>
+              <td width="25%" align="center"  nowrap> 要求完成时间 </td>
+            </tr>
+            <tr height=30>
+              <td align="center"></td>
+			  <td align="center"></td>
+              <td align="center"></td>
+              <td align="center"></td>
+            </tr>
+            <tr  height=30>
+              <td width="40%" align="center" colspan="4"  nowrap> 全程路由 </td>
+            </tr>
+            <tr height=30>
+              <td align="center" colspan="4"></td>
+            </tr>
+        </table>
+        <table width="100%">
+          <TR>
+            <TD height=30 width="15%" align="right"><FONT face=宋体>打印人：</FONT> </TD>
+            <TD height=30 width="35%" align="left"><FONT face=宋体>史希洋</FONT> </TD>
+            <TD height=30 align="right" width="25%"><FONT face=宋体>打印时间：</FONT> </TD>
+            <TD height=30 align="left" width="25%"> 2019-07-17 19:04:57 </TD>
+          </TR>
+        </TABLE></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+	<div class="PageNext"></div>
+﻿
+<TABLE cellSpacing=0 cellPadding=0 width=630 align=center border=0>
+  <TBODY>
+    <TR>
+      <TD><TABLE cellSpacing=0 cellPadding=2 width="100%" border=0>
+          <TBODY>
+            <TR>
+              <TD align=center height="25"  width="100%"><h2> <FONT face="宋体">集团工单附件信息</FONT></h2></TD>
+            </TR>
+          </TBODY>
+        </TABLE></TD>
+    </TR>
+    <TR>
+      <TD>
+      <TABLE  width="100%">
+          <tr>
+              <td align="right"  width="15%" nowrap> 金卡编号： </td>
+              <td height=30  width="20%"></td>
+			  <td align="right"  width="10%" nowrap> 集团分群一层： </td>
+              <td height=30  width="20%">行业客户</td>
+			  <td align="right"  width="15%" nowrap> 集团分群二层： </td>
+              <td height=30  width="20%" colspan="3">特大型客户</td>
+            </tr>
+            </TABLE>
+      <table  width="100%">
+          <TR>
+            <TD height=22 align="left" width="20%" ><FONT face=宋体>调度单基本信息：</FONT></TD>
+          </TR>
+        </TABLE>
+        <TABLE style="FONT-SIZE: x-small; BORDER-COLLAPSE: collapse"
+								borderColor=#111111 cellSpacing=0 cellPadding=2 width="100%"
+								border=1>
+          <TBODY>
+            <tr  height=30>
+              <td width="30%" align="center"  > 调度文号 </td>
+              <td width="70%" align="center"  >  </td>
+            </tr>
+            
+            <tr height=30>
+              <td width="30%" align="center"  > 派单部门 </td>
+              <td width="70%" align="center"  > 上海 </td>
+            </tr>
+            
+            <tr height=30>
+              <td width="30%" align="center"  > 抄送部门 </td>
+              <td width="70%" align="center"  > &nbsp;&nbsp;&nbsp;&nbsp; </td>
+            </tr>
+            
+            <tr height=30>
+              <td width="30%" align="center"  > 标题 </td>
+              <td width="70%" align="center"  >__  </td>
+            </tr>
+            
+            <tr height=70>
+              <td width="30%" align="center"  > 正文 </td>
+              <td width="70%" align="center"  >  </td>
+            </tr>
+            
+            <tr height=30>
+              <td width="30%" align="center"  > 拟稿人姓名 </td>
+              <td width="70%" align="center"  > 於炯 </td>
+            </tr>
+            
+            <tr height=30>
+              <td width="30%" align="center"  > 拟稿人电话 </td>
+              <td width="70%" align="center"  > 64315317 </td>
+            </tr>
+        </table>
+        <table  width="100%">
+          <TR>
+            <TD height=22 align="left" width="20%" ><FONT face=宋体> 资源内容：</FONT></TD>
+          </TR>
+        </TABLE>
+        <TABLE style="FONT-SIZE: x-small; BORDER-COLLAPSE: collapse"
+								borderColor=#111111 cellSpacing=0 cellPadding=2 width="100%"
+								border=1>
+          <TBODY>
+            <tr  height=30>
+              <td width="20%" align="center"  nowrap> 序号 </td>
+              <td align="center"> 1 </td>
+              <td width="20%" align="center" nowrap > 站点编号 </td>
+              <td align="center"></td>
+            </tr>
+            <tr height=30>
+			  <td width="20%" align="center"  nowrap> 站点类型 </td>
+              <td align="center"></td>
+              <td width="20%" align="center" nowrap > 定单留言信息 </td>
+              <td align="center">  </td>
+            </tr>
+            <tr  height=30>
+			  <td width="20%" align="center"  nowrap> 操作类型 </td>
+              <td align="center">  </td>
+              <td width="20%" align="center" nowrap > 交付类型 </td>
+              <td align="center">  </td>
+            </tr>
+            <tr height=30>
+              <td width="20%" align="center"  nowrap> 网络拓扑 </td>
+              <td align="center">  </td>
+              <td width="20%" align="center" nowrap > VPN网号 </td>
+              <td align="center">  </td>
+            </tr>
+            <tr height=30>
+              <td width="20%" align="center"  nowrap> VPN路由总数 </td>
+              <td align="center">  </td>
+              <td width="20%" align="center" nowrap > 业务类型 </td>
+              <td align="center">  </td>
+            </tr>
+            <tr height=30>
+              <td width="20%" align="center"  nowrap> 是否Multi_Vrf </td>
+              <td align="center">  </td>
+              <td width="20%" align="center" nowrap > Multi-Vrf接入标识 </td>
+              <td align="center">  </td>
+            </tr>
+			<tr height=30>
+              <td width="20%" align="center"  nowrap> 原VPN接入电路代号 </td>
+              <td align="center"> &nbsp; </td>
+              <td width="20%" align="center" nowrap > CE所属城市 </td>
+              <td align="center">  </td>
+            </tr>
+           	<tr height=30>
+              <td width="20%" align="center"  nowrap> CE提供方 </td>
+              <td align="center">  </td>
+              <td width="20%" align="center" nowrap > CE所属运营商 </td>
+              <td align="center">  </td>
+            </tr>
+            <tr height=30>
+              <td width="20%" align="center"  nowrap> CE端口速率 </td>
+              <td align="center">  </td>
+              <td width="20%" align="center" nowrap > 接入电路速率 </td>
+              <td align="center">  </td>
+            </tr> 
+            <tr height=30>
+              <td width="20%" align="center"  nowrap> CE接口封装类型 </td>
+              <td align="center">  </td>
+              <td width="20%" align="center" nowrap > DLCI号或VPI号/VCI号 </td>
+              <td align="center"> &nbsp; </td>
+            </tr> 
+            <tr height=30>
+              <td width="20%" align="center"  nowrap> 路由数目 </td>
+              <td align="center">  </td>
+              <td width="20%" align="center" nowrap > 客户AS号 </td>
+              <td align="center">   </td>
+            </tr>
+            <tr height=30>
+              <td width="20%" align="center"  nowrap> PE/CE间路由协议 </td>
+              <td align="center">  </td>
+              <td width="20%" align="center" nowrap > 要求完成日期 </td>
+              <td align="center">  </td>
+            </tr>
+            <tr height=30>
+              <td width="20%" align="center"  nowrap> 用户名称 </td>
+              <td align="center"></td>
+              <td width="20%" align="center" nowrap > &nbsp; </td>
+              <td align="center"> &nbsp; </td>
+            </tr>
+            <tr height=30>
+              <td width="20%" align="center"  nowrap> CE路由器WAN IP地址 </td>
+              <td align="center">  </td>
+              <td width="20%" align="center" nowrap > PE路由器IP地址 </td>
+              <td align="center">  </td>
+            </tr>
+            <tr height=30>
+              <td width="20%" align="center"  nowrap> 割接开始时间 </td>
+              <td align="center"> &nbsp; </td>
+              <td width="20%" align="center" nowrap > 割接截止时间 </td>
+              <td align="center"> &nbsp; </td>
+            </tr>
+              <tr height=30>
+              <td width="20%" align="center"  nowrap> 是否电话通知后操作 </td>
+              <td align="center">  </td>
+              <td width="20%" align="center" nowrap > 是否中心点 </td>
+              <td align="center">  </td>
+            </tr>
+            <tr height=30>
+              <td width="20%" align="center"  nowrap> 带宽突发策略 </td>
+              <td align="center">  </td>
+              <td width="20%" align="center" nowrap > CE loopback地址 </td>
+              <td align="center">  </td>
+            </tr> 
+            <tr height=30>
+              <td width="20%" align="center"  nowrap> 客户默认网关IP地址 </td>
+              <td align="center">  </td>
+              <td width="20%" align="center" nowrap > CN2 PE所在城市 </td>
+              <td align="center">  </td>
+            </tr>
+     	    <tr height=30>
+              <td width="20%" align="center"  nowrap> PE编码 </td>
+              <td align="center">  </td>
+              <td width="20%" align="center" nowrap > PE归属 </td>
+              <td align="center">  </td>
+            </tr>
+            <tr height=30>
+              <td width="20%" align="center"  nowrap> 双电路承载方式 </td>
+              <td align="center">  </td>
+              <td width="20%" align="center" nowrap > 是否需要快速收敛 </td>
+              <td align="center">  </td>
+            </tr>
+            <tr height=30>
+              <td width="20%" align="center"  nowrap> 是否成帧 </td>
+              <td align="center">  </td>
+              <td width="20%" align="center" nowrap > 站点可用率 </td>
+              <td align="center">  </td>
+            </tr>
+            <tr height=30>
+              <td width="20%" align="center"  nowrap> 最大传输单元（MTU） </td>
+              <td align="center">  </td>
+              <td width="20%" align="center" nowrap > 与该客户已有点是否一致 </td>
+              <td align="center">  </td>
+            </tr>
+            <tr height=30>
+              <td width="20%" align="center"  nowrap> BGP MD5 对端认证（MTU） </td>
+              <td align="center">  </td>
+              <td width="20%" align="center" nowrap > 客户IP子网段地址/子网掩码 </td>
+              <td align="center"> &nbsp; </td>
+            </tr>
+            <tr height=30>
+              <td width="20%" align="center"  nowrap> Option A方式跨域互联地址网段(/30) </td>
+              <td align="center">  </td>
+              <td width="20%" align="center" nowrap > 用户装机地址 </td>
+              <td align="center">  </td>
+            </tr>
+            <tr height=30>
+              <td width="20%" align="center"  nowrap> 本地用户联系人及电话 </td>
+              <td align="center">  </td>
+              <td width="20%" align="center" nowrap > QoS等级/购买带宽/突发带宽－钻石 </td>
+              <td align="center">  </td>
+            </tr>
+            <tr height=30>
+              <td width="20%" align="center"  nowrap> QoS等级/购买带宽/突发带宽－白金 </td>
+              <td align="center">  </td>
+              <td width="20%" align="center" nowrap > QoS等级/购买带宽/突发带宽－金 </td>
+              <td align="center">  </td>
+            </tr>
+            <tr height=30>
+              <td width="20%" align="center"  nowrap> QoS等级/购买带宽/突发带宽－银 </td>
+              <td align="center">  </td>
+              <td width="20%" align="center" nowrap > QoS等级/购买带宽/突发带宽－铜 </td>
+              <td align="center">  </td>
+            </tr>
+            <tr height=30>
+              <td width="20%" align="center"  nowrap> CE接口类型 </td>
+              <td align="center">  </td>
+              <td width="20%" align="center" nowrap > 平均故障修复时间 </td>
+              <td align="center">  </td>
+            </tr>
+            <tr height=30>
+              <td width="20%" align="center"  nowrap> CE接入电路类型 </td>
+              <td align="center">  </td>
+              <td width="20%" align="center" nowrap > PE接口速率 </td>
+              <td align="center">  </td>
+            </tr>
+             <tr height=30>
+              <td width="20%" align="center" nowrap > 备注 </td>
+              <td align="center" colspan="3">  </td>
+            </tr>
+        </table>
+		<table  width="100%">
+          <TR>
+            <TD height=22 align="left" width="20%" ><FONT face=宋体> 调单业务信息：</FONT></TD>
+          </TR>
+        </TABLE>
+        <TABLE style="FONT-SIZE: x-small; BORDER-COLLAPSE: collapse"
+								borderColor=#111111 cellSpacing=0 cellPadding=2 width="100%"
+								border=1>
+          <TBODY>
+            <tr  height=30>
+              <td width="20%" align="center"  nowrap> 序号 </td>
+              <td align="center"> 1 </td>
+              <td width="20%" align="center" nowrap > 站点编号 </td>
+              <td align="center"> </td>
+            </tr>
+            <tr height=30>
+			  <td width="20%" align="center"  nowrap> 站点类型 </td>
+              <td align="center"></td>
+              <td width="20%" align="center" nowrap > &nbsp; </td>
+              <td align="center"> &nbsp; </td>
+            </tr>
+            <tr height=30>
+              <td width="20%" align="center" nowrap > 定单留言信息</td>
+              <td align="center">  </td>
+              <td width="20%" align="center"  nowrap> 挂起原因 </td>
+              <td align="center"> &nbsp; </td>
+            </tr>
+            <tr height=30>
+              <td width="20%" align="center" nowrap > 是否预约测试 </td>
+              <td align="center"> 否 </td>
+              <td width="20%" align="center"  nowrap> 是否异常回退 </td>
+              <td align="center"> 否 </td>
+            </tr>
+            <tr height=30>
+              <td width="20%" align="center" nowrap > 电路备注 </td>
+              <td align="center">  </td>
+              <td width="20%" align="center"  nowrap> 是否双PE接入 </td>
+              <td align="center">  </td>
+            </tr>
+            <tr height=30>
+              <td width="20%" align="center" nowrap > 客户名称 </td>
+              <td align="center"> 中国农业银行股份有限公司信用卡中心 </td>
+              <td width="20%" align="center"  nowrap > 用户名称 </td>
+              <td align="center">  </td>
+            </tr>
+            <tr height=30>
+              <td width="20%" align="center" nowrap > 接入资源分配单回单时间 </td>
+              <td align="center"></td>
+              <td width="20%" align="center"  nowrap> 接入资源分配单要求完成时间 </td>
+              <td align="center"></td>
+            </tr>
+            <tr height=30>
+              <td width="20%" align="center" nowrap > 接入电路段状态 </td>
+              <td align="center">  </td>
+              <td width="20%" align="center"  nowrap> VPN专网号 </td>
+              <td align="center">  </td>
+            </tr>
+            <tr height=30>
+              <td width="20%" align="center" nowrap > 大客户系统标识 </td>
+              <td align="center">  </td>
+              <td width="20%" align="center"  nowrap> 业务类型 </td>
+              <td align="center">  </td>
+            </tr>
+            <tr height=30>
+              <td width="20%" align="center" nowrap > VPN路由总数 </td>
+              <td align="center">  </td>
+              <td width="20%" align="center"  nowrap> 网络拓扑 </td>
+              <td align="center">  </td>
+            </tr>
+            <tr height=30>
+              <td width="20%" align="center"  nowrap> 是否Multi_Vrf </td>
+              <td align="center">  </td>
+              <td width="20%" align="center" nowrap > Multi-Vrf接入电路标识 </td>
+              <td align="center">  </td>
+            </tr>
+            <tr height=30>
+              <td width="20%" align="center"  nowrap> Multi-VRF接入电路代号 </td>
+              <td align="center"> &nbsp; </td>
+              <td width="20%" align="center" nowrap > &nbsp; </td>
+              <td align="center"> &nbsp; </td>
+            </tr>
+            <tr height=30>
+              <td width="20%" align="center"  nowrap> 接入电路代号 </td>
+              <td align="center">  </td>
+              <td width="20%" align="center" nowrap > 成对电路代号 </td>
+              <td align="center"> </td>
+            </tr>
+            <tr height=30>
+              <td width="20%" align="center"  nowrap> 接入电路调度局联系人 </td>
+              <td align="center">  </td>
+              <td width="20%" align="center" nowrap > 接入电路调度局联系方式 </td>
+              <td align="center">  </td>
+            </tr>
+            <tr height=30>
+              <td width="20%" align="center"  nowrap> 本地承载电路代号 </td>
+              <td align="center">   M1130001 </td>
+              <td width="20%" align="center" nowrap > 城域网AS号 </td>
+              <td align="center">  </td>
+            </tr>
+            <tr height=30>
+              <td width="20%" align="center"  nowrap> CE测试要求完成时间 </td>
+              <td align="center"> </td>
+              <td width="20%" align="center" nowrap > PE测试要求完成时间 </td>
+              <td align="center"> </td>
+            </tr>
+            <tr height=30>
+              <td width="20%" align="center"  nowrap> 要求完成时间 </td>
+              <td align="center">  </td>
+              <td width="20%" align="center" nowrap > 速率 </td>
+              <td align="center">  </td>
+            </tr>
+            <tr height=30>
+              <td width="20%" align="center"  nowrap> 最大传输单元（MTU） </td>
+              <td align="center">  </td>
+              <td width="20%" align="center" nowrap > 操作类型 </td>
+              <td align="center">  </td>
+            </tr>
+            <tr height=30>
+              <td width="20%" align="center"  nowrap> 变更类型 </td>
+              <td align="center">  </td>
+              <td width="20%" align="center" nowrap > 站点质量指标变更 </td>
+              <td align="center">  </td>
+            </tr>
+            <tr height=30>
+              <td width="20%" align="center"  nowrap> CE路由器WAN IP地址 </td>
+              <td align="center">  </td>
+              <td width="20%" align="center" nowrap > 成对CE IP地址 </td>
+              <td align="center"> </td>
+            </tr>
+            <tr height=30>
+              <td width="20%" align="center"  nowrap> EXPORT RT </td>
+              <td align="center">  </td>
+              <td width="20%" align="center" nowrap > IMPORT RT </td>
+              <td align="center"></td>
+            </tr>
+            <tr height=30>
+              <td width="20%" align="center"  nowrap> VRF 名称 </td>
+              <td align="center"> </td>
+              <td width="20%" align="center" nowrap > RD </td>
+              <td align="center">  </td>
+            </tr>
+            <tr height=30>
+              <td width="20%" align="center"  nowrap> 客户AS号 </td>
+              <td align="center">  </td>
+              <td width="20%" align="center" nowrap > BGP MD5 对端认证 </td>
+              <td align="center">  </td>
+            </tr>
+            <tr height=30>
+              <td width="20%" align="center"  nowrap> Option A方式跨域互联地址网段(/30) </td>
+              <td align="center">  </td>
+              <td width="20%" align="center" nowrap > 交换机下连接口类型 </td>
+              <td align="center">  </td>
+            </tr>
+            <tr height=30>
+              <td width="20%" align="center"  nowrap> PE路由器IP地址 </td>
+              <td align="center">  </td>
+              <td width="20%" align="center" nowrap > 成对PE IP地址 </td>
+              <td align="center"> &nbsp; </td>
+            </tr>
+            <tr height=30>
+              <td width="20%" align="center"  nowrap> 割接开始时间 </td>
+              <td align="center"> &nbsp; </td>
+              <td width="20%" align="center" nowrap > 割接截止时间 </td>
+              <td align="center"> &nbsp; </td>
+            </tr>
+            <tr height=30>
+              <td width="20%" align="center"  nowrap> 是否电话通知后操作 </td>
+              <td align="center">  </td>
+              <td width="20%" align="center" nowrap > 是否中心点 </td>
+              <td align="center">  </td>
+            </tr>
+            <tr height=30>
+              <td width="20%" align="center"  nowrap> 带宽突发策略 </td>
+              <td align="center">  </td>
+              <td width="20%" align="center" nowrap > 是否成帧 </td>
+              <td align="center">  </td>
+            </tr>
+            <tr height=30>
+              <td width="20%" align="center"  nowrap> 客户接入端口号 </td>
+              <td align="center">  </td>
+              <td width="20%" align="center" nowrap > 逻辑子端口号 </td>
+              <td align="center"> &nbsp; </td>
+            </tr>
+            <tr height=30>
+              <td width="20%" align="center"  nowrap> SW与CN2 PE互联中继 </td>
+              <td align="center"> </td>
+              <td width="20%" align="center" nowrap > PE下连端口 </td>
+              <td align="center"></td>
+            </tr>
+            <tr height=30>
+              <td width="20%" align="center"  nowrap> CE提供方 </td>
+              <td align="center">  </td>
+              <td width="20%" align="center" nowrap > CE接口类型 </td>
+              <td align="center">  </td>
+            </tr>
+            <tr height=30>
+              <td width="20%" align="center"  nowrap> CE端口速率  </td>
+              <td align="center">  </td>
+              <td width="20%" align="center" nowrap > CE接口封装类型  </td>
+              <td align="center">  </td>
+            </tr>
+            <tr height=30>
+              <td width="20%" align="center"  nowrap> DLCI号  </td>
+              <td align="center">  </td>
+              <td width="20%" align="center" nowrap > VPI/VCI号  </td>
+              <td align="center"> &nbsp; </td>
+            </tr>
+            <tr height=30>
+              <td width="20%" align="center"  nowrap> 客户默认网关IP地址  </td>
+              <td align="center">  </td>
+              <td width="20%" align="center" nowrap > PE归属  </td>
+              <td align="center">  </td>
+            </tr>
+            <tr height=30>
+              <td width="20%" align="center"  nowrap> 安装地址  </td>
+              <td align="center">  </td>
+              <td width="20%" align="center" nowrap > 本地用户联系人、联系电话  </td>
+              <td align="center">   </td>
+            </tr>
+            <tr height=30>
+              <td width="20%" align="center"  nowrap> CE接入电路类型  </td>
+              <td align="center">  </td>
+              <td width="20%" align="center" nowrap > 双电路承载方式  </td>
+              <td align="center">  </td>
+            </tr>
+            <tr height=30>
+              <td width="20%" align="center"  nowrap> 成对电路承载方式  </td>
+              <td align="center"> &nbsp; </td>
+              <td width="20%" align="center" nowrap > 是否需要快速收敛  </td>
+              <td align="center">  </td>
+            </tr>
+            <tr height=30>
+              <td width="20%" align="center" nowrap > QoS等级/购买带宽/突发带宽－钻石 </td>
+              <td align="center">  </td>
+              <td width="20%" align="center"  nowrap> QoS等级/购买带宽/突发带宽－白金 </td>
+              <td align="center">  </td>
+            </tr>
+            <tr height=30>
+              <td width="20%" align="center" nowrap > QoS等级/购买带宽/突发带宽－金 </td>
+              <td align="center">  </td>
+              <td width="20%" align="center"  nowrap> QoS等级/购买带宽/突发带宽－银 </td>
+              <td align="center">  </td>
+            </tr>
+            <tr height=30>
+              <td width="20%" align="center" nowrap > QoS等级/购买带宽/突发带宽－铜 </td>
+              <td align="center">  </td>
+              <td width="20%" align="center"  nowrap> 站点可用率 </td>
+              <td align="center">  </td>
+            </tr>
+            <tr height=30>
+              <td width="20%" align="center" nowrap > 成对电路站点质量 </td>
+              <td align="center"> &nbsp; </td>
+              <td width="20%" align="center"  nowrap> 平均故障修复时间 </td>
+              <td align="center">  </td>
+            </tr>
+            <tr height=30>
+              <td width="20%" align="center" nowrap > PE/CE间路由协议 </td>
+              <td align="center">  </td>
+              <td width="20%" align="center"  nowrap> 客户IP子网地址段/掩码 </td>
+              <td align="center"> &nbsp; </td>
+            </tr>
+            <tr height=30>
+              <td width="20%" align="center" nowrap > 路由数目 </td>
+              <td align="center">  </td>
+              <td width="20%" align="center"  nowrap> 路由策略 </td>
+              <td align="center">  </td>
+            </tr>
+            <tr height=70>
+              <td width="20%" align="center" nowrap > 是否海外POP点 </td>
+              <td align="center"> 否 </td>
+              <td width="20%" align="center"  nowrap> 备注 </td>
+              <td align="center"> &nbsp; </td>
+            </tr>
+            <tr height=30>
+              <td width="20%" align="center" nowrap > OptionA客户接入端口号 </td>
+              <td align="center"> &nbsp; </td>
+              <td width="20%" align="center"  nowrap> OptionA逻辑子端口号 </td>
+              <td align="center"> &nbsp; </td>
+            </tr>
+            <tr height=30>
+              <td width="20%" align="center" nowrap > OptionASW与CN2 PE互联中继 </td>
+              <td align="center"> &nbsp; </td>
+              <td width="20%" align="center"  nowrap> OptionAPE下连端口 </td>
+              <td align="center"> &nbsp; </td>
+            </tr>
+            <tr height=30>
+              <td width="20%" align="center" nowrap > 是否未完成回单 </td>
+              <td align="center"> PE:是 CE:否 </td>
+              <td width="20%" align="center"  nowrap> 产品实例号 </td>
+              <td align="center">  </td>
+            </tr>
+            <tr height=30>
+              <td width="20%" align="center" nowrap > 是否IPv6协议 </td>
+              <td align="center">  </td>
+              <td width="20%" align="center"  nowrap> IPV6 站点路由数 </td>
+              <td align="center">  </td>
+            </tr>
+            <tr height=30>
+              <td width="20%" align="center" nowrap > PE/CE间路由协议(IPv6) </td>
+              <td align="center">   </td>
+              <td width="20%" align="center"  nowrap> 客户IPv6子网地址段/掩码 </td>
+              <td align="center"> </td>
+            </tr>
+            <tr height=30>
+              <td width="20%" align="center" nowrap > PE路由器IPv6地址 </td>
+              <td align="center">  </td>
+              <td width="20%" align="center"  nowrap> IPV6 CE IP地址 </td>
+              <td align="center">   </td>
+            </tr>
+            <tr height=30>
+              <td width="20%" align="center" nowrap > RtExportIPV6 </td>
+              <td align="center">  </td>
+              <td width="20%" align="center"  nowrap> RtImportIPV6 </td>
+              <td align="center">  </td>
+            </tr>
+            <tr height=30>
+            	<td width="20%" align="center" nowrap > 集团流水号： </td>
+              <td align="center">
+            </tr>
+        </table>
+        <table width="100%">
+          <TR>
+            <TD height=30 width="15%" align="right"><FONT face=宋体>打印人：</FONT> </TD>
+            <TD height=30 width="35%" align="left"><FONT face=宋体>史希洋</FONT> </TD>
+            <TD height=30 align="right" width="25%"><FONT face=宋体>打印时间：</FONT> </TD>
+            <TD height=30 align="left" width="25%"> 2019-07-17 19:04:57 </TD>
+          </TR>
+        </TABLE></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+	<div class="PageNext"></div>
+﻿
+<TABLE cellSpacing=0 cellPadding=0 width=630 align=center border=0>
+  <TBODY>
+    <TR>
+      <TD><TABLE cellSpacing=0 cellPadding=2 width="100%" border=0>
+          <TBODY>
+            <TR>
+              <TD align=center height="25"  width="100%"><h2> <FONT face=宋体>链路客户信息
+                   </FONT> </h2></TD>
+            </TR>
+          </TBODY>
+        </TABLE></TD>
+    </TR>
+    <TR>
+      <TD>
+       <TABLE  width="100%">
+          <tr>
+              <td align="right"  width="15%" nowrap> 金卡编号： </td>
+              <td height=30  width="20%"></td>
+			  <td align="right"  width="10%" nowrap> 集团分群一层： </td>
+              <td height=30  width="20%"></td>
+			  <td align="right"  width="15%" nowrap> 集团分群二层： </td>
+              <td height=30  width="20%" colspan="3"></td>
+            </tr>
+            </TABLE>
+      <table  width="100%">
+          <TR>
+            <TD height=22 align="left" width="20%" ><FONT face=宋体> 链路集团名称： </FONT> </TD>
+          </TR>
+          <TR>
+            <TD height=22 align="left" width="20%" ><FONT face=宋体> 链路编号：M1130001 </FONT> &nbsp;&nbsp;&nbsp;
+              链路标签： </TD>
+          </TR>
+        </TABLE>
+        <table  width="100%">
+          <TR>
+            <TD height=22 align="left" width="20%" ><FONT face=宋体> 客 户 信 息： </FONT> </TD>
+          </TR>
+        </TABLE>
+        <TABLE style="FONT-SIZE: x-small; BORDER-COLLAPSE: collapse"
+								borderColor=#111111 cellSpacing=0 cellPadding=2 width="100%"
+								border=1>
+          <TBODY>
+            <tr  height=30>
+              <td width="20%" align="center"  > 客户名称 </td>
+              <td width="20%" align="center"  > 客户地址 </td>
+              <td width="20%" align="center"  > 联系人 </td>
+              <td width="20%" align="center"  > 联系电话 </td>
+              <td width="20%" align="center"  > 客户类型 </td>
+            </tr>
+            <tr height=30>
+              <td >  </td>
+              <td >  </td>
+              <td >  </td>
+              <td >  </td>
+              <td >  </td>
+            </tr>
+        </table>
+        <table  width="100%">
+          <TR>
+            <TD height=22 align="left" width="20%" ><FONT face=宋体> 起始设备信息： </FONT> </TD>
+          </TR>
+        </TABLE>
+        <TABLE style="FONT-SIZE: x-small; BORDER-COLLAPSE: collapse"
+								borderColor=#111111 cellSpacing=0 cellPadding=2 width="100%"
+								border=1>
+          <TBODY>
+            <tr  height=30>
+              <td width="25%" align="center"  nowrap> 所属客户 </td>
+              <td width="20%" align="center" nowrap > 使用单位联系人 </td>
+              <td width="15%" align="center"  nowrap> 使用单位联系电话 </td>
+              <td width="25%" align="center"  nowrap> 设备维护单位名称 </td>
+              <td width="15%" align="center"  nowrap> 设备维护单位联系人 </td>
+            </tr>
+            <tr height=30>
+              <td >  </td>
+              <td >  </td>
+              <td >  </td>
+              <td >  </td>
+              <td >  </td>
+            </tr>
+        </table>
+        <table  width="100%">
+          <TR>
+            <TD height=22 align="left" width="20%" ><FONT face=宋体> 起始端口信息： </FONT> </TD>
+          </TR>
+        </TABLE>
+        <TABLE style="FONT-SIZE: x-small; BORDER-COLLAPSE: collapse"
+								borderColor=#111111 cellSpacing=0 cellPadding=2 width="100%"
+								border=1>
+          <TBODY>
+            <tr  height=30>
+              <td width="15%" align="center"  nowrap> 用户维护界面 </td>
+              <td width="15%" align="center"  nowrap> 用户要求接口类型 </td>
+              <td width="15%" align="center" nowrap > 协议转换器 </td>
+              <td width="15%" align="center"  nowrap> 维护信息 </td>
+              <td width="15%" align="center"  nowrap> 尾纤长度 </td>
+              <td width="10%" align="center"  nowrap> 机电特性 </td>
+              <td width="15%" align="center"  nowrap> 落低机房地址 </td>
+            </tr>
+            <tr height=30>
+              <td >  </td>
+              <td >  </td>
+              <td >  </td>
+              <td >  </td>
+              <td >  </td>
+              <td >  </td>
+              <td >  </td>
+            </tr>
+        </table>
+        <table  width="100%">
+          <TR>
+            <TD height=22 align="left" width="20%" ><FONT face=宋体> 终止设备信息： </FONT> </TD>
+          </TR>
+        </TABLE>
+        <TABLE style="FONT-SIZE: x-small; BORDER-COLLAPSE: collapse"
+								borderColor=#111111 cellSpacing=0 cellPadding=2 width="100%"
+								border=1>
+          <TBODY>
+            <tr  height=30>
+              <td width="25%" align="center"  nowrap> 所属客户 </td>
+              <td width="20%" align="center" nowrap > 使用单位联系人 </td>
+              <td width="15%" align="center"  nowrap> 使用单位联系电话 </td>
+              <td width="25%" align="center"  nowrap> 设备维护单位名称 </td>
+              <td width="15%" align="center"  nowrap> 设备维护单位联系人 </td>
+            </tr>
+            <tr height=30>
+              <td >  </td>
+              <td >  </td>
+              <td >  </td>
+              <td >  </td>
+              <td >  </td>
+            </tr>
+        </table>
+        <table  width="100%">
+          <TR>
+            <TD height=22 align="left" width="20%" ><FONT face=宋体> 终止端口信息： </FONT> </TD>
+          </TR>
+        </TABLE>
+        <TABLE style="FONT-SIZE: x-small; BORDER-COLLAPSE: collapse"
+								borderColor=#111111 cellSpacing=0 cellPadding=2 width="100%"
+								border=1>
+          <TBODY>
+            <tr  height=30>
+              <td width="15%" align="center"  nowrap> 用户维护界面 </td>
+              <td width="15%" align="center"  nowrap> 用户要求接口类型 </td>
+              <td width="15%" align="center" nowrap > 协议转换器 </td>
+              <td width="15%" align="center"  nowrap> 维护信息 </td>
+              <td width="15%" align="center"  nowrap> 尾纤长度 </td>
+              <td width="10%" align="center"  nowrap> 机电特性 </td>
+              <td width="15%" align="center"  nowrap> 落低机房地址 </td>
+            </tr>
+            <tr height=30>
+              <td >  </td>
+              <td >  </td>
+              <td >  </td>
+              <td >  </td>
+              <td >  </td>
+              <td >  </td>
+              <td >  </td>
+            </tr>
+        </table>
+        <table width="100%">
+          <TR>
+            <TD height=30 width="15%" align="right"><FONT face=宋体>打印人：</FONT> </TD>
+            <TD height=30 width="35%" align="left"><FONT face=宋体>史希洋</FONT> </TD>
+            <TD height=30 align="right" width="25%"><FONT face=宋体>打印时间：</FONT> </TD>
+            <TD height=30 align="left" width="25%"> 2019-07-17 19:04:57 </TD>
+          </TR>
+        </TABLE></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+	<div class="PageNext"></div>
+﻿
+<TABLE cellSpacing=0 cellPadding=0 width=630 align=center border=0>
+  <TBODY>
+    <TR>
+      <TD><TABLE cellSpacing=0 cellPadding=2 width="100%" border=0>
+          <TBODY>
+            <TR>
+              <TD align=center height="25"  width="100%"><h2> <FONT face=宋体> 
+                  电 路
+                   链 路 表
+                   </FONT> </h2></TD>
+            </TR>
+          </TBODY>
+        </TABLE></TD>
+    </TR>
+    <TR>
+      <TD>
+       <TABLE  width="100%">
+          <tr>
+              <td align="right"  width="15%" nowrap> 金卡编号： </td>
+              <td height=30  width="20%"></td>
+			  <td align="right"  width="10%" nowrap> 集团分群一层： </td>
+              <td height=30  width="20%"></td>
+			  <td align="right"  width="15%" nowrap> 集团分群二层： </td>
+              <td height=30  width="20%" colspan="3"></td>
+            </tr>
+            </TABLE>
+      <table  width="100%">
+          <TR>
+            <TD height=22 align="left" width="20%" ><FONT face=宋体> 移机 </FONT> </TD>
+          </TR>
+          <TR>
+            <TD height=22 align="left" width="20%" ><FONT face=宋体> 链路数: 
+             2  </FONT> </TD>
+          </TR>
+        </TABLE>
+        <TABLE style="FONT-SIZE: x-small; BORDER-COLLAPSE: collapse"
+								borderColor=#111111 cellSpacing=0 cellPadding=2 width="100%"
+								border=1>
+          <TBODY>
+            <tr  height=30>
+              <td align="center"  nowrap> 序号 </td>
+              <td  align="center"  nowrap> 链路编号 </td>
+              <td  align="center"  nowrap title="标志/业务类型"> 标志/类型 </td>
+              <td  align="center"  nowrap> 起始端 </td>
+              <td  align="center"  nowrap> 终止端 </td>
+              <td  align="center"  nowrap> 经过系统(A端) </td>
+              <td align="center"  nowrap> 转接速率 </td>
+              <td  align="center"  nowrap> 经过系统(Z端) </td>
+              <td  align="center" nowrap > W/P </td>
+              <td align="center"  nowrap> 路由信息 </td>
+              <td  align="center"  nowrap title="业务属性"> 属性 </td>
+            </tr>
+          <tr height=30>
+            <td > 1 </td>
+            <td > 澳尼路88号-南汇信息园区30N0006<br>
+              标签：
+              (割接后)
+            <td > 普通链路<br>
+               </td>
+            <td > 中国农业银行股份有限公司信用卡中心澳尼路U1 </td>
+            <td > 信息园区NGN/Z </td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td > LHCL/U1-XXYQN/Z </td>
+            <td >&nbsp;</td>
+          </tr>
+          <tr height=30>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >农业银行数据中心/华为METRO1K-1101(对用户)<br>
+              SH03\1\IU4\43\双向电\\2M\\&nbsp; </td>
+            <td > </td>
+            <td ><br>
+              &nbsp; </td>
+            <td >w&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+          </tr>
+          <tr height=30>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >农业银行数据中心/华为METRO1K-1101(对用户)<br>
+              SH03\1\IU1\1\FC\\155M\\&nbsp; </td>
+            <td >
+              VC12
+               </td>
+            <td >金桥T/华为METRO3K-125<br>
+              SH01\1\IU5(5)\3\FC\\155M\\&nbsp; </td>
+            <td >w&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+          </tr>
+          <tr height=30>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >金桥T/华为METRO3K-125<br>
+              SH01\1\IU8(10)\1\FC\\2.5G\\&nbsp; </td>
+            <td >
+              VC12
+               </td>
+            <td >云莲T/华为METRO5K-102<br>
+              SH01\1\LIU1(1)\2\FC\\2.5G\\&nbsp; </td>
+            <td >w&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+          </tr>
+          <tr height=30>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >云莲T/华为METRO3K-110<br>
+              SH01\2\IU8(10)\1\FC\\2.5G\\&nbsp; </td>
+            <td >
+              VC12
+               </td>
+            <td >云莲T/华为METRO5K-102<br>
+              SH01\1\3\1\FC\\2.5G\\&nbsp; </td>
+            <td >w&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+          </tr>
+          <tr height=30>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >云莲T/华为METRO3K-110<br>
+              SH01\2\IU10(12)\1\双向电\\155M\\&nbsp; </td>
+            <td >
+              VC12
+               </td>
+            <td >YL441<br>
+              SA20\1(PSA7)\2\4\双向电\\155M\\&nbsp; </td>
+            <td >w&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+          </tr>
+          <tr height=30>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >YL441<br>
+              SA20\2(PSA8)\7\3\双向电\\155M\\&nbsp; </td>
+            <td >
+              VC12
+               </td>
+            <td >STOSV9XXYQ8A41/01<br>
+              SA01\1\LS1\1\FC\\10G\\&nbsp; </td>
+            <td >w&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+          </tr>
+          <tr height=30>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >8TG1<br>
+              A04-04-05&nbsp; </td>
+            <td >
+              VC12
+               </td>
+            <td >STOSV9XXYQ8A41/01<br>
+              SA01\1\TS3(PB3)\4\FC\\155M\\&nbsp; </td>
+            <td >w&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+          </tr>
+          <tr height=30>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >8TG1<br>
+              A04-04-05-62&nbsp; </td>
+            <td > </td>
+            <td ><br>
+              &nbsp; </td>
+            <td >w&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+          </tr>
+          
+          
+          
+          <tr height=30>
+            <td > 2 </td>
+            <td > 澳尼路88号-南汇信息园区30N0007<br>
+              标签：
+              (割接后)
+            <td > 普通链路<br>
+               </td>
+            <td > 中国农业银行股份有限公司信用卡中心澳尼路U1 </td>
+            <td > 信息园区NGN/Z </td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td > LHCL/U1-XXYQN/Z </td>
+            <td >&nbsp;</td>
+          </tr>
+          <tr height=30>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >农业银行数据中心/华为METRO1K-1101(对用户)<br>
+              SH03\1\IU4\29\双向电\\2M\\&nbsp; </td>
+            <td > </td>
+            <td ><br>
+              &nbsp; </td>
+            <td >w&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+          </tr>
+          <tr height=30>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >农业银行数据中心/华为METRO1K-1101(对用户)<br>
+              SH03\1\IU1\1\FC\\155M\\&nbsp; </td>
+            <td >
+              VC12
+               </td>
+            <td >金桥T/华为METRO3K-125<br>
+              SH01\1\IU5(5)\3\FC\\155M\\&nbsp; </td>
+            <td >w&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+          </tr>
+          <tr height=30>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >金桥T/华为METRO3K-125<br>
+              SH01\1\IU8(10)\1\FC\\2.5G\\&nbsp; </td>
+            <td >
+              VC12
+               </td>
+            <td >云莲T/华为METRO5K-102<br>
+              SH01\1\LIU1(1)\2\FC\\2.5G\\&nbsp; </td>
+            <td >w&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+          </tr>
+          <tr height=30>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >云莲T/华为METRO3K-110<br>
+              SH01\2\IU8(10)\1\FC\\2.5G\\&nbsp; </td>
+            <td >
+              VC12
+               </td>
+            <td >云莲T/华为METRO5K-102<br>
+              SH01\1\3\1\FC\\2.5G\\&nbsp; </td>
+            <td >w&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+          </tr>
+          <tr height=30>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >云莲T/华为METRO3K-110<br>
+              SH01\2\IU10(12)\1\双向电\\155M\\&nbsp; </td>
+            <td >
+              VC12
+               </td>
+            <td >YL441<br>
+              SA20\1(PSA7)\2\4\双向电\\155M\\&nbsp; </td>
+            <td >w&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+          </tr>
+          <tr height=30>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >云莲T_贝尔1678-0101<br>
+              BA01\1\17\2\FC\\10G\\&nbsp; </td>
+            <td >
+              VC12
+               </td>
+            <td >YL441<br>
+              SA11\2(PSA9)\8\3\双向电\\155M\\&nbsp; </td>
+            <td >w&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+          </tr>
+          <tr height=30>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >信息园区传输中心T_贝尔1660-0501<br>
+              BA05\1\25\1\FC\\10G\\&nbsp; </td>
+            <td >
+              VC12
+               </td>
+            <td >云莲T_贝尔1678-0101<br>
+              BA01\1\5\1\FC\\10G\\&nbsp; </td>
+            <td >w&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+          </tr>
+          <tr height=30>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >8TG1<br>
+              A05-03-07&nbsp; </td>
+            <td >
+              VC12
+               </td>
+            <td >信息园区传输中心T_贝尔1660-0501<br>
+              BA05\1\19(38)\8\FC\\155M\\&nbsp; </td>
+            <td >w&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+          </tr>
+          <tr height=30>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >8TG1<br>
+              A05-03-07-47&nbsp; </td>
+            <td > </td>
+            <td ><br>
+              &nbsp; </td>
+            <td >w&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+          </tr>
+          
+          
+          
+          <tr height=30>
+            <td > 3 </td>
+            <td > <br>
+              标签：
+              (割接后)
+            <td > <br>
+               </td>
+            <td >  </td>
+            <td >  </td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >  </td>
+            <td >&nbsp;</td>
+          </tr>
+          
+          <tr height=30>
+            <td > 3 </td>
+            <td > 银城路9号-南汇信息园区30N0011<br>
+              标签：
+              (割接前)
+            <td > 普通链路<br>
+               </td>
+            <td > 中国农业银行股份有限公司银城路U1 </td>
+            <td > 信息园区NGN/Z </td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td > ZGNYY85/U1-XXYQN/Z </td>
+            <td >&nbsp;</td>
+          </tr>
+          <tr height=30>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >农业银行/华为OSN1500-18551(对用户)<br>
+              SH01\1\7\11\双向电\2M&nbsp; </td>
+            <td > </td>
+            <td ><br>
+              &nbsp; </td>
+            <td >w&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+          </tr>
+          <tr height=30>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >农业银行/华为OSN1500-18551(对用户)<br>
+              SH01\1\4\1\FC\2.5G&nbsp; </td>
+            <td >
+              VC12
+               </td>
+            <td >富都T1/华为OSN7500-18119<br>
+              SH03\1\5\2\FC\2.5G&nbsp; </td>
+            <td >w&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+          </tr>
+          <tr height=30>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >富都T1/华为OSN7500-18119<br>
+              SH03\1\11\1\FC\10G&nbsp; </td>
+            <td >
+              VC12
+               </td>
+            <td >康健D1/华为OSN7500-18304<br>
+              SH02\1\8\1\FC\10G&nbsp; </td>
+            <td >w&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+          </tr>
+          <tr height=30>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >康健D1/华为OSN7500-18304<br>
+              SH02\1\7\1\FC\10G&nbsp; </td>
+            <td >
+              VC12
+               </td>
+            <td >(低阶满)康健T1/华为OSN7500-8711<br>
+              SH05\1\7\2\FC\10G&nbsp; </td>
+            <td >w&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+          </tr>
+          <tr height=30>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >(低阶满)康健T1/华为OSN7500-8711<br>
+              SH05\1\8\1\FC\未知\10G&nbsp; </td>
+            <td >
+              VC12
+               </td>
+            <td >金杨T2/华为OSN7500-8102<br>
+              SH02\1\11\1\FC\\10G\\&nbsp; </td>
+            <td >w&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+          </tr>
+          <tr height=30>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >金杨T2/华为OSN7500-8102<br>
+              SH02\1\15\9\FC\\155M\\&nbsp; </td>
+            <td >
+              VC12
+               </td>
+            <td >STOSV9JY28A41/01<br>
+              SA01\1\TS6(PB6)\13\FC\\155M\\&nbsp; </td>
+            <td >w&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+          </tr>
+          <tr height=30>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >STOSV9XXYQ8A41/01<br>
+              SA01\1\LS2\1\FC\\10G\\&nbsp; </td>
+            <td >
+              VC12
+               </td>
+            <td >STOSV9JY28A41/01<br>
+              SA01\1\LS1\1\FC\\10G\\&nbsp; </td>
+            <td >w&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+          </tr>
+          <tr height=30>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >8TG1<br>
+              A04-04-05&nbsp; </td>
+            <td >
+              VC12
+               </td>
+            <td >STOSV9XXYQ8A41/01<br>
+              SA01\1\TS3(PB3)\4\FC\\155M\\&nbsp; </td>
+            <td >w&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+          </tr>
+          <tr height=30>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >8TG1<br>
+              A04-04-05-62&nbsp; </td>
+            <td > </td>
+            <td ><br>
+              &nbsp; </td>
+            <td >w&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+          </tr>
+          
+          
+          <tr height=30>
+            <td > 4 </td>
+            <td > <br>
+              标签：
+              (割接后)
+            <td > <br>
+               </td>
+            <td >  </td>
+            <td >  </td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >  </td>
+            <td >&nbsp;</td>
+          </tr>
+          
+          <tr height=30>
+            <td > 4 </td>
+            <td > 银城路9号-南汇信息园区30N0012<br>
+              标签：
+              (割接前)
+            <td > 普通链路<br>
+               </td>
+            <td > 中国农业银行股份有限公司银城路U1 </td>
+            <td > 信息园区NGN/Z </td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td > ZGNYY85/U1-XXYQN/Z </td>
+            <td >&nbsp;</td>
+          </tr>
+          <tr height=30>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >农业银行/华为OSN1500-18551(对用户)<br>
+              SH01\1\7\13\双向电\2M&nbsp; </td>
+            <td > </td>
+            <td ><br>
+              &nbsp; </td>
+            <td >w&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+          </tr>
+          <tr height=30>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >农业银行/华为OSN1500-18551(对用户)<br>
+              SH01\1\4\1\FC\2.5G&nbsp; </td>
+            <td >
+              VC12
+               </td>
+            <td >富都T1/华为OSN7500-18119<br>
+              SH03\1\5\2\FC\2.5G&nbsp; </td>
+            <td >w&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+          </tr>
+          <tr height=30>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >富都T1/华为OSN7500-18119<br>
+              SH03\1\11\1\FC\10G&nbsp; </td>
+            <td >
+              VC12
+               </td>
+            <td >(低阶满)华夏T1/华为OSN7500-18108<br>
+              SH06\1\8\1\FC\10G&nbsp; </td>
+            <td >w&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+          </tr>
+          <tr height=30>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >(低阶满)华夏T1/华为OSN7500-18108<br>
+              SH06\1\7\2\FC\10G&nbsp; </td>
+            <td >
+              VC12
+               </td>
+            <td >(低阶满)华夏T/华为OSN7500-7551<br>
+              SH03\1\30\1\FC\10G&nbsp; </td>
+            <td >w&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+          </tr>
+          <tr height=30>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >东昌T1/华为OSN7500-8109<br>
+              SH02\1\30\1\FC\10G&nbsp; </td>
+            <td >
+              VC12
+               </td>
+            <td >(低阶满)华夏T/华为OSN7500-7551<br>
+              SH03\1\11\1\FC\未知\10G&nbsp; </td>
+            <td >w&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+          </tr>
+          <tr height=30>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >东昌T1/华为OSN7500-8109<br>
+              SH02\1\11\1\FC\\10G\\&nbsp; </td>
+            <td >
+              VC12
+               </td>
+            <td >信息园区传输中心T_贝尔1678-0101<br>
+              BA01\1\18\2\FC\未知\10G&nbsp; </td>
+            <td >w&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+          </tr>
+          <tr height=30>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >信息园区传输中心T_贝尔1660-0501<br>
+              BA05\1\25\1\FC\\10G\\&nbsp; </td>
+            <td >
+              VC12
+               </td>
+            <td >信息园区传输中心T_贝尔1678-0101<br>
+              BA01\1\2\2\FC\未知\10G&nbsp; </td>
+            <td >w&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+          </tr>
+          <tr height=30>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >8TG1<br>
+              A05-03-07&nbsp; </td>
+            <td >
+              VC12
+               </td>
+            <td >信息园区传输中心T_贝尔1660-0501<br>
+              BA05\1\19(38)\8\FC\\155M\\&nbsp; </td>
+            <td >w&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+          </tr>
+          <tr height=30>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >8TG1<br>
+              A05-03-07-47&nbsp; </td>
+            <td > </td>
+            <td ><br>
+              &nbsp; </td>
+            <td >w&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+          </tr>
+          
+          
+        </table>
+        
+        
+        
+        <table width="100%">
+          <TR>
+            <TD height=30 width="15%" align="right"><FONT face=宋体>打印人：</FONT> </TD>
+            <TD height=30 width="35%" align="left"><FONT face=宋体>史希洋</FONT> </TD>
+            <TD height=30 align="right" width="25%"><FONT face=宋体>打印时间：</FONT> </TD>
+            <TD height=30 align="left" width="25%"> 2019-07-17 19:04:57 </TD>
+          </TR>
+        </TABLE></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+
+	<div class="PageNext"></div>
+﻿
+<TABLE cellSpacing=0 cellPadding=0 width=630 align=center border=0>
+  <TBODY>
+    <TR>
+      <TD><TABLE cellSpacing=0 cellPadding=2 width="100%" border=0>
+          <TBODY>
+            <TR>
+              <TD align=center height="25"  width="100%"><h2> <FONT face=宋体>电路软跳接表
+                   </FONT> </h2></TD>
+            </TR>
+          </TBODY>
+        </TABLE></TD>
+    </TR>
+    <TR>
+      <TD>
+      <TABLE  width="100%">
+          <tr>
+              <td align="right"  width="15%" nowrap> 金卡编号： </td>
+              <td height=30  width="20%"></td>
+			  <td align="right"  width="10%" nowrap> 集团分群一层： </td>
+              <td height=30  width="20%"></td>
+			  <td align="right"  width="15%" nowrap> 集团分群二层： </td>
+              <td height=30  width="20%" colspan="3"></td>
+            </tr>
+            </TABLE>
+      <table  width="100%">
+          <TR>
+            <TD height=22 align="left" width="20%" ><FONT face=宋体> 链路数：
+              1
+               &nbsp;&nbsp;&nbsp;
+              移机 </FONT> </TD>
+          </TR>
+        </TABLE>
+        <TABLE style="FONT-SIZE: x-small; BORDER-COLLAPSE: collapse"
+								borderColor=#111111 cellSpacing=0 cellPadding=2 width="100%"
+								border=1>
+          <TBODY>
+            <tr  height=30>
+              <td  align="center" nowrap > 序号 </td>
+              <td align="center"  nowrap> 电路编号 </td>
+              <td  align="center" nowrap title="标志/业务类型"> 标志/类型 </td>
+              <td  align="center" nowrap > 设备 </td>
+              <td align="center" nowrap > 端口(速率) </td>
+              <td  align="center" nowrap > 通道/时隙 </td>
+              <td  align="center"  nowrap> 设备 </td>
+              <td align="center"  nowrap> 端口(速率) </td>
+              <td  align="center" nowrap > W/P </td>
+              <td  align="center" nowrap > 路由 </td>
+            </tr>
+          <tr height=30>
+            <td >1</td>
+            <td > M1130001<br>
+              标签：
+ </td>
+            <td ><br>
+               </td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >&nbsp;</td>
+            <td >  </td>
+          </tr>
+          
+          
+        </table>
+        <table width="100%">
+          <TR>
+            <TD height=30 width="15%" align="right"><FONT face=宋体>打印人：</FONT> </TD>
+            <TD height=30 width="35%" align="left"><FONT face=宋体>史希洋</FONT> </TD>
+            <TD height=30 align="right" width="25%"><FONT face=宋体>打印时间：</FONT> </TD>
+            <TD height=30 align="left" width="25%"> 2019-07-17 19:04:57 </TD>
+          </TR>
+        </TABLE></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+	<div class="PageNext"></div>
+﻿
+<TABLE cellSpacing=0 cellPadding=0 width=630 align=center border=0>
+  <TBODY>
+    <TR>
+      <TD><TABLE cellSpacing=0 cellPadding=2 width="100%" border=0>
+          <TBODY>
+            <TR>
+              <TD align=center height="25"  width="100%"><h2> <FONT face=宋体> 
+                  DDF
+                  跳 接 表
+                  
+                  </FONT> </h2></TD>
+            </TR>
+          </TBODY>
+        </TABLE></TD>
+    </TR>
+	<TR>
+	<TD>
+	<TABLE  width="100%">
+          <tr>
+              <td align="right"  width="15%" nowrap> 金卡编号： </td>
+              <td height=30  width="20%"></td>
+			  <td align="right"  width="10%" nowrap> 集团分群一层： </td>
+              <td height=30  width="20%"></td>
+			  <td align="right"  width="15%" nowrap> 集团分群二层： </td>
+              <td height=30  width="20%" colspan="3"></td>
+            </tr>
+            </TABLE>
+	</TD>
+	</TR>
+  <TR>
+    <TD><table  width="100%">
+        <TR>
+          <TD height=22 align="left" width="80%" ><FONT face=宋体>
+拆除
+          </FONT> </TD>
+          <TD height=22 align="left" width="20%" ><FONT face=宋体> Table 1/1</FONT> </TD>
+        </TR>
+        <TR>
+          <TD height=22 align="left"  colspan="2" ><FONT face=宋体> 中国农业银行股份有限公司银城路U1 </FONT> &nbsp;&nbsp;&nbsp;
+            机房地址：银城路9号A楼18层机房 </TD>
+        </TR>
+      </TABLE>
+      <TABLE style="FONT-SIZE: x-small; BORDER-COLLAPSE: collapse"
+													borderColor=#111111 cellSpacing=0 cellPadding=2 width="100%"
+													border=1>
+        <TBODY>
+          <tr  height=30>
+            <td  align="center"  width="5%" nowrap> 序号 </td>
+            <td  align="center"  nowrap  width="10%" > 链路编号</td>
+            <td  align="center"  nowrap  width="10%" > 标志 </td>
+            <td  align="center"  nowrap  width="15%" > 路由信息 </td>
+            <td  align="center" nowrap  width="15%"> 起始设备端口(速率) </td>
+            <td  align="center" nowrap  width="30%"> DDF《---》DDF </td>
+            <td  align="center"  nowrap  width="15%"> 终止设备端口(速率) </td>
+             <td  align="center"  nowrap  width="15%"> CE互联IP地址 </td>
+            <td  align="center"  nowrap  width="15%"> PE互联IP地址 </td>
+             </tr>
+        
+        <tr height=30>
+          <td >3</td>
+          <td >JG190834197<br/>
+            银城路9号-南汇信息园区30N0011 </td>
+          <td > 普通链路 </td>
+          <td > ZGNYY85/U1-XXYQN/Z </td>
+          <td >中国农业银行股份有限公司信用卡中心-20686000 1</td>
+          <td > 
+			1---->NYYYYCDDF(SH01反面)-1-11<br>
+		  
+			1<----NYYYYCDDF(SH01反面)-3-11
+          </td>
+          <td >农业银行/华为OSN1500-18551(对用户) SH01\1\7\11\双向电\2M</td>
+           <td ></td>
+            <td ></td>
+           </tr>
+        <tr height=30>
+          <td >4</td>
+          <td >JG190834197<br/>
+            银城路9号-南汇信息园区30N0012 </td>
+          <td > 普通链路 </td>
+          <td > ZGNYY85/U1-XXYQN/Z </td>
+          <td >中国农业银行股份有限公司信用卡中心-20686000 2</td>
+          <td > 
+			2---->NYYYYCDDF(SH01反面)-1-13<br>
+		  
+			2<----NYYYYCDDF(SH01反面)-3-13
+          </td>
+          <td >农业银行/华为OSN1500-18551(对用户) SH01\1\7\13\双向电\2M</td>
+           <td ></td>
+            <td ></td>
+           </tr>
+      </table></TD>
+  </TR>
+  
+  <TR>
+    <TD><table  width="100%">
+        <TR>
+          <TD height=22 align="left" width="80%" ><FONT face=宋体>
+安装
+          </FONT> </TD>
+          <TD height=22 align="left" width="20%" ><FONT face=宋体> Table 1/2</FONT> </TD>
+        </TR>
+        <TR>
+          <TD height=22 align="left"  colspan="2" ><FONT face=宋体> 中国农业银行数据中心澳尼路U1 </FONT> &nbsp;&nbsp;&nbsp;
+            机房地址：澳尼路88号3层 </TD>
+        </TR>
+      </TABLE>
+      <TABLE style="FONT-SIZE: x-small; BORDER-COLLAPSE: collapse"
+													borderColor=#111111 cellSpacing=0 cellPadding=2 width="100%"
+													border=1>
+        <TBODY>
+          <tr  height=30>
+            <td  align="center"  width="2%" nowrap> 序号 </td>
+            <td  align="center"  nowrap  width="10%" > 链路编号 </td>
+            <td  align="center"  nowrap  width="8%" > 标志 </td>
+            <td  align="center"  nowrap  width="10%" > 路由信息 </td>
+            <td  align="center" nowrap  width="15%"> 起始设备端口(速率) </td>
+            <td  align="center" nowrap  width="30%"> DDF《---》DDF </td>
+            <td  align="center"  nowrap  width="15%"> 终止设备端口(速率) </td>
+            <td  align="center"  nowrap  width="15%"> CE互联IP地址 </td>
+            <td  align="center"  nowrap  width="15%"> PE互联IP地址 </td>
+            <td  align="center"  nowrap  width="10%" > 条码值 </td>
+             </tr>
+        
+        <tr height=30>
+          <td >1</td>
+          <td >JG190834197<br/>
+            澳尼路88号-南汇信息园区30N0006 </td>
+          <td > 普通链路 </td>
+          <td > LHCL/U1-XXYQN/Z </td>
+          <td >中国农业银行股份有限公司信用卡中心-20686000 1</td>
+          <td > 
+			1---->LHCLDDF_杂项架02-3/19 (S)<br>
+		  
+			1<----LHCLDDF_杂项架02-7/19 (R)
+          </td>
+          <td >农业银行数据中心/华为METRO1K-1101(对用户) SH03\1\IU4\43\双向电\\2M\\</td>
+           <td ></td>
+            <td ></td>
+           <td >100015076455</br>100015076456</td>
+           </tr>
+        <tr height=30>
+          <td >2</td>
+          <td >JG190834197<br/>
+            澳尼路88号-南汇信息园区30N0007 </td>
+          <td > 普通链路 </td>
+          <td > LHCL/U1-XXYQN/Z </td>
+          <td >中国农业银行股份有限公司信用卡中心-20686000 2</td>
+          <td > 
+			2---->LHCLDDF_杂项架02-3/5 (S)<br>
+		  
+			2<----LHCLDDF_杂项架02-7/5 (R)
+          </td>
+          <td >农业银行数据中心/华为METRO1K-1101(对用户) SH03\1\IU4\29\双向电\\2M\\</td>
+           <td ></td>
+            <td ></td>
+           <td >100015076751</br>100015076750</td>
+           </tr>
+      </table></TD>
+  </TR>
+  <TR>
+    <TD><table  width="100%">
+        <TR>
+          <TD height=22 align="left" width="80%" ><FONT face=宋体>
+安装
+          </FONT> </TD>
+          <TD height=22 align="left" width="20%" ><FONT face=宋体> Table 2/2</FONT> </TD>
+        </TR>
+        <TR>
+          <TD height=22 align="left"  colspan="2" ><FONT face=宋体> 中国农业银行股份有限公司信用卡中心澳尼路U1 </FONT> &nbsp;&nbsp;&nbsp;
+            机房地址：澳尼路88号 </TD>
+        </TR>
+      </TABLE>
+      <TABLE style="FONT-SIZE: x-small; BORDER-COLLAPSE: collapse"
+													borderColor=#111111 cellSpacing=0 cellPadding=2 width="100%"
+													border=1>
+        <TBODY>
+          <tr  height=30>
+            <td  align="center"  width="2%" nowrap> 序号 </td>
+            <td  align="center"  nowrap  width="10%" > 链路编号 </td>
+            <td  align="center"  nowrap  width="8%" > 标志 </td>
+            <td  align="center"  nowrap  width="10%" > 路由信息 </td>
+            <td  align="center" nowrap  width="15%"> 起始设备端口(速率) </td>
+            <td  align="center" nowrap  width="30%"> DDF《---》DDF </td>
+            <td  align="center"  nowrap  width="15%"> 终止设备端口(速率) </td>
+            <td  align="center"  nowrap  width="15%"> CE互联IP地址 </td>
+            <td  align="center"  nowrap  width="15%"> PE互联IP地址 </td>
+            <td  align="center"  nowrap  width="10%" > 条码值 </td>
+             </tr>
+        
+        <tr height=30>
+          <td >1</td>
+          <td >JG190834197<br/>
+            澳尼路88号-南汇信息园区30N0006 </td>
+          <td > 普通链路 </td>
+          <td > LHCL/U1-XXYQN/Z </td>
+          <td >中国农业银行股份有限公司信用卡中心-20686000 1</td>
+          <td > 
+			1---->LHCLDDF_杂项架02-3/19 (S)<br>
+		  
+			1<----LHCLDDF_杂项架02-7/19 (R)
+          </td>
+          <td >农业银行数据中心/华为METRO1K-1101(对用户) SH03\1\IU4\43\双向电\\2M\\</td>
+           <td ></td>
+            <td ></td>
+           <td >100015076455</br>100015076456</td>
+           </tr>
+        <tr height=30>
+          <td >2</td>
+          <td >JG190834197<br/>
+            澳尼路88号-南汇信息园区30N0007 </td>
+          <td > 普通链路 </td>
+          <td > LHCL/U1-XXYQN/Z </td>
+          <td >中国农业银行股份有限公司信用卡中心-20686000 2</td>
+          <td > 
+			2---->LHCLDDF_杂项架02-3/5 (S)<br>
+		  
+			2<----LHCLDDF_杂项架02-7/5 (R)
+          </td>
+          <td >农业银行数据中心/华为METRO1K-1101(对用户) SH03\1\IU4\29\双向电\\2M\\</td>
+           <td ></td>
+            <td ></td>
+           <td >100015076751</br>100015076750</td>
+           </tr>
+      </table></TD>
+  </TR>
+  
+  
+  <TR>
+              <TD align=center height="25"  width="100%"><h3> <FONT color="red" face=宋体> 
+                  拆除同机房未拆除链路列表 </FONT> </h3></TD>
+   </TR>
+  <TR>
+    <TD><table  width="100%">
+        <TR>
+          <TD height=22 align="left" width="80%" ><FONT face=宋体>
+          拆除(已登记未拆除链路)
+          </FONT> </TD>
+          <TD height=22 align="left" width="20%" ><FONT face=宋体> Table 1/2</FONT> </TD>
+        </TR>
+        <TR>
+          <TD height=22 align="left"  colspan="2" ><FONT face=宋体> 中国农业银行数据中心澳尼路U1 </FONT> &nbsp;&nbsp;&nbsp;
+            机房地址：澳尼路88号3层 </TD>
+        </TR>
+      </TABLE>
+      <TABLE style="FONT-SIZE: x-small; BORDER-COLLAPSE: collapse"
+													borderColor=#111111 cellSpacing=0 cellPadding=2 width="100%"
+													border=1>
+        <TBODY>
+          <tr  height=30>
+            <td  align="center"  width="5%" nowrap>序号</td>
+            <td  align="center"  nowrap  width="10%" >工单编号</td>
+					<td  align="center" nowrap  width="15%"> 起始设备端口(速率) </td>
+					<td  align="center" nowrap  width="30%"> DDF《---》DDF </td>
+					<td  align="center"  nowrap  width="15%"> 终止设备端口(速率) </td>
+			<td  align="center"  nowrap  width="15%" >登记人信息</td>
+			<td  align="center"  nowrap  width="10%" >登记原因</td>
+            <td  align="center"  nowrap  width="15%" >登记时间</td>
+			</tr>
+        
+        <tr height=30>
+          <td >1</td>
+          <td >OD180728063</td>
+			  <td >上海金融期货信息技术有限公司澳尼路-FIBER FIBER-2</td>
+			  <td > FIBER-2---->P光00637-0010-1-6<br>
+				FIBER-2<----P光00637-0010-1-5 </td>
+			  <td >P光00637(0-0010) 5 6</td>
+		  <td >钱吴刚/13801962891/德律康工程工位</td>
+          <td >业主/物业不让拆</td>
+          <td >2019-03-12 10:04:17</td>   
+          </tr>
+        <tr height=30>
+          <td >2</td>
+          <td >OD180738126</td>
+			  <td >上海金融期货信息技术有限公司澳尼路-FIBER FIBER-1</td>
+			  <td > FIBER-1---->P光00637-0010-1-4<br>
+				FIBER-1<----P光00637-0010-1-3 </td>
+			  <td >P光00637(0-0010) 3 4</td>
+		  <td >钱吴刚/13801962891/德律康工程工位</td>
+          <td >机房无法进入</td>
+          <td >2018-12-17 13:38:51</td>   
+          </tr>
+        <tr height=30>
+          <td >3</td>
+          <td >OD180624982</td>
+			  <td >中国农业银行数据中心澳尼路-ATM SIN-O-Y-107748</td>
+			  <td > SIN-O-Y-107748---->P光01416-0004-1-18<br>
+				SIN-O-Y-107748<----P光01416-0004-1-17 </td>
+			  <td >P光01416(0-0004) 17 18</td>
+		  <td >余建军/18918592601/德律康工程工位</td>
+          <td >业主/物业不让拆</td>
+          <td >2018-05-29 14:18:04</td>   
+          </tr>
+        <tr height=30>
+          <td >4</td>
+          <td >OD180615133</td>
+			  <td >中国农业银行数据中心-Router router-2</td>
+			  <td > router-2---->P光01416-0004-1-5<br>
+				router-2<----P光01416-0004-1-6 </td>
+			  <td >P光01416(0-0004) 5 6</td>
+		  <td >余建军/18918592601/德律康工程工位</td>
+          <td >业主/物业不让拆</td>
+          <td >2018-05-29 14:18:46</td>   
+          </tr>
+        <tr height=30>
+          <td >5</td>
+          <td >OD180624979</td>
+			  <td >中国农业银行数据中心澳尼路88号-ATM SIN-O-Y-1047744a</td>
+			  <td > SIN-O-Y-1047744a---->P光03911-1-45<br>
+				SIN-O-Y-1047744a<----P光03911-1-46 </td>
+			  <td >外高桥南-外高桥北(Z)光1 81(Y) 82(Y)</td>
+		  <td >余建军/18918592601/德律康工程工位</td>
+          <td >业主/物业不让拆</td>
+          <td >2018-05-29 14:17:36</td>   
+          </tr>
+        <tr height=30>
+          <td >6</td>
+          <td >OD180624978</td>
+			  <td >农业银行澳尼路-ATM SIN-O-Y-1067372</td>
+			  <td > SIN-O-Y-1067372---->P光03911-1-47<br>
+				SIN-O-Y-1067372<----P光03911-1-48 </td>
+			  <td >外高桥南-外高桥北(Z)光1 83(Y) 84(Y)</td>
+		  <td >余建军/18918592601/德律康工程工位</td>
+          <td >业主/物业不让拆</td>
+          <td >2018-05-29 14:13:25</td>   
+          </tr>
+      </table></TD>
+  </TR>
+   
+  <tr>
+    <td><table width="100%">
+        <TR>
+          <TD height=30 width="15%" align="right"><FONT face=宋体>打印人：</FONT> </TD>
+          <TD height=30 width="35%" align="left"><FONT face=宋体>史希洋</FONT> </TD>
+          <TD height=30 align="right" width="25%"><FONT face=宋体>打印时间：</FONT> </TD>
+          <TD height=30 align="left" width="25%"> 2019-07-17 19:04:57 </TD>
+        </TR>
+      </TABLE></td>
+  </tr>
+ 
+  </TBODY>
+  
+</TABLE>
+<br/>
+<table style="border:none; width:100%;">
+	<tr style="border:none;">
+		<td style="border:none; text-align:center;">
+			<input type="button" class="noprint rich-button" accesskey="P" value="打印(P)" onclick="javascript:window.print(); "/>
+			<input type="button" class="noprint rich-button" accesskey="C" value="关闭(C)" onclick="javascript:window.close();"/>
+			  <input type="button" id="p1" value="条码打印" onclick="print1()" />
+			
+		</td>
+	</tr>
+</table>
+</center>
+</body>
+<script type="text/javascript">
+	 	function print1() { 
+	 	var data="<?xml version=\"1.0\" encoding=\"utf-8\" ?><Data>";	 	
+	 	 	var input = document.getElementsByName('receiving'); 
+	 	    var receive=new Array();
+	 	    var receive1=new Array();
+ 		    for(var i=0;i<input.length;i++){
+    				var re=input[i].value;
+    				receive.push(re);
+    				receive1.push(re);
+    		}
+    		var send=new Array();
+    		var send1=new Array();
+    		var input2 = document.getElementsByName('sending');
+   			for(var i=0;i<input.length;i++){
+    			var se=input2[i].value;
+    			send.push(se);
+    			send1.push(se);
+    		}
+    		var input = document.getElementsByName('raiseDevice');
+    		var raise=new Array();
+    		var raise1=new Array();
+ 		    for(var i=0;i<input.length;i++){
+    				var ra=input[i].innerText;	
+    				var ra1=input[i].innerText;	
+    				var start=ra.indexOf("---->");
+    				if(start>0){
+    				  ra=ra.substring(0,start);	
+    				  ra1=ra1.substring(start+5,ra1.length);	
+    				  raise.push(ra);
+    				  raise1.push(ra1);
+    				}else{
+    				  start=ra.indexOf("<----"); 
+    				  ra=ra.substring(start+5,ra.length);	
+    				  ra1=ra1.substring(0,start);	
+    				  raise.push(ra);
+    				  raise1.push(ra1);
+    				}
+    		}
+    		var input = document.getElementsByName('sinkDevice');
+    		var sink=new Array();
+    		var sink1=new Array();
+ 		    for(var i=0;i<input.length;i++){
+    				var si=input[i].innerText;
+    				var si1=input[i].innerText;
+    				var last=si.indexOf("<----");
+    				if(last>0){
+    				si=si.substring(last+5,si.length);
+    				si1=si1.substring(0,last);
+    				sink.push(si);
+    				sink1.push(si1);
+    				}else{
+    				last=si.indexOf("---->");
+    				si=si.substring(0,last);
+    				si1=si1.substring(last+5,si1.length);
+    				sink.push(si);
+    				sink1.push(si1);
+    				}
+    		}
+    		var inputNO = document.getElementsByName('circuitNo');	
+    		var inputType = document.getElementsByName('jt_bc_code');
+    		var inputName = document.getElementsByName('uDeviceName1');
+    		var inputNOs=new Array();
+    		var texts=new Array();
+    		if(inputNO.length>0){
+    		var text=inputNO[0].value+inputType[0].value+inputName[0].value;
+    		}
+    		for(var i=0;i<inputNO.length;i++){
+    	 	  inputNOs.push(inputNO[i].value);
+    	      texts.push(text);
+    	    }		 
+    		var printTime=document.getElementById('printTime');
+    		var ptime=printTime.innerHTML;
+    		var pt=ptime.lastIndexOf("-");
+    		ptime=ptime.substring(0,pt+3);
+    		var Print="";
+    		for(var i=0;i<receive.length;i++){
+    		var QRCode="<Print><QRCode>"+receive[i]+"</QRCode><PrintType>1001</PrintType><Text>"+receive[i]+ptime+"</Text><Text>"+raise[i]+"</Text></Print>"+
+    		           "<Print><QRCode>"+receive1[i]+"</QRCode><PrintType>1001</PrintType><Text>"+receive1[i]+ptime+"</Text><Text>"+raise1[i]+"</Text></Print>"+
+    		           "<Print><QRCode>"+send[i]+"</QRCode><PrintType>1001</PrintType><Text>"+send[i]+ptime+"</Text><Text>"+sink[i]+"</Text></Print>"+
+    		           "<Print><QRCode>"+send1[i]+"</QRCode><PrintType>1001</PrintType><Text>"+send1[i]+ptime+"</Text><Text>"+sink1[i]+"</Text></Print>";
+    		Print=Print+QRCode;
+    		}
+    		for(var i=0;i<inputNOs.length;i++){
+    		var QRCode="<Print><QRCode>"+inputNOs[i]+"</QRCode><PrintType>1001</PrintType><Text>"+inputNOs[i]+ptime+"</Text><Text>"+texts[i]+"</Text></Print>"   ; 
+    		 Print=Print+QRCode;
+    		}
+    		var  xml=data+Print+"</Data>";
+			loadXML(xml);
+		}
+	</script>
+	<script type="text/javascript">
+		function loadXML(xml) {
+			var openUrl = "LabelPrint.html?r=" + Math.random();
+			var targetWindowStyle = "dialogHeight: 550px; dialogWidth: 550px; center: Yes; help: No; resizable: yes; status: yes; scroll:yes";
+			if (window.navigator.userAgent.indexOf("Chrome") >= 1) {			
+	 			window.open(openUrl,new String(xml),targetWindowStyle);
+	  	  	} else {
+	 			window.showModalDialog(openUrl, new String(xml), targetWindowStyle);
+	  	  	}
+		}
+</script>
+</html>
