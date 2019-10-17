@@ -1,0 +1,36 @@
+用测环境:
+出流水：
+http://fe.ue.sh.ctc.com/ord/ordbizdispatch/dispatch/biz/orderItem/mockIbpTrans/WMX2019090304922239
+报竣：
+http://fe.ue.sh.ctc.com/ord/ordbizdispatch/dispatch/biz/orderItem/mockIbpComplete/WMX2019090304922239
+
+仿真环境：
+出流水：
+http://ord.test.sh.ctc.com:8182/ord/ordbizdispatchapp/dispatch/biz/orderItem/mockIbpTrans/WMX2019090300408451
+报竣：
+http://ord.test.sh.ctc.com:8182/ord/ordbizdispatchapp/dispatch/biz/orderItem/mockIbpComplete/WMX2019090300408451
+
+以上全部get类型
+
+
+
+用测启动订单
+http://fe.ue.sh.ctc.com/ord/ordbizdispatch/dispatch/biz/customerOrder/startProcess
+{
+    "custOrderId": 400124686500,
+    "sourceCustOrderId": 400124686500
+}
+
+
+用测获取订单
+http://fe.ue.sh.ctc.com/ord/ordbizquery//query/biz/qryCustomerOrderAllDetail
+{
+    "custOrderNbr": "WMX2019080100312505",
+    "scopeInfos": [
+      {
+        "scope": "customerOrder",
+        "pageIndex": "0",
+        "pageSize": "5"
+      }
+    ]
+}

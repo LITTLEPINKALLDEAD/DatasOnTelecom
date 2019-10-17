@@ -34,3 +34,8 @@ p7
 http://10.145.206.49:5001/OrderManagement/control/runPFVQuery
 用户名：oms-automation
 密码：passw0rd
+
+新CRM
+地址：http://test.sh.ctc.com
+账号：hebing
+密码：!qazhebing
