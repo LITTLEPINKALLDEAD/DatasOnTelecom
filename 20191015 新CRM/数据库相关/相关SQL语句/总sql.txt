@@ -1,0 +1,160 @@
+客户sql：
+
+select IS_REALNAME,cust_number from customer where cust_type = '1100'; -- 查政企客户
+update customer set IS_REALNAME='1' where cust_number='202110499539'  
+select iccid from prod_inst where acc_num = '18918585073';
+update prod_inst set STATUS_CD = '140001' where acc_num = '13301937171'
+select * from prod_inst where prod_inst_id in(select prod_inst_id from prod_inst_state where stop_type='120000');-- 查停机类型设备号
+select * from cust_addr_rel where BUREAU_NAME is not NULL  -- 客户地址
+select * from cust_addr_rel where cust_id='400000060234';
+update cust_addr_rel set addr_name='上海新村1388弄2号楼6层9室' where CUST_ID='400000060234'; -- 改客户地质
+select * from prod_inst where acc_num ='17301846308'
+select STOP_TYPE from prod_inst_state where PROD_INST_ID in (select PROD_INST_ID from prod_inst where acc_num='17301846308') limit  40;
+select * from prod_inst_rel where rel_type='101300'; -- 根产品关系表
+
+UPDATE customer SET cust_type = '1000' WHERE  cust_id ='48104832' --改政企
+select cust_number from customer where cust_id in(202113056827);
+SELECT ACC_NUM FROM prod_inst WHERE OWNER_CUST_ID IN (
+SELECT OBJ_ID FROM special_list WHERE SUB_SPECIAL_TYPE = 120002 AND PROD_ID = 1000001315) -- 查黑名单根产品类型的设备号
+
+SELECT * FROM prod_inst_state WHERE ACC_NUM='KD2000005047'; -- 查询停机类型
+select SUB_SPECIAL_TYPE from special_list where obj_id=202177409292; -- 查询该客户黑名单类型
+update special_list set SUB_SPECIAL_TYPE = '120002' where obj_id='400000060234'; -- 改黑名单类型
+select * from special_list where  obj_id=4866992; -- 查询该客户是否在黑名单中
+delete  from special_list where obj_id='221958243803'  --移除黑名单
+update special_list set SPECIAL_TYPE = '1200' where obj_id=202125917528;  -- 改黑名单类型
+
+select * from customer where cust_id = '300004861220' -- 根据客户id查
+update customer set IS_REALNAME = '1' WHERE cust_number = '300005098806' -- 根据客户标识改变实名状况
+select STATUS_CD from prod_inst where acc_num ='18901603553' -- 查询根产品状态
+select * from prod_inst_state where prod_inst_id in(select prod_inst_id from prod_inst where ACC_NUM='18918586722') -- 查该设备号停机类型
+select * from prod_inst_state where prod_inst_id='35774478' -- 停机类型表
+SELECT * from prod_inst where  prod_inst_id in (
+SELECT PROD_INST_ID FROM offer_prod_inst_rel where OFFER_INST_ID in 
+(SELECT OFFER_INST_ID from offer_inst where OFFER_id=100000000277379));  limit 100-- 查询资产
+select act_date,prod_inst_id,prod_id from prod_inst where acc_num='18916378428'
+select acc_num from prod_inst where STATUS_CD ='140001'; -- 查预开通设备号
+select * from customer where cust_number=202110271272;  -- 查客户id
+update prod_inst set STATUS_CD ='140001' where acc_num='13331902667'; -- 改预开通设备号
+select * from prod_inst where PROD_INST_ID in
+(SELECT A_PROD_INST_ID from prod_inst_rel WHERE REL_TYPE =100602 and STATUS_CD = 1000); 
+SELECT * from prod_inst where acc_num='13331890387' -- 根据设备号查询
+select * from offer_inst where OWNER_CUST_ID in(select OWNER_CUST_ID from prod_inst where acc_num='13331890387'); -- 该设备号含有的销售品类型
+select * from party_cert  where cert_num='CY1997';  -- 证件号查询
+select * from offer_inst where OWNER_CUST_ID='400000057203'; -- 销售品实例表
+select * from offer_prod_inst_rel -- 销售品产品实例关系表
+select * from prod_inst_state  -- 停机类型表
+SELECT * FROM party_cert  -- 证件类型表
+SELECT cust_number FROM customer WHERE party_id IN (SELECT party_id FROM party_cert WHERE cert_Type='7');     -- 查找客户的证件类型
+SELECT acc_num from prod_inst where STATUS_CD !=110000 and prod_inst_id in(
+(SELECT prod_inst_id from prod_inst_attr where ATTR_ID=990000160013 and ATTR_ID!=990000190080)); 携出设备号
+select table_schema,table_name from information_schema.columns where column_name = 'address_id' -- 根据字段可查询所有库包含该字段的表表
+select * from prod_inst_attr
+select * from prod_inst_attr where prod_inst_id in(select * from prod_inst where acc_num='KD2000017513');
+select a.*,b.* from prod_inst a,prod_inst_attr b where a.prod_inst_id=b.prod_inst_id limit 50; -- 产品实例属性表和产品实例表
+select offer_id,OFFER_INST_ID from offer_inst f,prod_inst p where f.OWNER_CUST_ID=p.OWNER_CUST_ID and acc_num='KD0007211707' and  limit 100;
+SELECT acct_id FROM account WHERE acct_cd='10000004002' -- 查账户标识
+
+cpc sql：
+select * FROM  attr_spec  WHERE   attr_nbr ='RES-C-0023' -- 根据字段状态编码
+select * from  attr_value where attr_id = '10000682' -- 根据属性id查看具体状态类型  
+
+SELECT 
+	s.attr_name,
+	s.attr_desc,
+	v.*
+FROM
+	attr_spec s,
+	attr_value v
+WHERE
+	s.attr_id = v.attr_id
+AND s.attr_name like '%停机%'  -- 查停机类型 
+
+-- 新老产品编码映射
+select * from product_mapping where crm_prod_nbr = '566';
+
+-- 查询产品
+select * from offer where offer_type in(11,10) and status_cd = '1000' and offer_id in (
+select offer_id from offer_prod_rel where prod_id =1000000511) ;-- 修改此id
+-- 新老产品编码映射
+select * from product_mapping where crm_prod_nbr = '524';
+update offer set EXP_DATE='2019-09-07 00:00:00' where OFFER_ID='990000145389955';
+-- 查询产品
+select * from offer where offer_type in(11,10) and status_cd = '1000' and offer_id in (
+select offer_id from offer_prod_rel where prod_id =1000001359) ;-- 修改此id
+
+select * from offer where offer_id in (
+select offer_id from offer_prod_rel where prod_id in (
+select prod_id from product_mapping pm where pm.CRM_PROD_NBR in ('462'))
+and status_cd != '1100')
+
+select * from product where prod_id='' limit 50;  -- 产品表
+select * from product where prod_name  like'%%' limit 50; -- 产品表
+select * from offer where offer_id=''; -- 销售品表
+select * from offer where offer_name like'%%'; -- 销售品表
+select * from prod_rel where Z_PROD_ID='' limit 50; -- 产品关系表
+select * from prod_rel where A_PROD_ID=''; -- 产品关系表
+select * from offer_rel where Z_offer_ID=''; -- 销售品关系表
+select * from offer_rel where A_offer_ID=''; -- 销售品关系表
+select * from product where prod_id in(select A_PROD_ID from prod_rel where Z_PROD_ID='') -- 根据子产品id查询根产品信息
+select * from offer where offer_id in(select A_offer_ID from offer_rel where Z_offer_ID='') -- 根据附属商品id查询销售品品信息
+SELECT b.OFFER_NAME FROM offer_ext a,offer b WHERE OFFER_SUB_TYPE='014'
+AND a.OFFER_ID = b.OFFER_ID -- 查询终补话补等可选包类型,06终，09话
+select * from offer_res_rel where offer_id='166259787332' -- 查询终端配机型status=1000
+
+受理 sql：
+select o.CUST_ORDER_ID,o.CUST_ORDER_NBR,o.STATUS_CD from customer_order o where o.CUST_ORDER_NBR='WMX2019091800434911'-- 受理库用流水单查 CUST_ORDER_ID
+SELECT s.status_cd, s.deal_num, s.batch_task_id, s.file_row_id, s.priority, s.create_date, s.batch_task_source_id, s.random_num
+	FROM batch_task_source s, batch_task t WHERE s.batch_task_id = t.batch_task_id 
+	AND t.batch_task_nbr = 'BATCH2019092351412173' ORDER BY file_row_id;
+ -- 查询批量订单的预处理优先级
+SELECT * from work_order where CUST_ORDER_NBR ='WMX2019101500485915' limit 10;
+SELECT * from work_order where 
+SOURCE_CUST_ORDER_ID ='400800828575' limit 100; 
+SELECT CUST_ORDER_ID from customer_order where CUST_ORDER_NBR='WMX2019102100491323'; -- 订单
+select work_order_id from work_order where cust_order_nbr='WMX2019102100489441'; -- 工单
+SELECT * from ord_mkt_res_inst where SOURCE_CUST_ORDER_ID='400800875389' and MKT_RES_INST_ID='13341691970';
+SELECT * from ord_prod_res_inst_rel where SOURCE_CUST_ORDER_ID='400800875389';
+-- 查看竣工异常
+SELECT msg, OBJ_ID, APPLY_OBJ_SPEC FROM job_log, order_item, customer_order 
+	WHERE job_log.SHARDING_ID = customer_order.CUST_ORDER_ID AND order_item.SOURCE_CUST_ORDER_ID = customer_order.CUST_ORDER_ID
+		AND customer_order.CUST_ORDER_NBR = 'WMX2019080700318284';
+
+-- 出流水失败异常
+SELECT attr.order_item_id, attr.ATTR_VALUE 
+	FROM order_item_attr attr, order_item item, customer_order orde
+	WHERE attr.ORDER_ITEM_ID = item.ORDER_ITEM_ID AND item.SOURCE_CUST_ORDER_ID = orde.SOURCE_CUST_ORDER_ID
+		AND orde.CUST_ORDER_NBR = 'WMX2019080700318284';
+SELECT * FROM intf_send_data d WHERE 1=1 and d.CHANNEL_NBR='mscReject' and d.CUST_ORDER_ID='400801330705';
+SELECT * FROM intf_send_data_his WHERE CUST_ORDER_ID = '400801409169';
+SELECT * FROM intf_send_data WHERE CUST_ORDER_ID = '400801409169';
+SELECT OFFER_INST_ID,PROD_INST_ID,REL_TYPE,ORD_STATUS_CD,STATUS_CD,OPER_TYPE，role_id
+FROM ord_offer_prod_inst_rel WHERE SOURCE_CUST_ORDER_ID=400801410493;  -- 根产品和子产品关系
+SELECT * FROM  customer_order WHERE CUST_ORDER_NBR="WMY2019090500428553" -- 查订单状态
+select i.ORDER_ITEM_ID,i.status_cd 订单项状态,o.STATUS_CD 订单项状态,i.update_date i_u,o.UPDATE_DATE o_u,o.CUST_ORDER_ID,
+i.order_item_cd,i.apply_obj_spec, i.OBJ_ID,o.CREATE_DATE
+ from customer_order o,order_item i
+where i.CUST_ORDER_ID=o.CUST_ORDER_ID
+and o.CUST_ORDER_NBR='WMZ2019082000320993'-- 查订单状态，订单项状态
+order by ORDER_ITEM_ID;
+
+营销资源sql
+select a.mkt_res_inst_nbr from mkt_res_card_inst a join mkt_res_card_inst_ext b on a.mkt_res_inst_id = b.mkt_res_card_inst_id 
+join mkt_res_card_act c on a.mkt_res_inst_id = c.mkt_res_card_inst_id
+where b.card_type is not null  and a.status_cd = '1000' and c.network = 'CGL' limit 50 -- 查可用UIm卡号
+
+select * from mkt_res_card_inst where mkt_res_inst_nbr = '卡号' -- 查询卡信息
+
+select b.obj_id from mkt_res_num_inst a, mkt_res_store_obj_rel b where a.mkt_res_inst_nbr = '13310131646'
+and b.mkt_res_store_id = a.mkt_res_store_id and b.obj_type= '1100';
+select * from mkt_res_lifecycle
+ select mkt_res_inst_id from mkt_res_num_inst where status_cd='1002' AND mkt_res_inst_id LIKE '13%' LIMIT 100; -- 做预开通的号码
+
+基础sql：
+SELECT t.* from pwd_sms_send t where t.PWD_SMS_TEL='17317435026'  
+   ORDER BY t.SEND_DATE desc
+select org_code from organization where org_name=''; -- 根据组织名字查询组织标识和编码
+
+
+
+

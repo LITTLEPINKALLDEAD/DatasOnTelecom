@@ -1,0 +1,46 @@
+cpc sql：
+select * FROM  attr_spec  WHERE   attr_nbr ='RES-C-0023' -- 根据字段状态编码
+select * from  attr_value where attr_id = '10000682' -- 根据属性id查看具体状态类型  
+
+SELECT 
+	s.attr_name,
+	s.attr_desc,
+	v.*
+FROM
+	attr_spec s,
+	attr_value v
+WHERE
+	s.attr_id = v.attr_id
+AND s.attr_name like '%停机%'  -- 查停机类型 
+
+-- 新老产品编码映射
+select * from product_mapping where crm_prod_nbr = '566';
+
+-- 查询产品
+select * from offer where offer_type in(11,10) and status_cd = '1000' and offer_id in (
+select offer_id from offer_prod_rel where prod_id =1000000511) ;-- 修改此id
+-- 新老产品编码映射
+select * from product_mapping where crm_prod_nbr = '524';
+update offer set EXP_DATE='2019-09-07 00:00:00' where OFFER_ID='990000145389955';
+-- 查询产品
+select * from offer where offer_type in(11,10) and status_cd = '1000' and offer_id in (
+select offer_id from offer_prod_rel where prod_id =1000001359) ;-- 修改此id
+
+select * from offer where offer_id in (
+select offer_id from offer_prod_rel where prod_id in (
+select prod_id from product_mapping pm where pm.CRM_PROD_NBR in ('462'))
+and status_cd != '1100')
+
+select * from product where prod_id='' limit 50;  -- 产品表
+select * from product where prod_name  like'%%' limit 50; -- 产品表
+select * from offer where offer_id=''; -- 销售品表
+select * from offer where offer_name like'%%'; -- 销售品表
+select * from prod_rel where Z_PROD_ID='' limit 50; -- 产品关系表
+select * from prod_rel where A_PROD_ID=''; -- 产品关系表
+select * from offer_rel where Z_offer_ID=''; -- 销售品关系表
+select * from offer_rel where A_offer_ID=''; -- 销售品关系表
+select * from product where prod_id in(select A_PROD_ID from prod_rel where Z_PROD_ID='') -- 根据子产品id查询根产品信息
+select * from offer where offer_id in(select A_offer_ID from offer_rel where Z_offer_ID='') -- 根据附属商品id查询销售品品信息
+SELECT b.OFFER_NAME FROM offer_ext a,offer b WHERE OFFER_SUB_TYPE='014'
+AND a.OFFER_ID = b.OFFER_ID -- 查询终补话补等可选包类型,06终，09话
+select * from offer_res_rel where offer_id='166259787332' -- 查询终端配机型status=1000
