@@ -1,0 +1,46 @@
+GET http://test.sh.ctc.com/PEMP/msc/contactorderbizapp/contactOrder?channelType=1800&channelCode=3101051000706&logicType=1&limit=3&offset=0&custCode=400000063006&expand=contactTask&t=1572504820828 HTTP/1.1
+Host: test.sh.ctc.com
+Connection: keep-alive
+X-App-Id: 18876326e02aff3e2f379e1d211bcaa7
+x-paas-frontend-user: HEBING
+virtualOrderId: 1bd7e32f4ee442868470ab8475c75f9b
+X-App-Key: 199263ef798122e63e94ae31f61a69c7
+User-Agent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36 UniteBrowser/1.0
+Content-Type: application/json;charset=UTF-8
+Access-Control-Allow-Origin: *
+Accept: application/json, text/plain, */*
+sessionId: N2E2NzNiYjMtOGExNC00ZjQ3LTllNjMtYmNiODYxZDI4ZDJm
+ReqUserId: MSC20190128
+Referer: http://test.sh.ctc.com/PEMP/
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN
+Cookie: ZUUL-SESSION-ID=N2E2NzNiYjMtOGExNC00ZjQ3LTllNjMtYmNiODYxZDI4ZDJm; ReqStageEnv=0; regionId=8310100; sessionId=N2E2NzNiYjMtOGExNC00ZjQ3LTllNjMtYmNiODYxZDI4ZDJm; orgCode=3100001003598; ReqUserId=21134260; channelNbr=17194741446; virtualOrderId=1bd7e32f4ee442868470ab8475c75f9b; warning=1; tips=1; ltpacreatetime=0; logintype=1; AMWEBJCT!%2Fpwdexpi!JSESSIONID=0000AFpUKfaJr2YQW0ENqEQ4557:-1; auth_flag=true; PD-H-SESSION-ID=4_xp5Q7ygx32URQz8xLfcG4VaKQ89VsTfDbITdn36-m66ItzP4; AMWEBJCT!%2Fportalserver!JSESSIONID=0000taYfwVkG3BQRJdctpeQZfFs:1arujvhvs; loged=4_xp5Q7ygx32URQz8xLfcG4VaKQ89VsTfDbITdn36-m66ItzP4; messageStr=%u4E0A%u6B21%u767B%u5F55%u65F6%u95F4%uFF1A%3Cfont%20color%u7B49%u4E8E%27green%27%3E2019-10-31%2014%3A14%3A55%3C/font%3E%uFF0CIP%uFF1A%3Cfont%20color%u7B49%u4E8E%27green%27%3E10.145.204.131%3C/font%3E; updatesessiontime=1572503706; goto_url=/; AMWEBJCT!%2Fportalserverqy!JSESSIONID=000054uOpGv4fxCuwy616fXJfyE:1a16bn5f8; MssSsoToken=; LtpaToken=fyKd59ZLFq7GXjSmSn1zCYJXIKFtZS6h8Uq5r7c/zW6xzJJZYOvecVujsNov7v93KSvzqyXpSbi1mZv36+D1ORtxEjdMclIgiITgO35mg1zzP/0L00SyjZUOqIXK6mJ6y5byey6Z5jkNBqNAUawd3CBcEsh7MwxuqjZjAS26POytckkkeJyJ9UwQTpYJM0AoP5kkbjKB3ZjodRsLk6gAIh36U/3Bme5VIuxlKREowHSPtI31VbFOr7wQElwCWrR4KhhIHNwPFUofeibClaZHjLs9NMxYMAt6hOUm5JDDg2d17ENwDH5Hywh1gQM/TJs9NLRZFIswkQSVmYVkuWpifI3QZtqTQ98q; updatesessiontime
+
+
+HTTP/1.1 500
+content-type: application/problem+json
+date: Thu, 31 Oct 2019 06:50:28 GMT
+p3p: CP="NON CUR OTPi OUR NOR UNI"
+server: nginx/1.2.9
+transfer-encoding: chunked
+x-content-type-options: nosniff
+verno: 1.0, 1.0
+x-paas-frontend-user: HEBING
+repservunitname: apiGateway, contactorderBizApp
+repservunitversion: app$test$1.0,lbtable, app$te$1.2.0,lbtable
+x-frame-options: DENY
+pinpoint-traceid: 4689db597w94jbapiGateway^1572322482827^134531
+pinpoint-pspanid: -4399364754288299950
+reptimestamp: 2019-10-31 14:53:42.015, 2019-10-31 14:53:42.018
+requserid: MSC20190128, MSC20190128
+pragma: no-cache
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+x-xss-protection: 1; mode=block
+repdockerip: 10.233.28.170, 10.233.2.63
+expires: 0
+pinpoint-spanid: 5777571970657055436
+
+da
+{"code":"MSC_120010001","reason":"查询接触单业务服务出错","message":"查询接触单业务服务出错","referenceError":"10.233.2.63:8812/contactOrder,Traceid=4689db597w94jbapiGateway^1572322482827^134531"}
+0
+
