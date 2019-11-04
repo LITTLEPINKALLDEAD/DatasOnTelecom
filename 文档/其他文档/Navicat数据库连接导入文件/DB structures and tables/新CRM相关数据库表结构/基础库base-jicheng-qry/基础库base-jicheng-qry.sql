@@ -1,0 +1,1040 @@
+CREATE TABLE `_sys_global_sequence_` (
+  `sequence_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '序列标识',
+  `sequence_name` varchar(100) DEFAULT NULL COMMENT '序列名',
+  `schema_name` varchar(50) DEFAULT NULL COMMENT 'schema名称',
+  `is_cycle` tinyint(1) DEFAULT '0' COMMENT '是否循环序列',
+  `min_value` bigint(20) DEFAULT '1' COMMENT '最小值',
+  `step` int(11) DEFAULT '1000' COMMENT '步长',
+  `max_value` bigint(20) DEFAULT NULL COMMENT '最大值',
+  `sequence_value` bigint(20) DEFAULT NULL COMMENT '当前最大值',
+  `created` datetime DEFAULT NULL COMMENT '创建时间',
+  `modified` datetime DEFAULT NULL COMMENT '更新时间',
+  PRIMARY KEY (`sequence_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COMMENT='全局序列备份表';
+
+CREATE TABLE `biz_zone` (
+  `BIZ_ZONE_ID` bigint(20) NOT NULL COMMENT '商圈标识',
+  `BIZ_ZONE_LEVER` varchar(10) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '商圈级别',
+  `BIZ_ZONE_NAME` varchar(250) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '商圈名称',
+  `BIZ_ZONE_TYPE_CD` varchar(10) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '商圈类型',
+  `CREATE_DATE` date DEFAULT NULL COMMENT '创建时间',
+  `CREATE_STAFF` bigint(16) DEFAULT NULL,
+  `DESCRIPTION` varchar(250) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '描述',
+  `REGION_ID` bigint(16) DEFAULT NULL,
+  `STATUS_CD` varchar(10) COLLATE utf8mb4_bin NOT NULL COMMENT '状态',
+  `STATUS_DATE` date DEFAULT NULL COMMENT '状态时间',
+  `UPDATE_DATE` date DEFAULT NULL COMMENT '修改时间',
+  `UPDATE_STAFF` bigint(16) DEFAULT NULL,
+  `SIEBEL_ROW_ID` varchar(15) COLLATE utf8mb4_bin NOT NULL COMMENT 'SIEBEL表ROW_ID',
+  `BIZ_ZONE_NBR` varchar(30) COLLATE utf8mb4_bin DEFAULT NULL,
+  PRIMARY KEY (`BIZ_ZONE_ID`),
+  KEY `BIZ_ZE_IDX01` (`SIEBEL_ROW_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin COMMENT='商圈';
+
+CREATE TABLE `biz_zone_attr` (
+  `ATTR_ID` bigint(16) DEFAULT NULL,
+  `ATTR_VALUE` varchar(250) COLLATE utf8mb4_bin DEFAULT NULL,
+  `ATTR_VALUE_ID` bigint(16) DEFAULT NULL,
+  `BIZ_ZONE_ATTR_ID` bigint(20) NOT NULL COMMENT '商圈属性标识',
+  `BIZ_ZONE_ID` bigint(20) NOT NULL COMMENT '商圈标识',
+  `CREATE_DATE` date DEFAULT NULL COMMENT '创建时间',
+  `CREATE_STAFF` bigint(16) DEFAULT NULL,
+  `DESCRIPTION` varchar(250) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '描述',
+  `STATUS_CD` varchar(10) COLLATE utf8mb4_bin NOT NULL COMMENT '状态',
+  `STATUS_DATE` date DEFAULT NULL COMMENT '状态时间',
+  `UPDATE_DATE` date DEFAULT NULL COMMENT '修改时间',
+  `UPDATE_STAFF` bigint(16) DEFAULT NULL,
+  `SIEBEL_ROW_ID` varchar(15) COLLATE utf8mb4_bin NOT NULL COMMENT 'SIEBEL表ROW_ID',
+  PRIMARY KEY (`BIZ_ZONE_ATTR_ID`),
+  KEY `BIZ_ZE_ATTR_IDX01` (`SIEBEL_ROW_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin COMMENT='商圈属性';
+
+CREATE TABLE `bulletin` (
+  `BULLETIN_ID` bigint(16) NOT NULL,
+  `BULLETIN_TITLE` varchar(50) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '记录公告标题',
+  `BULLETIN_CONTENT` varchar(4000) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '记录公告内容',
+  `BULLETIN_TYPE` varchar(4) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '记录公告类型，LOVB=PUB-C-0009',
+  `BULLETIN_LEVEL` varchar(4) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '记录公告等级，LOVB=PUB-C-0016',
+  `IS_TOP` decimal(2,0) DEFAULT NULL COMMENT '记录是否置顶,置顶的公告在醒目位置显示，LOVB=PUB-C-0006',
+  `LAUNCH_STAFF` decimal(16,0) DEFAULT NULL COMMENT '记录发布公告的员工',
+  `LAUNCH_ORG` decimal(16,0) DEFAULT NULL COMMENT '记录发布公告的员工在的组织',
+  `EFF_DATE` datetime DEFAULT NULL COMMENT '记录公告的生效时间',
+  `EXP_DATE` datetime DEFAULT NULL COMMENT '记录公告的失效时间',
+  `STATUS_CD` varchar(10) COLLATE utf8mb4_bin NOT NULL COMMENT '记录状态。LOVB=PUB-C-0001。',
+  `CREATE_STAFF` decimal(16,0) DEFAULT NULL COMMENT '记录的创建员工。',
+  `UPDATE_STAFF` decimal(16,0) DEFAULT NULL COMMENT '记录的修改员工。',
+  `UPDATE_DATE` datetime DEFAULT NULL COMMENT '记录的修改时间。',
+  `STATUS_DATE` datetime DEFAULT NULL COMMENT '记录状态修改的时间',
+  `CREATE_DATE` datetime DEFAULT NULL COMMENT '记录公告发布的时间',
+  `REMARK` varchar(2000) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '记录备注信息。',
+  PRIMARY KEY (`BULLETIN_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin COMMENT='指对特定事件发布的通告。';
+
+CREATE TABLE `bulletin_rcv_obj_rel` (
+  `BULLETIN_RCV_OBJ_REL_ID` bigint(16) NOT NULL,
+  `BULLETIN_ID` bigint(16) DEFAULT NULL,
+  `RCV_TYPE` varchar(4) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '记录接收公告的对象类型，包括所有人、组织、员工、岗位，如果是某个本地网，可以通过选择某个本地网的关联的组织来限制，LOVB=PUB-C-0015',
+  `RCV_ID` bigint(16) DEFAULT NULL,
+  `STATUS_CD` varchar(10) COLLATE utf8mb4_bin NOT NULL COMMENT '记录状态。LOVB=PUB-C-0001',
+  `CREATE_STAFF` decimal(16,0) DEFAULT NULL COMMENT '记录的创建员工',
+  `UPDATE_STAFF` decimal(16,0) DEFAULT NULL COMMENT '记录的修改员工',
+  `CREATE_DATE` datetime DEFAULT NULL COMMENT '记录创建的时间',
+  `STATUS_DATE` datetime DEFAULT NULL COMMENT '状态修改的时间',
+  `UPDATE_DATE` datetime DEFAULT NULL COMMENT '记录的修改时间',
+  `REMARK` varchar(2000) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '记录备注信息。',
+  PRIMARY KEY (`BULLETIN_RCV_OBJ_REL_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin COMMENT='描述公告的接收对象的信息，比如公告的接收对象是所有人、某个员工、某个岗位、某个组织等。';
+
+CREATE TABLE `busi_store` (
+  `ADDRESS` varchar(250) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '地址',
+  `BUSI_STORE_HOUSE_TYPE` varchar(10) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '房产类型',
+  `BUSI_STORE_ID` bigint(16) NOT NULL,
+  `BUSI_STORE_NAME` varchar(250) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '经营场所名称',
+  `BUSI_STORE_NBR` varchar(30) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '经营场所编码',
+  `CREATE_DATE` datetime DEFAULT NULL,
+  `CREATE_STAFF` bigint(16) DEFAULT NULL,
+  `DESCRIPTION` varchar(250) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '描述',
+  `REGION_ID` bigint(16) DEFAULT NULL,
+  `STATUS_CD` varchar(10) COLLATE utf8mb4_bin NOT NULL COMMENT '状态',
+  `STATUS_DATE` datetime DEFAULT NULL,
+  `UPDATE_DATE` datetime DEFAULT NULL,
+  `UPDATE_STAFF` bigint(16) DEFAULT NULL,
+  `SIEBEL_ROW_ID` varchar(15) COLLATE utf8mb4_bin NOT NULL COMMENT 'SIEBEL表ROW_ID',
+  PRIMARY KEY (`BUSI_STORE_ID`),
+  KEY `BU_STR_IDX01` (`SIEBEL_ROW_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin COMMENT='经营场所';
+
+CREATE TABLE `busi_store_attr` (
+  `ATTR_ID` bigint(16) DEFAULT NULL,
+  `ATTR_VALUE` varchar(250) COLLATE utf8mb4_bin DEFAULT NULL,
+  `ATTR_VALUE_ID` bigint(16) DEFAULT NULL,
+  `BUSI_STORE_ATTR_ID` bigint(16) NOT NULL,
+  `BUSI_STORE_ID` bigint(16) DEFAULT NULL,
+  `CREATE_DATE` datetime DEFAULT NULL,
+  `CREATE_STAFF` bigint(16) DEFAULT NULL,
+  `DESCRIPTION` varchar(250) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '描述',
+  `STATUS_CD` varchar(10) COLLATE utf8mb4_bin NOT NULL COMMENT '状态',
+  `STATUS_DATE` datetime DEFAULT NULL,
+  `UPDATE_DATE` datetime DEFAULT NULL,
+  `UPDATE_STAFF` bigint(16) DEFAULT NULL,
+  `SIEBEL_ROW_ID` varchar(15) COLLATE utf8mb4_bin NOT NULL COMMENT 'SIEBEL表ROW_ID',
+  PRIMARY KEY (`BUSI_STORE_ATTR_ID`),
+  KEY `BU_STR_ATTR_IDX01` (`SIEBEL_ROW_ID`),
+  KEY `BU_STR_ATTR_IDX02` (`BUSI_STORE_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin COMMENT='经营场所属性';
+
+CREATE TABLE `busi_store_biz_zone_rel` (
+  `BIZ_ZONE_ID` bigint(16) DEFAULT NULL,
+  `BUSI_STORE_BIZ_ZONE_REL_ID` bigint(16) NOT NULL,
+  `BUSI_STORE_ID` bigint(16) DEFAULT NULL,
+  `CREATE_DATE` date DEFAULT NULL COMMENT '创建时间',
+  `CREATE_STAFF` bigint(16) DEFAULT NULL,
+  `DESCRIPTION` varchar(250) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '描述',
+  `EFF_DATE` date DEFAULT NULL COMMENT '生效时间',
+  `EXP_DATE` date DEFAULT NULL COMMENT '失效时间',
+  `REL_TYPE` varchar(10) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '经营场所商圈关系类型',
+  `STATUS_CD` varchar(10) COLLATE utf8mb4_bin NOT NULL COMMENT '状态',
+  `STATUS_DATE` date DEFAULT NULL COMMENT '状态时间',
+  `UPDATE_DATE` date DEFAULT NULL COMMENT '修改时间',
+  `UPDATE_STAFF` bigint(16) DEFAULT NULL,
+  `SIEBEL_ROW_ID` varchar(15) COLLATE utf8mb4_bin NOT NULL COMMENT 'SIEBEL表ROW_ID',
+  PRIMARY KEY (`BUSI_STORE_BIZ_ZONE_REL_ID`),
+  KEY `BU_STR_B_Z_REL_IDX01` (`SIEBEL_ROW_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin COMMENT='经营场所与商圈关系';
+
+CREATE TABLE `channel` (
+  `CHANNEL_CLASS` varchar(4) DEFAULT NULL,
+  `CHANNEL_DESC` varchar(2000) DEFAULT NULL,
+  `CHANNEL_NAME` varchar(250) DEFAULT NULL,
+  `CHANNEL_NBR` varchar(30) DEFAULT NULL,
+  `CREATE_DATE` datetime DEFAULT NULL,
+  `CREATE_STAFF` bigint(16) DEFAULT NULL,
+  `ORG_ID` bigint(16) NOT NULL,
+  `PARTY_ID` bigint(16) DEFAULT NULL,
+  `REGION_ID` bigint(16) NOT NULL,
+  `SALES_FIRST_TYPE` varchar(10) DEFAULT NULL,
+  `SALES_SECOND_TYPE` varchar(10) DEFAULT NULL,
+  `SALES_THIRD_TYPE` varchar(10) DEFAULT NULL,
+  `STATUS_CD` varchar(10) NOT NULL,
+  `STATUS_DATE` datetime DEFAULT NULL,
+  `UPDATE_DATE` datetime DEFAULT NULL,
+  `UPDATE_STAFF` bigint(16) DEFAULT NULL,
+  `SIEBEL_ROW_ID` varchar(15) DEFAULT NULL,
+  `CHANNEL_TYPE` varchar(30) DEFAULT NULL,
+  `CHANNEL_SUB_TYPE` varchar(30) DEFAULT NULL,
+  `CHN_TYPE_CD` varchar(10) DEFAULT NULL,
+  `CHANNEL_LEVEL` varchar(10) DEFAULT NULL,
+  `APPLY_CODE` varchar(30) DEFAULT NULL,
+  PRIMARY KEY (`ORG_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `channel_biz_zone_rel` (
+  `BIZ_ZONE_ID` bigint(16) DEFAULT NULL,
+  `CHANNEL_BIZ_ZONE_REL_ID` bigint(16) NOT NULL,
+  `CREATE_DATE` datetime DEFAULT NULL,
+  `CREATE_STAFF` bigint(16) DEFAULT NULL,
+  `DESCRIPTION` varchar(250) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '描述',
+  `EFF_DATE` datetime DEFAULT NULL,
+  `EXP_DATE` datetime DEFAULT NULL,
+  `ORG_ID` bigint(16) DEFAULT NULL,
+  `REL_TYPE` varchar(10) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '渠道商圈关系类型',
+  `STATUS_CD` varchar(10) COLLATE utf8mb4_bin NOT NULL COMMENT '状态',
+  `STATUS_DATE` datetime DEFAULT NULL,
+  `UPDATE_DATE` datetime DEFAULT NULL,
+  `UPDATE_STAFF` bigint(16) DEFAULT NULL,
+  `SIEBEL_ROW_ID` varchar(15) COLLATE utf8mb4_bin NOT NULL COMMENT 'SIEBEL表ROW_ID',
+  PRIMARY KEY (`CHANNEL_BIZ_ZONE_REL_ID`),
+  KEY `CHAN_B_Z_REL_IDX01` (`SIEBEL_ROW_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin COMMENT='渠道商圈关系';
+
+CREATE TABLE `channel_busi_store_rel` (
+  `BUSI_STORE_ID` bigint(16) DEFAULT NULL,
+  `CHANNEL_BUSI_STORE_REL_ID` bigint(16) NOT NULL,
+  `CREATE_DATE` datetime DEFAULT NULL,
+  `CREATE_STAFF` bigint(16) DEFAULT NULL,
+  `DESCRIPTION` varchar(250) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '描述',
+  `EFF_DATE` datetime DEFAULT NULL,
+  `EXP_DATE` datetime DEFAULT NULL,
+  `ORG_ID` bigint(16) DEFAULT NULL,
+  `REL_TYPE` varchar(10) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '渠道经营场所关系类型',
+  `STATUS_CD` varchar(10) COLLATE utf8mb4_bin NOT NULL COMMENT '状态',
+  `STATUS_DATE` datetime DEFAULT NULL,
+  `UPDATE_DATE` datetime DEFAULT NULL,
+  `UPDATE_STAFF` bigint(16) DEFAULT NULL,
+  `SIEBEL_ROW_ID` varchar(15) COLLATE utf8mb4_bin NOT NULL COMMENT 'SIEBEL表ROW_ID',
+  PRIMARY KEY (`CHANNEL_BUSI_STORE_REL_ID`),
+  KEY `CHAN_BU_STR_REL_IDX01` (`SIEBEL_ROW_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin COMMENT='渠道与经营场所关系';
+
+CREATE TABLE `channle_contract_rel` (
+  `REL_ID` bigint(16) NOT NULL COMMENT '渠道与合同关联标识',
+  `ORG_ID` bigint(16) DEFAULT NULL COMMENT '电信组织标识',
+  `CONTRACT_NBR` varchar(30) DEFAULT NULL COMMENT 'MSS合同编号',
+  `CONTRACT_NAME` varchar(50) DEFAULT NULL COMMENT '合同名称',
+  `CONTRACT_DESC` varchar(2000) DEFAULT NULL COMMENT '合同描述',
+  `BEGIN_DATE` datetime DEFAULT NULL COMMENT '合同开始时间',
+  `END_DATE` datetime DEFAULT NULL COMMENT '合同结束时间',
+  `CREATE_DATE` datetime DEFAULT NULL COMMENT '记录创建的时间',
+  `CREATE_STAFF` bigint(16) DEFAULT NULL COMMENT '创建人',
+  `STATUS_CD` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL COMMENT '记录状态。LOVB=PUB-C-0001。',
+  `STATUS_DATE` datetime DEFAULT NULL COMMENT '状态修改的时间',
+  `UPDATE_DATE` datetime DEFAULT NULL COMMENT '记录修改的时间',
+  `UPDATE_STAFF` bigint(16) DEFAULT NULL COMMENT '修改人',
+  `REMARK` varchar(250) DEFAULT NULL COMMENT '备注',
+  PRIMARY KEY (`REL_ID`),
+  KEY `idx_ORG_ID` (`ORG_ID`),
+  KEY `idx_CONTRACT_NBR` (`CONTRACT_NBR`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE `contacts_info` (
+  `CONTACT_ADDR` varchar(250) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '记录联系信息的联系地址。',
+  `CONTACT_DESC` varchar(2000) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '记录联系信息的详细描述。',
+  `CONTACT_EMPLOYER` varchar(250) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '记录联系信息的联系单位。',
+  `CONTACT_GENDER` varchar(4) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '记录参与人联系人的性别。LOVB=PTY-0008。',
+  `CONTACT_ID` bigint(20) NOT NULL COMMENT '记录联系信息标识，作为主键',
+  `CONTACT_NAME` varchar(50) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '记录参与人的联系人名称。',
+  `CONTACT_TYPE` varchar(4) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '记录联系信息的类型。LOVB=PTY-0001。',
+  `CREATE_DATE` datetime DEFAULT NULL,
+  `CREATE_STAFF` bigint(20) DEFAULT NULL COMMENT '记录创建的员工。',
+  `E_MAIL` varchar(250) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '记录联系信息的eMail地址。',
+  `FAX` varchar(250) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '记录联系信息的传真号码。',
+  `HOME_PHONE` varchar(250) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '记录参与人的家庭联系电话。',
+  `MOBILE_PHONE` varchar(250) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '记录联系信息的移动电话号码。',
+  `OFFICE_PHONE` varchar(250) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '记录联系信息的办公电话号码。',
+  `PARTY_ID` bigint(20) NOT NULL COMMENT '记录参与人标识，作为外键，指向参与人实体。',
+  `POST_ADDR` varchar(250) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '记录联系信息的邮寄地址',
+  `POSTCODE` varchar(20) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '记录联系信息的联系地址的邮政编码。',
+  `QQ_CODE` varchar(20) COLLATE utf8mb4_bin DEFAULT NULL COMMENT 'QQ号',
+  `REMARK` varchar(250) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '记录备注信息。',
+  `STATUS_CD` varchar(4) COLLATE utf8mb4_bin NOT NULL COMMENT '记录状态。LOVB=PUB-C-0001。',
+  `STATUS_DATE` datetime DEFAULT NULL,
+  `UNSUITABLE_CONTACT_TIME` varchar(250) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '不宜访问时间',
+  `UPDATE_DATE` datetime DEFAULT NULL,
+  `UPDATE_STAFF` bigint(20) DEFAULT NULL COMMENT '记录修改的员工。',
+  `WX_CODE` varchar(32) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '微信号',
+  `YX_CODE` varchar(32) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '易信号',
+  `SIEBEL_ROW_ID` varchar(32) COLLATE utf8mb4_bin DEFAULT NULL,
+  `PREF_COMM_METH_CD` varchar(30) COLLATE utf8mb4_bin DEFAULT NULL,
+  `YZF_CODE` varchar(32) COLLATE utf8mb4_bin DEFAULT NULL,
+  `MICROBLOG` varchar(32) COLLATE utf8mb4_bin DEFAULT NULL,
+  `CONTACT_SUB_TYPE` varchar(4) COLLATE utf8mb4_bin DEFAULT NULL,
+  PRIMARY KEY (`CONTACT_ID`),
+  KEY `IN_TMPCONTINFOEXT_SIEBELROWID` (`SIEBEL_ROW_ID`),
+  KEY `IN_TMPCONTINFOEXT_PARTYID` (`PARTY_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin COMMENT='联系信息';
+
+CREATE TABLE `data_priv_rule` (
+  `PRIV_RULE_ID` bigint(16) NOT NULL AUTO_INCREMENT COMMENT '权限规则标识,主键',
+  `PRIV_DATA_REL_ID` decimal(18,0) DEFAULT NULL COMMENT '权限功能关联标识,主键',
+  `BUSI_OBJ_ID` decimal(16,0) NOT NULL COMMENT '业务对象标识',
+  `BUSI_OBJ_ATTR_ID` decimal(16,0) NOT NULL COMMENT '业务对象属性标识',
+  `RULE_GROUP` decimal(8,0) DEFAULT NULL COMMENT '规则组,同组之间为"与"，组与组之间为"或"',
+  `RULE_OPERATOR` varchar(4) DEFAULT NULL COMMENT '规则操作符,包含、等于、大于、大于等于、小于、小于等于',
+  `ATTR_VALUE` varchar(250) DEFAULT NULL,
+  `OPER_TYPE` varchar(4) DEFAULT NULL COMMENT '规则操作类型，操作（所有）、查看（列）、取值（行）。LOVB=STF-C-0018。',
+  `STATUS_CD` varchar(10) NOT NULL COMMENT '状态',
+  `STATUS_DATE` datetime DEFAULT NULL COMMENT '状态时间',
+  `CREATE_DATE` datetime DEFAULT NULL COMMENT '创建时间',
+  `CREATE_STAFF` decimal(16,0) NOT NULL COMMENT '创建人',
+  `UPDATE_DATE` datetime DEFAULT NULL COMMENT '修改时间',
+  `UPDATE_STAFF` decimal(16,0) DEFAULT NULL COMMENT '修改人',
+  PRIMARY KEY (`PRIV_RULE_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='记录权限下相关联的规则，包括横向、纵向的数据维度。\r\n';
+
+CREATE TABLE `doc_content` (
+  `doc_content_id` bigint(16) NOT NULL,
+  `doc_id` bigint(16) NOT NULL,
+  `doc_content` text,
+  `status_cd` varchar(10) NOT NULL,
+  `create_staff` bigint(16) DEFAULT NULL,
+  `update_staff` bigint(16) DEFAULT NULL,
+  `create_date` datetime DEFAULT NULL,
+  `status_date` datetime DEFAULT NULL,
+  `update_date` datetime DEFAULT NULL,
+  `remark` varchar(250) DEFAULT NULL,
+  PRIMARY KEY (`doc_content_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE `document` (
+  `DOC_ID` bigint(16) NOT NULL,
+  `DOC_NAME` varchar(50) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '记录文档的名称',
+  `DOC_NBR` varchar(30) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '记录文档编码',
+  `DOC_DESC` varchar(2000) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '记录文档的描述信息',
+  `FORMAT_TYPE` varchar(10) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '记录文档格式，如文档文件的后缀名.LOVB=PUB-C-0019',
+  `VER_NUM` decimal(9,0) DEFAULT NULL COMMENT '记录文档的版本',
+  `DOC_SIZE` varchar(50) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '记录文档占用空间的大小',
+  `AUTHOR` varchar(250) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '记录文档的作者',
+  `STORE_TYPE` varchar(4) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '记录文档存储类型，LOVB=PUB-C-0008',
+  `DOC_LINK` varchar(50) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '记录文档存放路径链接',
+  `STATUS_CD` varchar(10) COLLATE utf8mb4_bin NOT NULL COMMENT '记录状态。LOVB=PUB-C-0001。',
+  `CREATE_STAFF` decimal(16,0) DEFAULT NULL COMMENT '记录的创建员工。',
+  `UPDATE_STAFF` decimal(16,0) DEFAULT NULL COMMENT '记录的修改员工。',
+  `CREATE_DATE` datetime DEFAULT NULL COMMENT '记录的创建时间。',
+  `STATUS_DATE` datetime DEFAULT NULL COMMENT '状态的修改时间。',
+  `UPDATE_DATE` datetime DEFAULT NULL COMMENT '记录的修改时间。',
+  `REMARK` varchar(2000) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '记录备注信息。',
+  PRIMARY KEY (`DOC_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin COMMENT='指纳入系统管理的非结构化文件信息。如照片、图片、扫描件等。';
+
+CREATE TABLE `func_comp` (
+  `comp_id` bigint(11) NOT NULL AUTO_INCREMENT,
+  `COMP_NAME` varchar(32) DEFAULT NULL COMMENT '模块组件名称',
+  `COMP_TYPE` varchar(10) DEFAULT NULL COMMENT '模块组件类型，LOVB=STF-C-0014。',
+  `COMP_DESC` varchar(250) DEFAULT NULL COMMENT '模块组件描述',
+  `URL_ADDR` varchar(2000) DEFAULT NULL COMMENT '模块组件URL链接地址',
+  `MENU_ID` bigint(9) DEFAULT NULL COMMENT '菜单标识，主键',
+  `STATUS_CD` varchar(10) NOT NULL COMMENT '模块组件状态',
+  `STATUS_DATE` datetime DEFAULT NULL COMMENT '模块组件状态修改时间',
+  `CREATE_DATE` datetime DEFAULT NULL COMMENT '创建时间',
+  `CREATE_STAFF` decimal(16,0) NOT NULL COMMENT '创建人',
+  `UPDATE_DATE` datetime DEFAULT NULL COMMENT '修改时间',
+  `UPDATE_STAFF` decimal(16,0) DEFAULT NULL COMMENT '修改人',
+  `SYSTEM_INFO_ID` bigint(16) DEFAULT NULL,
+  `COMP_CODE` varchar(30) DEFAULT NULL,
+  PRIMARY KEY (`comp_id`),
+  KEY `INDEX_FUNC_COMP` (`comp_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=21002959 DEFAULT CHARSET=utf8 COMMENT='指系统内的系统功能菜单的最小功能单元及组件。';
+
+CREATE TABLE `func_menu` (
+  `MENU_ID` bigint(20) NOT NULL,
+  `MENU_NAME` varchar(50) DEFAULT NULL COMMENT '菜单名称',
+  `MENU_TYPE` varchar(4) DEFAULT NULL COMMENT '菜单类型。LOVB=STF-C-0013。',
+  `MENU_LEVEL` decimal(9,0) DEFAULT NULL COMMENT '菜单项级别(从0开始)',
+  `MENU_INDEX` decimal(9,0) DEFAULT NULL COMMENT '菜单排序号（从0开始）',
+  `PAR_MENU_ID` bigint(9) DEFAULT NULL COMMENT '上级菜单标识',
+  `MENU_DESC` varchar(250) DEFAULT NULL COMMENT '菜单描述',
+  `URL_ADDR` varchar(2000) DEFAULT NULL COMMENT '菜单URL链接地址',
+  `REGION_ID` decimal(16,0) NOT NULL COMMENT '公用管理区域标识,记录区域唯一标识',
+  `SYSTEM_INFO_ID` bigint(16) unsigned zerofill NOT NULL COMMENT '系统用户的归属系统',
+  `STATUS_CD` varchar(10) NOT NULL COMMENT '菜单状态',
+  `STATUS_DATE` datetime DEFAULT NULL COMMENT '状态时间',
+  `CREATE_DATE` datetime DEFAULT NULL COMMENT '创建时间',
+  `CREATE_STAFF` decimal(16,0) NOT NULL COMMENT '创建人',
+  `UPDATE_DATE` datetime DEFAULT NULL COMMENT '修改时间',
+  `UPDATE_STAFF` decimal(16,0) DEFAULT NULL COMMENT '修改人',
+  `MENU_CODE` varchar(30) DEFAULT NULL,
+  PRIMARY KEY (`MENU_ID`),
+  KEY `INDEX_FUNC_MENU` (`MENU_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='功能模块和功能模块之间存在上下级关系，一个功能模块可以有多个下级功能模块，一个功能模块只能属于一个上级功能模块。例如：一';
+
+CREATE TABLE `general_channel` (
+  `G_CHL_ID` bigint(16) NOT NULL COMMENT '泛渠道标识',
+  `G_CHL_NAME` varchar(50) DEFAULT NULL COMMENT '泛渠道名称',
+  `PARTY_ID` bigint(16) NOT NULL COMMENT '参与人标识',
+  `G_CHL_CODE` varchar(30) DEFAULT NULL COMMENT '泛渠道编码',
+  `G_CHL_FORMAT` varchar(10) DEFAULT NULL COMMENT '泛渠道业态',
+  `ORG_ID` bigint(16) DEFAULT NULL COMMENT '结对渠道标识',
+  `STAFF_ID` bigint(16) NOT NULL COMMENT '结对渠道管控人员标识',
+  `BEGIN_DATE` datetime DEFAULT NULL COMMENT '合作开始时间',
+  `END_DATE` datetime DEFAULT NULL COMMENT '合作结束时间',
+  `CREATE_DATE` datetime DEFAULT NULL COMMENT '记录创建的时间',
+  `CREATE_STAFF` bigint(16) DEFAULT NULL COMMENT '创建人',
+  `STATUS_CD` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL COMMENT '泛渠道状态',
+  `STATUS_DATE` datetime DEFAULT NULL COMMENT '状态修改的时间',
+  `UPDATE_DATE` datetime DEFAULT NULL COMMENT '记录修改的时间',
+  `UPDATE_STAFF` bigint(16) DEFAULT NULL COMMENT '修改人',
+  `REMARK` varchar(250) DEFAULT NULL COMMENT '备注',
+  `REGION_ID` bigint(16) NOT NULL COMMENT '区域标识',
+  PRIMARY KEY (`G_CHL_ID`),
+  KEY `idx_ORG_ID` (`ORG_ID`),
+  KEY `idx_G_CHL_CODE` (`G_CHL_CODE`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE `general_channel_attr` (
+  `G_CHL_ATTR_ID` bigint(16) NOT NULL COMMENT '泛渠道属性标识',
+  `G_CHL_ID` bigint(16) NOT NULL COMMENT '泛渠道标识',
+  `ATTR_ID` bigint(16) NOT NULL COMMENT '属性标识',
+  `ATTR_VALUE_ID` bigint(16) NOT NULL COMMENT '属性值标识',
+  `ATTR_VALUE` varchar(250) DEFAULT NULL COMMENT '属性值',
+  `CREATE_DATE` datetime DEFAULT NULL COMMENT '记录创建的时间',
+  `CREATE_STAFF` bigint(16) DEFAULT NULL COMMENT '创建人',
+  `STATUS_CD` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL COMMENT '状态',
+  `STATUS_DATE` datetime DEFAULT NULL COMMENT '状态修改的时间',
+  `UPDATE_DATE` datetime DEFAULT NULL COMMENT '记录修改的时间',
+  `UPDATE_STAFF` bigint(16) DEFAULT NULL COMMENT '修改人',
+  `REMARK` varchar(250) DEFAULT NULL COMMENT '备注',
+  PRIMARY KEY (`G_CHL_ATTR_ID`),
+  KEY `idx_G_CHL_ID` (`G_CHL_ID`),
+  KEY `idx_G_ATTR_ID` (`ATTR_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE `obj_doc_rel` (
+  `OBJ_DOC_REL_ID` bigint(16) NOT NULL,
+  `OBJ_TYPE` varchar(10) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '记录关联文档的对象类型，包括公告、参与人证件照片、协议，LOVB=PUB-C-0010',
+  `OBJ_ID` bigint(16) DEFAULT NULL,
+  `doc_id` bigint(16) NOT NULL,
+  `DOC_SORT` decimal(9,0) DEFAULT NULL COMMENT '当有多个文档时，记录文档的排序',
+  `STATUS_CD` varchar(10) COLLATE utf8mb4_bin NOT NULL COMMENT '记录状态。LOVB=PUB-C-0001。',
+  `CREATE_STAFF` decimal(16,0) DEFAULT NULL COMMENT '记录的创建员工。',
+  `UPDATE_STAFF` decimal(16,0) DEFAULT NULL COMMENT '记录的修改员工。',
+  `CREATE_DATE` datetime DEFAULT NULL COMMENT '记录的创建时间。',
+  `STATUS_DATE` datetime DEFAULT NULL COMMENT '状态的修改时间。',
+  `UPDATE_DATE` datetime DEFAULT NULL COMMENT '记录的修改时间。',
+  `REMARK` varchar(2000) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '记录备注信息。',
+  PRIMARY KEY (`OBJ_DOC_REL_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin COMMENT='记录文档和对象的关系，比如公告和文档的关系等。';
+
+CREATE TABLE `operators` (
+  `ORG_ID` bigint(16) NOT NULL,
+  `OPERATORS_NBR` varchar(30) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '经营主体编码。LOVB=CHN-0012。',
+  `OPERATORS_NAME` varchar(50) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '经营主体名称：自营渠道：中国电信**分公司\n            社会渠道：营业执照中注册的公司名称或法人',
+  `OPERATORS_SNAME` varchar(32) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '经营主体简称：如国美电器有限公司，简称为"国美电器"；简称中不含地域信息、不含公司形式',
+  `PARTY_ID` bigint(16) DEFAULT NULL COMMENT '经营主体对应组织的关联参与人标识,参与人唯一标识',
+  `OPERATORS_LEVEL` varchar(10) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '经营主体级别，LOVB=CHN-0015。',
+  `LEGAL_REPR` varchar(250) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '法定代表人',
+  `PARENT_OPER_ID` bigint(16) DEFAULT '-1' COMMENT '上级经营主体标识',
+  `OPERATORS_DESC` varchar(2000) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '经营主体描述',
+  `IS_CHAIN` bigint(2) DEFAULT NULL COMMENT '区分经营主体是否是连锁，LOVB=PUB-C-0006',
+  `CHAIN_TYPE` varchar(4) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '连锁经营主体的类型，区分是全国级连锁、省级连锁、地市级连锁、县级连锁。LOVB=STF-C-0036。',
+  `REGION_ID` bigint(16) NOT NULL COMMENT '公用管理区域标识,记录区域唯一标识',
+  `CREATE_DATE` datetime DEFAULT NULL COMMENT '创建时间',
+  `CREATE_STAFF` bigint(16) DEFAULT NULL COMMENT '创建人',
+  `STATUS_CD` varchar(10) COLLATE utf8mb4_bin NOT NULL COMMENT '经营主体状态。LOVB=CHN-0014。',
+  `STATUS_DATE` datetime DEFAULT NULL COMMENT '经营主体状态时间',
+  `UPDATE_DATE` datetime DEFAULT NULL COMMENT '修改时间',
+  `UPDATE_STAFF` bigint(16) DEFAULT NULL COMMENT '修改人',
+  `IS_AGENT` bigint(2) DEFAULT NULL COMMENT '是否代理商,LOVB=PUB-C-0006',
+  `OPERATORS_TYPE_CD` varchar(4) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '经营主体类型，LOVB=STF-C-0003\n            ',
+  `TOP_TYPE` varchar(4) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '强商类型。LOVB=CHN-C-0017',
+  `SIEBEL_ROW_ID` varchar(15) COLLATE utf8mb4_bin DEFAULT NULL,
+  PRIMARY KEY (`ORG_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin COMMENT='经营主体信息，描述电信组织作为经营主体的相关属性信息。';
+
+CREATE TABLE `operators_contact_info` (
+  `UPDATE_STAFF` bigint(20) DEFAULT NULL COMMENT '修改人',
+  `UPDATE_DATE` date DEFAULT NULL COMMENT '修改时间',
+  `CREATE_STAFF` bigint(20) DEFAULT NULL COMMENT '创建人',
+  `CREATE_DATE` date DEFAULT NULL COMMENT '创建时间',
+  `EXP_DATE` date DEFAULT NULL COMMENT '失效时间',
+  `STATUS_CD` varchar(10) COLLATE utf8mb4_bin NOT NULL COMMENT '状态',
+  `STATUS_DATE` date DEFAULT NULL COMMENT '状态时间',
+  `EFF_DATE` date DEFAULT NULL COMMENT '生效时间',
+  `ORG_ID` bigint(20) NOT NULL COMMENT '电信组织标识',
+  `OPERATORS_CONTACT_ID` bigint(20) NOT NULL COMMENT '经营主体联系信息标识',
+  `CONTACT_ID` bigint(20) NOT NULL COMMENT '联系标识',
+  `SIEBEL_ROW_ID` varchar(15) COLLATE utf8mb4_bin NOT NULL COMMENT 'SIEBEL表ROW_ID',
+  PRIMARY KEY (`OPERATORS_CONTACT_ID`),
+  KEY `OPE_CONT_INFO_IDX01` (`SIEBEL_ROW_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin COMMENT='经营主体联系信息';
+
+CREATE TABLE `org_attr` (
+  `UPDATE_STAFF` bigint(16) DEFAULT NULL,
+  `UPDATE_DATE` datetime DEFAULT NULL,
+  `CREATE_STAFF` bigint(16) DEFAULT NULL,
+  `CREATE_DATE` datetime DEFAULT NULL,
+  `ATTR_VALUE` varchar(250) COLLATE utf8mb4_bin DEFAULT NULL,
+  `ATTR_VALUE_ID` bigint(16) DEFAULT NULL,
+  `ATTR_ID` bigint(16) DEFAULT NULL,
+  `STATUS_CD` varchar(10) COLLATE utf8mb4_bin NOT NULL COMMENT '状态',
+  `STATUS_DATE` datetime DEFAULT NULL,
+  `ORG_ATTR_ID` bigint(16) NOT NULL,
+  `ORG_ID` bigint(16) NOT NULL,
+  `ORG_ROLE_TYPE` varchar(4) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '电信组织角色类型',
+  `SIEBEL_ROW_ID` varchar(15) COLLATE utf8mb4_bin NOT NULL COMMENT 'SIEBEL表ROW_ID',
+  `REMARK` varchar(250) COLLATE utf8mb4_bin DEFAULT NULL,
+  PRIMARY KEY (`ORG_ATTR_ID`),
+  KEY `ORG_ATTR_IDX01` (`SIEBEL_ROW_ID`),
+  KEY `ORG_ATTR_IDX02` (`ORG_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin COMMENT='电信组织属性';
+
+CREATE TABLE `org_post_rel` (
+  `ORG_ID` decimal(16,0) NOT NULL COMMENT '组织标识',
+  `SYS_POST_ID` decimal(16,0) NOT NULL COMMENT '系统岗位标识',
+  `EFF_DATE` datetime DEFAULT NULL COMMENT '系统岗位关联使用组织生效时间',
+  `EXP_DATE` datetime DEFAULT NULL COMMENT '系统岗位关联使用组织失效时间',
+  `STATUS_CD` varchar(10) NOT NULL COMMENT '状态',
+  `STATUS_DATE` datetime DEFAULT NULL COMMENT '状态时间',
+  `CREATE_DATE` datetime DEFAULT NULL COMMENT '创建时间',
+  `CREATE_STAFF` decimal(16,0) DEFAULT NULL COMMENT '创建人',
+  `UPDATE_DATE` datetime DEFAULT NULL COMMENT '修改时间',
+  `UPDATE_STAFF` decimal(16,0) DEFAULT NULL COMMENT '修改人',
+  `ORG_POST_REL_ID` bigint(16) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='定义组织可使用的系统岗位。';
+
+CREATE TABLE `org_rel` (
+  `A_ORG_ID` bigint(20) NOT NULL COMMENT 'A组织标识',
+  `CREATE_DATE` datetime DEFAULT NULL,
+  `CREATE_STAFF` bigint(20) DEFAULT NULL COMMENT '创建人',
+  `EFF_DATE` datetime DEFAULT NULL,
+  `EXP_DATE` datetime DEFAULT NULL,
+  `ORG_REL_ID` bigint(20) NOT NULL COMMENT '电信组织关系标识',
+  `ORG_REL_TYPE` varchar(4) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '电信组织关系类型',
+  `STATUS_CD` varchar(10) COLLATE utf8mb4_bin NOT NULL COMMENT '状态',
+  `STATUS_DATE` datetime DEFAULT NULL,
+  `UPDATE_DATE` datetime DEFAULT NULL,
+  `UPDATE_STAFF` bigint(20) DEFAULT NULL COMMENT '修改人',
+  `Z_ORG_ID` bigint(20) NOT NULL COMMENT 'Z组织标识',
+  `SIEBEL_ROW_ID` varchar(15) COLLATE utf8mb4_bin DEFAULT NULL,
+  `REMARK` varchar(250) COLLATE utf8mb4_bin DEFAULT NULL,
+  PRIMARY KEY (`ORG_REL_ID`),
+  KEY `ORG_REL_IDX01` (`SIEBEL_ROW_ID`),
+  KEY `ORG_REL_IDX02` (`A_ORG_ID`),
+  KEY `ORG_REL_IDX03` (`Z_ORG_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin COMMENT='电信组织关联关系';
+
+CREATE TABLE `org_staff_schdl` (
+  `STAFF_SCHDL_ID` bigint(16) NOT NULL COMMENT '营业排班标识',
+  `ORG_ID` bigint(16) NOT NULL COMMENT '营业厅标识',
+  `SEAT_ID` bigint(16) NOT NULL COMMENT '坐席标识',
+  `TIME_SCHDL_ID` bigint(16) NOT NULL COMMENT '班次标识',
+  `STAFF_ID` bigint(16) NOT NULL COMMENT '员工标识',
+  `DUTY_DATE` datetime DEFAULT NULL COMMENT '值班日期',
+  `UPDATE_STAFF` bigint(16) DEFAULT NULL,
+  `UPDATE_DATE` datetime DEFAULT NULL,
+  `CREATE_STAFF` bigint(16) DEFAULT NULL,
+  `CREATE_DATE` datetime DEFAULT NULL,
+  `STATUS_CD` varchar(10) COLLATE utf8mb4_bin NOT NULL COMMENT '状态',
+  `STATUS_DATE` datetime DEFAULT NULL,
+  `REMARK` varchar(250) COLLATE utf8mb4_bin DEFAULT NULL,
+  PRIMARY KEY (`STAFF_SCHDL_ID`),
+  KEY `STAFF_IDX02` (`STAFF_ID`),
+  KEY `ORG_IDX02` (`ORG_ID`),
+  KEY `SEAT_IDX02` (`SEAT_ID`),
+  KEY `TIME_SCHDL_IDX02` (`TIME_SCHDL_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin COMMENT='电信营业班表';
+
+CREATE TABLE `org_time_schdl` (
+  `TIME_SCHDL_ID` bigint(16) NOT NULL COMMENT '营业班次标识',
+  `ORG_ID` bigint(16) NOT NULL COMMENT '电信组织标识',
+  `SCHDL_TYPE` varchar(10) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '班次类型',
+  `START_TIME` varchar(30) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '开始时间',
+  `END_TIME` varchar(30) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '结束时间',
+  `DURATION` bigint(16) NOT NULL COMMENT '时长',
+  `DURATION_UNIT` varchar(10) COLLATE utf8mb4_bin NOT NULL COMMENT '时长单位',
+  `UPDATE_STAFF` bigint(16) DEFAULT NULL,
+  `UPDATE_DATE` datetime DEFAULT NULL,
+  `CREATE_STAFF` bigint(16) DEFAULT NULL,
+  `CREATE_DATE` datetime DEFAULT NULL,
+  `STATUS_CD` varchar(10) COLLATE utf8mb4_bin NOT NULL COMMENT '状态',
+  `STATUS_DATE` datetime DEFAULT NULL,
+  `REMARK` varchar(250) COLLATE utf8mb4_bin DEFAULT NULL,
+  `IS_WEEKEND_REST` bigint(16) NOT NULL COMMENT '双休日是否休息 使用主数据',
+  `IS_HOLIDAYS_REST` bigint(16) NOT NULL COMMENT '是否休法定节假日 使用主数据',
+  PRIMARY KEY (`TIME_SCHDL_ID`),
+  KEY `ORG_IDX02` (`ORG_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin COMMENT='电信营业班次表';
+
+CREATE TABLE `organization` (
+  `ORG_ID` bigint(16) NOT NULL,
+  `PARTY_ID` bigint(16) NOT NULL,
+  `ORG_CODE` varchar(30) DEFAULT NULL,
+  `ORG_NAME` varchar(250) DEFAULT NULL,
+  `REGION_ID` decimal(16,0) NOT NULL,
+  `ORG_TYPE` varchar(4) DEFAULT NULL,
+  `ORG_SUBTYPE` varchar(10) DEFAULT NULL,
+  `VILLAGE_FLAG` varchar(4) DEFAULT NULL,
+  `PARENT_ORG_ID` bigint(20) DEFAULT NULL,
+  `ORG_LEVEL` decimal(9,0) DEFAULT NULL,
+  `ORG_INDEX` decimal(9,0) DEFAULT NULL,
+  `SALESORG_CODE` varchar(30) DEFAULT NULL,
+  `DIVORG_FLAG` decimal(2,0) DEFAULT NULL,
+  `CREATE_DATE` datetime DEFAULT NULL,
+  `CREATE_STAFF` decimal(16,0) DEFAULT NULL,
+  `STATUS_CD` varchar(10) NOT NULL,
+  `STATUS_DATE` datetime DEFAULT NULL,
+  `UPDATE_DATE` datetime DEFAULT NULL,
+  `UPDATE_STAFF` bigint(16) DEFAULT NULL,
+  `SIEBEL_ROW_ID` varchar(15) DEFAULT NULL,
+  `ODSM_ROW_ID` varchar(50) DEFAULT NULL,
+  `ORG_DESC` varchar(250) DEFAULT NULL,
+  `REMARK` varchar(250) DEFAULT NULL,
+  `OA_ORG_ID` varchar(50) DEFAULT NULL,
+  `CHANNEL_TYPE` varchar(30) DEFAULT NULL COMMENT '渠道大类',
+  `CHANNEL_SUB_TYPE` varchar(30) DEFAULT NULL COMMENT '渠道小类',
+  PRIMARY KEY (`ORG_ID`),
+  KEY `INDEX_ORGANIZATION` (`ORG_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `organization_ext` (
+  `ORG_ID` decimal(16,0) NOT NULL COMMENT '电信组织标识',
+  `PAR_DIVN_ID` decimal(16,0) DEFAULT NULL COMMENT '电信组织父部门',
+  `ACCNT_BUREAU` varchar(60) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '组织所属二级单位',
+  `PARTNER_BUREAU` varchar(60) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '组织所属区局',
+  `ADMIN_BUREAU` varchar(60) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '组织所属分局',
+  `AGENT_NUMBER` varchar(30) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '组织所属代理商编号',
+  `REGION_NAME` varchar(30) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '组织所属行政区域',
+  `PARTNER_LEVEL` varchar(120) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '组织等级',
+  `PARTNER_STATUS` varchar(30) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '组织审核状态',
+  `PARENT_CHN_NUM` varchar(30) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '组织所属上级编码',
+  `Siebel_ROW_ID` varchar(50) COLLATE utf8mb4_bin DEFAULT NULL COMMENT 'SIEBEL表ROW_ID',
+  `UPDATE_STAFF` decimal(16,0) DEFAULT NULL COMMENT '记录的修改员工',
+  `UPDATE_DATE` datetime DEFAULT NULL COMMENT '记录创建的时间',
+  `STATUS_DATE` datetime DEFAULT NULL COMMENT '状态修改的时间',
+  `CREATE_STAFF` decimal(16,0) DEFAULT NULL COMMENT '创建人',
+  `CREATE_DATE` datetime DEFAULT NULL COMMENT '创建时间。',
+  `MANAGE_BUREAU` varchar(60) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '管理部门',
+  PRIMARY KEY (`ORG_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
+
+CREATE TABLE `priv_data_rel` (
+  `PRIV_DATA_REL_ID` decimal(18,0) NOT NULL COMMENT '权限数据关联标识,主键',
+  `PRIV_ID` decimal(16,0) NOT NULL COMMENT '权限标识，外键',
+  `PRIV_REF_ID` varchar(250) DEFAULT NULL COMMENT '根据权限对象类型，如果为"业务对象",则填写业务对象ID;',
+  `EFF_DATE` datetime DEFAULT NULL COMMENT '生效时间',
+  `EXP_DATE` datetime DEFAULT NULL COMMENT '失效时间',
+  `SYSTEM_INFO_ID` decimal(16,0) NOT NULL COMMENT '权限的归属系统',
+  `STATUS_CD` varchar(10) NOT NULL COMMENT '状态',
+  `STATUS_DATE` datetime DEFAULT NULL COMMENT '状态时间',
+  `CREATE_DATE` datetime DEFAULT NULL COMMENT '创建时间',
+  `CREATE_STAFF` decimal(16,0) DEFAULT NULL COMMENT '创建人',
+  `UPDATE_DATE` datetime DEFAULT NULL COMMENT '修改时间',
+  `UPDATE_STAFF` decimal(16,0) DEFAULT NULL COMMENT '修改人',
+  PRIMARY KEY (`PRIV_DATA_REL_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='记录权限与业务对象之间多对多的关系';
+
+CREATE TABLE `priv_func_rel` (
+  `PRIV_FUNC_REL_ID` bigint(16) NOT NULL,
+  `PRIV_ID` bigint(16) NOT NULL COMMENT '权限标识，外键',
+  `PRIV_REF_TYPE` varchar(10) DEFAULT NULL COMMENT '权限对象类型，LOVB=STF-C-0021；',
+  `PRIV_REF_ID` bigint(250) DEFAULT NULL COMMENT '根据权限对象类型，如果为"业务对象",则填写业务对象ID;',
+  `EFF_DATE` datetime DEFAULT NULL COMMENT '生效时间',
+  `EXP_DATE` datetime DEFAULT NULL COMMENT '失效时间',
+  `SYSTEM_INFO_ID` bigint(16) DEFAULT NULL COMMENT '权限的归属系统',
+  `STATUS_CD` varchar(10) NOT NULL COMMENT '状态',
+  `STATUS_DATE` datetime DEFAULT NULL COMMENT '状态时间',
+  `CREATE_DATE` datetime DEFAULT NULL COMMENT '创建时间',
+  `CREATE_STAFF` decimal(16,0) DEFAULT NULL COMMENT '创建人',
+  `UPDATE_DATE` datetime DEFAULT NULL COMMENT '修改时间',
+  `UPDATE_STAFF` decimal(16,0) DEFAULT NULL COMMENT '修改人',
+  PRIMARY KEY (`PRIV_FUNC_REL_ID`),
+  KEY `INDEX_PRIV_FUNC_REL` (`PRIV_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='定义权限关联的功能菜单、功能组件，一个权限可包含多个功能菜单或功能组件。';
+
+CREATE TABLE `priv_grant` (
+  `PRIV_GRANT_ID` bigint(20) NOT NULL AUTO_INCREMENT,
+  `PRIV_ID` bigint(16) NOT NULL COMMENT '权限标识',
+  `MANAGE_CLASS` varchar(10) DEFAULT NULL COMMENT '授权管理分类，分为：管理权限、使用权限；‘管理权限’包含了‘使用权限’；LOVB=STF-C-0015。',
+  `GRANT_OBJ_TYPE` varchar(10) DEFAULT NULL COMMENT '授权对象类型。LOVB=STF-C-0016。',
+  `GRANT_OBJ_ID` bigint(16) NOT NULL COMMENT '授权对象标识，根据授权对象类型，区分是系统用户ID、系统岗位ID、角色ID',
+  `OPER_TYPE` varchar(4) DEFAULT NULL COMMENT '授权操作类型，LOVB=STF-C-0017。',
+  `EFF_DATE` datetime DEFAULT NULL COMMENT '生效时间',
+  `EXP_DATE` datetime DEFAULT NULL COMMENT '失效时间',
+  `STATUS_CD` varchar(10) NOT NULL COMMENT '状态',
+  `STATUS_DATE` datetime DEFAULT NULL COMMENT '状态时间',
+  `CREATE_DATE` datetime DEFAULT NULL COMMENT '创建时间',
+  `CREATE_STAFF` decimal(16,0) NOT NULL COMMENT '创建人',
+  `UPDATE_DATE` datetime DEFAULT NULL COMMENT '修改时间',
+  `UPDATE_STAFF` decimal(16,0) DEFAULT NULL COMMENT '修改人',
+  `PAR_PRIV_ID` decimal(16,0) NOT NULL DEFAULT '0' COMMENT '记录授予的数据权限所关联的功能权限标识',
+  `GRANT_OBJ_NAME` varchar(50) DEFAULT NULL,
+  `org_id` bigint(16) DEFAULT NULL,
+  PRIMARY KEY (`PRIV_GRANT_ID`),
+  KEY `idx_priv_grant_status_cd` (`STATUS_CD`,`GRANT_OBJ_TYPE`,`GRANT_OBJ_ID`),
+  KEY `INDEX_PRIV_GRANT` (`GRANT_OBJ_TYPE`,`GRANT_OBJ_ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=23138808 DEFAULT CHARSET=utf8 COMMENT='描述将权限授权给不同的对象，包括系统用户、系统岗位、角色；\r\n一个系统用户也可以拥有多个私有的权限，一个权限可';
+
+CREATE TABLE `privilege` (
+  `PRIV_ID` bigint(20) NOT NULL AUTO_INCREMENT,
+  `PRIV_CODE` varchar(30) DEFAULT NULL COMMENT '权限编码',
+  `PRIV_NAME` varchar(250) DEFAULT NULL COMMENT '权限名称',
+  `PRIV_TYPE` varchar(10) DEFAULT NULL COMMENT '权限类型,LOVB=STF-0002。',
+  `PRIV_DESC` varchar(2000) DEFAULT NULL COMMENT '权限描述',
+  `PRIV_MANAGE_CLASS` varchar(10) DEFAULT NULL COMMENT '权限管控类别，区分是普通权限、管控权限，对于高危权限能够有一定的提醒，并且可以有不同的授权流程。LOVB=STF-C-0020。',
+  `EFF_DATE` datetime DEFAULT NULL COMMENT '生效时间',
+  `EXP_DATE` datetime DEFAULT NULL COMMENT '失效时间',
+  `SYSTEM_INFO_ID` bigint(16) NOT NULL COMMENT '权限的归属系统',
+  `STATUS_CD` varchar(10) NOT NULL COMMENT '状态',
+  `STATUS_DATE` datetime DEFAULT NULL COMMENT '状态时间',
+  `CREATE_DATE` datetime DEFAULT NULL COMMENT '创建时间',
+  `CREATE_STAFF` decimal(16,0) DEFAULT NULL COMMENT '创建人',
+  `UPDATE_DATE` datetime DEFAULT NULL COMMENT '修改时间',
+  `UPDATE_STAFF` decimal(16,0) DEFAULT NULL COMMENT '修改人',
+  `PRIV_SORT` varchar(10) DEFAULT NULL,
+  `REGION_ID` decimal(16,0) NOT NULL,
+  PRIMARY KEY (`PRIV_ID`),
+  KEY `INDEX_PRIVILEGE` (`PRIV_ID`,`SYSTEM_INFO_ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=21003044 DEFAULT CHARSET=utf8 COMMENT='权限规格表，记录权限的配置';
+
+CREATE TABLE `pwd_sms_send` (
+  `SMS_ID` bigint(17) NOT NULL,
+  `STAFF_ID` bigint(17) DEFAULT NULL,
+  `SMS_ORDER` varchar(10) DEFAULT NULL,
+  `SMS_TYPE` varchar(10) DEFAULT NULL,
+  `PWD_SMS_TEL` decimal(16,0) DEFAULT NULL,
+  `IDENTIFY_CODE` varchar(10) DEFAULT NULL,
+  `SYSTEM_INFO_ID` bigint(17) DEFAULT NULL,
+  `SEND_DATE` datetime DEFAULT NULL,
+  PRIMARY KEY (`SMS_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE `staff` (
+  `STAFF_ID` bigint(16) NOT NULL COMMENT '员工标识',
+  `PARTY_ID` bigint(16) DEFAULT NULL COMMENT '参与人标识,参与人唯一标识',
+  `STAFF_CODE` varchar(250) NOT NULL COMMENT '员工编码',
+  `STAFF_ACCOUNT` varchar(250) NOT NULL COMMENT '员工账号',
+  `ORG_ID` bigint(16) DEFAULT NULL COMMENT '组织标识外键,员工的归属管理组织',
+  `STAFF_TYPE` varchar(10) DEFAULT NULL COMMENT '1000有效、1001暂停、1010锁定、1011密码错误锁定、1020停用、1100无效、1200未生效、1210审批通过、1220审批中、1230审批未通过',
+  `STAFF_NAME` varchar(250) DEFAULT NULL COMMENT '员工姓名',
+  `STAFF_DESC` varchar(2000) DEFAULT NULL COMMENT '员工描述',
+  `STATUS_CD` varchar(10) DEFAULT NULL COMMENT '1000	有效\r\n1001	暂停\r\n1010	锁定\r\n1011	密码错误锁定\r\n1020	停用\r\n1100	无效\r\n1200	未生效\r\n1210	审批通过\r\n1220	审批中\r\n1230	审批未通过',
+  `STATUS_DATE` datetime DEFAULT NULL COMMENT '状态时间',
+  `CREATE_DATE` datetime DEFAULT NULL COMMENT '创建时间',
+  `CREATE_STAFF` bigint(16) DEFAULT NULL,
+  `UPDATE_DATE` datetime DEFAULT NULL COMMENT '修改时间',
+  `UPDATE_STAFF` bigint(16) DEFAULT NULL,
+  `SALESSTAFF_CODE` varchar(30) DEFAULT NULL,
+  `COMMON_REGION_ID` bigint(16) DEFAULT NULL,
+  `SIEBEL_ROW_ID` varchar(15) DEFAULT NULL,
+  PRIMARY KEY (`STAFF_ID`),
+  KEY `idx_STAFF_STAFF_CODE` (`STAFF_CODE`),
+  KEY `idx_STAFF_STAFF_ACCOUNT` (`STAFF_ACCOUNT`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE `staff_attr` (
+  `ATTR_ID` bigint(20) DEFAULT NULL COMMENT '属性标识',
+  `ATTR_VALUE` varchar(250) COLLATE utf8mb4_bin DEFAULT NULL,
+  `ATTR_VALUE_ID` bigint(20) DEFAULT NULL COMMENT '属性值标识',
+  `CREATE_DATE` datetime DEFAULT NULL,
+  `CREATE_STAFF` bigint(20) DEFAULT NULL COMMENT '创建人',
+  `STAFF_ATTR_ID` bigint(20) NOT NULL COMMENT '员工属性标识',
+  `STAFF_ID` bigint(20) NOT NULL COMMENT '员工标识',
+  `STATUS_CD` varchar(10) COLLATE utf8mb4_bin NOT NULL COMMENT '状态',
+  `STATUS_DATE` datetime DEFAULT NULL,
+  `UPDATE_DATE` datetime DEFAULT NULL,
+  `UPDATE_STAFF` bigint(20) DEFAULT NULL COMMENT '修改人',
+  `SIEBEL_ROW_ID` varchar(15) COLLATE utf8mb4_bin NOT NULL COMMENT 'SIEBEL表ROW_ID',
+  `STAFF_ROLE_TYPE` varchar(10) COLLATE utf8mb4_bin DEFAULT NULL,
+  PRIMARY KEY (`STAFF_ATTR_ID`),
+  KEY `STF_ATTR_IDX01` (`SIEBEL_ROW_ID`),
+  KEY `IN_STAFFATTR` (`STAFF_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin COMMENT='员工属性';
+
+CREATE TABLE `staff_biz_zone_rel` (
+  `BIZ_ZONE_ID` bigint(20) NOT NULL COMMENT '商圈标识',
+  `CREATE_DATE` date DEFAULT NULL COMMENT '创建时间',
+  `CREATE_STAFF` bigint(20) DEFAULT NULL COMMENT '创建人',
+  `EFF_DATE` date DEFAULT NULL COMMENT '生效时间',
+  `EXP_DATE` date DEFAULT NULL COMMENT '失效时间',
+  `REL_TYPE` varchar(10) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '员工商圈关系类型',
+  `STAFF_BIZ_ZONE_REL_ID` bigint(20) NOT NULL COMMENT '员工商圈关系标识',
+  `STAFF_ID` bigint(20) NOT NULL COMMENT '员工标识',
+  `STATUS_CD` varchar(10) COLLATE utf8mb4_bin NOT NULL COMMENT '状态',
+  `STATUS_DATE` date DEFAULT NULL COMMENT '状态时间',
+  `UPDATE_DATE` date DEFAULT NULL COMMENT '修改时间',
+  `UPDATE_STAFF` bigint(20) DEFAULT NULL COMMENT '修改人',
+  `SIEBEL_ROW_ID` varchar(15) COLLATE utf8mb4_bin NOT NULL COMMENT 'SIEBEL表ROW_ID',
+  `SALES_STAFF_ID` bigint(16) DEFAULT NULL,
+  PRIMARY KEY (`STAFF_BIZ_ZONE_REL_ID`),
+  KEY `STF_B_Z_REL_IDX01` (`SIEBEL_ROW_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin COMMENT='员工商圈关系';
+
+CREATE TABLE `staff_contact_info` (
+  `UPDATE_STAFF` bigint(20) DEFAULT NULL COMMENT '修改人',
+  `UPDATE_DATE` date DEFAULT NULL COMMENT '修改时间',
+  `CREATE_STAFF` bigint(20) DEFAULT NULL COMMENT '创建人',
+  `CREATE_DATE` date DEFAULT NULL COMMENT '创建时间',
+  `STAFF_ID` bigint(20) NOT NULL COMMENT '员工标识',
+  `STAFF_CONTACT_ID` bigint(20) NOT NULL COMMENT '员工联系信息标识',
+  `EXP_DATE` date DEFAULT NULL COMMENT '失效时间',
+  `STATUS_CD` varchar(10) COLLATE utf8mb4_bin NOT NULL COMMENT '状态',
+  `STATUS_DATE` date DEFAULT NULL COMMENT '状态时间',
+  `EFF_DATE` date DEFAULT NULL COMMENT '生效时间',
+  `CONTACT_ID` bigint(20) NOT NULL COMMENT '联系标识',
+  `SIEBEL_ROW_ID` varchar(15) COLLATE utf8mb4_bin NOT NULL COMMENT 'SIEBEL表ROW_ID',
+  PRIMARY KEY (`STAFF_CONTACT_ID`),
+  KEY `STF_CONT_INFO_IDX01` (`SIEBEL_ROW_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin COMMENT='员工联系信息';
+
+CREATE TABLE `staff_man_hour_cfg` (
+  `SMHC_ID` bigint(16) NOT NULL COMMENT '人员工时配置标识',
+  `ORG_ID` bigint(16) NOT NULL COMMENT '营业厅标识',
+  `STAFF_ID` bigint(16) NOT NULL COMMENT '员工标识',
+  `MONTH` datetime DEFAULT NULL COMMENT '月份',
+  `MAN_HOUR` bigint(16) DEFAULT NULL COMMENT '工时',
+  `HOLI_DATE` datetime DEFAULT NULL COMMENT '假期时间',
+  `HOLI_TYPE` bigint(16) DEFAULT NULL COMMENT '假期调班类型 1000休息 1100上班',
+  `UPDATE_STAFF` bigint(16) DEFAULT NULL,
+  `UPDATE_DATE` datetime DEFAULT NULL,
+  `CREATE_STAFF` bigint(16) DEFAULT NULL,
+  `CREATE_DATE` datetime DEFAULT NULL,
+  `STATUS_CD` varchar(10) COLLATE utf8mb4_bin NOT NULL COMMENT '状态',
+  `STATUS_DATE` datetime DEFAULT NULL,
+  `REMARK` varchar(250) COLLATE utf8mb4_bin DEFAULT NULL,
+  PRIMARY KEY (`SMHC_ID`),
+  KEY `STAFF_IDX02` (`STAFF_ID`),
+  KEY `ORG_IDX02` (`ORG_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin COMMENT='人员月计划工时配置';
+
+CREATE TABLE `staff_org_rel` (
+  `CREATE_DATE` datetime DEFAULT NULL,
+  `CREATE_STAFF` bigint(20) DEFAULT NULL COMMENT '创建人',
+  `EFF_DATE` datetime DEFAULT NULL,
+  `EXP_DATE` datetime DEFAULT NULL,
+  `ORG_ID` bigint(20) NOT NULL COMMENT '电信组织标识',
+  `REL_TYPE` varchar(4) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '员工组织关系类型',
+  `ROLE_ID` bigint(20) DEFAULT NULL COMMENT '员工组织关系角色标识',
+  `STAFF_ID` bigint(20) NOT NULL COMMENT '员工标识',
+  `STAFF_ORG_REL_ID` bigint(20) NOT NULL COMMENT '员工组织关系标识',
+  `STATUS_CD` varchar(10) COLLATE utf8mb4_bin NOT NULL COMMENT '状态',
+  `STATUS_DATE` datetime DEFAULT NULL,
+  `UPDATE_DATE` datetime DEFAULT NULL,
+  `UPDATE_STAFF` bigint(20) DEFAULT NULL COMMENT '修改人',
+  `SIEBEL_ROW_ID` varchar(15) COLLATE utf8mb4_bin NOT NULL COMMENT 'SIEBEL表ROW_ID',
+  PRIMARY KEY (`STAFF_ORG_REL_ID`),
+  KEY `STF_ORG_REL_IDX01` (`SIEBEL_ROW_ID`),
+  KEY `idx_STAFF_ORG_REL_STAFF_ID` (`STAFF_ID`),
+  KEY `idx_STAFF_ORG_REL_ORG_ID` (`ORG_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin COMMENT='员工组织关系';
+
+CREATE TABLE `sync_fail_record` (
+  `OPER_ID` bigint(20) NOT NULL COMMENT '主键标识',
+  `OPER_INFO_OBJ` varchar(32) NOT NULL,
+  `OPER_INFO_NAME` varchar(32) NOT NULL,
+  `OPER_INFO_TYPE` varchar(16) NOT NULL,
+  `OPER_CODE` varchar(32) DEFAULT NULL,
+  `OPER_CALL_TYPE` int(2) NOT NULL,
+  `PRIMARY_KEY` bigint(20) NOT NULL COMMENT '操作对象的主键标识',
+  `CREATE_DATE` datetime NOT NULL,
+  `REMAKE` varchar(2000) NOT NULL,
+  `FILE_CODE` int(16) NOT NULL,
+  `FILE_MESSAGE` varchar(1024) NOT NULL,
+  PRIMARY KEY (`OPER_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `system_info` (
+  `SYSTEM_INFO_ID` bigint(11) NOT NULL AUTO_INCREMENT,
+  `SYSTEM_NAME` varchar(50) DEFAULT NULL COMMENT '记录系统名称。',
+  `SYSTEM_NBR` varchar(250) NOT NULL COMMENT '记录系统编码。',
+  `SYSTEM_TYPE` varchar(4) DEFAULT NULL COMMENT '记录系统类型，LOVB=PUB-C-0017',
+  `REGION_ID` decimal(16,0) DEFAULT NULL COMMENT '记录系统归属区域。指向公共管理区域标识',
+  `STATUS_CD` varchar(10) NOT NULL COMMENT '记录状态。LOVB=PUB-C-0001。',
+  `CREATE_STAFF` decimal(16,0) DEFAULT NULL COMMENT '记录创建的员工。',
+  `UPDATE_STAFF` decimal(16,0) DEFAULT NULL COMMENT '记录修改的员工。',
+  `CREATE_DATE` datetime DEFAULT NULL COMMENT '记录创建的时间。',
+  `STATUS_DATE` datetime DEFAULT NULL COMMENT '状态变更的时间。',
+  `UPDATE_DATE` datetime DEFAULT NULL COMMENT '记录修改的时间。',
+  `REMARK` varchar(2000) DEFAULT NULL COMMENT '记录备注信息',
+  PRIMARY KEY (`SYSTEM_INFO_ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=122 DEFAULT CHARSET=utf8 COMMENT='描述记录订单、红包、认证等用到系统的详细信息。';
+
+CREATE TABLE `system_login_log` (
+  `SYSTEM_LOGIN_LOG_ID` bigint(16) NOT NULL COMMENT '主键标识',
+  `STAFF_ID` bigint(16) NOT NULL COMMENT '员工标识',
+  `STAFF_ACCOUNT` varchar(250) NOT NULL COMMENT '员工账号',
+  `STAFF_NAME` varchar(250) DEFAULT NULL COMMENT '员工姓名',
+  `SYS_USER_ID` bigint(16) NOT NULL COMMENT '记录系统用户的主键。',
+  `SYS_ROLE_IDS` varchar(250) NOT NULL COMMENT '记录系统用户角色标识集合字符串。',
+  `SYSTEM_INFO_ID` bigint(11) NOT NULL COMMENT '系统标识',
+  `SYSTEM_NAME` varchar(50) DEFAULT NULL COMMENT '记录系统名称。',
+  `ORG_ID` bigint(16) DEFAULT NULL COMMENT '组织标识外键,员工的归属管理组织',
+  `ORG_NAME` varchar(250) DEFAULT NULL,
+  `LOGIN_DATE` datetime DEFAULT NULL COMMENT '登录时间',
+  `PARTNER_BUREAU_NAME` varchar(60) DEFAULT NULL COMMENT '组织所属区局名称',
+  `ADMIN_BUREAU_NAME` varchar(60) DEFAULT NULL COMMENT '组织所属分局名称',
+  `CHANNEL_TYPE_NAME` varchar(30) DEFAULT NULL COMMENT '渠道小类名称',
+  `CHANNEL_SUB_TYPE_NAME` varchar(30) DEFAULT NULL COMMENT '渠道大类名称',
+  `CHANNEL_GRADE_NAME` varchar(30) DEFAULT NULL COMMENT '门店等级名称',
+  PRIMARY KEY (`SYSTEM_LOGIN_LOG_ID`),
+  KEY `idx_LOGIN_DATE` (`LOGIN_DATE`),
+  KEY `idx_STAFF_ACCOUNT` (`STAFF_ACCOUNT`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE `system_post_role` (
+  `SYS_POST_ROLE_ID` decimal(16,0) NOT NULL COMMENT '系统岗位角色标识',
+  `SYS_ROLE_ID` decimal(16,0) NOT NULL COMMENT '角色标识',
+  `SYS_POST_ID` decimal(16,0) DEFAULT NULL COMMENT '系统岗位标识',
+  `EFF_DATE` datetime DEFAULT NULL COMMENT '生效时间',
+  `EXP_DATE` datetime DEFAULT NULL COMMENT '失效时间',
+  `STATUS_CD` varchar(10) NOT NULL COMMENT '状态',
+  `STATUS_DATE` datetime DEFAULT NULL COMMENT '状态时间',
+  `CREATE_DATE` datetime DEFAULT NULL COMMENT '创建时间',
+  `CREATE_STAFF` decimal(16,0) DEFAULT NULL COMMENT '创建人',
+  `UPDATE_DATE` datetime DEFAULT NULL COMMENT '修改时间',
+  `UPDATE_STAFF` decimal(16,0) DEFAULT NULL COMMENT '修改人',
+  PRIMARY KEY (`SYS_POST_ROLE_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='记录系统岗位授予的角色关系，一个系统岗位可以包含多个角色，一个角色可以分配给多个系统岗位。';
+
+CREATE TABLE `system_roles` (
+  `sys_role_id` bigint(11) NOT NULL AUTO_INCREMENT,
+  `SYS_ROLE_NAME` varchar(50) DEFAULT NULL COMMENT '角色名称',
+  `SYS_ROLE_CODE` varchar(30) DEFAULT NULL COMMENT '角色编码',
+  `SYS_ROLE_TYPE` varchar(10) DEFAULT NULL COMMENT '角色类型,LOVB=STF-C-0012。',
+  `SYS_ROLE_DESC` varchar(2000) DEFAULT NULL COMMENT '角色描述',
+  `INIT_FLAG` decimal(2,0) DEFAULT NULL COMMENT '是否系统初始数据',
+  `REGION_ID` decimal(16,0) NOT NULL COMMENT '公用管理区域标识,记录区域唯一标识',
+  `SYSTEM_INFO_ID` bigint(16) DEFAULT NULL COMMENT '系统用户的归属系统',
+  `STATUS_CD` varchar(10) NOT NULL COMMENT '状态',
+  `STATUS_DATE` datetime DEFAULT NULL COMMENT '状态时间',
+  `CREATE_DATE` datetime DEFAULT NULL COMMENT '创建时间',
+  `CREATE_STAFF` decimal(16,0) DEFAULT NULL COMMENT '创建人',
+  `UPDATE_DATE` datetime DEFAULT NULL COMMENT '修改时间',
+  `UPDATE_STAFF` decimal(16,0) DEFAULT NULL COMMENT '修改人',
+  PRIMARY KEY (`sys_role_id`),
+  KEY `INDEX_SYSTEM_ROLES` (`sys_role_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=67279180055707649 DEFAULT CHARSET=utf8 COMMENT='描述员工的系统权限集合，是用以定义系统使用人员操作权限的实体。';
+
+CREATE TABLE `system_roles_org_rel` (
+  `SYS_ROLE_REL_ID` bigint(17) NOT NULL,
+  `SYS_ROLE_ID` bigint(17) NOT NULL,
+  `SYS_ROLE_REL_TYPE` varchar(10) DEFAULT NULL,
+  `X_SUBCHANNEL` varchar(30) DEFAULT NULL,
+  `ORG_ID` bigint(17) DEFAULT NULL,
+  `STATUS_CD` varchar(10) DEFAULT NULL,
+  `STATUS_DATE` datetime DEFAULT NULL,
+  `CREATE_DATE` datetime DEFAULT NULL,
+  `UPDATE_DATE` datetime DEFAULT NULL,
+  `CREATE_STAFF` decimal(16,0) DEFAULT NULL,
+  `UPDATE_STAFF` decimal(16,0) DEFAULT NULL,
+  `SYS_ROLE_REL_NAME` varchar(200) NOT NULL,
+  PRIMARY KEY (`SYS_ROLE_REL_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE `system_user` (
+  `SYS_USER_ID` bigint(16) NOT NULL AUTO_INCREMENT COMMENT '记录系统用户的主键。',
+  `STAFF_ID` decimal(16,0) NOT NULL COMMENT '取员工表中的员工标识为外键。',
+  `SYS_USER_CODE` varchar(250) DEFAULT NULL COMMENT '员工的系统用户账号。',
+  `PASSWORD` varchar(250) DEFAULT NULL COMMENT '密码',
+  `PWD_ERR_CNT` decimal(9,0) NOT NULL COMMENT '记录用户登录系统时输入秘密错误的次数，超过一定次数时锁定用户',
+  `PWD_SMS_TEL` decimal(16,0) DEFAULT NULL COMMENT '记录系统登录用户的短信通知手机号码，用于员工的系统安全验证、短信登录等功能',
+  `PWD_STATUS` varchar(6) DEFAULT NULL COMMENT '密码状态,LOVB=STF-C-0006。',
+  `PWD_NEWTIME` datetime DEFAULT NULL COMMENT '新密码生成时间',
+  `PWD_EFFECT_DAYS` decimal(9,0) DEFAULT NULL COMMENT '密码有效天数,单位为天',
+  `REGION_ID` decimal(16,0) NOT NULL COMMENT '公用管理区域标识,记录区域唯一标识',
+  `SYSTEM_INFO_ID` bigint(16) NOT NULL COMMENT '系统用户归属的系统信息标识',
+  `LIMIT_COUNT` decimal(9,0) DEFAULT NULL COMMENT '登录次数限制',
+  `LOGINED_NUM` decimal(9,0) DEFAULT NULL COMMENT '当前登录次数',
+  `SYS_USER_DESC` varchar(2000) DEFAULT NULL COMMENT '系统用户描述',
+  `EFF_DATE` datetime DEFAULT NULL COMMENT '系统用户生效时间',
+  `EXP_DATE` datetime DEFAULT NULL COMMENT '系统用户失效时间',
+  `STATUS_CD` varchar(10) NOT NULL COMMENT '记录系统用户状态。LOVB=STF-0001。',
+  `STATUS_DATE` datetime DEFAULT NULL COMMENT '状态变更的时间',
+  `CREATE_DATE` datetime DEFAULT NULL COMMENT '记录系统用户创建时间',
+  `CREATE_STAFF` decimal(16,0) DEFAULT NULL COMMENT '记录系统用户创建人',
+  `UPDATE_DATE` datetime DEFAULT NULL COMMENT '修改时间',
+  `UPDATE_STAFF` decimal(16,0) DEFAULT NULL COMMENT '修改人',
+  `STAFF_NAME` varchar(250) DEFAULT NULL,
+  `SIEBEL_ROW_ID` varchar(15) DEFAULT NULL,
+  PRIMARY KEY (`SYS_USER_ID`),
+  KEY `INDEX_SYSTEM_USER` (`SYS_USER_ID`,`STAFF_ID`,`SYS_USER_CODE`),
+  KEY `idx_SYSTEM_USER_SYS_USER_CODE` (`SYS_USER_CODE`),
+  KEY `idx_SYSTEM_USER_STAFF_ID` (`STAFF_ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=21003034 DEFAULT CHARSET=utf8 COMMENT='记录员工登录系统使用的系统帐户，不同的系统可有不同的系统用户。';
+
+CREATE TABLE `system_user_attr` (
+  `SYS_USER_ATTR_ID` decimal(16,0) NOT NULL COMMENT '系统用户属性标识',
+  `SYS_USER_ID` decimal(16,0) NOT NULL COMMENT '系统用户标识',
+  `ATTR_ID` decimal(16,0) DEFAULT NULL COMMENT '属性标识',
+  `ATTR_VALUE_ID` decimal(16,0) DEFAULT NULL COMMENT '属性值标识，选填',
+  `ATTR_VALUE` varchar(250) DEFAULT NULL,
+  `STATUS_CD` varchar(10) NOT NULL COMMENT '系统用户属性状态',
+  `STATUS_DATE` datetime DEFAULT NULL COMMENT '系统用户属性状态修改时间',
+  `CREATE_DATE` datetime DEFAULT NULL COMMENT '创建时间',
+  `CREATE_STAFF` decimal(16,0) DEFAULT NULL COMMENT '创建人',
+  `UPDATE_DATE` datetime DEFAULT NULL COMMENT '修改时间',
+  `UPDATE_STAFF` decimal(16,0) DEFAULT NULL COMMENT '修改人',
+  PRIMARY KEY (`SYS_USER_ATTR_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='指根据不同的系统所具有的不同的扩展属性。记录系统用户属性规格的实例化信息。';
+
+CREATE TABLE `system_user_role` (
+  `SYS_USER_ROLE_ID` bigint(11) NOT NULL AUTO_INCREMENT,
+  `SYS_ROLE_ID` bigint(16) NOT NULL COMMENT '角色标识',
+  `SYS_USER_ID` bigint(16) NOT NULL COMMENT '系统用户标识',
+  `EFF_DATE` datetime DEFAULT NULL COMMENT '生效时间',
+  `EXP_DATE` datetime DEFAULT NULL COMMENT '失效时间',
+  `STATUS_CD` varchar(10) NOT NULL COMMENT '状态',
+  `STATUS_DATE` datetime DEFAULT NULL COMMENT '状态时间',
+  `CREATE_DATE` datetime DEFAULT NULL COMMENT '创建时间',
+  `CREATE_STAFF` decimal(16,0) DEFAULT NULL COMMENT '创建人',
+  `UPDATE_DATE` datetime DEFAULT NULL COMMENT '修改时间',
+  `UPDATE_STAFF` decimal(16,0) DEFAULT NULL COMMENT '修改人',
+  `org_id` bigint(16) DEFAULT NULL,
+  PRIMARY KEY (`SYS_USER_ROLE_ID`),
+  KEY `INDEX_SYSTEM_USER_ROLE` (`SYS_ROLE_ID`,`SYS_USER_ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=22105747 DEFAULT CHARSET=utf8 COMMENT='描述系统用户与角色之间的对应关系，是多对多关系。一个系统用户除了拥有系统岗位所带的角色和权限，也可以拥有多个私有的角色，';
+
+CREATE TABLE `sysuser_collection` (
+  `COLLECT_ID` bigint(16) NOT NULL COMMENT '收藏标识，主键',
+  `SYS_USER_ID` bigint(16) NOT NULL COMMENT '系统用户标识，外键',
+  `COLLECT_STAFF` decimal(16,0) NOT NULL COMMENT '收藏人员对应工号',
+  `COLLECT_DATE` datetime DEFAULT NULL COMMENT '收藏时间',
+  `CONTENT_TYPE` varchar(10) NOT NULL COMMENT '收藏内容类型 1000 销售品 1001 菜单 1002 客户调查事件',
+  `CONTENT_ID` bigint(16) NOT NULL COMMENT '收藏内容标识，根据收藏内容类型，关联对应的表主键',
+  `COLLECT_SORT` decimal(9,0) DEFAULT NULL COMMENT '收藏排序',
+  `STATUS_CD` varchar(10) NOT NULL COMMENT '记录系统用户登录设置的状态，如有效、无效等。',
+  `STATUS_DATE` datetime DEFAULT NULL COMMENT '状态变更的时间',
+  `CREATE_DATE` datetime DEFAULT NULL COMMENT '记录系统用户登录设置创建时间',
+  `CREATE_STAFF` decimal(16,0) DEFAULT NULL COMMENT '记录系统用户登录设置的创建人',
+  `UPDATE_DATE` datetime DEFAULT NULL COMMENT '修改时间',
+  `UPDATE_STAFF` decimal(16,0) DEFAULT NULL COMMENT '修改人',
+  PRIMARY KEY (`COLLECT_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='记录用户的收藏夹内容。';
+
+CREATE TABLE `sysuser_log` (
+  `LOG_ID` int(10) NOT NULL,
+  `STAFF_ID` bigint(255) DEFAULT NULL,
+  `OPER_CODE` varchar(255) DEFAULT NULL,
+  `OPER_NAME` varchar(255) DEFAULT NULL,
+  `OPER_IP` varchar(255) DEFAULT NULL,
+  `REMARK` varchar(4000) DEFAULT NULL,
+  `CREATE_DATE` datetime DEFAULT NULL,
+  `PRIMARY_KEY` varchar(255) DEFAULT NULL,
+  `OPER_TYPE` varchar(20) DEFAULT NULL,
+  `OPER_DESCRIBE` varchar(1200) DEFAULT NULL,
+  PRIMARY KEY (`LOG_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE `sysuser_login_limit` (
+  `LOGIN_LIMIT_ID` decimal(9,0) NOT NULL COMMENT '登录设置标识,主键',
+  `SYS_USER_ID` decimal(16,0) DEFAULT NULL COMMENT '系统用户标识',
+  `LOGIN_LIMIT_TYPE` varchar(4) DEFAULT NULL COMMENT '登录设置类型，LOVB=STF-C-0009。',
+  `LOGIN_LIMIT_IP_VAL` varchar(250) DEFAULT NULL COMMENT '登录设置IP值',
+  `REGION_ID` decimal(16,0) NOT NULL COMMENT '公用管理区域标识,记录区域唯一标识',
+  `EFF_DATE` datetime DEFAULT NULL COMMENT '系统用户生效时间',
+  `EXP_DATE` datetime DEFAULT NULL COMMENT '系统用户失效时间',
+  `STATUS_CD` varchar(10) NOT NULL COMMENT '记录系统用户登录设置的状态，如有效、无效等。',
+  `STATUS_DATE` datetime DEFAULT NULL COMMENT '状态变更的时间',
+  `CREATE_DATE` datetime DEFAULT NULL COMMENT '记录系统用户登录设置创建时间',
+  `CREATE_STAFF` decimal(16,0) DEFAULT NULL COMMENT '记录系统用户登录设置的创建人',
+  `UPDATE_DATE` datetime DEFAULT NULL COMMENT '修改时间',
+  `UPDATE_STAFF` decimal(16,0) DEFAULT NULL COMMENT '修改人',
+  `LOGIN_LIMIT_MAC_VAL` varchar(250) DEFAULT NULL COMMENT '登录设置MAC值',
+  PRIMARY KEY (`LOGIN_LIMIT_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='系统用户登录设置。同一系统用户可以有多种登录设置信息。';
+
+CREATE TABLE `tmp_cm_sequence` (
+  `oper_type` varchar(50) NOT NULL COMMENT '序列的名字，唯一',
+  `current_value` bigint(20) NOT NULL COMMENT '当前的值',
+  `increment_value` int(11) NOT NULL DEFAULT '1' COMMENT '步长，默认为1',
+  PRIMARY KEY (`oper_type`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='公共的序列表，用于为非自增且要求唯一的字段记录和获取唯一ID。';
+
