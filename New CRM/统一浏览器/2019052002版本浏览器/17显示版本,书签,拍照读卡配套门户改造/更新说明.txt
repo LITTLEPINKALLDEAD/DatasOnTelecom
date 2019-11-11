@@ -1,0 +1,15 @@
+2019/5/20
+1. 配合门户的读卡和拍照功能优化, 以下6个地址,强制调用IE内核
+读卡文件地址：
+集成：http://test.sh.ctc.com/jchj/getCardInfo2.html
+用测：http://test.sh.ctc.com/cgporal2/getCardInfo2.html
+生产：http://www.sh.ctc.com/STSP/getCardInfo2.html
+
+拍照文件地址：
+集成：http://test.sh.ctc.com/jchj/getPhoto.html
+用测：http://test.sh.ctc.com/cgporal2/getPhoto.html
+生产：http://www.sh.ctc.com/STSP/getPhoto.html
+
+2. 显示版本号, 鼠标移到左上角, 统一浏览器字样上,会浮现版本号
+
+3. 从本版本开始的, 个性化收藏的网页书签,  重新安装新版本后,不会消失
