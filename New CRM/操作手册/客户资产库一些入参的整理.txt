@@ -1,0 +1,32 @@
+1、客户核心表：
+客户：customer     CUST_ID 主键客户标识，通过CUST_ID客户标识作为入参查询
+证件：party_cert    通过客户表查询到该客户的PARTY_ID，作为入参在party_cert 表中查询
+参与人：party         通过客户表查询到该客户的PARTY_ID，作为入参在party   表中查询
+账户：account        通过CUST_ID客户标识作为入参查询，作为入参在account 表中查询
+支付方案：payment_plan           通过CUST_ID客户标识作为入参查询，作为入参在payment_plan 表中查询
+发票定制关系：inv_format_customize_rel            通过CUST_ID客户标识作为入参查询
+联系人：contacts_info   通过客户表查询到该客户的PARTY_ID，作为入参在contacts_info表中查询
+客户常用地址：cust_addr_rel         通过CUST_ID客户标识作为入参查询
+客户与联系人关系：cust_contact_info_rel     通过CUST_ID客户标识作为入参查询
+客户属性：cust_attr                                     通过CUST_ID客户标识作为入参查询
+特殊名单：special_list            通过CUST_ID在客户常用地址表cust_addr_rel  中查询到地址ID：ADDR_ID，用查询到的值作为OBJ_ID入参查询special_list （前提是该地址添加黑名单了）
+信用度：credit             通过CUST_ID在客户常用地址表cust_addr_rel  中查询到地址ID：ADDR_ID，用查询到的值作为OBJ_ID入参查询查询credit
+以上几张表都可以通过客户标识查客户表customer 获取到需要的参数去各个表查询对应该客户的信息，special_list ，credit  这2张表麻烦点需要先查地址表，查到ADDR_ID，再去查询。
+
+后面2张没找到和客户表的关系。
+纳税人：tax_payer   
+取票人：tax_ticket_taker
+
+
+2.资产核心表：
+客户资产表：prod_inst   通过USE_CUST_ID客户标识作为入参查询该客户名下所有资产，通过ACC_NUM设备号入参查询单个设备资产。找到该资产的prod_inst _id
+以下表都可根据资产表中查到的prod_inst _id作为入参查询
+账务定制关系prod_inst_acct_rel
+产品实例属性prod_inst_attr
+产品实例联系人prod_inst_contact
+产品实例付费模式记录prod_inst_paymode
+产品实例停机记录prod_inst_state
+产品实例停机记录prod_inst_state
+产品实例与营销资源关系prod_res_inst_rel
+
+产品实例关系prod_inst_rel  资产有群组关系时，比如移动电话入IVPN群的情况，可以用IVPN群头的prod_inst _id当作a_prod_inst _id为入参查询prod_inst_rel查到IVPN群与移动电话的关系 ，或者用移动电话的prod_inst _id，当作z_prod_inst _id去查也一样。
