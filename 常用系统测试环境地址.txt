@@ -25,10 +25,19 @@ http://10.145.206.11:9280/purdo/index.jsp
 旧：test  123456
 新：test 654321
 
+最新地址：
+http://10.145.206.11:9180/purdo/login.jsp    
+帐号：admin   
+密码：654321
+
 客保
 http://10.145.206.7:9082/baf/jsp/uiframe/login.xhtml
-通用权限sa
-密码都是888888
+
+新地址：http://10.145.206.7:9082/baf/jsp/uiframe/login.xhtml
+
+通用权限：sa
+旧密码：888888
+新密码：CcSs0Ft2019
 
 p7
 http://10.145.206.49:5001/OrderManagement/control/runPFVQuery
@@ -37,5 +46,10 @@ http://10.145.206.49:5001/OrderManagement/control/runPFVQuery
 
 新CRM
 地址：http://test.sh.ctc.com
+公客：
 账号：hebing
 密码：!qazhebing
+
+政企：
+账号：chenjianbing   
+密码：!qazchenjianbing
