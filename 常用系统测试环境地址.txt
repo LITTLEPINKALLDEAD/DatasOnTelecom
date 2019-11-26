@@ -16,6 +16,8 @@ http://10.145.206.52:8001/wop/
 123 abc
 wfptest  111111(ĞÂÃÜÂë£ºw0ptest*)
 
+ÃâÃÜµØÖ·£ºhttp://10.145.206.52:8001/wop/userlogin.action?adminId=wfptest&adminPwd=111111
+
 ×Û×Ê
 http://10.145.206.10:9280/purdo/login.jsp
 test 654321
