@@ -1,0 +1,42 @@
+CPC库 常用表：
+1.product  产品表   主键是product_id 也就是新CRM的产品编码
+2.offer       销售品表 主键是offer_id  销售品ID，OFFER_NAME和OFFER_SYS_NAME都是销售品名称，但是OFFER_SYS_NAME是和新CRM界面上是对应的
+3.prod_rel 产品关系表，常用与查询根产品下的子产品 ，A_PROD_ID为根产品ID，Z_PROD_ID为子产品ID
+4.offer_prod_rel  销售品与产品关系表 用来查销售品和产品的关联关系，通过offer_id销售品id或prod_id产品id去查
+5.product_mapping 老CRM产品编码与新CRM映射表，因新老CRM系统的产品编码和产品名称不同，想要查老CRM中某个产品在新CRM里产品编码和产品名称通过这张表
+查询语句：select * from product b where b.PROD_ID=(select a.PROD_ID from product_mapping a where a.CRM_PROD_NBR='老CRM的产品编码')
+
+
+客户库  常用表：
+一.客户
+客户：customer                                             CUST_ID 主键客户标识，也就是新CRM上面新建客户后生成的40000XXXX的编码
+客户常用地址：cust_addr_rel                         通过CUST_ID客户标识作为入参查询，能查到该客户下添加的所有地址
+客户与联系人关系：cust_contact_info_rel      通过CUST_ID客户标识作为入参查询
+客户属性：cust_attr                                        通过CUST_ID客户标识作为入参查询
+账户：account                                               通过CUST_ID客户标识作为入参查询
+证件：party_cert                                            先查询CUST_ID 查询到客户的PARTY_ID，然后用PARTY_ID查询party_cert   证件表
+参与人：party                                                同上先查到PARTY_ID，当作入参去查
+联系人：contacts_info                                    同上先查到PARTY_ID，当作入参去查
+二、客户资产
+1.客户资产表：prod_inst                    PROD_INST_ID产品资产ID是主键，可以通过USE_CUST_ID客户标识作为入参查询该客户名下所有资产或者通过ACC_NUM设备号入参查询单个设备资产。
+2.账务定制关系prod_inst_acct_rel      先从prod_inst  客户资产表查到PROD_INST_ID，然后用PROD_INST_ID去查，以下同
+3.产品实例属性prod_inst_attr
+4.产品实例联系人prod_inst_contact
+5.产品实例付费模式记录prod_inst_paymode
+6.产品实例停机记录prod_inst_state
+7.产品实例停机记录prod_inst_state
+8.产品实例与营销资源关系prod_res_inst_rel
+
+受理库   常用表：
+1.customer_order客户订单表，               cust_order_id为主键，一张CRM订单对应一条记录。订单状态STATUS_CD 30000已竣工，201300 开通中，401700已撤单
+2.work_order 工单表，                            work_order_id为主键，cust_order_nbr CRM订单号可为入参，以订单中的每一订单项的每一个版本对应一条记录。  STATUS_CD   记录工单状态。201700:待发送,201300:开通中,201200:待前序订单项反馈',
+
+
+
+营销资源库：
+1.mkt_res_card_inst  串号资源   用于新装C网移动电话查询可用串号，mkt_res_inst_nbr 为串号号码，status_cd = '1000' 表示状态可用
+查询可用串号语句：select a.mkt_res_inst_nbr from mkt_res_card_inst a join mkt_res_card_inst_ext b on a.mkt_res_inst_id = b.mkt_res_card_inst_id 
+join mkt_res_card_act c on a.mkt_res_inst_id = c.mkt_res_card_inst_id
+where b.card_type is not null  and a.status_cd = '1000' and c.network = 'CGL' limit 50
+
+ 
