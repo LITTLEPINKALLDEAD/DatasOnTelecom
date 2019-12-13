@@ -1,0 +1,156 @@
+<?xml version="1.0"?>
+<Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Header/>
+  <Body>
+    <queryIntResServiceResponse xmlns:m="http://sanss.com">
+      <queryIntResServiceResponse>
+        <ErrorCode xmlns:java="java:com.sanss.ibp.nonphs.ra.common">0</ErrorCode>
+        <ErrorMessage xmlns:java="java:com.sanss.ibp.nonphs.ra.common"/>
+        <ProcessFlag xmlns:java="java:com.sanss.ibp.nonphs.ra.common">0</ProcessFlag>
+        <Result xmlns:java="java:com.sanss.ibp.nonphs.ra.common">1</Result>
+        <Product xmlns:java="java:com.sanss.ibp.nonphs.ra.system97">
+          <GroupProperty>
+            <GroupName>jh_info</GroupName>
+            <GroupProperty>
+              <GroupName>vtrunkinfo</GroupName>
+              <Properties>
+                <Name xmlns:n1="java:com.sanss.ibp.nonphs.ra.common">opt_type</Name>
+                <Value xmlns:n2="java:com.sanss.ibp.nonphs.ra.common">&#x65B0;&#x5EFA;</Value>
+              </Properties>
+              <Properties>
+                <Name xmlns:n3="java:com.sanss.ibp.nonphs.ra.common">z_nodename</Name>
+                <Value xmlns:n4="java:com.sanss.ibp.nonphs.ra.common">990</Value>
+              </Properties>
+              <Properties>
+                <Name xmlns:n5="java:com.sanss.ibp.nonphs.ra.common">a_nodename</Name>
+                <Value xmlns:n6="java:com.sanss.ibp.nonphs.ra.common">999</Value>
+              </Properties>
+              <Properties>
+                <Name xmlns:n7="java:com.sanss.ibp.nonphs.ra.common">z_ip</Name>
+                <Value xmlns:n8="java:com.sanss.ibp.nonphs.ra.common">218.1.198.160</Value>
+              </Properties>
+              <Properties>
+                <Name xmlns:n9="java:com.sanss.ibp.nonphs.ra.common">a_ip</Name>
+                <Value xmlns:n10="java:com.sanss.ibp.nonphs.ra.common">218.1.198.32</Value>
+              </Properties>
+              <Properties>
+                <Name xmlns:n11="java:com.sanss.ibp.nonphs.ra.common">z_domain</Name>
+                <Value xmlns:n12="java:com.sanss.ibp.nonphs.ra.common">9999333</Value>
+              </Properties>
+              <Properties>
+                <Name xmlns:n13="java:com.sanss.ibp.nonphs.ra.common">a_domain</Name>
+                <Value xmlns:n14="java:com.sanss.ibp.nonphs.ra.common">134563456</Value>
+              </Properties>
+              <Properties>
+                <Name xmlns:n15="java:com.sanss.ibp.nonphs.ra.common">a_heartport</Name>
+                <Value xmlns:n16="java:com.sanss.ibp.nonphs.ra.common">&#x5BF9;&#x7AEF;&#x4E1A;&#x52A1;</Value>
+              </Properties>
+              <Properties>
+                <Name xmlns:n17="java:com.sanss.ibp.nonphs.ra.common">z_serviceport</Name>
+                <Value xmlns:n18="java:com.sanss.ibp.nonphs.ra.common">&#x672C;&#x7AEF;</Value>
+              </Properties>
+              <Properties>
+                <Name xmlns:n19="java:com.sanss.ibp.nonphs.ra.common">a_serviceport</Name>
+                <Value xmlns:n20="java:com.sanss.ibp.nonphs.ra.common">&#x5BF9;&#x7AEF;</Value>
+              </Properties>
+              <Properties>
+                <Name xmlns:n21="java:com.sanss.ibp.nonphs.ra.common">z_designcapacity</Name>
+                <Value xmlns:n22="java:com.sanss.ibp.nonphs.ra.common">100</Value>
+              </Properties>
+              <Properties>
+                <Name xmlns:n23="java:com.sanss.ibp.nonphs.ra.common">z_usecapacity</Name>
+                <Value xmlns:n24="java:com.sanss.ibp.nonphs.ra.common">&#x4E1A;&#x52A1;</Value>
+              </Properties>
+            </GroupProperty>
+            <GroupProperty>
+              <GroupName>alloccodeinfo</GroupName>
+              <Properties>
+                <Name xmlns:n25="java:com.sanss.ibp.nonphs.ra.common">opt_type</Name>
+                <Value xmlns:n26="java:com.sanss.ibp.nonphs.ra.common">&#x65B0;&#x5EFA;</Value>
+              </Properties>
+              <Properties>
+                <Name xmlns:n27="java:com.sanss.ibp.nonphs.ra.common">Serialno</Name>
+                <Value xmlns:n28="java:com.sanss.ibp.nonphs.ra.common">249414775</Value>
+              </Properties>
+              <Properties>
+                <Name xmlns:n29="java:com.sanss.ibp.nonphs.ra.common">number_field</Name>
+                <Value xmlns:n30="java:com.sanss.ibp.nonphs.ra.common">780-788</Value>
+              </Properties>
+              <Properties>
+                <Name xmlns:n31="java:com.sanss.ibp.nonphs.ra.common">nodename</Name>
+                <Value xmlns:n32="java:com.sanss.ibp.nonphs.ra.common">990</Value>
+              </Properties>
+              <Properties>
+                <Name xmlns:n33="java:com.sanss.ibp.nonphs.ra.common">charge</Name>
+                <Value xmlns:n34="java:com.sanss.ibp.nonphs.ra.common">&#x8BA1;&#x8BE6;&#x5355;</Value>
+              </Properties>
+              <Properties>
+                <Name xmlns:n35="java:com.sanss.ibp.nonphs.ra.common">control_way</Name>
+                <Value xmlns:n36="java:com.sanss.ibp.nonphs.ra.common">&#x4E3B;&#x53EB;&#x63A7;&#x5236;</Value>
+              </Properties>
+              <Properties>
+                <Name xmlns:n37="java:com.sanss.ibp.nonphs.ra.common">long_function</Name>
+                <Value xmlns:n38="java:com.sanss.ibp.nonphs.ra.common">&#x51FA;(&#x56FD;&#x9645;)&#x5165;</Value>
+              </Properties>
+              <Properties>
+                <Name xmlns:n39="java:com.sanss.ibp.nonphs.ra.common">using</Name>
+                <Value xmlns:n40="java:com.sanss.ibp.nonphs.ra.common">IP</Value>
+              </Properties>
+            </GroupProperty>
+            <Properties>
+              <Name xmlns:n41="java:com.sanss.ibp.nonphs.ra.common">wt_no</Name>
+              <Value xmlns:n42="java:com.sanss.ibp.nonphs.ra.common">(2019)/19065595_0001P</Value>
+            </Properties>
+            <Properties>
+              <Name xmlns:n43="java:com.sanss.ibp.nonphs.ra.common">wt_name</Name>
+              <Value xmlns:n44="java:com.sanss.ibp.nonphs.ra.common">YaoQiu123</Value>
+            </Properties>
+            <Properties>
+              <Name xmlns:n45="java:com.sanss.ibp.nonphs.ra.common">jh_content</Name>
+              <Value xmlns:n46="java:com.sanss.ibp.nonphs.ra.common">&#x65B0;&#x589E;&#x4EA4;&#x6362;&#x865A;&#x4E2D;&#x7EE7;&#x5B9A;&#x5355;</Value>
+            </Properties>
+            <Properties>
+              <Name xmlns:n47="java:com.sanss.ibp.nonphs.ra.common">contact_person</Name>
+              <Value xmlns:n48="java:com.sanss.ibp.nonphs.ra.common">admin</Value>
+            </Properties>
+            <Properties>
+              <Name xmlns:n49="java:com.sanss.ibp.nonphs.ra.common">contact_tel</Name>
+              <Value xmlns:n50="java:com.sanss.ibp.nonphs.ra.common">18818589013</Value>
+            </Properties>
+            <Properties>
+              <Name xmlns:n51="java:com.sanss.ibp.nonphs.ra.common">designer</Name>
+              <Value xmlns:n52="java:com.sanss.ibp.nonphs.ra.common">admin</Value>
+            </Properties>
+            <Properties>
+              <Name xmlns:n53="java:com.sanss.ibp.nonphs.ra.common">jh_date</Name>
+              <Value xmlns:n54="java:com.sanss.ibp.nonphs.ra.common">2019-12-13</Value>
+            </Properties>
+            <Properties>
+              <Name xmlns:n55="java:com.sanss.ibp.nonphs.ra.common">wt_task_from_id</Name>
+              <Value xmlns:n56="java:com.sanss.ibp.nonphs.ra.common">ddn</Value>
+            </Properties>
+          </GroupProperty>
+          <Aid xsi:nil="true"/>
+          <Name xsi:nil="true"/>
+          <Properties>
+            <Name xmlns:n57="java:com.sanss.ibp.nonphs.ra.common">crm_product_code</Name>
+            <Value xmlns:n58="java:com.sanss.ibp.nonphs.ra.common">SN13</Value>
+          </Properties>
+          <Properties>
+            <Name xmlns:n59="java:com.sanss.ibp.nonphs.ra.common">crm_product_name</Name>
+            <Value xmlns:n60="java:com.sanss.ibp.nonphs.ra.common">&#x4EA4;&#x6362;&#x865A;&#x4E2D;&#x7EE7;&#x5B9A;&#x5355;</Value>
+          </Properties>
+          <Nm_inv_info xsi:nil="true"/>
+        </Product>
+        <EventId97 xmlns:java="java:com.sanss.ibp.nonphs.ra.system97">P7A10000000000114652</EventId97>
+        <WpResponseBasicInfo xmlns:java="java:com.sanss.ibp.nonphs.ra.system97">
+          <Note/>
+          <SerialNo/>
+          <UserId>VT10000087</UserId>
+          <Result>1</Result>
+          <Nbnumber/>
+        </WpResponseBasicInfo>
+      </queryIntResServiceResponse>
+    </queryIntResServiceResponse>
+  </Body>
+</Envelope>
