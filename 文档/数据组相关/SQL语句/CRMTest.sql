@@ -3,7 +3,7 @@ where row_id in
 (select row_id from siebel.S_ORDER_ITEM 
 where ORDER_ID in
 (select row_id from siebel.S_ORDER where ORDER_NUM in 
-('2-30078928160')) and 
+('2-30261123955')) and 
 PAR_ORDER_ITEM_ID is null and
 (PROCESSED_FLG <> 'Y' or STATUS_CD='97完成') and
 ACTION_CD<>'现有的')
@@ -14,7 +14,7 @@ commit;
 select row_id,PROCESSED_FLG,STATUS_CD,service_num from siebel.S_ORDER_ITEM 
 where ORDER_ID in
 (select row_id from siebel.S_ORDER where ORDER_NUM in 
-('2-30078928160')) and 
+('2-30261123955')) and 
 PAR_ORDER_ITEM_ID is null and
 (PROCESSED_FLG <> 'Y' or STATUS_CD='97完成') and
 ACTION_CD<>'现有的'
@@ -42,3 +42,6 @@ select STATUS_CD from siebel.S_ORDER where ORDER_NUM = '2-30023855818';
 select * from siebel.S_ORDER where STATUS_CD='通过合法性校验'
 
 select userenv('language') from dual;
+
+select * from siebel.S_ORDER where ORDER_NUM='2-30259448180';
+--,2-30261123955

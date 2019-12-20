@@ -1,0 +1,56 @@
+20191220:
+客户标识：
+ZQ20191220 400000067341，400000071000（新CRM政企）
+生命线政企 202113267241（老CRM）
+
+新装（新CRM）：
+
+
+生成的DK编号：2019DK10019
+
+需订购的子产品：“SD-WAN国内组网SLA服务”、“SD-WAN国内组网四层防火墙”、“SD-WAN国内组网入侵检测和防御”、“SD-WAN国内组网安全审计”、“SD-WAN国内组网WEB应用防护”、“SD-WAN国内组网Underlay电路信息”
+
+验证IBP派发工单顺序，先发信网部业务处理中心工单，收到回单后，再并发信网部综合运营监控中心和客保工单
+验证方法：登陆WOP测试环境，在综合查询-工单查询中搜索订单，找到信网部综合运营监控中心工单后点击工单号进入工单详情，在服务信息中搜索“设备串号”、“设备型号”，在产品信息中搜索子产品
+
+验证IBP发客保工单中的工单报文含有所有子产品信息以及“设备串号”、“设备型号”
+登陆WOP数据库执行语句：select a.p6_req_content from wp_p6_req a where a.crm_order_id='订单号'  and a.plane_type='111'
+验证字段：“device_serial_num”、“device_model”、“sla_servcie”、“safety_audit”、“intrusion_detection_defense”、“four_layer_firewall”、“web_apply_protect”
+
+新装（老CRM）：
+2-30260873299 (给综资验证)
+
+2-30261123955（提交成功，验证成功，IBP,CRM,综资都完工了）
+2-30261124213（老CRM未返回设备编号）
+2-30261124479（合检通过未提交）
+
+生成的DK编号：2019DK10020
+需订购的子产品：“SD-WAN国内组网SLA服务”、“SD-WAN国内组网四层防火墙”、“SD-WAN国内组网入侵检测和防御”、“SD-WAN国内组网安全审计”、“SD-WAN国内组网WEB应用防护”、“SD-WAN国内组网Underlay电路信息”
+
+验证IBP派发工单顺序，先发信网部业务处理中心工单，收到回单后，再并发信网部综合运营监控中心和客保工单
+验证方法：登陆WOP测试环境，在综合查询-工单查询中搜索订单，找到信网部综合运营监控中心工单后点击工单号进入工单详情，在服务信息中搜索“设备串号”、“设备型号”，在产品信息中搜索子产品
+
+验证IBP发客保工单中的工单报文含有所有子产品信息以及“设备串号”、“设备型号”
+登陆WOP数据库执行语句：select a.p6_req_content from wp_p6_req a where a.crm_order_id='订单号'  and a.plane_type='111'
+验证字段“device_serial_num”、“device_model”、“sla_servcie”、“safety_audit”、“intrusion_detection_defense”、“four_layer_firewall”、“web_apply_protect”。
+
+
+拆机（新CRM）：
+
+验证IBP派发工单顺序，先派发客保工单，收到回单后再派发信网部综合运营监控中心工单
+验证方法：登陆WOP测试环境，在综合查询-工单查询中搜索订单，找到信网部综合运营监控中心工单后点击工单号进入工单详情，在服务信息中搜索“设备串号”、“设备型号”，在产品信息中搜索子产品
+
+验证客保工单和信网部综合运营监控中心工单的工单数据
+登陆WOP数据库执行语句：select a.p6_req_content from wp_p6_req a where a.crm_order_id='订单号'  and a.plane_type='111'
+验证字段“device_serial_num”、“device_model”、“sla_servcie”、“safety_audit”、“intrusion_detection_defense”、“four_layer_firewall”、“web_apply_protect”。
+
+
+拆机（老CRM）：
+
+验证IBP派发工单顺序，先派发客保工单，收到回单后再派发信网部综合运营监控中心工单
+验证方法：登陆WOP测试环境，在综合查询-工单查询中搜索订单，找到信网部综合运营监控中心工单后点击工单号进入工单详情，在服务信息中搜索“设备串号”、“设备型号”，在产品信息中搜索子产品
+
+验证客保工单和信网部综合运营监控中心工单的工单数据
+登陆WOP数据库执行语句：select a.p6_req_content from wp_p6_req a where a.crm_order_id='订单号'  and a.plane_type='111'
+验证字段“device_serial_num”、“device_model”、“sla_servcie”、“safety_audit”、“intrusion_detection_defense”、“four_layer_firewall”、“web_apply_protect”。
+

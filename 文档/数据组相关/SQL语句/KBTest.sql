@@ -4,4 +4,7 @@ select * from T_PUB_TASK order by DISPATCH_TIME desc;    --公共任务表
 select * from T_SF_TASK order by TASK_ID desc;      --政企任务表
 select count(*) from T_PUB_BILL_ACTION order by OPERATE_END_TIME desc;    --公共动作表
 
+select pub_b2c(d.xmlinfo) from t_Sf_Receive_Quene D WHERE D.SPS_APPLY_ID like '%(2019)/19065599%'
+--验证客保收到IBP工单报文中是否含有新增字段虚中继信息节点（vtrunkinfo）和分配号码信息节点(alloccodeinfo)
+
 --帐号： KB_TEST   密码：marconi

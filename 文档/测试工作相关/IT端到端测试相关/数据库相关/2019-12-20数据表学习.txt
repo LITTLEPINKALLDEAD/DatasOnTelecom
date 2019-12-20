@@ -1,0 +1,30 @@
+SOP数据库:
+receive_massgae表
+p6_order_info表,SOP发P7的状态查询，Status，失败Failed，成功Processing，失败原因字段FAILURE_CAUSE
+
+PAL数据库：
+ra_workorder_request表里的字段解释：
+request_type：createIntResService是创服务（固网的）
+request_type：dispatchMOrder(2M),checkService是资源审核(2M),csOrder是返回客保工单的记录（2M）
+User_97_ID是设备编号
+Action_CODE是操作类型
+Subaction_node是操作子类型
+Status:8表示成功（2M）
+
+ins_res_config_result 
+
+综资数据库：
+c_serviceorder 在途订单表 
+mm_dictionary 字典值
+intf_datafortelement 综资返回IBP是否收到的表
+intf_requstlog 接受信息表，IBP发给综资的信息
+
+客保数据库：
+wp_p6_req的
+t_pub_mainbill 公共接口表
+t_open_revert_queue_his 历史接口表（公客）
+t_sf_revert_queue_his 历史接口表（政企）
+t_sf 开头都是政企相关数据表
+t_open 开头都是公客相关数据表
+
+工程工单是综资起单的，带宽型工单是从CRM下单的
