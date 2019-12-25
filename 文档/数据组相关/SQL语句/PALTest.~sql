@@ -18,6 +18,10 @@ select CRM_ORDER_NUMBER from ra_workorder_request where USER_ID_97 like '%M13076
 --(2019)/19075950_0001C ,(2019)/19076141_0002C
 --(2019)/19076225_0001PZ,修订过的工程订单的P6号为15094
 --(2019)/19076222_0001PZ,P6号为15091
+
+select t.work_order_return from  ra_workorder_request t  where crm_order_number like '%(2019)/19065599%' and t.request_type='queryIntResService'
+--验证资源信息中新增字段虚中继信息节点（vtrunkinfo）和分配号码信息节点(alloccodeinfo) IBP是否收到
+
 select * from pai_workorder_request where crm_order_number = '2-29978524433'; --P7-PAI --2-29936482320
 select * from asap_workorder_request where crm_order_number = '2-29978513149';  --P7-asap
 

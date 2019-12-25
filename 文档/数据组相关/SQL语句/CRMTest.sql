@@ -3,7 +3,7 @@ where row_id in
 (select row_id from siebel.S_ORDER_ITEM 
 where ORDER_ID in
 (select row_id from siebel.S_ORDER where ORDER_NUM in 
-('2-30261123955')) and 
+('2-30261387506')) and 
 PAR_ORDER_ITEM_ID is null and
 (PROCESSED_FLG <> 'Y' or STATUS_CD='97完成') and
 ACTION_CD<>'现有的')
@@ -14,7 +14,7 @@ commit;
 select row_id,PROCESSED_FLG,STATUS_CD,service_num from siebel.S_ORDER_ITEM 
 where ORDER_ID in
 (select row_id from siebel.S_ORDER where ORDER_NUM in 
-('2-30261123955')) and 
+('2-30261387506')) and 
 PAR_ORDER_ITEM_ID is null and
 (PROCESSED_FLG <> 'Y' or STATUS_CD='97完成') and
 ACTION_CD<>'现有的'
