@@ -2,7 +2,7 @@ select * from ra_workorder_request where crm_order_number = '(2019)/19076533-000
 select * from ra_workorder_request where crm_order_number = '2-30039336430'; --P7-综资，订单原资产报错
 select * from ra_workorder_request where ORDER_SEQ_ID = '28471' order by RA_COMPLELED_TIME DESC; --P7-综资，用P7号查询
 select * from ra_workorder_request where ORDER_SEQ_ID = '28471' order by RECEIVE_TIME DESC; --P7-综资，用P7号查询
-select * from ra_workorder_request where crm_order_number like '%2-30261405580%' order by RECEIVE_TIME DESC;
+select * from ra_workorder_request where crm_order_number like '%WMZ2019122700529672%' order by RECEIVE_TIME DESC;
 select * from ra_workorder_request where crm_order_number in ('2-30059571205','2-30059578041','2-30059598956') order by RECEIVE_TIME DESC;
 select * from ra_workorder_request where USER_ID_97 like '%M1323110%' order by RECEIVE_TIME DESC;--(Servrice ID，设备号，工程单编号)等97ID查询
 

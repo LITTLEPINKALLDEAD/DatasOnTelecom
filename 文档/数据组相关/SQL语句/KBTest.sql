@@ -7,4 +7,7 @@ select count(*) from T_PUB_BILL_ACTION order by OPERATE_END_TIME desc;    --公共
 select pub_b2c(d.xmlinfo) from t_Sf_Receive_Quene D WHERE D.SPS_APPLY_ID like '%(2019)/19065599%'
 --验证客保收到IBP工单报文中是否含有新增字段虚中继信息节点（vtrunkinfo）和分配号码信息节点(alloccodeinfo)
 
+
+select pub_b2c(d.xmlinfo) from t_sf_receive_quene_his d where d.sps_apply_id='WMZ2019122700529672'
+-- bureau_code  区局      customer_address_road  安装地址,STN200014021
 --帐号： KB_TEST   密码：marconi
