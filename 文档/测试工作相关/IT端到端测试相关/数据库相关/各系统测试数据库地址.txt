@@ -1,0 +1,49 @@
+SOP和WOP测试数据库地址（这2地址是共用的帐号不同）
+SOP 帐号：testorder   密码：testorder            WOP 帐号：wopdb     密码：nophsq
+testdb_10.145.206.4 =
+  (DESCRIPTION =
+    (ADDRESS_LIST =
+      (ADDRESS = (PROTOCOL = TCP)(HOST = 10.145.206.4)(PORT = 1521))
+    )
+    (CONNECT_DATA =
+      (SID = testdb)
+      (SERVER = DEDICATED)
+    )
+  )
+
+PAL中间层测试数据库地址
+帐号：nonphs_aa    密码nophsq
+NONPHS_P7_PAL_TEST =
+  (DESCRIPTION=
+    (ADDRESS_LIST =
+      (ADDRESS = (PROTOCOL=TCP)(HOST=10.145.206.26)(PORT=1521))
+    )
+    (CONNECT_DATA =      
+      (SERVICE_NAME = osmtest)
+    )   
+  )
+
+P7测试数据库地址
+帐号：ordermgmt    密码：passw0rd
+P7_10.10.145.206.51 =
+  (DESCRIPTION =
+    (ADDRESS_LIST =
+      (ADDRESS = (PROTOCOL = TCP)(HOST = 10.145.206.51)(PORT = 1521))
+    )
+    (CONNECT_DATA =
+      (SID = n7testdb)
+      (SERVER = DEDICATED)
+    )
+  )
+
+客保测试数据库地址
+帐号： KB_TEST   密码：marconi
+ORAIDA_28=
+  (DESCRIPTION =
+    (ADDRESS_LIST =
+      (ADDRESS = (PROTOCOL = TCP)(HOST = 10.145.206.8)(PORT = 1521))
+    )
+    (CONNECT_DATA =
+      (SERVICE_NAME = ORAIDA)
+    )
+  )
