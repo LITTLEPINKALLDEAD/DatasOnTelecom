@@ -60,3 +60,12 @@ http://10.145.206.37:5001/OrderManagement
 政企：
 账号：chenjianbing
 密码：!qazchenjianbing
+
+新账号：
+账号：huangrenjie 
+密码：!qazhuangrenjie
+
+新CRM订单排编系统：
+http://10.145.206.18:8081/bac-web-ui/#/
+账号：admin  
+密码：123qwe

@@ -1,0 +1,156 @@
+客户标识：202110002775（老CRM）
+2-30285775431（修订后取消） 从CRM提交
+
+新CRM
+============================================================================================
+customer_order 客户订单表：
+cust_order_id为主键
+一张CRM订单对应一条记录
+
+订单状态STATUS_CD 30000已竣工，201300 开通中，401700已撤单，20000为已提交（未发送到IBP）
+
+work_order 工单表:                           
+work_order_id为主键
+cust_order_nbr CRM订单号可为入参，以订单中的每一订单项的每一个版本对应一条记录
+STATUS_CD  记录工单状态 201700:待发送,201300:开通中,201200:待前序订单项反馈'，20000为已提交（未发送到IBP）
+
+customer 客户表：                                           
+CUST_ID 主键客户标识，也就是新CRM上面新建客户后生成的40000XXXX的编码
+
+cust_addr_rel 客户常用地址表：                     
+通过CUST_ID客户标识作为入参查询，能查到该客户下添加的所有地址
+
+cust_contact_info_rel 客户与联系人关系表：    
+通过CUST_ID客户标识作为入参查询
+
+cust_attr  客户属性表：                                   
+通过CUST_ID客户标识作为入参查询
+
+account  账户表：                                          
+通过CUST_ID客户标识作为入参查询
+
+party_cert 证件表：                                          
+先查询CUST_ID 查询到客户的PARTY_ID，然后用PARTY_ID查询party_cert   证件表
+
+party 参与人表：                                          
+同上先查到PARTY_ID，当作入参去查
+
+contacts_info  联系人表：                                
+同上先查到PARTY_ID，当作入参去查
+
+============================================================================================
+
+IBP:
+============================================================================================
+2-30285775431修订并取消后，received_message表有三条记录
+2-30285775431修订并取消后，p6_order_info和SERVICE_ORDER_SENT有两条记录
+--------------------------------------------------------------------------------------------
+SOP的received_message（SOP是否收到CRM提交的订单）表：
+MESSAGE_ID为主键
+MESSAGE_BODY为从CRM发到SOP的报文
+RECEIVED_TIME为接收时间
+MESSAGE_SOURCE为订单来源
+CRM_ORDER_NUMBER为CRM订单号
+CRM_ORDER_VERSION为CRM订单版本号：1（新建订单），2（做了修订），3（取消订单）
+
+SOP的p6_order_info表（定单拆分发往P7）：
+
+CRM_ORDER_ID为主键
+CRM_ORDER_NUMBER为CRM订单号
+VERSION为CRM订单版本号
+PRODUCT_NAME为产品名称
+PRODUCT_CODE为产品编码
+ACTION为操作类型：新建
+SUB_ACTION为操作子类型：新建
+STATUS为发送状态：失败Failed，成功Processing，完工Finished
+STATUS_TIME为状态变更时间
+P6_ORDER_ID为P7号
+FAILURE_CAUSE为错误原因
+P6_NAMESPACE为订单大类：adsl
+P6_VERSION为发送到P7的订单版本号：1.0.0.0.0
+P6_SOURCE为订单来源：CRM
+P6_TYPE为发送给P7的订单类型：ADSL_ZZ_CRM
+
+SOP的SERVICE_ORDER_SENT（SOP发P7报文）表：
+ID 为主键
+CRM_ORDER_NUMBER 为CRM订单号
+CRM_ORDER_VERSION 为CRM订单版本号：1（新建订单），2（做了修订），3（取消订单）
+OSS_TYPE 为P6版本 ：P6-MAIN
+OSS_NAMESPACE 为订单大类：adsl
+OSS_VERSION 为发送到P7的订单版本号：1.0.0.0.0
+SO_SOURCE 为订单来源：crm
+SO_TYPE 为订单类型：adsl_zz_crm
+SAVED_TIME 
+SO_BODY 为从CRM发到SOP的报文
+SO_VERSION 为CRM订单版本号：1（新建订单），2（做了修订），3（取消订单）
+P6ORDERID 为P7号
+--------------------------------------------------------------------------------------------
+PAL的ra_workorder_request（IBP和综资对接）表：
+P_RESULT为返回错误信息
+在订单request_type为queryIntResService（资源审核待配置）时候，WORK_ORDER_RETURN字段返回报文信息
+work_order_request为请求报文数据
+EXCUTIONMODE为执行模式：do为发送，redo是重发，undo是撤销
+STATE为返回订单状态，包括：
+
+（1：初始状态，准备发送；
+2：发送失败
+3：已发送，但未收到回单；
+4：未用
+5：已收到失败的回单结果
+6：工单结果准备回给P7
+7：工单结果回P7失败
+8：工单结果回P7成功
+）
+
+VERSION为订单版本号
+request_type为返回请求类型，包括：（
+createIntResService是创服务（固网的）
+dispatchMOrder(2M的创服务),checkService是资源审核(2M)
+queryIntResService（原资产查询，改性能场景有）
+csOrder是返回客保工单的记录（2M），completeIntResService是订单完工
+）
+
+User_97_ID是设备编号
+Action_CODE是操作类型
+Subaction_node是操作子类型
+
+--------------------------------------------------------------------------------------------
+WOP的wp_srq表（对接客保能看发送工单成功，失败）：
+STATUS：101未发送，102已派发、104已打印、105已竣工、255已撤销、250待撤销、254重派中、253退单中、251待修改
+process_flag：02成功，0P，0E失败
+TASK_ID为ddxx:1是WOP工单，可在WOP界面上查询，2M的WOP工单，测试环境上似乎没有
+
+WOP的wp_p6_req表（人工工单和工单内容）：
+process_status：101未发送，102已派发、104已打印、105已竣工、255已撤销、250待撤销、254重派中、253退单中、251待修改
+============================================================================================
+综资：
+select * from intf_requestlog where crmquotenumber='2-30285864503';--接口表，IBP发给综资的信息
+SELECT * from c_serviceorder  where crmquotenumber like '2-30285864503'; --订单表
+SELECT * from c_Servicecurrent WHERE globalserviceid='M1332973';--在途服务表,根据c_serviceorder的GLOBALSERVICEID查询,即设备编号
+SELECT * from intf_datafortelement where CRMQUOTENUMBER = '2-30285864503' or SERVICEID = 'M1332973';  
+--综资返回IBP是否收到的表
+
+select * from mm_dictionary where id in (SELECT DISPATCHER_GROUP from c_serviceorder where crmquotenumber like '2-30285864503');
+ -- 从c_serviceorder表中查询PROCESSTYPE的值，进行查询,DOTYPE是操作状态，PROCESSTYPE是订单类型，ORDERTYPE是订单类型,STATUS是订单状态，ISLEGAL是否合法,OPERATION_TYPE操作类型
+
+select * from mm_dictionary where id in (SELECT STATUS from intf_datafortelement where CRMQUOTENUMBER = '2-30285864503');
+
+============================================================================================
+客保:
+t_sf_receive_quene（在用）_表：
+RECORD_ID为主键
+pub_b2c(d.xmlinfo)用于返回客保收到IBP工单报文
+sps_apply_id为CRM订单号
+DEAL_CODE为设备编号
+SPS_ORDER_ID为P7号
+SPS_APPLY_ID为CRM订单号
+
+t_sf_receive_quene_his（历史）表：
+RECORD_ID为主键
+pub_b2c(d.xmlinfo)用于返回客保收到IBP工单报文
+sps_apply_id为CRM订单号
+DEAL_CODE为设备编号
+SPS_ORDER_ID为P7号
+SPS_APPLY_ID为CRM订单号
+
+
