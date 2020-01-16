@@ -79,11 +79,12 @@ OSS_TYPE 为P6版本 ：P6-MAIN
 OSS_NAMESPACE 为订单大类：adsl
 OSS_VERSION 为发送到P7的订单版本号：1.0.0.0.0
 SO_SOURCE 为订单来源：crm
-SO_TYPE 为订单类型：adsl_zz_crm
+SO_TYPE 为订单类型,对应P7任务项Type : adsl_zz_crm
 SAVED_TIME 
 SO_BODY 为从CRM发到SOP的报文
-SO_VERSION 为CRM订单版本号：1（新建订单），2（做了修订），3（取消订单）
+SO_VERSION 为P6订单版本号：1，2，3
 P6ORDERID 为P7号
+LINENO 为行项目编号
 --------------------------------------------------------------------------------------------
 PAL的ra_workorder_request（IBP和综资对接）表：
 P_RESULT为返回错误信息
@@ -118,20 +119,35 @@ Subaction_node是操作子类型
 WOP的wp_srq表（对接客保能看发送工单成功，失败）：
 STATUS：101未发送，102已派发、104已打印、105已竣工、255已撤销、250待撤销、254重派中、253退单中、251待修改
 process_flag：02成功，0P，0E失败
-TASK_ID为ddxx:1是WOP工单，可在WOP界面上查询，2M的WOP工单，测试环境上似乎没有
+TASK_ID为ddxx:1是WOP工单，可在WOP界面上查询，2M的WOP工单，测试环境上没有
 
 WOP的wp_p6_req表（人工工单和工单内容）：
 process_status：101未发送，102已派发、104已打印、105已竣工、255已撤销、250待撤销、254重派中、253退单中、251待修改
 ============================================================================================
 综资：
 select * from intf_requestlog where crmquotenumber='2-30285864503';--接口表，IBP发给综资的信息
+-- intf_requestlog表中的TARGETMETHOD为订单配置状态，createService是创服务，checkService是资源审核
 SELECT * from c_serviceorder  where crmquotenumber like '2-30285864503'; --订单表
+-- c_serviceorder会有一条记录，其中SERVICE_ID为空，因为该项为主单。SERVICE_ID有值的为子单
+-- 在综资界面配置的时候，都是在子单中操作
 SELECT * from c_Servicecurrent WHERE globalserviceid='M1332973';--在途服务表,根据c_serviceorder的GLOBALSERVICEID查询,即设备编号
 SELECT * from intf_datafortelement where CRMQUOTENUMBER = '2-30285864503' or SERVICEID = 'M1332973';  
 --综资返回IBP是否收到的表
 
-select * from mm_dictionary where id in (SELECT DISPATCHER_GROUP from c_serviceorder where crmquotenumber like '2-30285864503');
- -- 从c_serviceorder表中查询PROCESSTYPE的值，进行查询,DOTYPE是操作状态，PROCESSTYPE是订单类型，ORDERTYPE是订单类型,STATUS是订单状态，ISLEGAL是否合法,OPERATION_TYPE操作类型
+select * from mm_dictionary where id in (SELECT PROCESSTYPE from c_serviceorder where crmquotenumber like '2-30285864503');
+ -- 从c_serviceorder表中查询PROCESSTYPE的为订单类型
+select * from mm_dictionary where id in (SELECT DOTYPE from c_serviceorder where crmquotenumber like '2-30285864503');
+-- DOTYPE是操作状态，
+select * from mm_dictionary where id in (SELECT PROCESSTYPE from c_serviceorder where crmquotenumber like '2-30285864503');
+-- PROCESSTYPE是订单类型，
+select * from mm_dictionary where id in (SELECT ORDERTYPE from c_serviceorder where crmquotenumber like '2-30285864503');
+-- ORDERTYPE是来源订单类型,
+select * from mm_dictionary where id in (SELECT STATUS from c_serviceorder where crmquotenumber like '2-30285864503');
+-- STATUS是订单配置状态，
+select * from mm_dictionary where id in (SELECT ISLEGAL from c_serviceorder where crmquotenumber like '2-30285864503');
+-- ISLEGAL是否合法,
+select * from mm_dictionary where id in (SELECT OPERATION_TYPE from c_serviceorder where crmquotenumber like '2-30285864503');
+-- OPERATION_TYPE流程操作类型
 
 select * from mm_dictionary where id in (SELECT STATUS from intf_datafortelement where CRMQUOTENUMBER = '2-30285864503');
 
