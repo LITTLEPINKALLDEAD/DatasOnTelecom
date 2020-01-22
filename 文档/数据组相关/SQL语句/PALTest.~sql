@@ -8,7 +8,7 @@ select * from ra_workorder_request where crm_order_number like '%2-30285708158%'
 select * from ra_workorder_request where crm_order_number in ('WMZ2019120500516845','WMZ2019120500519229') order by RECEIVE_TIME DESC;
 select * from ra_workorder_request where USER_ID_97 like '%M1323110%' order by RECEIVE_TIME DESC;--(Servrice ID，设备号，工程单编号)等97ID查询
 
-select * from RA_WORKORDER_REQUEST where CRM_ORDER_NUMBER = 'WMX2020011705148153';
+select * from RA_WORKORDER_REQUEST where CRM_ORDER_NUMBER = '2-30287568216' order by RECEIVE_TIME desc;
 
 ---STATE为返回订单状态，包括：
 ---（1：初始状态，准备发送；
