@@ -1,6 +1,6 @@
-select * from intf_requestlog where crmquotenumber='2-30287548338';--接口表，IBP发给综资的信息
+select * from intf_requestlog where crmquotenumber='WMX2020021405150807';--接口表，IBP发给综资的信息
 -- intf_requestlog表中的TARGETMETHOD为订单配置状态，createService是创服务，checkService是资源审核
-SELECT * from c_serviceorder where crmquotenumber like '2-30287548338'; --订单表
+SELECT * from c_serviceorder where crmquotenumber like 'WMX2020021405150807'; --订单表
 -- c_serviceorder会有一条记录，其中SERVICE_ID为空，因为该项为主单。SERVICE_ID有值的为子单
 -- 在综资界面配置的时候，都是在子单中操作
 SELECT * from c_Servicecurrent WHERE globalserviceid='M2049021';--在途服务表,根据c_serviceorder的GLOBALSERVICEID查询,即设备编号

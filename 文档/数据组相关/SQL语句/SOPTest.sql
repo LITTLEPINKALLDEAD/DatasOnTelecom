@@ -1,10 +1,10 @@
-select * from received_message where crm_order_number like '%2-30285853154%'; --查SOP是否收到CRM提交的订单
+select * from received_message where crm_order_number in('WMX2020021305150748','WMX2020021305150749','WMX2020021305150750','WMX2020021305150751'); --查SOP是否收到CRM提交的订单
 ---received_message中CRM_ORDER_VERSION为CRM订单版本号：1，2，3，订单不同的版本，数据库就有不同的记录条数
 
-select * from p6_order_info where crm_order_number like '%2-30285853154%'; -- 查SOP发P7的状态
+select * from p6_order_info where crm_order_number in('WMX2020021305150748','WMX2020021305150749','WMX2020021305150750','WMX2020021305150751'); -- 查SOP发P7的状态
 ---p6_order_info中的STATUS为发送状态：失败Failed，成功Processing，完工Finished
 
-select * from SERVICE_ORDER_SENT where CRM_ORDER_NUMBER like '%2-30285853154%'; -- 查SOP发P7报文的报文
+select * from SERVICE_ORDER_SENT where CRM_ORDER_NUMBER in('WMX2020021305150748','WMX2020021305150749','WMX2020021305150750','WMX2020021305150751'); -- 查SOP发P7报文的报文
 ---SERVICE_ORDER_SENT中CRM_ORDER_VERSION为CRM订单版本号：1，2，3，订单不同的版本，数据库就有不同的记录条数
 
 
