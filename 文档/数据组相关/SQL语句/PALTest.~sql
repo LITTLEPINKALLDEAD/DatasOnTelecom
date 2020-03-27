@@ -8,7 +8,7 @@ select * from ra_workorder_request where crm_order_number like '%2-30285708158%'
 select * from ra_workorder_request where crm_order_number in ('WMZ2019120500516845','WMZ2019120500519229') order by RECEIVE_TIME DESC;
 select * from ra_workorder_request where USER_ID_97 like '%M1323110%' order by RECEIVE_TIME DESC;--(Servrice ID，设备号，工程单编号)等97ID查询
 
-select * from RA_WORKORDER_REQUEST where CRM_ORDER_NUMBER = '2-30287568216' and REQUEST_TYPE like '%queryIntResService%' order by RECEIVE_TIME desc;
+select * from RA_WORKORDER_REQUEST where CRM_ORDER_NUMBER = 'WMX2020021405150807' and REQUEST_TYPE like '%queryIntResService%' order by RECEIVE_TIME desc;
 
 ---STATE为返回订单状态，包括：
 ---（1：初始状态，准备发送；
@@ -55,5 +55,16 @@ select * from pai_workorder_request where crm_order_number = '2-29978524433'; --
 select * from asap_workorder_request where crm_order_number = '2-29978513149';  --P7-asap
 
 select * from INT_RES_CONFIG_RESULT_NEW where CRM_ORDER_NO = 'WMX2019112100508401' --查询PAL配置情况的表
+
+select q.wop_process_state from pai_workorder_request q where q.crm_order_number='WMZ2020032605228166' and q.platform='P027'; 
+---云主机产品重派验证，wop_process_state为1时表示已重发工单
+
+select q.pai_compleled_time from pai_workorder_request q  where q.crm_order_number='WMZ2020032605228166' and q.platform='P027';
+---云主机产品重派验证，派发智能网管工单后过几分钟再去WOP调用重派,pai_compleled_time这个时间来验证重派是否有效
+
+select q.pai_compleled_time from pai_workorder_request q  where q.crm_order_number in('WMZ2020032705236482','WMZ2020032705236546') and q.platform='P027';
+---云主机产品重派验证，派发智能网管工单后过几分钟再去WOP调用重派,pai_comp
+
+select userenv('language') from dual
 
 --帐号：nonphs_aa    密码nophsq

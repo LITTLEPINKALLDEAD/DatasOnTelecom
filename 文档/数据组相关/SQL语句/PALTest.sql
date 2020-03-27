@@ -56,4 +56,15 @@ select * from asap_workorder_request where crm_order_number = '2-29978513149';  
 
 select * from INT_RES_CONFIG_RESULT_NEW where CRM_ORDER_NO = 'WMX2019112100508401' --查询PAL配置情况的表
 
+select q.wop_process_state from pai_workorder_request q where q.crm_order_number='WMZ2020032605228166' and q.platform='P027'; 
+---云主机产品重派验证，wop_process_state为1时表示已重发工单
+
+select q.pai_compleled_time from pai_workorder_request q  where q.crm_order_number='WMZ2020032605228166' and q.platform='P027';
+---云主机产品重派验证，派发智能网管工单后过几分钟再去WOP调用重派,pai_compleled_time这个时间来验证重派是否有效
+
+select q.pai_compleled_time from pai_workorder_request q  where q.crm_order_number in('WMZ2020032705236482','WMZ2020032705236546') and q.platform='P027';
+---云主机产品重派验证，派发智能网管工单后过几分钟再去WOP调用重派,pai_comp
+
+select userenv('language') from dual
+
 --帐号：nonphs_aa    密码nophsq
