@@ -2,7 +2,7 @@
 '彭昭晔'<pengzhaoye@ccssoft.com.cn>;'马珺洁'<majunjie@ccssoft.com.cn>
 
 
-抄送：'臧敏捷' <zangminjie@shtel.com.cn>; '马文斌_中通软' <pocket007@ccssoft.com.cn>; '李少颖' <lishaoying@sanss.com>; '江敏' <jiangmin@ccssoft.com.cn>; '曹小波' <caoxiaobo@shtel.com.cn>; '沈健' <jian.shen@ape-tech.com>; '沈明欣_中通软' <shenmingxin@ccssoft.com.cn>
+抄送：'臧敏捷' <zangminjie@shtel.com.cn>; '马文斌_中通软' <pocket007@ccssoft.com.cn>; '李少颖' <lishaoying@sanss.com>; '江敏' <jiangmin@ccssoft.com.cn>; '曹小波' <caoxiaobo@shtel.com.cn>; 'SHENJ' <jian.shen@ape-tech.com>; '沈明欣_中通软' <shenmingxin@ccssoft.com.cn>
 
 标题：交换整合联调测试记录 - 2018071X
 
@@ -16,8 +16,6 @@
 以上问题请综资尽快解决！
 
 附件中包含目前交换整合联调测试的记录，请注意查收！
- 
-张轶晟
 2018.7.14
 
 
