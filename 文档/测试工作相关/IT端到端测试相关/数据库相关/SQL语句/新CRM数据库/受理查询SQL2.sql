@@ -1,0 +1,26 @@
+select STATUS_CD from customer_order where CUST_ORDER_NBR = 'WMX2019110500501630';
+
+SELECT fee.*
+FROM payment fee, customer_order orde 
+WHERE fee.SOURCE_CUST_ORDER_ID = orde.SOURCE_CUST_ORDER_ID 
+AND orde.CUST_ORDER_NBR = 'WMX2019110500501630';
+
+SELECT fee.* 
+FROM bill fee, customer_order orde 
+WHERE fee.SOURCE_CUST_ORDER_ID = orde.SOURCE_CUST_ORDER_ID 
+AND orde.CUST_ORDER_NBR = 'WMX2019110500501630';
+
+SELECT fee.* 
+FROM business_record fee, customer_order orde 
+WHERE fee.SOURCE_CUST_ORDER_ID = orde.SOURCE_CUST_ORDER_ID 
+AND orde.CUST_ORDER_NBR = 'WMX2019110500501630';
+
+SELECT fee.* 
+FROM pay_complete_cust_order fee, customer_order orde 
+WHERE fee.SOURCE_CUST_ORDER_ID = orde.SOURCE_CUST_ORDER_ID 
+AND orde.CUST_ORDER_NBR = 'WMX2019110500501630';
+
+select ATTR_ID,ATTR_VALUE,ATTR_VALUE_ID from order_attr where ATTR_ID = 11000497 
+AND CUST_ORDER_ID = 400804062697;
+
+#ATTR_ID,ATTR_VALUE,ATTR_VALUE_ID

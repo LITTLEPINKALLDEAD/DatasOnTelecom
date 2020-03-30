@@ -47,3 +47,19 @@ ORAIDA_28=
       (SERVICE_NAME = ORAIDA)
     )
   )
+
+综资测试数据库地址：
+账号：PURDO_WLMIG1106  密码：zhzy
+zz_DNtest =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = 10.7.95.224)(PORT = 1521))
+    (CONNECT_DATA =
+      (SERVER = DEDICATED)
+      (SID = shtirm1)
+    )
+  )
+
+老CRM测试数据库地址：
+帐号： SHENJ   密码：SHENJ
+HOST：10.145.196.67，PORT:1521
+SERVICE_NAME/SID：siebeldb2
