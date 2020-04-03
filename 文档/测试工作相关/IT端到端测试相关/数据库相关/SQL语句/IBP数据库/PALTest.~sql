@@ -1,5 +1,5 @@
 select * from ra_workorder_request where crm_order_number = '(2019)/19076533-0001'; --P7-综资
-select * from ra_workorder_request where crm_order_number = '2-30247695499'
+select * from ra_workorder_request where crm_order_number = 'WMX2020040205288735'
 select * from ra_workorder_request where P_RESULT is NOT null and rownum < 11 order by RECEIVE_TIME DESC; --根据订单的接收时间从近到远选取最近10张有报错信息的订单
 select * from ra_workorder_request where crm_order_number = '2-30242684394'; --P7-综资，订单原资产报错
 select * from ra_workorder_request where ORDER_SEQ_ID = '28471' order by RA_COMPLELED_TIME DESC; --P7-综资，用P7号查询
@@ -8,7 +8,7 @@ select * from ra_workorder_request where crm_order_number like '%2-30285708158%'
 select * from ra_workorder_request where crm_order_number in ('WMZ2019120500516845','WMZ2019120500519229') order by RECEIVE_TIME DESC;
 select * from ra_workorder_request where USER_ID_97 like '%M1323110%' order by RECEIVE_TIME DESC;--(Servrice ID，设备号，工程单编号)等97ID查询
 
-select * from RA_WORKORDER_REQUEST where CRM_ORDER_NUMBER = 'WMX2020021405150807' and REQUEST_TYPE like '%queryIntResService%' order by RECEIVE_TIME desc;
+select * from RA_WORKORDER_REQUEST where CRM_ORDER_NUMBER = 'WMX2020040205289095' and REQUEST_TYPE like '%queryIntResService%' order by RECEIVE_TIME desc;
 
 ---STATE为返回订单状态，包括：
 ---（1：初始状态，准备发送；
@@ -67,4 +67,9 @@ select q.pai_compleled_time from pai_workorder_request q  where q.crm_order_numb
 
 select userenv('language') from dual
 
+select t.*,t.rowid from asap_workorder_request t where crm_order_number='WMX2020040205289121' and request_type='VIMS_OrderRequest' order by hist_seq_id;
+--验证IBP派发了vims工单
+
+select t.*,t.rowid from asap_workorder_request t where crm_order_number in ('WMX2020040205288719','WMX2020040205289095','WMX2020040205288724','WMX2020040205289121') and request_type='VIMS_OrderRequest' order by hist_seq_id;
+--验证IBP派发了vims工单
 --帐号：nonphs_aa    密码nophsq
