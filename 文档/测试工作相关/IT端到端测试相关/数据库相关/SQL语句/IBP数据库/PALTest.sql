@@ -73,4 +73,16 @@ select t.*,t.rowid from asap_workorder_request t where crm_order_number='WMX2020
 select t.*,t.rowid from asap_workorder_request t where crm_order_number in ('WMX2020040205288719','WMX2020040205289095','WMX2020040205288724','WMX2020040205289121') and request_type='VIMS_OrderRequest' order by hist_seq_id;
 --验证IBP派发了vims工单
 
+select p.work_order_request from pai_workorder_request p where p.crm_order_number in ('WMX2020040905308819','WMX2020040905308876','WMX2020040905308945') and p.platform='P017';
+
+select p.work_order_request from pai_workorder_request p where p.crm_order_number in ('WMX2020040905308900','WMX2020040905308956','WMX2020040905308995') and p.platform='P017';
+
+--验证字段工单中带有子产品ipoe_path（ipoe通道），子产品属性biz_type（业务类型）为云游戏，up_bandwidth（上行速率）为100M，down_bandwidth（下行速率）为500M
+
+select asap.work_order_request from asap_workorder_request asap where asap.crm_order_number in ('WMX2020040905308819','WMX2020040905308876','WMX2020040905308945') and asap.request_type='ONU_OrderRequest';
+
+select asap.work_order_request from asap_workorder_request asap where asap.crm_order_number in ('WMX2020040905308900','WMX2020040905308956','WMX2020040905308995') and asap.request_type='ONU_OrderRequest';
+--报文中含有yun_vlan（云网超宽vLan）并且值与资源信息返回的一致
+
+
 --帐号：nonphs_aa    密码nophsq
