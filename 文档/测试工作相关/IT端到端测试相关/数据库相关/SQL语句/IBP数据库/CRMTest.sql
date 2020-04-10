@@ -1,58 +1,48 @@
-update siebel.s_order_item set status_cd='97Íê³É',processed_flg='N',EAI_EXPRT_STAT_CD='´ıÍê¹¤´¦Àí' 
+update siebel.s_order_item set status_cd='97å®Œæˆ',processed_flg='N',EAI_EXPRT_STAT_CD='å¾…å®Œå·¥å¤„ç†' 
 where row_id in
 (select row_id from siebel.S_ORDER_ITEM 
 where ORDER_ID in
 (select row_id from siebel.S_ORDER where ORDER_NUM in 
-('2-30286194921')) and 
+('2-30309707282')) and 
 PAR_ORDER_ITEM_ID is null and
-(PROCESSED_FLG <> 'Y' or STATUS_CD='97Íê³É') and
-ACTION_CD<>'ÏÖÓĞµÄ')
+(PROCESSED_FLG <> 'Y' or STATUS_CD='97å®Œæˆ') and
+ACTION_CD<>'ç°æœ‰çš„')
 
 commit;
---1.ËùÓĞĞĞÏîÄ¿Ë¢³É97Íê³É
+--1.æ‰€æœ‰è¡Œé¡¹ç›®åˆ·æˆ97å®Œæˆ
 
 select row_id,PROCESSED_FLG,STATUS_CD,service_num from siebel.S_ORDER_ITEM 
 where ORDER_ID in
 (select row_id from siebel.S_ORDER where ORDER_NUM in 
-('2-30286194921')) and 
+('2-30309707282')) and 
 PAR_ORDER_ITEM_ID is null and
-(PROCESSED_FLG <> 'Y' or STATUS_CD='97Íê³É') and
-ACTION_CD<>'ÏÖÓĞµÄ'
+(PROCESSED_FLG <> 'Y' or STATUS_CD='97å®Œæˆ') and
+ACTION_CD<>'ç°æœ‰çš„'
 
---2.²éÑ¯ËùÓĞĞĞÏîÄ¿ID
---ÏÈ½«ĞĞÏîÄ¿Ë¢³É97Íê³É×´Ì¬£¬ÔÙ²éÑ¯ËùÓĞĞĞÏîÄ¿µÄID£¬ÔÚÄ£ÄâÆ÷ÖĞÔËĞĞ
---CRMÄ£ÄâÆ÷ÔÚÊ×Ò³·Å´ó¾µÖĞÑ°ÕÒ£¬Ëæºó¼ÓÔØÎÄ¼ş1ºÍÎÄ¼ş2,ÔÚÎÄ¼ş2µÄ´°¿ÚÏÂÊôĞÔÖµÖĞÊäÈëROW_ID
---£¨¸ñÊ½|2-DS9XRG0|2-DS9XRH7|£©£¬ÔÙ½øĞĞÖ´ĞĞ
---2-30007915046³É¹¦Íê¹¤£¬Æä¹ØÁª×Ó¶©µ¥£º2-30017522181£¬2-30017529510Ò²Íê¹¤ÁË
+--2.æŸ¥è¯¢æ‰€æœ‰è¡Œé¡¹ç›®ID
+--å…ˆå°†è¡Œé¡¹ç›®åˆ·æˆ97å®ŒæˆçŠ¶æ€ï¼Œå†æŸ¥è¯¢æ‰€æœ‰è¡Œé¡¹ç›®çš„IDï¼Œåœ¨æ¨¡æ‹Ÿå™¨ä¸­è¿è¡Œ
+--CRMæ¨¡æ‹Ÿå™¨åœ¨é¦–é¡µæ”¾å¤§é•œä¸­å¯»æ‰¾ï¼ŒéšååŠ è½½æ–‡ä»¶1å’Œæ–‡ä»¶2,åœ¨æ–‡ä»¶2çš„çª—å£ä¸‹å±æ€§å€¼ä¸­è¾“å…¥ROW_ID
+--ï¼ˆæ ¼å¼|2-DS9XRG0|2-DS9XRH7|ï¼‰ï¼Œå†è¿›è¡Œæ‰§è¡Œ
+--2-30007915046æˆåŠŸå®Œå·¥ï¼Œå…¶å…³è”å­è®¢å•ï¼š2-30017522181ï¼Œ2-30017529510ä¹Ÿå®Œå·¥äº†
 
 
-select * from siebel.S_ORDER where ORDER_NUM='2-30287514725'
-update siebel.S_ORDER set STATUS_CD='Í¨¹ıºÏ·¨ĞÔĞ£Ñé' where row_id='2-DWWEJXH';
+select * from siebel.S_ORDER where ORDER_NUM='2-30309312925'
+update siebel.S_ORDER set STATUS_CD='é€šè¿‡åˆæ³•æ€§æ ¡éªŒ' where row_id='2-DX9DRJ1';
 commit;
---¸ÄCRM×´Ì¬ÎªÍ¨¹ıºÏ·¨ĞÔĞ£Ñé
+--æ”¹CRMçŠ¶æ€ä¸ºé€šè¿‡åˆæ³•æ€§æ ¡éªŒ
 
 select * from siebel.S_ORDER where ORDER_NUM='2-30078809860';
-update siebel.S_ORDER set STATUS_CD='Í¨¹ıºÏ·¨ĞÔĞ£Ñé' where row_id='2-DTG5A84';
+update siebel.S_ORDER set STATUS_CD='é€šè¿‡åˆæ³•æ€§æ ¡éªŒ' where row_id='2-DTG5A84';
 commit;
---2-22494391826£¨LHH£©,2-22414821620(ZQY),All updated successfully!
+--2-22494391826ï¼ˆLHHï¼‰,2-22414821620(ZQY),All updated successfully!
 
 select STATUS_CD from siebel.S_ORDER where ORDER_NUM in ('2-30007915046','2-30017522181','2-30017529510');
 select STATUS_CD from siebel.S_ORDER where ORDER_NUM = '2-30023855818';
---²éÑ¯¶©µ¥µÄ×´Ì¬
+--æŸ¥è¯¢è®¢å•çš„çŠ¶æ€
 
-select * from siebel.S_ORDER where STATUS_CD='Í¨¹ıºÏ·¨ĞÔĞ£Ñé'
+select * from siebel.S_ORDER where STATUS_CD='é€šè¿‡åˆæ³•æ€§æ ¡éªŒ'
+
+select SS.STATUS_CD from siebel.S_ORDER SS where SS.ORDER_NUM='2-30285926616';
+--siebel.S_ORDERä¸­çš„STATUS_CDä¸ºè€CRMå‘é€è®¢å•çš„çŠ¶æ€
 
 select userenv('language') from dual;
-
-select ORDER_NUM from siebel.S_ORDER where CREATED between to_date('2020-01-17','yyyy-mm-dd') and to_date('2020-01-18','yyyy-mm-dd');
--- ¸ù¾İÖ¸¶¨Ê±¼äÄÚ£¬²éÑ¯CRMÏµÍ³ÊÜÀíµÄ¶©µ¥ºÅ
-
-select * from siebel.S_ORDER order by CREATED;
---,2-30261123955
-
--- 20200119: 
--- 2-30286194921 (FTTO½ÓÈëµÄÆÕÍ¨µç»°£¬×öÖ±¸ÄÖĞ)£¬2-30287503814£¨FTTO½ÓÈëµÄÖ±¸ÄÖĞ¶©µ¥,P7ºÍIBP±¨ÎÄ¶¼ÓĞIMSÀàĞÍºÍIMS_Type×Ö¶Î£©
---2-30287548338(ÅäµÄÊÇ¹â)£¬2-30287565771(ÏµÍ³ÓÅÏÈ½ÓÈëµÄÆÕÍ¨µç»°£¬×öÖ±¸ÄÖĞ£¬Ã»IMSÀàĞÍ)£¬2-30287552777£¨ÏµÍ³ÓÅÏÈ½ÓÈëµÄÖ±¸ÄÖĞ¶©µ¥£©
--- 2-30287426773 (ÆÕÍ¨½ÓÈëµÄÆÕÍ¨µç»°£¬Ã»IMSÀàĞÍ£©
--- WMX2020011905148545(ÅäµÄÊÇ¹â)£¨ÏµÍ³ÓÅÏÈ½ÓÈëµÄ¹Ì¶¨µç»°²úÆ·£¬Ã»IMSÀàĞÍ£©
-

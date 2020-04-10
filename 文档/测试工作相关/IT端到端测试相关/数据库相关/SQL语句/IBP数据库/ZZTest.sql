@@ -1,35 +1,35 @@
-select * from intf_requestlog where crmquotenumber='WMX2020021405150807';--½Ó¿Ú±í£¬IBP·¢¸ø×Û×ÊµÄĞÅÏ¢
--- intf_requestlog±íÖĞµÄTARGETMETHODÎª¶©µ¥ÅäÖÃ×´Ì¬£¬createServiceÊÇ´´·şÎñ£¬checkServiceÊÇ×ÊÔ´ÉóºË
-SELECT * from c_serviceorder where crmquotenumber like 'WMX2020021405150807'; --¶©µ¥±í
--- c_serviceorder»áÓĞÒ»Ìõ¼ÇÂ¼£¬ÆäÖĞSERVICE_IDÎª¿Õ£¬ÒòÎª¸ÃÏîÎªÖ÷µ¥¡£SERVICE_IDÓĞÖµµÄÎª×Óµ¥
--- ÔÚ×Û×Ê½çÃæÅäÖÃµÄÊ±ºò£¬¶¼ÊÇÔÚ×Óµ¥ÖĞ²Ù×÷
-SELECT * from c_Servicecurrent WHERE globalserviceid='M2049021';--ÔÚÍ¾·şÎñ±í,¸ù¾İc_serviceorderµÄGLOBALSERVICEID²éÑ¯,¼´Éè±¸±àºÅ
-SELECT * from intf_datafortelement where CRMQUOTENUMBER = 'WMX2020011705148008';  
---×Û×Ê·µ»ØIBPÊÇ·ñÊÕµ½µÄ±í
+select * from intf_requestlog where crmquotenumber='WMZ2020032305208888';--æ¥å£è¡¨ï¼ŒIBPå‘ç»™ç»¼èµ„çš„ä¿¡æ¯
+-- intf_requestlogè¡¨ä¸­çš„TARGETMETHODä¸ºè®¢å•é…ç½®çŠ¶æ€ï¼ŒcreateServiceæ˜¯åˆ›æœåŠ¡ï¼ŒcheckServiceæ˜¯èµ„æºå®¡æ ¸
+SELECT * from c_serviceorder where crmquotenumber like 'WMZ2020032305208888'; --è®¢å•è¡¨
+-- c_serviceorderä¼šæœ‰ä¸€æ¡è®°å½•ï¼Œå…¶ä¸­SERVICE_IDä¸ºç©ºï¼Œå› ä¸ºè¯¥é¡¹ä¸ºä¸»å•ã€‚SERVICE_IDæœ‰å€¼çš„ä¸ºå­å•
+-- åœ¨ç»¼èµ„ç•Œé¢é…ç½®çš„æ—¶å€™ï¼Œéƒ½æ˜¯åœ¨å­å•ä¸­æ“ä½œ
+SELECT * from c_Servicecurrent WHERE globalserviceid='M2049021';--åœ¨é€”æœåŠ¡è¡¨,æ ¹æ®c_serviceorderçš„GLOBALSERVICEIDæŸ¥è¯¢,å³è®¾å¤‡ç¼–å·
+SELECT * from intf_datafortelement where CRMQUOTENUMBER = 'WMZ2020032305208888';  
+--ç»¼èµ„è¿”å›IBPæ˜¯å¦æ”¶åˆ°çš„è¡¨
 
-select * from INTF_FAILEDREQLOG_IFCARCHIVE WHERE SERVICEID LIKE 'M2049022%'; -- ×Û×Ê¹éµµ±í
+select * from INTF_FAILEDREQLOG_IFCARCHIVE WHERE SERVICEID LIKE 'M2049022%'; -- ç»¼èµ„å½’æ¡£è¡¨
 
 Select t.*,t.rowid From intf_failedrequestlog_forifc t Where t.serviceid like 'M2049022%'
 
-SELECT * FROM INTF_FAILEDREQUESTLOG_FORIFC where SERVICEID = 'M2049022'; --×Û×ÊÅäÖÃÍê·¢³öÈ¥µÄ±í
+SELECT * FROM INTF_FAILEDREQUESTLOG_FORIFC where SERVICEID = 'M2049022'; --ç»¼èµ„é…ç½®å®Œå‘å‡ºå»çš„è¡¨
 
-select * from mm_dictionary where id in (SELECT PROCESSTYPE from c_serviceorder where crmquotenumber like 'WMZ2020011705147885');
- -- ´Óc_serviceorder±íÖĞ²éÑ¯PROCESSTYPEµÄÎª¶©µ¥ÀàĞÍ
-select * from mm_dictionary where id in (SELECT DOTYPE from c_serviceorder where crmquotenumber like 'WMZ2020011705147885');
--- DOTYPEÊÇ²Ù×÷×´Ì¬£¬
-select * from mm_dictionary where id in (SELECT PROCESSTYPE from c_serviceorder where crmquotenumber like 'WMZ2020011705147885');
--- PROCESSTYPEÊÇ¶©µ¥ÀàĞÍ£¬
-select * from mm_dictionary where id in (SELECT ORDERTYPE from c_serviceorder where crmquotenumber like 'WMZ2020011705147885');
--- ORDERTYPEÊÇÀ´Ô´¶©µ¥ÀàĞÍ,
-select * from mm_dictionary where id in (SELECT STATUS from c_serviceorder where crmquotenumber like 'WMZ2020011705147885');
--- STATUSÊÇ¶©µ¥ÅäÖÃ×´Ì¬£¬
-select * from mm_dictionary where id in (SELECT ISLEGAL from c_serviceorder where crmquotenumber like 'WMZ2020011705147885');
--- ISLEGALÊÇ·ñºÏ·¨,
-select * from mm_dictionary where id in (SELECT OPERATION_TYPE from c_serviceorder where crmquotenumber like 'WMZ2020011705147885');
--- OPERATION_TYPEÁ÷³Ì²Ù×÷ÀàĞÍ
+select * from mm_dictionary where id in (SELECT PROCESSTYPE from c_serviceorder where crmquotenumber like 'WMZ2020032305208888');
+ -- ä»c_serviceorderè¡¨ä¸­æŸ¥è¯¢PROCESSTYPEçš„ä¸ºè®¢å•ç±»å‹
+select * from mm_dictionary where id in (SELECT DOTYPE from c_serviceorder where crmquotenumber like 'WMZ2020032305208888');
+-- DOTYPEæ˜¯æ“ä½œçŠ¶æ€ï¼Œ
+select * from mm_dictionary where id in (SELECT PROCESSTYPE from c_serviceorder where crmquotenumber like 'WMZ2020032305208888');
+-- PROCESSTYPEæ˜¯è®¢å•ç±»å‹ï¼Œ
+select * from mm_dictionary where id in (SELECT ORDERTYPE from c_serviceorder where crmquotenumber like 'WMZ2020032305208888');
+-- ORDERTYPEæ˜¯æ¥æºè®¢å•ç±»å‹,
+select * from mm_dictionary where id in (SELECT STATUS from c_serviceorder where crmquotenumber like 'WMZ2020032305208888');
+-- STATUSæ˜¯è®¢å•é…ç½®çŠ¶æ€ï¼Œ
+select * from mm_dictionary where id in (SELECT ISLEGAL from c_serviceorder where crmquotenumber like 'WMZ2020032305208888');
+-- ISLEGALæ˜¯å¦åˆæ³•,
+select * from mm_dictionary where id in (SELECT OPERATION_TYPE from c_serviceorder where crmquotenumber like 'WMZ2020032305208888');
+-- OPERATION_TYPEæµç¨‹æ“ä½œç±»å‹
 
 select DISTINCT(STATUS) from C_SERVICEORDER;
 
 select * from mm_dictionary where id in (select DISTINCT(OPERATION_TYPE) from C_SERVICEORDER);
 
-select * from mm_dictionary where id in (SELECT STATUS from intf_datafortelement where CRMQUOTENUMBER = 'WMZ2020011705147885');
+select * from mm_dictionary where id in (SELECT STATUS from intf_datafortelement where CRMQUOTENUMBER = 'WMZ2020032305208888');

@@ -1,13 +1,13 @@
-select * from T_PUB_MAINBILL order by CREATE_TIME desc;  --¹«¹²½Ó¿Ú±í
-select * from T_SF_BILL order by APPLY_TIME desc;    --ÕşÆó¹¤µ¥±í
-select * from T_PUB_TASK order by DISPATCH_TIME desc;    --¹«¹²ÈÎÎñ±í
-select * from T_SF_TASK order by TASK_ID desc;      --ÕşÆóÈÎÎñ±í
-select count(*) from T_PUB_BILL_ACTION order by OPERATE_END_TIME desc;    --¹«¹²¶¯×÷±í
-
-select pub_b2c(d.xmlinfo) from t_Sf_Receive_Quene D WHERE D.SPS_APPLY_ID like '%(2019)/19065599%';
---ÑéÖ¤¿Í±£ÊÕµ½IBP¹¤µ¥±¨ÎÄÖĞÊÇ·ñº¬ÓĞĞÂÔö×Ö¶ÎĞéÖĞ¼ÌĞÅÏ¢½Úµã£¨vtrunkinfo£©ºÍ·ÖÅäºÅÂëĞÅÏ¢½Úµã(alloccodeinfo)
+--select * from T_PUB_MAINBILL order by CREATE_TIME desc;  --å…¬å…±æ¥å£è¡¨
+--select * from T_SF_BILL order by APPLY_TIME desc;    --æ”¿ä¼å·¥å•è¡¨
+--select * from T_PUB_TASK order by DISPATCH_TIME desc;    --å…¬å…±ä»»åŠ¡è¡¨
+--select * from T_SF_TASK order by TASK_ID desc;      --æ”¿ä¼ä»»åŠ¡è¡¨
+--select count(*) from T_PUB_BILL_ACTION order by OPERATE_END_TIME desc;    --å…¬å…±åŠ¨ä½œè¡¨
 
 
-select pub_b2c(d.xmlinfo) from t_sf_receive_quene_his d where d.sps_apply_id='WMZ2020011300536458';
--- bureau_code  Çø¾Ö      customer_address_road  °²×°µØÖ·,STN200014021
---ÕÊºÅ£º KB_TEST   ÃÜÂë£ºmarconi
+select pub_b2c(d.xmlinfo),D.* from t_Sf_Receive_Quene D WHERE D.SPS_APPLY_ID like 'WMZ2020011605147748%';
+--éªŒè¯å®¢ä¿æ”¶åˆ°IBPå·¥å•æŠ¥æ–‡ä¸­æ˜¯å¦å«æœ‰æ–°å¢å­—æ®µè™šä¸­ç»§ä¿¡æ¯èŠ‚ç‚¹ï¼ˆvtrunkinfoï¼‰å’Œåˆ†é…å·ç ä¿¡æ¯èŠ‚ç‚¹(alloccodeinfo)onåœ¨é€”è¡¨
+
+select pub_b2c(d.xmlinfo),d.* from t_sf_receive_quene_his d where d.sps_apply_id='WMZ2020011605147748';
+--éªŒè¯å®¢ä¿æ”¶åˆ°IBPå·¥å•æŠ¥æ–‡ä¸­æ˜¯å¦å«æœ‰åŒºå±€å­—æ®µ(bureau_code),å®‰è£…åœ°å€(customer_address_road)onå†å²è¡¨
+--å¸å·ï¼š KB_TEST   å¯†ç ï¼šmarconi

@@ -1,11 +1,14 @@
-select * from received_message where crm_order_number in('WMX2020021305150748','WMX2020021305150749','WMX2020021305150750','WMX2020021305150751'); --²éSOPÊÇ·ñÊÕµ½CRMÌá½»µÄ¶©µ¥
----received_messageÖĞCRM_ORDER_VERSIONÎªCRM¶©µ¥°æ±¾ºÅ£º1£¬2£¬3£¬¶©µ¥²»Í¬µÄ°æ±¾£¬Êı¾İ¿â¾ÍÓĞ²»Í¬µÄ¼ÇÂ¼ÌõÊı
+select * from received_message where crm_order_number like 'WMZ2020032705235960%';
+ --æŸ¥SOPæ˜¯å¦æ”¶åˆ°CRMæäº¤çš„è®¢å•,SOPæ ¸å¿ƒè¡¨
+---received_messageä¸­CRM_ORDER_VERSIONä¸ºCRMè®¢å•ç‰ˆæœ¬å·ï¼š1ï¼Œ2ï¼Œ3ï¼Œè®¢å•ä¸åŒçš„ç‰ˆæœ¬ï¼Œæ•°æ®åº“å°±æœ‰ä¸åŒçš„è®°å½•æ¡æ•°
 
-select * from p6_order_info where crm_order_number in('WMX2020021305150748','WMX2020021305150749','WMX2020021305150750','WMX2020021305150751'); -- ²éSOP·¢P7µÄ×´Ì¬
----p6_order_infoÖĞµÄSTATUSÎª·¢ËÍ×´Ì¬£ºÊ§°ÜFailed£¬³É¹¦Processing£¬Íê¹¤Finished
+select * from p6_order_info where crm_order_number like 'WMZ2020032705235960%'; 
+-- æŸ¥SOPå‘P7çš„çŠ¶æ€,æ”¶CRMè®¢å• p6_order_info å®šå•æ‹†åˆ†å‘å¾€P7
+-- p6_order_infoä¸­çš„STATUSä¸ºå‘é€çŠ¶æ€ï¼šå¤±è´¥Failedï¼ŒæˆåŠŸProcessingï¼Œå®Œå·¥Finished
 
-select * from SERVICE_ORDER_SENT where CRM_ORDER_NUMBER in('WMX2020021305150748','WMX2020021305150749','WMX2020021305150750','WMX2020021305150751'); -- ²éSOP·¢P7±¨ÎÄµÄ±¨ÎÄ
----SERVICE_ORDER_SENTÖĞCRM_ORDER_VERSIONÎªCRM¶©µ¥°æ±¾ºÅ£º1£¬2£¬3£¬¶©µ¥²»Í¬µÄ°æ±¾£¬Êı¾İ¿â¾ÍÓĞ²»Í¬µÄ¼ÇÂ¼ÌõÊı
+select * from SERVICE_ORDER_SENT where CRM_ORDER_NUMBER like 'WMZ2020032705235960%'; 
+-- æŸ¥SOPå‘P7æŠ¥æ–‡çš„æŠ¥æ–‡
+---SERVICE_ORDER_SENTä¸­CRM_ORDER_VERSIONä¸ºCRMè®¢å•ç‰ˆæœ¬å·ï¼š1ï¼Œ2ï¼Œ3ï¼Œè®¢å•ä¸åŒçš„ç‰ˆæœ¬ï¼Œæ•°æ®åº“å°±æœ‰ä¸åŒçš„è®°å½•æ¡æ•°
 
 
 --where crm_order_number = '2-29936865024'
@@ -15,9 +18,9 @@ select * from SERVICE_ORDER_SENT where CRM_ORDER_NUMBER in('WMX2020021305150748'
 
 
 select r.message_body from received_message r where r.crm_order_number in ('WMX2019121900526637')
--- ²éÑ¯±¨ÎÄÖĞRelay TypeµÄÖµ
+-- æŸ¥è¯¢æŠ¥æ–‡ä¸­Relay Typeçš„å€¼
 
 select r.message_body from received_message r where r.crm_order_number in ('WMZ2019122500531058')
--- ÔÚ±¨ÎÄÖĞËÑË÷×Ó²úÆ·Ãû³Æ¡°×éÊı¾İ¼¯ÈºÒôÖ¤¡±
+-- åœ¨æŠ¥æ–‡ä¸­æœç´¢å­äº§å“åç§°â€œç»„æ•°æ®é›†ç¾¤éŸ³è¯â€
 
---SOP ÕÊºÅ£ºtestorder   ÃÜÂë£ºtestorder
+--SOP å¸å·ï¼štestorder   å¯†ç ï¼štestorder

@@ -1,88 +1,87 @@
-select * from ra_workorder_request where crm_order_number = '(2019)/19076533-0001'; --P7-×Û×Ê
-select * from ra_workorder_request where crm_order_number = 'WMX2020040205288735'
-select * from ra_workorder_request where P_RESULT is NOT null and rownum < 11 order by RECEIVE_TIME DESC; --¸ù¾Ý¶©µ¥µÄ½ÓÊÕÊ±¼ä´Ó½üµ½Ô¶Ñ¡È¡×î½ü10ÕÅÓÐ±¨´íÐÅÏ¢µÄ¶©µ¥
-select * from ra_workorder_request where crm_order_number = '2-30242684394'; --P7-×Û×Ê£¬¶©µ¥Ô­×Ê²ú±¨´í
-select * from ra_workorder_request where ORDER_SEQ_ID = '28471' order by RA_COMPLELED_TIME DESC; --P7-×Û×Ê£¬ÓÃP7ºÅ²éÑ¯
-select * from ra_workorder_request where ORDER_SEQ_ID = '35174' order by RECEIVE_TIME DESC; --P7-×Û×Ê£¬ÓÃP7ºÅ²éÑ¯
-select * from ra_workorder_request where crm_order_number like '%2-30285708158%' order by RECEIVE_TIME DESC;
+select * from ra_workorder_request where crm_order_number = '(2019)/19076533-0001'; --P7-ç»¼èµ„
+select * from ra_workorder_request where crm_order_number = 'WMX2020040905308819'
+select * from ra_workorder_request where P_RESULT is NOT null and rownum < 11 order by RECEIVE_TIME DESC; --æ ¹æ®è®¢å•çš„æŽ¥æ”¶æ—¶é—´ä»Žè¿‘åˆ°è¿œé€‰å–æœ€è¿‘10å¼ æœ‰æŠ¥é”™ä¿¡æ¯çš„è®¢å•
+select * from ra_workorder_request where crm_order_number = '2-30242684394'; --P7-ç»¼èµ„ï¼Œè®¢å•åŽŸèµ„äº§æŠ¥é”™
+select * from ra_workorder_request where ORDER_SEQ_ID = '28471' order by RA_COMPLELED_TIME DESC; --P7-ç»¼èµ„ï¼Œç”¨P7å·æŸ¥è¯¢
+select * from ra_workorder_request where ORDER_SEQ_ID = '35174' order by RECEIVE_TIME DESC; --P7-ç»¼èµ„ï¼Œç”¨P7å·æŸ¥è¯¢
+select * from ra_workorder_request where crm_order_number like 'WMZ2020032305208888%' order by RECEIVE_TIME DESC;
 select * from ra_workorder_request where crm_order_number in ('WMZ2019120500516845','WMZ2019120500519229') order by RECEIVE_TIME DESC;
-select * from ra_workorder_request where USER_ID_97 like '%M1323110%' order by RECEIVE_TIME DESC;--(Servrice ID£¬Éè±¸ºÅ£¬¹¤³Ìµ¥±àºÅ)µÈ97ID²éÑ¯
+select * from ra_workorder_request where USER_ID_97 like '%M1323110%' order by RECEIVE_TIME DESC;--(Servrice IDï¼Œè®¾å¤‡å·ï¼Œå·¥ç¨‹å•ç¼–å·)ç­‰97IDæŸ¥è¯¢
 
-select * from RA_WORKORDER_REQUEST where CRM_ORDER_NUMBER = 'WMX2020040205289095' and REQUEST_TYPE like '%queryIntResService%' order by RECEIVE_TIME desc;
+select aa.STATE,aa.REQUEST_TYPE,aa.* from RA_WORKORDER_REQUEST aa where aa.CRM_ORDER_NUMBER = '2-30309482575';
 
----STATEÎª·µ»Ø¶©µ¥×´Ì¬£¬°üÀ¨£º
----£¨1£º³õÊ¼×´Ì¬£¬×¼±¸·¢ËÍ£»
----2£º·¢ËÍÊ§°Ü
----3£ºÒÑ·¢ËÍ£¬µ«Î´ÊÕµ½»Øµ¥£»
----4£ºÎ´ÓÃ
----5£ºÒÑÊÕµ½Ê§°ÜµÄ»Øµ¥½á¹û
----6£º¹¤µ¥½á¹û×¼±¸»Ø¸øP7
----7£º¹¤µ¥½á¹û»ØP7Ê§°Ü
----8£º¹¤µ¥½á¹û»ØP7³É¹¦
----£©
+---STATEä¸ºè¿”å›žè®¢å•çŠ¶æ€ï¼ŒåŒ…æ‹¬ï¼š
+---ï¼ˆ1ï¼šåˆå§‹çŠ¶æ€ï¼Œå‡†å¤‡å‘é€ï¼›
+---2ï¼šå‘é€å¤±è´¥
+---3ï¼šå·²å‘é€ï¼Œä½†æœªæ”¶åˆ°å›žå•ï¼›
+---4ï¼šæœªç”¨
+---5ï¼šå·²æ”¶åˆ°å¤±è´¥çš„å›žå•ç»“æžœ
+---6ï¼šå·¥å•ç»“æžœå‡†å¤‡å›žç»™P7
+---7ï¼šå·¥å•ç»“æžœå›žP7å¤±è´¥
+---8ï¼šå·¥å•ç»“æžœå›žP7æˆåŠŸ
+---ï¼‰
 
----request_typeÎª·µ»ØÇëÇóÀàÐÍ£¬°üÀ¨£º£¨
----createIntResServiceÊÇ´´·þÎñ£¨¹ÌÍøµÄ£©
----dispatchMOrder(2MºÃÏñÊÇ´´·þÎñ),checkServiceÊÇ×ÊÔ´ÉóºË(2M)
----queryIntResService£¨Ô­×Ê²ú²éÑ¯£©
----csOrderÊÇ·µ»Ø¿Í±£¹¤µ¥µÄ¼ÇÂ¼£¨2M£©
----completeIntResServiceÊÇ¶©µ¥Íê¹¤£¨¹ÌÍø£©,archiveNMResourceÊÇ¶©µ¥Íê¹¤(2M)
----£©
+---request_typeä¸ºè¿”å›žè¯·æ±‚ç±»åž‹ï¼ŒåŒ…æ‹¬ï¼šï¼ˆ
+---createIntResServiceæ˜¯åˆ›æœåŠ¡ï¼ˆå›ºç½‘çš„ï¼‰
+---dispatchMOrder(2Måˆ›æœåŠ¡),checkServiceæ˜¯èµ„æºå®¡æ ¸(2M)
+---queryIntResServiceï¼ˆåŽŸèµ„äº§æŸ¥è¯¢ï¼‰
+---csOrderæ˜¯è¿”å›žå®¢ä¿å·¥å•çš„è®°å½•ï¼ˆ2Mï¼‰
+---completeIntResServiceæ˜¯è®¢å•å®Œå·¥ï¼ˆå›ºç½‘ï¼‰,archiveNMResourceæ˜¯è®¢å•å®Œå·¥(2M)
+---ï¼‰
 
 select USER_ID_97 from ra_workorder_request where crm_order_number like '%2-30039336430%' order by RECEIVE_TIME DESC;
---²éÑ¯CRM¶©µ¥µÄService IDÉè±¸ºÅ
+--æŸ¥è¯¢CRMè®¢å•çš„Service IDè®¾å¤‡å·
 
 select CRM_ORDER_NUMBER from ra_workorder_request where USER_ID_97 like '%M1307690%' order by RECEIVE_TIME DESC;
---¸ù¾ÝService IDÉè±¸ºÅ²éÑ¯CRM¶©µ¥ºÅ
+--æ ¹æ®Service IDè®¾å¤‡å·æŸ¥è¯¢CRMè®¢å•å·
 
 --20190313:(2019)/19076920-0001
 --20190314:2-29999072116
 --WMX2019012100117301,WMX2019012600123517
 --(2019)/19075950_0001C ,(2019)/19076141_0002C
---(2019)/19076225_0001PZ,ÐÞ¶©¹ýµÄ¹¤³Ì¶©µ¥µÄP6ºÅÎª15094
+--(2019)/19076225_0001PZ,ä¿®è®¢è¿‡çš„å·¥ç¨‹è®¢å•çš„P6å·ä¸º15094
 
---(2019)/19076222_0001PZ,P6ºÅÎª15091
+--(2019)/19076222_0001PZ,P6å·ä¸º15091
+
+select * from RA_WORKORDER_REQUEST where P_RESULT like '%Could%' and rownum<=10;
 
 select t.work_order_return from  ra_workorder_request t  where crm_order_number like '%(2019)/19065599%' and t.request_type='queryIntResService'
---ÑéÖ¤×ÊÔ´ÐÅÏ¢ÖÐÐÂÔö×Ö¶ÎÐéÖÐ¼ÌÐÅÏ¢½Úµã£¨vtrunkinfo£©ºÍ·ÖÅäºÅÂëÐÅÏ¢½Úµã(alloccodeinfo) IBPÊÇ·ñÊÕµ½
+--éªŒè¯èµ„æºä¿¡æ¯ä¸­æ–°å¢žå­—æ®µè™šä¸­ç»§ä¿¡æ¯èŠ‚ç‚¹ï¼ˆvtrunkinfoï¼‰å’Œåˆ†é…å·ç ä¿¡æ¯èŠ‚ç‚¹(alloccodeinfo) IBPæ˜¯å¦æ”¶åˆ°
 
 select p.work_order_request from pai_workorder_request p  where p.crm_order_number in ('2-30264173016'); 
--- ²ð»ú£º2-30264222174£¬WMZ2019122500529376, Éè±¸ºÅ£º ACC400807650785(ÐÂCRMÐÂ×°), WMZ2019122500531058£¨ÐÂCRM²ð»ú£©,WMZ2019122500529380  Éè±¸ºÅ£º ACC400807650815£¨ÐÂCRMÐÂ×°²»´ø×Ó²úÆ·£©
---ÑéÖ¤×Ö¶Î£º¿Í»§±êÊ¶¡°service_account¡±¡¢¿Í»§Ãû³Æ¡°account_number¡±¡¢Ò»¼¶²úÆ·±àÂë¡°Ò»¼¶×Ó²úÆ·±àºÅ¡±¡¢Èº×éºÅ¡°group_number¡±
+-- æ‹†æœºï¼š2-30264222174ï¼ŒWMZ2019122500529376, è®¾å¤‡å·ï¼š ACC400807650785(æ–°CRMæ–°è£…), WMZ2019122500531058ï¼ˆæ–°CRMæ‹†æœºï¼‰,WMZ2019122500529380  è®¾å¤‡å·ï¼š ACC400807650815ï¼ˆæ–°CRMæ–°è£…ä¸å¸¦å­äº§å“ï¼‰
+--éªŒè¯å­—æ®µï¼šå®¢æˆ·æ ‡è¯†â€œservice_accountâ€ã€å®¢æˆ·åç§°â€œaccount_numberâ€ã€ä¸€çº§äº§å“ç¼–ç â€œä¸€çº§å­äº§å“ç¼–å·â€ã€ç¾¤ç»„å·â€œgroup_numberâ€
 
 
 select * from pai_workorder_request where crm_order_number = '2-29978524433'; --P7-PAI --2-29936482320
 select * from asap_workorder_request where crm_order_number = '2-29978513149';  --P7-asap
 
-select * from INT_RES_CONFIG_RESULT_NEW where CRM_ORDER_NO = 'WMX2019112100508401' --²éÑ¯PALÅäÖÃÇé¿öµÄ±í
+select * from INT_RES_CONFIG_RESULT_NEW where CRM_ORDER_NO = 'WMX2019112100508401' --æŸ¥è¯¢PALé…ç½®æƒ…å†µçš„è¡¨
 
-select q.wop_process_state from pai_workorder_request q where q.crm_order_number='WMZ2020032605228166' and q.platform='P027'; 
----ÔÆÖ÷»ú²úÆ·ÖØÅÉÑéÖ¤£¬wop_process_stateÎª1Ê±±íÊ¾ÒÑÖØ·¢¹¤µ¥
-
-select q.pai_compleled_time from pai_workorder_request q  where q.crm_order_number='WMZ2020032605228166' and q.platform='P027';
----ÔÆÖ÷»ú²úÆ·ÖØÅÉÑéÖ¤£¬ÅÉ·¢ÖÇÄÜÍø¹Ü¹¤µ¥ºó¹ý¼¸·ÖÖÓÔÙÈ¥WOPµ÷ÓÃÖØÅÉ,pai_compleled_timeÕâ¸öÊ±¼äÀ´ÑéÖ¤ÖØÅÉÊÇ·ñÓÐÐ§
+select q.wop_process_state from pai_workorder_request q where q.crm_order_number='WMZ2020032605228633' and q.platform='P027'; 
+---äº‘ä¸»æœºäº§å“é‡æ´¾éªŒè¯ï¼Œwop_process_stateä¸º1æ—¶è¡¨ç¤ºå·²é‡å‘å·¥å•
 
 select q.pai_compleled_time from pai_workorder_request q  where q.crm_order_number in('WMZ2020032705236482','WMZ2020032705236546') and q.platform='P027';
----ÔÆÖ÷»ú²úÆ·ÖØÅÉÑéÖ¤£¬ÅÉ·¢ÖÇÄÜÍø¹Ü¹¤µ¥ºó¹ý¼¸·ÖÖÓÔÙÈ¥WOPµ÷ÓÃÖØÅÉ,pai_comp
+---äº‘ä¸»æœºäº§å“é‡æ´¾éªŒè¯ï¼Œæ´¾å‘æ™ºèƒ½ç½‘ç®¡å·¥å•åŽè¿‡å‡ åˆ†é’Ÿå†åŽ»WOPè°ƒç”¨é‡æ´¾,pai_compleled_timeè¿™ä¸ªæ—¶é—´æ¥éªŒè¯é‡æ´¾æ˜¯å¦æœ‰æ•ˆ
 
-select userenv('language') from dual
+select t.*,t.rowid from asap_workorder_request t where crm_order_number='WMZ2020040205289110' and request_type='VIMS_OrderRequest' order by hist_seq_id;
+--éªŒè¯IBPæ´¾å‘äº†vimså·¥å•
 
-select t.*,t.rowid from asap_workorder_request t where crm_order_number='WMX2020040205289121' and request_type='VIMS_OrderRequest' order by hist_seq_id;
---ÑéÖ¤IBPÅÉ·¢ÁËvims¹¤µ¥
+select t.*,t.rowid from asap_workorder_request t where crm_order_number in ('WMX2020040205288719','WMX2020040205289095','WMX2020040205288724','WMX2020040205289121','2-30309283705','2-30309482575') and request_type='VIMS_OrderRequest' order by hist_seq_id;
+--éªŒè¯IBPæ´¾å‘äº†vimså·¥å•ï¼Œè¿™äº›è®¢å•ç±»åž‹æ˜¯è¦å‘VIMSå·¥å•çš„
 
-select t.*,t.rowid from asap_workorder_request t where crm_order_number in ('WMX2020040205288719','WMX2020040205289095','WMX2020040205288724','WMX2020040205289121') and request_type='VIMS_OrderRequest' order by hist_seq_id;
---ÑéÖ¤IBPÅÉ·¢ÁËvims¹¤µ¥
+select t.*,t.rowid from asap_workorder_request t where crm_order_number in ('WMZ2020040205288743','WMZ2020040305289921','WMZ2020040205289110','WMZ2020040305289948','2-30309707282','2-30309754240') and request_type='VIMS_OrderRequest' order by hist_seq_id;
+--éªŒè¯IBPæ´¾å‘äº†vimså·¥å•,è¿™äº›è®¢å•ç±»åž‹æ˜¯ä¸å‘VIMSå·¥å•çš„
 
 select p.work_order_request from pai_workorder_request p where p.crm_order_number in ('WMX2020040905308819','WMX2020040905308876','WMX2020040905308945') and p.platform='P017';
 
 select p.work_order_request from pai_workorder_request p where p.crm_order_number in ('WMX2020040905308900','WMX2020040905308956','WMX2020040905308995') and p.platform='P017';
 
---ÑéÖ¤×Ö¶Î¹¤µ¥ÖÐ´øÓÐ×Ó²úÆ·ipoe_path£¨ipoeÍ¨µÀ£©£¬×Ó²úÆ·ÊôÐÔbiz_type£¨ÒµÎñÀàÐÍ£©ÎªÔÆÓÎÏ·£¬up_bandwidth£¨ÉÏÐÐËÙÂÊ£©Îª100M£¬down_bandwidth£¨ÏÂÐÐËÙÂÊ£©Îª500M
+--éªŒè¯å­—æ®µå·¥å•ä¸­å¸¦æœ‰å­äº§å“ipoe_pathï¼ˆipoeé€šé“ï¼‰ï¼Œå­äº§å“å±žæ€§biz_typeï¼ˆä¸šåŠ¡ç±»åž‹ï¼‰ä¸ºäº‘æ¸¸æˆï¼Œup_bandwidthï¼ˆä¸Šè¡Œé€ŸçŽ‡ï¼‰ä¸º100Mï¼Œdown_bandwidthï¼ˆä¸‹è¡Œé€ŸçŽ‡ï¼‰ä¸º500M
 
-select asap.work_order_request from asap_workorder_request asap where asap.crm_order_number in ('WMX2020040905308819','WMX2020040905308876','WMX2020040905308945') and asap.request_type='ONU_OrderRequest';
+--select asap.work_order_request from asap_workorder_request asap where asap.crm_order_number in ('WMX2020040905308819','WMX2020040905308876','WMX2020040905308945') and asap.request_type='ONU_OrderRequest';
 
 select asap.work_order_request from asap_workorder_request asap where asap.crm_order_number in ('WMX2020040905308900','WMX2020040905308956','WMX2020040905308995') and asap.request_type='ONU_OrderRequest';
---±¨ÎÄÖÐº¬ÓÐyun_vlan£¨ÔÆÍø³¬¿ívLan£©²¢ÇÒÖµÓë×ÊÔ´ÐÅÏ¢·µ»ØµÄÒ»ÖÂ
+--æŠ¥æ–‡ä¸­å«æœ‰yun_vlanï¼ˆäº‘ç½‘è¶…å®½vLanï¼‰å¹¶ä¸”å€¼ä¸Žèµ„æºä¿¡æ¯è¿”å›žçš„ä¸€è‡´
 
-
---ÕÊºÅ£ºnonphs_aa    ÃÜÂënophsq
+--å¸å·ï¼šnonphs_aa    å¯†ç nophsq

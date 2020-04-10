@@ -1,3 +1,2 @@
-select ap.xml_request from asap_workorder_request ap where ap.crm_order_no in('WMX2019121900527359','WMX2019121900527390','WMX2019121900526634','WMX2019121900526637') and ap.request_type='cdma_work_order';
-select ap.xml_request from asap_workorder_request ap where ap.crm_order_no in('WMX2019121900527361','WMX2019121900527392','WMX2019121900526630') and ap.request_type='cdma_work_order';
--- CÍøP7²éÑ¯£ºassp·¢³öµÄÊÇ×ÖµäÖµ£º1´ú±ísipÖĞ¼Ì1£¬2´ú±ísipÖĞ¼Ì2 (p_yunyin_assistant_attr×Ö¶Î)
+select ap.xml_request from asap_workorder_request ap where ap.crm_order_no in('WMX2019121900526637') and ap.request_type='cdma_work_order';
+-- Cç½‘P7æŸ¥è¯¢ï¼šasspå‘å‡ºçš„æ˜¯å­—å…¸å€¼ï¼š1ä»£è¡¨sipä¸­ç»§1ï¼Œ2ä»£è¡¨sipä¸­ç»§2 (p_yunyin_assistant_attrå­—æ®µ)

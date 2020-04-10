@@ -1,8 +1,8 @@
-select * from om_order_header where reference_number = 'WMX2019012100117301'; --²é¿´¶©µ¥ÔÚP7Í·µÄ×´Ì¬
-select * from om_order_flow where ORDER_SEQ_ID = '15127'; --²é¿´¶©µ¥ÔÚP7µÄÁ÷³Ì×´Ì¬
+select * from om_order_header where reference_number = 'WMX2019012100117301'; --æŸ¥çœ‹è®¢å•åœ¨P7å¤´çš„çŠ¶æ€
+select * from om_order_flow where ORDER_SEQ_ID = '15127'; --æŸ¥çœ‹è®¢å•åœ¨P7çš„æµç¨‹çŠ¶æ€
 --where crm_order_number = '2-29936865024'
 --ORDER BY status_time DESC
 --2-29936865024 
 --(2019)/19076141_0002C
 
---ÕÊºÅ£ºordermgmt    ÃÜÂë£ºpassw0rd
+--å¸å·ï¼šordermgmt    å¯†ç ï¼špassw0rd
