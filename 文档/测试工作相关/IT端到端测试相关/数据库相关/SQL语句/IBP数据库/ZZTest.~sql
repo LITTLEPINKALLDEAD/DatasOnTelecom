@@ -1,4 +1,4 @@
-select * from intf_requestlog where crmquotenumber='WMZ2020041305324142';--接口表，IBP发给综资的信息
+select * from intf_requestlog where crmquotenumber='WMZ2020041305323744';--接口表，IBP发给综资的信息
 -- intf_requestlog表中的TARGETMETHOD为订单配置状态，createService是创服务，checkService是资源审核
 SELECT * from c_serviceorder where crmquotenumber like 'WMZ2020032305208888'; --订单表
 -- c_serviceorder会有一条记录，其中SERVICE_ID为空，因为该项为主单。SERVICE_ID有值的为子单
