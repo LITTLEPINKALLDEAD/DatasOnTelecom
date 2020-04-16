@@ -1,0 +1,34 @@
+<ONU_OrderRequest>
+	<order_type>1</order_type>
+	<serv_type>Z</serv_type>
+	<serv_sub_type>U07</serv_sub_type>
+	<service_id>400143845943</service_id>
+	<p6_order_id>41257</p6_order_id>
+	<crm_order_no>WMX2020041505328048</crm_order_no>
+	<sub_bureau_code>284</sub_bureau_code>
+	<serviceProperty_new>
+		<bac_domain>BAC03.fx.sh2.ctcims.cn</bac_domain>
+		<pon_type>FTTH</pon_type>
+		<voice>Y</voice>
+		<onu_provider>HW</onu_provider>
+		<adsl_sp_flag>0</adsl_sp_flag>
+		<a_c_flag>C</a_c_flag>
+		<iptv_flag>N</iptv_flag>
+		<olt_ip>203.239.199.242</olt_ip>
+		<olt_type>MA5800</olt_type>
+		<voip_vlan>275</voip_vlan>
+		<onu_logical_id>0070135022</onu_logical_id>
+		<home_gateway_flag>3</home_gateway_flag>
+		<account_price_type>13</account_price_type>
+		<olt_name>奉贤奉浦Z1/HW5800-OLT18</olt_name>
+		<olt_pon_port>0/13/n/00</olt_pon_port>
+		<onu_no>4</onu_no>
+		<onu_uni_no>FX/HW-ONT1495390/0/1/1(FE)</onu_uni_no>
+		<tn>38531837470162</tn>
+		<olt_pon_type>0</olt_pon_type>
+		<olt_mode>1</olt_mode>
+		<olt_location>1</olt_location>
+		<bureau_code>g</bureau_code>
+		<is_10g_epon>1</is_10g_epon>
+	</serviceProperty_new>
+</ONU_OrderRequest>

@@ -84,10 +84,24 @@ select p.work_order_request from pai_workorder_request p where p.crm_order_numbe
 select asap.work_order_request from asap_workorder_request asap where asap.crm_order_number in ('WMX2020040905308900','WMX2020040905308956','WMX2020040905308995') and asap.request_type='ONU_OrderRequest';
 --报文中含有yun_vlan（云网超宽vLan）并且值与资源信息返回的一致
 
-select t.work_order_request from pai_workorder_request t where crm_order_number in ('WMZ2020041305323758','WMZ2020041405325093') and t.platform='P038d';
+select t.work_order_request from pai_workorder_request t where crm_order_number in ('WMZ2020041305323758','WMZ2020041405325093','WMZ2020041405325098') and t.platform='P038d';
 -- 验证新增的智能质检自动工单工单数据，验证字段：service_id（设备号）、Business_Type_AI（智能业务类型）、Channel_Name（渠道名称）、service_account（客户名称）、contact_person（联系人）、contact_tel（联系电话）
 
 select t.work_order_request from pai_workorder_request t  where crm_order_number in ('WMZ2020041305324129','WMZ2020041405325065','WMZ2020041405325096') and t.platform='P038c';
 -- 验证新增的智能语音自动工单工单数据，验证字段：service_id（设备号）、Business_Type_AI（智能业务类型）、Channel_Name（渠道名称）、Concurrency（并发数）、Concurrency_Fee（并发单价）、service_account（客户名称）、contact_person（联系人）、contact_tel（联系电话）
+
+select asap.request_type,asap.platform,asap.work_order_request from asap_workorder_request asap where asap.crm_order_number = 'WMX2020041505328048';
+-- 验证方法ims、ONU、SHLR工单，serviceProperty_new这种是新节点，后面是old的是老节点，报文里应该只有新节点没有老节点的
+
+select t.action_code,t.* from pai_workorder_request t where crm_order_number = 'WMX2020041505328048';
+-- 验证action_code（操作类型）为装
+
+select count(*) as count from ra_workorder_request where RECEIVE_TIME >= date '2020-4-7' AND RECEIVE_TIME <= date '2020-4-14'; 
+-- 统计从2020年4月7日到2020年4月14日所有P7收到的订单
+
+select count(*) from ra_workorder_request where to_char(RECEIVE_TIME,'yyyy-mm-dd hh:mm:ss') between '2020-04-07 09:00:00' AND '2020-04-14 21:00:00'; 
+-- 统计从2020年4月7日早上9点到2020年4月14日晚上9点所有P7收到的订单
+
+
 
 --帐号：nonphs_aa    密码nophsq

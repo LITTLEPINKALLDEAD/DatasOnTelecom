@@ -1,0 +1,31 @@
+<NGN2_OrderRequest>
+	<order_type>1</order_type>
+	<serv_type>Z</serv_type>
+	<serv_sub_type>U07</serv_sub_type>
+	<platform>1</platform>
+	<if_tn_changed>0</if_tn_changed>
+	<if_mdf_changed>0</if_mdf_changed>
+	<crm_order_no>WMX2020041505328048</crm_order_no>
+	<p6_order_no>41257</p6_order_no>
+	<serviceProperty_new>
+		<tn>37470162</tn>
+		<physical_tn_carried>38531837470162</physical_tn_carried>
+		<user_type>11</user_type>
+		<fee_type>1</fee_type>
+		<is_centrex_ext>0</is_centrex_ext>
+		<ims_type>HW</ims_type>
+	</serviceProperty_new>
+	<serviceBusiness_new>
+		<ims_video_com>1</ims_video_com>
+		<qinqing_group_main_num>0</qinqing_group_main_num>
+		<qinqing_group_secondary_num>0</qinqing_group_secondary_num>
+		<tn_carried>0</tn_carried>
+		<zhaocaibao_integrated>0</zhaocaibao_integrated>
+		<zhaocaibao_base>0</zhaocaibao_base>
+		<zhaocaibao_standard>0</zhaocaibao_standard>
+		<music_ring>0</music_ring>
+		<collab_comm>0</collab_comm>
+		<sound_bao>0</sound_bao>
+		<outcall_restrict>0</outcall_restrict>
+	</serviceBusiness_new>
+</NGN2_OrderRequest>
