@@ -1,5 +1,5 @@
 select * from ra_workorder_request where crm_order_number = '(2019)/19076533-0001'; --P7-综资
-select * from ra_workorder_request where crm_order_number = 'WMZ2020041305323744'
+select * from ra_workorder_request where crm_order_number = 'WMZ2020042005336888'
 select * from ra_workorder_request where P_RESULT is NOT null and rownum < 11 order by RECEIVE_TIME DESC; --根据订单的接收时间从近到远选取最近10张有报错信息的订单
 select * from ra_workorder_request where crm_order_number = '2-30242684394'; --P7-综资，订单原资产报错
 select * from ra_workorder_request where ORDER_SEQ_ID = '28471' order by RA_COMPLELED_TIME DESC; --P7-综资，用P7号查询
@@ -84,7 +84,7 @@ select p.work_order_request from pai_workorder_request p where p.crm_order_numbe
 select asap.work_order_request from asap_workorder_request asap where asap.crm_order_number in ('WMX2020040905308900','WMX2020040905308956','WMX2020040905308995') and asap.request_type='ONU_OrderRequest';
 --报文中含有yun_vlan（云网超宽vLan）并且值与资源信息返回的一致
 
-select t.work_order_request from pai_workorder_request t where crm_order_number in ('WMZ2020041305323758','WMZ2020041405325093','WMZ2020041405325098') and t.platform='P038d';
+select t.work_order_request from pai_workorder_request t where crm_order_number in ('WMZ2020041305323758','WMZ2020041405325093','WMZ2020041405325098','WMZ2020042005336888') and t.platform='P038d';
 -- 验证新增的智能质检自动工单工单数据，验证字段：service_id（设备号）、Business_Type_AI（智能业务类型）、Channel_Name（渠道名称）、service_account（客户名称）、contact_person（联系人）、contact_tel（联系电话）
 
 select t.work_order_request from pai_workorder_request t  where crm_order_number in ('WMZ2020041305324129','WMZ2020041405325065','WMZ2020041405325096') and t.platform='P038c';
