@@ -1,8 +1,3 @@
-<!--
-æŸ¥è¯¢å†…å®¹ï¼šæŸ¥æ‰¾åˆ°ACCESSå’ŒTRUNKå³å¯
-
--->
-
 <?xml version="1.0" encoding="gbk"?>
 <root>
 	<data>
@@ -44,23 +39,23 @@
 						</CUSTOMER_PARAM>
 						<CUSTOMER_PARAM>
 							<PARA_NAME>contact_name</PARA_NAME>
-							<PARA_VALUE>æ”¿ä¼å®¢æˆ·01</PARA_VALUE>
+							<PARA_VALUE>ÕşÆó¿Í»§01</PARA_VALUE>
 						</CUSTOMER_PARAM>
 						<CUSTOMER_PARAM>
 							<PARA_NAME>customer_price_type</PARA_NAME>
-							<PARA_VALUE>æ”¿ä¼</PARA_VALUE>
+							<PARA_VALUE>ÕşÆó</PARA_VALUE>
 						</CUSTOMER_PARAM>
 						<CUSTOMER_PARAM>
 							<PARA_NAME>customer_price_sub_type</PARA_NAME>
-							<PARA_VALUE>ä¸ªä½“</PARA_VALUE>
+							<PARA_VALUE>¸öÌå</PARA_VALUE>
 						</CUSTOMER_PARAM>
 						<CUSTOMER_PARAM>
 							<PARA_NAME>address_full</PARA_NAME>
-							<PARA_VALUE>æŸ³æ—è·¯158å·10å±‚1003å®¤</PARA_VALUE>
+							<PARA_VALUE>ÁøÁÖÂ·158ºÅ10²ã1003ÊÒ</PARA_VALUE>
 						</CUSTOMER_PARAM>
 						<CUSTOMER_PARAM>
 							<PARA_NAME>property_account</PARA_NAME>
-							<PARA_VALUE>æ”¿ä¼å®¢æˆ·01</PARA_VALUE>
+							<PARA_VALUE>ÕşÆó¿Í»§01</PARA_VALUE>
 						</CUSTOMER_PARAM>
 						<CUSTOMER_PARAM>
 							<PARA_NAME>service_account_number</PARA_NAME>
@@ -86,11 +81,11 @@
 						</SERVICE_PARAM>
 						<SERVICE_PARAM>
 							<PARA_NAME>crm_product_name</PARA_NAME>
-							<PARA_VALUE>ä»¥å¤ªä¸“çº¿</PARA_VALUE>
+							<PARA_VALUE>ÒÔÌ«×¨Ïß</PARA_VALUE>
 						</SERVICE_PARAM>
 						<SERVICE_PARAM>
 							<PARA_NAME>circuit_maintain_level</PARA_NAME>
-							<PARA_VALUE>æ™®é€š</PARA_VALUE>
+							<PARA_VALUE>ÆÕÍ¨</PARA_VALUE>
 						</SERVICE_PARAM>
 						<SERVICE_PARAM>
 							<PARA_NAME>dispatch_status</PARA_NAME>
@@ -119,11 +114,11 @@
 						</SERVICE_PARAM>
 						<SERVICE_PARAM>
 							<PARA_NAME>operation_type</PARA_NAME>
-							<PARA_VALUE>æ™®é€šæµç¨‹</PARA_VALUE>
+							<PARA_VALUE>ÆÕÍ¨Á÷³Ì</PARA_VALUE>
 						</SERVICE_PARAM>
 						<SERVICE_PARAM>
 							<PARA_NAME>BusinessForm</PARA_NAME>
-							<PARA_VALUE>æ™®é€šå‹</PARA_VALUE>
+							<PARA_VALUE>ÆÕÍ¨ĞÍ</PARA_VALUE>
 						</SERVICE_PARAM>
 						<SERVICE_PARAM>
 							<PARA_NAME>UserRequiredCompletionTime</PARA_NAME>
@@ -131,15 +126,15 @@
 						</SERVICE_PARAM>
 						<SERVICE_PARAM>
 							<PARA_NAME>ShanghaiCloudResourcePoolName</PARA_NAME>
-							<PARA_VALUE>å¤©ç¿¼äº‘-é‡‘å±±å»ºå®‰3.0</PARA_VALUE>
+							<PARA_VALUE>ÌìÒíÔÆ-½ğÉ½½¨°²3.0</PARA_VALUE>
 						</SERVICE_PARAM>
 						<SERVICE_PARAM>
 							<PARA_NAME>order_source</PARA_NAME>
-							<PARA_VALUE>å´‡æ˜</PARA_VALUE>
+							<PARA_VALUE>³çÃ÷</PARA_VALUE>
 						</SERVICE_PARAM>
 						<SERVICE_PARAM>
 							<PARA_NAME>project_manager</PARA_NAME>
-							<PARA_VALUE>é™ˆé£å</PARA_VALUE>
+							<PARA_VALUE>³Â·ç»ª</PARA_VALUE>
 						</SERVICE_PARAM>
 					</SERVICE>
 					<MULTI_INVENTORY/>
@@ -194,11 +189,11 @@
 						</INV_PARAM>
 						<INV_PARAM>
 							<PARA_NAME>client_user_device_type_a</PARA_NAME>
-							<PARA_VALUE>GE/FE(è‡ªé€‚åº”ç”µæ¥å£)</PARA_VALUE>
+							<PARA_VALUE>GE/FE(×ÔÊÊÓ¦µç½Ó¿Ú)</PARA_VALUE>
 						</INV_PARAM>
 						<INV_PARAM>
 							<PARA_NAME>client_user_device_type_z</PARA_NAME>
-							<PARA_VALUE>GE/FE(è‡ªé€‚åº”ç”µæ¥å£)</PARA_VALUE>
+							<PARA_VALUE>GE/FE(×ÔÊÊÓ¦µç½Ó¿Ú)</PARA_VALUE>
 						</INV_PARAM>
 						<INV_PARAM>
 							<PARA_NAME>B1DownPort_Buz</PARA_NAME>
@@ -243,11 +238,11 @@
 						<PRODUCT_ID>ethernet_a_port</PRODUCT_ID>
 						<PRODUCT_PARAM>
 							<PARA_NAME>customer_address_road</PARA_NAME>
-							<PARA_VALUE>æŸ³æ—è·¯158å·10å±‚1001å®¤</PARA_VALUE>
+							<PARA_VALUE>ÁøÁÖÂ·158ºÅ10²ã1001ÊÒ</PARA_VALUE>
 						</PRODUCT_PARAM>
 						<PRODUCT_PARAM>
 							<PARA_NAME>a_end_port_type</PARA_NAME>
-							<PARA_VALUE>GE/FE(è‡ªé€‚åº”ç”µæ¥å£)</PARA_VALUE>
+							<PARA_VALUE>GE/FE(×ÔÊÊÓ¦µç½Ó¿Ú)</PARA_VALUE>
 						</PRODUCT_PARAM>
 						<PRODUCT_PARAM>
 							<PARA_NAME>configuration_info</PARA_NAME>
@@ -267,7 +262,7 @@
 						</PRODUCT_PARAM>
 						<PRODUCT_PARAM>
 							<PARA_NAME>PointAttribute</PARA_NAME>
-							<PARA_VALUE>æ–°ç«¯å£</PARA_VALUE>
+							<PARA_VALUE>ĞÂ¶Ë¿Ú</PARA_VALUE>
 						</PRODUCT_PARAM>
 						<PRODUCT_PARAM>
 							<PARA_NAME>PortFlag</PARA_NAME>
@@ -278,11 +273,11 @@
 						<PRODUCT_ID>ethernet_z_port</PRODUCT_ID>
 						<PRODUCT_PARAM>
 							<PARA_NAME>customer_address_road</PARA_NAME>
-							<PARA_VALUE>æŸ³æ—è·¯158å·10å±‚1003å®¤</PARA_VALUE>
+							<PARA_VALUE>ÁøÁÖÂ·158ºÅ10²ã1003ÊÒ</PARA_VALUE>
 						</PRODUCT_PARAM>
 						<PRODUCT_PARAM>
 							<PARA_NAME>end_b_port_type</PARA_NAME>
-							<PARA_VALUE>GE/FE(è‡ªé€‚åº”ç”µæ¥å£)</PARA_VALUE>
+							<PARA_VALUE>GE/FE(×ÔÊÊÓ¦µç½Ó¿Ú)</PARA_VALUE>
 						</PRODUCT_PARAM>
 						<PRODUCT_PARAM>
 							<PARA_NAME>configuration_info</PARA_NAME>
@@ -302,7 +297,7 @@
 						</PRODUCT_PARAM>
 						<PRODUCT_PARAM>
 							<PARA_NAME>PointAttribute</PARA_NAME>
-							<PARA_VALUE>æ–°ç«¯å£</PARA_VALUE>
+							<PARA_VALUE>ĞÂ¶Ë¿Ú</PARA_VALUE>
 						</PRODUCT_PARAM>
 						<PRODUCT_PARAM>
 							<PARA_NAME>PortFlag</PARA_NAME>
@@ -318,23 +313,23 @@
 						</CUSTOMER_PARAM>
 						<CUSTOMER_PARAM>
 							<PARA_NAME>contact_name</PARA_NAME>
-							<PARA_VALUE>æ”¿ä¼å®¢æˆ·01</PARA_VALUE>
+							<PARA_VALUE>ÕşÆó¿Í»§01</PARA_VALUE>
 						</CUSTOMER_PARAM>
 						<CUSTOMER_PARAM>
 							<PARA_NAME>customer_price_type</PARA_NAME>
-							<PARA_VALUE>æ”¿ä¼</PARA_VALUE>
+							<PARA_VALUE>ÕşÆó</PARA_VALUE>
 						</CUSTOMER_PARAM>
 						<CUSTOMER_PARAM>
 							<PARA_NAME>customer_price_sub_type</PARA_NAME>
-							<PARA_VALUE>ä¸ªä½“</PARA_VALUE>
+							<PARA_VALUE>¸öÌå</PARA_VALUE>
 						</CUSTOMER_PARAM>
 						<CUSTOMER_PARAM>
 							<PARA_NAME>address_full</PARA_NAME>
-							<PARA_VALUE>æŸ³æ—è·¯158å·10å±‚1003å®¤</PARA_VALUE>
+							<PARA_VALUE>ÁøÁÖÂ·158ºÅ10²ã1003ÊÒ</PARA_VALUE>
 						</CUSTOMER_PARAM>
 						<CUSTOMER_PARAM>
 							<PARA_NAME>property_account</PARA_NAME>
-							<PARA_VALUE>æ”¿ä¼å®¢æˆ·01</PARA_VALUE>
+							<PARA_VALUE>ÕşÆó¿Í»§01</PARA_VALUE>
 						</CUSTOMER_PARAM>
 						<CUSTOMER_PARAM>
 							<PARA_NAME>service_account_number</PARA_NAME>
@@ -352,11 +347,11 @@
 						</SERVICE_PARAM>
 						<SERVICE_PARAM>
 							<PARA_NAME>crm_product_name</PARA_NAME>
-							<PARA_VALUE>ä»¥å¤ªä¸“çº¿</PARA_VALUE>
+							<PARA_VALUE>ÒÔÌ«×¨Ïß</PARA_VALUE>
 						</SERVICE_PARAM>
 						<SERVICE_PARAM>
 							<PARA_NAME>circuit_maintain_level</PARA_NAME>
-							<PARA_VALUE>æ™®é€š</PARA_VALUE>
+							<PARA_VALUE>ÆÕÍ¨</PARA_VALUE>
 						</SERVICE_PARAM>
 						<SERVICE_PARAM>
 							<PARA_NAME>dispatch_date</PARA_NAME>
@@ -372,11 +367,11 @@
 						</SERVICE_PARAM>
 						<SERVICE_PARAM>
 							<PARA_NAME>operation_type</PARA_NAME>
-							<PARA_VALUE>æ™®é€šæµç¨‹</PARA_VALUE>
+							<PARA_VALUE>ÆÕÍ¨Á÷³Ì</PARA_VALUE>
 						</SERVICE_PARAM>
 						<SERVICE_PARAM>
 							<PARA_NAME>BusinessForm</PARA_NAME>
-							<PARA_VALUE>æ™®é€šå‹</PARA_VALUE>
+							<PARA_VALUE>ÆÕÍ¨ĞÍ</PARA_VALUE>
 						</SERVICE_PARAM>
 						<SERVICE_PARAM>
 							<PARA_NAME>UserRequiredCompletionTime</PARA_NAME>
@@ -384,15 +379,15 @@
 						</SERVICE_PARAM>
 						<SERVICE_PARAM>
 							<PARA_NAME>ShanghaiCloudResourcePoolName</PARA_NAME>
-							<PARA_VALUE>å¤©ç¿¼äº‘-é‡‘å±±å»ºå®‰3.0</PARA_VALUE>
+							<PARA_VALUE>ÌìÒíÔÆ-½ğÉ½½¨°²3.0</PARA_VALUE>
 						</SERVICE_PARAM>
 						<SERVICE_PARAM>
 							<PARA_NAME>order_source</PARA_NAME>
-							<PARA_VALUE>å´‡æ˜</PARA_VALUE>
+							<PARA_VALUE>³çÃ÷</PARA_VALUE>
 						</SERVICE_PARAM>
 						<SERVICE_PARAM>
 							<PARA_NAME>project_manager</PARA_NAME>
-							<PARA_VALUE>é™ˆé£å</PARA_VALUE>
+							<PARA_VALUE>³Â·ç»ª</PARA_VALUE>
 						</SERVICE_PARAM>
 					</SERVICE>
 					<INVENTORY>
@@ -446,11 +441,11 @@
 						</INV_PARAM>
 						<INV_PARAM>
 							<PARA_NAME>client_user_device_type_a</PARA_NAME>
-							<PARA_VALUE>GE/FE(è‡ªé€‚åº”ç”µæ¥å£)</PARA_VALUE>
+							<PARA_VALUE>GE/FE(×ÔÊÊÓ¦µç½Ó¿Ú)</PARA_VALUE>
 						</INV_PARAM>
 						<INV_PARAM>
 							<PARA_NAME>client_user_device_type_z</PARA_NAME>
-							<PARA_VALUE>GE/FE(è‡ªé€‚åº”ç”µæ¥å£)</PARA_VALUE>
+							<PARA_VALUE>GE/FE(×ÔÊÊÓ¦µç½Ó¿Ú)</PARA_VALUE>
 						</INV_PARAM>
 						<INV_PARAM>
 							<PARA_NAME>B1DownPort_Buz</PARA_NAME>
@@ -496,11 +491,11 @@
 						<PRODUCT_ID>ethernet_a_port</PRODUCT_ID>
 						<PRODUCT_PARAM>
 							<PARA_NAME>customer_address_road</PARA_NAME>
-							<PARA_VALUE>æŸ³æ—è·¯158å·10å±‚1001å®¤</PARA_VALUE>
+							<PARA_VALUE>ÁøÁÖÂ·158ºÅ10²ã1001ÊÒ</PARA_VALUE>
 						</PRODUCT_PARAM>
 						<PRODUCT_PARAM>
 							<PARA_NAME>a_end_port_type</PARA_NAME>
-							<PARA_VALUE>GE/FE(è‡ªé€‚åº”ç”µæ¥å£)</PARA_VALUE>
+							<PARA_VALUE>GE/FE(×ÔÊÊÓ¦µç½Ó¿Ú)</PARA_VALUE>
 						</PRODUCT_PARAM>
 						<PRODUCT_PARAM>
 							<PARA_NAME>configuration_info</PARA_NAME>
@@ -516,7 +511,7 @@
 						</PRODUCT_PARAM>
 						<PRODUCT_PARAM>
 							<PARA_NAME>PointAttribute</PARA_NAME>
-							<PARA_VALUE>æ–°ç«¯å£</PARA_VALUE>
+							<PARA_VALUE>ĞÂ¶Ë¿Ú</PARA_VALUE>
 						</PRODUCT_PARAM>
 						<PRODUCT_PARAM>
 							<PARA_NAME>PortFlag</PARA_NAME>
@@ -527,11 +522,11 @@
 						<PRODUCT_ID>ethernet_z_port</PRODUCT_ID>
 						<PRODUCT_PARAM>
 							<PARA_NAME>customer_address_road</PARA_NAME>
-							<PARA_VALUE>æŸ³æ—è·¯158å·10å±‚1003å®¤</PARA_VALUE>
+							<PARA_VALUE>ÁøÁÖÂ·158ºÅ10²ã1003ÊÒ</PARA_VALUE>
 						</PRODUCT_PARAM>
 						<PRODUCT_PARAM>
 							<PARA_NAME>end_b_port_type</PARA_NAME>
-							<PARA_VALUE>GE/FE(è‡ªé€‚åº”ç”µæ¥å£)</PARA_VALUE>
+							<PARA_VALUE>GE/FE(×ÔÊÊÓ¦µç½Ó¿Ú)</PARA_VALUE>
 						</PRODUCT_PARAM>
 						<PRODUCT_PARAM>
 							<PARA_NAME>configuration_info</PARA_NAME>
@@ -547,7 +542,7 @@
 						</PRODUCT_PARAM>
 						<PRODUCT_PARAM>
 							<PARA_NAME>PointAttribute</PARA_NAME>
-							<PARA_VALUE>æ–°ç«¯å£</PARA_VALUE>
+							<PARA_VALUE>ĞÂ¶Ë¿Ú</PARA_VALUE>
 						</PRODUCT_PARAM>
 						<PRODUCT_PARAM>
 							<PARA_NAME>PortFlag</PARA_NAME>

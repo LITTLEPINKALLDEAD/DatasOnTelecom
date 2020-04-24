@@ -1,505 +1,504 @@
-<?xml version="1.0"?>
 <Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/">
-  <Header/>
-  <Body>
-    <queryIntResServiceResponse xmlns:m="http://sanss.com">
-      <queryIntResServiceResponse>
-        <ErrorCode xmlns:java="java:com.sanss.ibp.nonphs.ra.common">0</ErrorCode>
-        <ErrorMessage xmlns:java="java:com.sanss.ibp.nonphs.ra.common"/>
-        <ProcessFlag xmlns:java="java:com.sanss.ibp.nonphs.ra.common">0</ProcessFlag>
-        <Result xmlns:java="java:com.sanss.ibp.nonphs.ra.common">1</Result>
-        <Product xmlns:java="java:com.sanss.ibp.nonphs.ra.system97">
-          <Aid>400806384839</Aid>
-          <Name>adsl</Name>
-          <Properties>
-            <Name xmlns:n1="java:com.sanss.ibp.nonphs.ra.common">crm_product_code</Name>
-            <Value xmlns:n2="java:com.sanss.ibp.nonphs.ra.common">524</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n3="java:com.sanss.ibp.nonphs.ra.common">area_name</Name>
-            <Value xmlns:n4="java:com.sanss.ibp.nonphs.ra.common">&#x9EC4;&#x6D66;</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n5="java:com.sanss.ibp.nonphs.ra.common">a_b_plane_flag</Name>
-            <Value xmlns:n6="java:com.sanss.ibp.nonphs.ra.common">1</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n7="java:com.sanss.ibp.nonphs.ra.common">account_no</Name>
-            <Value xmlns:n8="java:com.sanss.ibp.nonphs.ra.common">82513889</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n9="java:com.sanss.ibp.nonphs.ra.common">broadband_access_type</Name>
-            <Value xmlns:n10="java:com.sanss.ibp.nonphs.ra.common">5</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n11="java:com.sanss.ibp.nonphs.ra.common">connect_type</Name>
-            <Value xmlns:n12="java:com.sanss.ibp.nonphs.ra.common">1</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n13="java:com.sanss.ibp.nonphs.ra.common">intfaccess_type</Name>
-            <Value xmlns:n14="java:com.sanss.ibp.nonphs.ra.common">6</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n15="java:com.sanss.ibp.nonphs.ra.common">bureau_code</Name>
-            <Value xmlns:n16="java:com.sanss.ibp.nonphs.ra.common">6</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n17="java:com.sanss.ibp.nonphs.ra.common">sub_bureau_code</Name>
-            <Value xmlns:n18="java:com.sanss.ibp.nonphs.ra.common">154</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n19="java:com.sanss.ibp.nonphs.ra.common">cooperation_type</Name>
-            <Value xmlns:n20="java:com.sanss.ibp.nonphs.ra.common">A</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n21="java:com.sanss.ibp.nonphs.ra.common">equipment_address</Name>
-            <Value xmlns:n22="java:com.sanss.ibp.nonphs.ra.common">&#x67F3;&#x6797;&#x8DEF;158&#x53F7;5&#x5C42;&#x4FE1;&#x606F;&#x5316;&#x673A;&#x623F;</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n23="java:com.sanss.ibp.nonphs.ra.common">home_gateway_type</Name>
-            <Value xmlns:n24="java:com.sanss.ibp.nonphs.ra.common">C</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n25="java:com.sanss.ibp.nonphs.ra.common">iptv_pvc</Name>
-            <Value xmlns:n26="java:com.sanss.ibp.nonphs.ra.common">SH-SH-LIL-MSE-1.MAN.M6000/255-0-25-0884-1226</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n27="java:com.sanss.ibp.nonphs.ra.common">quarter_address</Name>
-            <Value xmlns:n28="java:com.sanss.ibp.nonphs.ra.common">&#x67F3;&#x6797;&#x8DEF;158&#x53F7;</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n29="java:com.sanss.ibp.nonphs.ra.common">quarter_name</Name>
-            <Value xmlns:n30="java:com.sanss.ibp.nonphs.ra.common">&#x67F3;&#x6797;</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n31="java:com.sanss.ibp.nonphs.ra.common">vlan_no</Name>
-            <Value xmlns:n32="java:com.sanss.ibp.nonphs.ra.common">SH-SH-LIL-MSE-1.MAN.M6000/255-0-25-0384-1226</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n33="java:com.sanss.ibp.nonphs.ra.common">whether_dslam_5200</Name>
-            <Value xmlns:n34="java:com.sanss.ibp.nonphs.ra.common">1</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n35="java:com.sanss.ibp.nonphs.ra.common">port_download_speed</Name>
-            <Value xmlns:n36="java:com.sanss.ibp.nonphs.ra.common">F</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n37="java:com.sanss.ibp.nonphs.ra.common">port_upload_speed</Name>
-            <Value xmlns:n38="java:com.sanss.ibp.nonphs.ra.common">D</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n39="java:com.sanss.ibp.nonphs.ra.common">root_download_speed</Name>
-            <Value xmlns:n40="java:com.sanss.ibp.nonphs.ra.common">F</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n41="java:com.sanss.ibp.nonphs.ra.common">root_upload_speed</Name>
-            <Value xmlns:n42="java:com.sanss.ibp.nonphs.ra.common">D</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n43="java:com.sanss.ibp.nonphs.ra.common">mdu</Name>
-            <Value xmlns:n44="java:com.sanss.ibp.nonphs.ra.common">ZQ/ZTE-ONT1443903/0/1/1(FE)</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n45="java:com.sanss.ibp.nonphs.ra.common">pin_no</Name>
-            <Value xmlns:n46="java:com.sanss.ibp.nonphs.ra.common">HUNGETNH</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n47="java:com.sanss.ibp.nonphs.ra.common">pop_connect_flag</Name>
-            <Value xmlns:n48="java:com.sanss.ibp.nonphs.ra.common">0</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n49="java:com.sanss.ibp.nonphs.ra.common">ip_type</Name>
-            <Value xmlns:n50="java:com.sanss.ibp.nonphs.ra.common">3</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n51="java:com.sanss.ibp.nonphs.ra.common">serv_ip_address_type</Name>
-            <Value xmlns:n52="java:com.sanss.ibp.nonphs.ra.common">3</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n53="java:com.sanss.ibp.nonphs.ra.common">old_is_onu_last_user</Name>
-            <Value xmlns:n54="java:com.sanss.ibp.nonphs.ra.common">N</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n55="java:com.sanss.ibp.nonphs.ra.common">contains_smart_family</Name>
-            <Value xmlns:n56="java:com.sanss.ibp.nonphs.ra.common">0</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n57="java:com.sanss.ibp.nonphs.ra.common">broad_num_of_same_address</Name>
-            <Value xmlns:n58="java:com.sanss.ibp.nonphs.ra.common">12</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n59="java:com.sanss.ibp.nonphs.ra.common">maintain_obd_id</Name>
-            <Value xmlns:n60="java:com.sanss.ibp.nonphs.ra.common">26027460</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n61="java:com.sanss.ibp.nonphs.ra.common">maintain_obd_port_id</Name>
-            <Value xmlns:n62="java:com.sanss.ibp.nonphs.ra.common">362926557</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n63="java:com.sanss.ibp.nonphs.ra.common">if_with_home_gateway</Name>
-            <Value xmlns:n64="java:com.sanss.ibp.nonphs.ra.common">3</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n65="java:com.sanss.ibp.nonphs.ra.common">is_onu_last_user</Name>
-            <Value xmlns:n66="java:com.sanss.ibp.nonphs.ra.common">Y</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n67="java:com.sanss.ibp.nonphs.ra.common">term_tele_port_used_count</Name>
-            <Value xmlns:n68="java:com.sanss.ibp.nonphs.ra.common">0</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n69="java:com.sanss.ibp.nonphs.ra.common">light</Name>
-            <Value xmlns:n70="java:com.sanss.ibp.nonphs.ra.common">ZQGF00875/0002/OBD01|003</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n71="java:com.sanss.ibp.nonphs.ra.common">olt_ip_address</Name>
-            <Value xmlns:n72="java:com.sanss.ibp.nonphs.ra.common">203.29.247.245</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n73="java:com.sanss.ibp.nonphs.ra.common">olt_device_code</Name>
-            <Value xmlns:n74="java:com.sanss.ibp.nonphs.ra.common">LLI2/T2/ZTEC300-OLT28</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n75="java:com.sanss.ibp.nonphs.ra.common">olt_mode</Name>
-            <Value xmlns:n76="java:com.sanss.ibp.nonphs.ra.common">1</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n77="java:com.sanss.ibp.nonphs.ra.common">is_10g_epon</Name>
-            <Value xmlns:n78="java:com.sanss.ibp.nonphs.ra.common">1</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n79="java:com.sanss.ibp.nonphs.ra.common">olt_pon_type</Name>
-            <Value xmlns:n80="java:com.sanss.ibp.nonphs.ra.common">0</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n81="java:com.sanss.ibp.nonphs.ra.common">olt_type</Name>
-            <Value xmlns:n82="java:com.sanss.ibp.nonphs.ra.common">ZXA10 C300</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n83="java:com.sanss.ibp.nonphs.ra.common">olt_type_id</Name>
-            <Value xmlns:n84="java:com.sanss.ibp.nonphs.ra.common">100000080</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n85="java:com.sanss.ibp.nonphs.ra.common">onu_logical_id</Name>
-            <Value xmlns:n86="java:com.sanss.ibp.nonphs.ra.common">0070134453</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n87="java:com.sanss.ibp.nonphs.ra.common">onu_nms_reg_id</Name>
-            <Value xmlns:n88="java:com.sanss.ibp.nonphs.ra.common">31</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n89="java:com.sanss.ibp.nonphs.ra.common">onu_name</Name>
-            <Value xmlns:n90="java:com.sanss.ibp.nonphs.ra.common">ZQ/ZTE-ONT1443903</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n91="java:com.sanss.ibp.nonphs.ra.common">onu_address</Name>
-            <Value xmlns:n92="java:com.sanss.ibp.nonphs.ra.common">&#x67F3;&#x6797;&#x8DEF;158&#x53F7;5&#x5C42;509&#x5BA4;</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n93="java:com.sanss.ibp.nonphs.ra.common">pin_no</Name>
-            <Value xmlns:n94="java:com.sanss.ibp.nonphs.ra.common">HUNGETNH</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n95="java:com.sanss.ibp.nonphs.ra.common">pon_no</Name>
-            <Value xmlns:n96="java:com.sanss.ibp.nonphs.ra.common">ZQ/ZTE-ONT1443903</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n97="java:com.sanss.ibp.nonphs.ra.common">pon_olt_device_id</Name>
-            <Value xmlns:n98="java:com.sanss.ibp.nonphs.ra.common">&#x67F3;&#x6797;T2/ZTEC300-OLT28</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n99="java:com.sanss.ibp.nonphs.ra.common">pon_olt_port_no</Name>
-            <Value xmlns:n100="java:com.sanss.ibp.nonphs.ra.common">1/15/n/05</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n101="java:com.sanss.ibp.nonphs.ra.common">pon_port_no</Name>
-            <Value xmlns:n102="java:com.sanss.ibp.nonphs.ra.common">ZQ/ZTE-ONT1443903/0/1/1(FE)</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n103="java:com.sanss.ibp.nonphs.ra.common">voip_vlan</Name>
-            <Value xmlns:n104="java:com.sanss.ibp.nonphs.ra.common">284</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n105="java:com.sanss.ibp.nonphs.ra.common">iptv_vlan_no</Name>
-            <Value xmlns:n106="java:com.sanss.ibp.nonphs.ra.common">SH-SH-LIL-MSE-1.MAN.M6000/255-0-25-0884-1226</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n107="java:com.sanss.ibp.nonphs.ra.common">olt_server_type_first</Name>
-            <Value xmlns:n108="java:com.sanss.ibp.nonphs.ra.common">Unknown</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n109="java:com.sanss.ibp.nonphs.ra.common">olt_server_type_first_id</Name>
-            <Value xmlns:n110="java:com.sanss.ibp.nonphs.ra.common">71</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n111="java:com.sanss.ibp.nonphs.ra.common">light_name_second</Name>
-            <Value xmlns:n112="java:com.sanss.ibp.nonphs.ra.common">ZQGF00445/0027/OBD06</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n113="java:com.sanss.ibp.nonphs.ra.common">light_port_no_second</Name>
-            <Value xmlns:n114="java:com.sanss.ibp.nonphs.ra.common">201</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n115="java:com.sanss.ibp.nonphs.ra.common">olt_server_type_second</Name>
-            <Value xmlns:n116="java:com.sanss.ibp.nonphs.ra.common">&#x5BBD;&#x5CB1;</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n117="java:com.sanss.ibp.nonphs.ra.common">olt_server_type_second_id</Name>
-            <Value xmlns:n118="java:com.sanss.ibp.nonphs.ra.common">53</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n119="java:com.sanss.ibp.nonphs.ra.common">olt_full_address_second</Name>
-            <Value xmlns:n120="java:com.sanss.ibp.nonphs.ra.common">&#x4EBA;&#x6C11;&#x8DEF;885&#x53F7;B1&#x673A;&#x623F;</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n121="java:com.sanss.ibp.nonphs.ra.common">oltf_proportion_first</Name>
-            <Value xmlns:n122="java:com.sanss.ibp.nonphs.ra.common">1:32&#x5149;&#x5206;&#x8DEF;&#x5668;</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n123="java:com.sanss.ibp.nonphs.ra.common">oltf_proportion_second</Name>
-            <Value xmlns:n124="java:com.sanss.ibp.nonphs.ra.common">1:32&#x5149;&#x5206;&#x8DEF;&#x5668;</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n125="java:com.sanss.ibp.nonphs.ra.common">pvc</Name>
-            <Value xmlns:n126="java:com.sanss.ibp.nonphs.ra.common">SH-SH-LIL-MSE-1.MAN.M6000/255-0-25-0384-1226</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n127="java:com.sanss.ibp.nonphs.ra.common">upstream_oxc_equip_port</Name>
-            <Value xmlns:n128="java:com.sanss.ibp.nonphs.ra.common">003</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n129="java:com.sanss.ibp.nonphs.ra.common">construction_share_flag</Name>
-            <Value xmlns:n130="java:com.sanss.ibp.nonphs.ra.common">1</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n131="java:com.sanss.ibp.nonphs.ra.common">is_pots_with_adsl</Name>
-            <Value xmlns:n132="java:com.sanss.ibp.nonphs.ra.common">0</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n133="java:com.sanss.ibp.nonphs.ra.common">is_dljs</Name>
-            <Value xmlns:n134="java:com.sanss.ibp.nonphs.ra.common">0</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n135="java:com.sanss.ibp.nonphs.ra.common">room</Name>
-            <Value xmlns:n136="java:com.sanss.ibp.nonphs.ra.common">&#x67F3;&#x6797;&#x8DEF;158&#x53F7;5&#x5C42;&#x4FE1;&#x606F;&#x5316;&#x673A;&#x623F;U1</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n137="java:com.sanss.ibp.nonphs.ra.common">custip_type</Name>
-            <Value xmlns:n138="java:com.sanss.ibp.nonphs.ra.common">0</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n139="java:com.sanss.ibp.nonphs.ra.common">reconfig_comment</Name>
-            <Value xmlns:n140="java:com.sanss.ibp.nonphs.ra.common">&#x4FEE;&#x8BA2;&#x539F;&#x56E0;&#xFF1A;</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n141="java:com.sanss.ibp.nonphs.ra.common">reconfigdate</Name>
-            <Value xmlns:n142="java:com.sanss.ibp.nonphs.ra.common">null</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n143="java:com.sanss.ibp.nonphs.ra.common">start_project_build</Name>
-            <Value xmlns:n144="java:com.sanss.ibp.nonphs.ra.common">&#x5426;</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n145="java:com.sanss.ibp.nonphs.ra.common">user_name</Name>
-            <Value xmlns:n146="java:com.sanss.ibp.nonphs.ra.common">Test20191209</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n147="java:com.sanss.ibp.nonphs.ra.common">user_address</Name>
-            <Value xmlns:n148="java:com.sanss.ibp.nonphs.ra.common">&#x67F3;&#x6797;&#x8DEF;158&#x53F7;5&#x5C42;509&#x5BA4;</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n149="java:com.sanss.ibp.nonphs.ra.common">user_type</Name>
-            <Value xmlns:n150="java:com.sanss.ibp.nonphs.ra.common">&#x666E;&#x901A;&#x4F4F;&#x5B85;</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n151="java:com.sanss.ibp.nonphs.ra.common">userstate</Name>
-            <Value xmlns:n152="java:com.sanss.ibp.nonphs.ra.common">1</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n153="java:com.sanss.ibp.nonphs.ra.common">svlan</Name>
-            <Value xmlns:n154="java:com.sanss.ibp.nonphs.ra.common">0384</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n155="java:com.sanss.ibp.nonphs.ra.common">cvlan</Name>
-            <Value xmlns:n156="java:com.sanss.ibp.nonphs.ra.common">1226</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n157="java:com.sanss.ibp.nonphs.ra.common">olt_manufacturer</Name>
-            <Value xmlns:n158="java:com.sanss.ibp.nonphs.ra.common">&#x4E2D;&#x5174;&#x901A;&#x8BAF;</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n159="java:com.sanss.ibp.nonphs.ra.common">olt_manufacturer_id</Name>
-            <Value xmlns:n160="java:com.sanss.ibp.nonphs.ra.common">92</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n161="java:com.sanss.ibp.nonphs.ra.common">serial_flag</Name>
-            <Value xmlns:n162="java:com.sanss.ibp.nonphs.ra.common">1</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n163="java:com.sanss.ibp.nonphs.ra.common">ISPON</Name>
-            <Value xmlns:n164="java:com.sanss.ibp.nonphs.ra.common">1</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n165="java:com.sanss.ibp.nonphs.ra.common">tyt_flag</Name>
-            <Value xmlns:n166="java:com.sanss.ibp.nonphs.ra.common">0</Value>
-          </Properties>
-          <Properties>
-            <Name xmlns:n167="java:com.sanss.ibp.nonphs.ra.common">serviceAccount</Name>
-            <Value xmlns:n168="java:com.sanss.ibp.nonphs.ra.common">Test20191209</Value>
-          </Properties>
-          <Nm_inv_info>
-            <GroupName>nm_inv_info</GroupName>
-            <GroupProperty>
-              <GroupName>nm_a_port</GroupName>
-              <Properties>
-                <Name xmlns:n169="java:com.sanss.ibp.nonphs.ra.common">port_type</Name>
-                <Value xmlns:n170="java:com.sanss.ibp.nonphs.ra.common">&#x5149;</Value>
-              </Properties>
-              <Properties>
-                <Name xmlns:n171="java:com.sanss.ibp.nonphs.ra.common">device_factory</Name>
-                <Value xmlns:n172="java:com.sanss.ibp.nonphs.ra.common">Unknown</Value>
-              </Properties>
-              <Properties>
-                <Name xmlns:n173="java:com.sanss.ibp.nonphs.ra.common">room_type</Name>
-                <Value xmlns:n174="java:com.sanss.ibp.nonphs.ra.common">&#x7528;&#x6237;&#x673A;&#x623F;U</Value>
-              </Properties>
-              <Properties>
-                <Name xmlns:n175="java:com.sanss.ibp.nonphs.ra.common">arriving_co</Name>
-                <Value xmlns:n176="java:com.sanss.ibp.nonphs.ra.common">&#x67F3;&#x6797;&#x8DEF;158&#x53F7;5&#x5C42;&#x4FE1;&#x606F;&#x5316;&#x673A;&#x623F;U1</Value>
-              </Properties>
-              <Properties>
-                <Name xmlns:n177="java:com.sanss.ibp.nonphs.ra.common">room_address</Name>
-                <Value xmlns:n178="java:com.sanss.ibp.nonphs.ra.common">&#x67F3;&#x6797;&#x8DEF;158&#x53F7;5&#x5C42;&#x4FE1;&#x606F;&#x5316;&#x673A;&#x623F;</Value>
-              </Properties>
-              <Properties>
-                <Name xmlns:n179="java:com.sanss.ibp.nonphs.ra.common">equipment</Name>
-                <Value xmlns:n180="java:com.sanss.ibp.nonphs.ra.common">ZQGF00875/0002/OBD01</Value>
-              </Properties>
-              <Properties>
-                <Name xmlns:n181="java:com.sanss.ibp.nonphs.ra.common">port_number</Name>
-                <Value xmlns:n182="java:com.sanss.ibp.nonphs.ra.common">003</Value>
-              </Properties>
-              <Properties>
-                <Name xmlns:n183="java:com.sanss.ibp.nonphs.ra.common">bandwidth</Name>
-                <Value xmlns:n184="java:com.sanss.ibp.nonphs.ra.common">&#x672A;&#x77E5;</Value>
-              </Properties>
-              <Properties>
-                <Name xmlns:n185="java:com.sanss.ibp.nonphs.ra.common">region</Name>
-                <Value xmlns:n186="java:com.sanss.ibp.nonphs.ra.common">&#x4E2D;&#x533A;</Value>
-              </Properties>
-              <Properties>
-                <Name xmlns:n187="java:com.sanss.ibp.nonphs.ra.common">device_type</Name>
-                <Value xmlns:n188="java:com.sanss.ibp.nonphs.ra.common">1:32&#x5149;&#x5206;&#x8DEF;&#x5668;</Value>
-              </Properties>
-              <Properties>
-                <Name xmlns:n189="java:com.sanss.ibp.nonphs.ra.common">relate_fiber_no</Name>
-                <Value xmlns:n190="java:com.sanss.ibp.nonphs.ra.common">AC2012591213</Value>
-              </Properties>
-            </GroupProperty>
-            <GroupProperty>
-              <GroupName>nm_z_port</GroupName>
-              <Properties>
-                <Name xmlns:n191="java:com.sanss.ibp.nonphs.ra.common">room_type</Name>
-                <Value xmlns:n192="java:com.sanss.ibp.nonphs.ra.common">&#x7528;&#x6237;&#x673A;&#x623F;U</Value>
-              </Properties>
-              <Properties>
-                <Name xmlns:n193="java:com.sanss.ibp.nonphs.ra.common">arriving_co</Name>
-                <Value xmlns:n194="java:com.sanss.ibp.nonphs.ra.common">&#x67F3;&#x6797;&#x8DEF;158&#x53F7;5&#x5C42;&#x4FE1;&#x606F;&#x5316;&#x673A;&#x623F;U1</Value>
-              </Properties>
-              <Properties>
-                <Name xmlns:n195="java:com.sanss.ibp.nonphs.ra.common">room_address</Name>
-                <Value xmlns:n196="java:com.sanss.ibp.nonphs.ra.common">&#x67F3;&#x6797;&#x8DEF;158&#x53F7;5&#x5C42;&#x4FE1;&#x606F;&#x5316;&#x673A;&#x623F;</Value>
-              </Properties>
-              <Properties>
-                <Name xmlns:n197="java:com.sanss.ibp.nonphs.ra.common">equipment</Name>
-                <Value xmlns:n198="java:com.sanss.ibp.nonphs.ra.common">ZQ/ZTE-ONT1443903</Value>
-              </Properties>
-              <Properties>
-                <Name xmlns:n199="java:com.sanss.ibp.nonphs.ra.common">port_number</Name>
-                <Value xmlns:n200="java:com.sanss.ibp.nonphs.ra.common">1</Value>
-              </Properties>
-              <Properties>
-                <Name xmlns:n201="java:com.sanss.ibp.nonphs.ra.common">region</Name>
-                <Value xmlns:n202="java:com.sanss.ibp.nonphs.ra.common">&#x4E2D;&#x533A;</Value>
-              </Properties>
-              <Properties>
-                <Name xmlns:n203="java:com.sanss.ibp.nonphs.ra.common">relate_fiber_no</Name>
-                <Value xmlns:n204="java:com.sanss.ibp.nonphs.ra.common">AC2012591213</Value>
-              </Properties>
-            </GroupProperty>
-            <GroupProperty>
-              <GroupName>cable_jump</GroupName>
-              <Properties>
-                <Name xmlns:n205="java:com.sanss.ibp.nonphs.ra.common">room_address</Name>
-                <Value xmlns:n206="java:com.sanss.ibp.nonphs.ra.common">&#x67F3;&#x6797;&#x8DEF;158&#x53F7;5&#x5C42;&#x4FE1;&#x606F;&#x5316;&#x673A;&#x623F;</Value>
-              </Properties>
-              <Properties>
-                <Name xmlns:n207="java:com.sanss.ibp.nonphs.ra.common">room_desc</Name>
-                <Value xmlns:n208="java:com.sanss.ibp.nonphs.ra.common">&#x67F3;&#x6797;&#x8DEF;158&#x53F7;5&#x5C42;&#x4FE1;&#x606F;&#x5316;&#x673A;&#x623F;U1</Value>
-              </Properties>
-              <Properties>
-                <Name xmlns:n209="java:com.sanss.ibp.nonphs.ra.common">receiving_port</Name>
-                <Value xmlns:n210="java:com.sanss.ibp.nonphs.ra.common">ZQ/ZTE-ONT1443903 1</Value>
-              </Properties>
-              <Properties>
-                <Name xmlns:n211="java:com.sanss.ibp.nonphs.ra.common">receiving_ddf</Name>
-                <Value xmlns:n212="java:com.sanss.ibp.nonphs.ra.common">003----&gt;1</Value>
-              </Properties>
-              <Properties>
-                <Name xmlns:n213="java:com.sanss.ibp.nonphs.ra.common">receiving_code</Name>
-                <Value xmlns:n214="java:com.sanss.ibp.nonphs.ra.common">100015855191</Value>
-              </Properties>
-              <Properties>
-                <Name xmlns:n215="java:com.sanss.ibp.nonphs.ra.common">sending_port</Name>
-                <Value xmlns:n216="java:com.sanss.ibp.nonphs.ra.common">ZQGF00875/0002/OBD01 003</Value>
-              </Properties>
-              <Properties>
-                <Name xmlns:n217="java:com.sanss.ibp.nonphs.ra.common">sending_ddf</Name>
-                <Value xmlns:n218="java:com.sanss.ibp.nonphs.ra.common">003&lt;----1</Value>
-              </Properties>
-              <Properties>
-                <Name xmlns:n219="java:com.sanss.ibp.nonphs.ra.common">sending_code</Name>
-                <Value xmlns:n220="java:com.sanss.ibp.nonphs.ra.common">100015855191</Value>
-              </Properties>
-              <Properties>
-                <Name xmlns:n221="java:com.sanss.ibp.nonphs.ra.common">maintenance_net_grid</Name>
-                <Value xmlns:n222="java:com.sanss.ibp.nonphs.ra.common">&#x5362;&#x6E7E;</Value>
-              </Properties>
-            </GroupProperty>
-            <GroupProperty>
-              <GroupName>fiber_info</GroupName>
-              <Properties>
-                <Name xmlns:n223="java:com.sanss.ibp.nonphs.ra.common">fiber_ttl_length</Name>
-                <Value xmlns:n224="java:com.sanss.ibp.nonphs.ra.common">0</Value>
-              </Properties>
-              <Properties>
-                <Name xmlns:n225="java:com.sanss.ibp.nonphs.ra.common">fiber_ttl_loss</Name>
-                <Value xmlns:n226="java:com.sanss.ibp.nonphs.ra.common">1310nm&#x635F;&#x8017;:0;1550nm&#x635F;&#x8017;:0</Value>
-              </Properties>
-              <Properties>
-                <Name xmlns:n227="java:com.sanss.ibp.nonphs.ra.common">start_port</Name>
-                <Value xmlns:n228="java:com.sanss.ibp.nonphs.ra.common">003</Value>
-              </Properties>
-              <Properties>
-                <Name xmlns:n229="java:com.sanss.ibp.nonphs.ra.common">end_port</Name>
-                <Value xmlns:n230="java:com.sanss.ibp.nonphs.ra.common">1</Value>
-              </Properties>
-            </GroupProperty>
-            <Properties>
-              <Name xmlns:n231="java:com.sanss.ibp.nonphs.ra.common">service_no</Name>
-              <Value xmlns:n232="java:com.sanss.ibp.nonphs.ra.common">AC2012591213</Value>
-            </Properties>
-          </Nm_inv_info>
-        </Product>
-        <EventId97 xmlns:java="java:com.sanss.ibp.nonphs.ra.system97">P7A10000000000114212</EventId97>
-        <WpResponseBasicInfo xmlns:java="java:com.sanss.ibp.nonphs.ra.system97">
-          <Note/>
-          <SerialNo/>
-          <UserId>KD2000025307</UserId>
-          <Result>1</Result>
-          <Nbnumber/>
-        </WpResponseBasicInfo>
-      </queryIntResServiceResponse>
-    </queryIntResServiceResponse>
-  </Body>
+	<Header/>
+	<Body>
+		<queryIntResServiceResponse xmlns:m="http://sanss.com">
+			<queryIntResServiceResponse>
+				<ErrorCode xmlns:java="java:com.sanss.ibp.nonphs.ra.common">0</ErrorCode>
+				<ErrorMessage xmlns:java="java:com.sanss.ibp.nonphs.ra.common"/>
+				<ProcessFlag xmlns:java="java:com.sanss.ibp.nonphs.ra.common">0</ProcessFlag>
+				<Result xmlns:java="java:com.sanss.ibp.nonphs.ra.common">1</Result>
+				<Product xmlns:java="java:com.sanss.ibp.nonphs.ra.system97">
+					<Aid>400806384839</Aid>
+					<Name>adsl</Name>
+					<Properties>
+						<Name xmlns:n1="java:com.sanss.ibp.nonphs.ra.common">crm_product_code</Name>
+						<Value xmlns:n2="java:com.sanss.ibp.nonphs.ra.common">524</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n3="java:com.sanss.ibp.nonphs.ra.common">area_name</Name>
+						<Value xmlns:n4="java:com.sanss.ibp.nonphs.ra.common">黄浦</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n5="java:com.sanss.ibp.nonphs.ra.common">a_b_plane_flag</Name>
+						<Value xmlns:n6="java:com.sanss.ibp.nonphs.ra.common">1</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n7="java:com.sanss.ibp.nonphs.ra.common">account_no</Name>
+						<Value xmlns:n8="java:com.sanss.ibp.nonphs.ra.common">82513889</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n9="java:com.sanss.ibp.nonphs.ra.common">broadband_access_type</Name>
+						<Value xmlns:n10="java:com.sanss.ibp.nonphs.ra.common">5</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n11="java:com.sanss.ibp.nonphs.ra.common">connect_type</Name>
+						<Value xmlns:n12="java:com.sanss.ibp.nonphs.ra.common">1</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n13="java:com.sanss.ibp.nonphs.ra.common">intfaccess_type</Name>
+						<Value xmlns:n14="java:com.sanss.ibp.nonphs.ra.common">6</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n15="java:com.sanss.ibp.nonphs.ra.common">bureau_code</Name>
+						<Value xmlns:n16="java:com.sanss.ibp.nonphs.ra.common">6</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n17="java:com.sanss.ibp.nonphs.ra.common">sub_bureau_code</Name>
+						<Value xmlns:n18="java:com.sanss.ibp.nonphs.ra.common">154</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n19="java:com.sanss.ibp.nonphs.ra.common">cooperation_type</Name>
+						<Value xmlns:n20="java:com.sanss.ibp.nonphs.ra.common">A</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n21="java:com.sanss.ibp.nonphs.ra.common">equipment_address</Name>
+						<Value xmlns:n22="java:com.sanss.ibp.nonphs.ra.common">柳林路158号5层信息化机房</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n23="java:com.sanss.ibp.nonphs.ra.common">home_gateway_type</Name>
+						<Value xmlns:n24="java:com.sanss.ibp.nonphs.ra.common">C</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n25="java:com.sanss.ibp.nonphs.ra.common">iptv_pvc</Name>
+						<Value xmlns:n26="java:com.sanss.ibp.nonphs.ra.common">SH-SH-LIL-MSE-1.MAN.M6000/255-0-25-0884-1226</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n27="java:com.sanss.ibp.nonphs.ra.common">quarter_address</Name>
+						<Value xmlns:n28="java:com.sanss.ibp.nonphs.ra.common">柳林路158号</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n29="java:com.sanss.ibp.nonphs.ra.common">quarter_name</Name>
+						<Value xmlns:n30="java:com.sanss.ibp.nonphs.ra.common">柳林</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n31="java:com.sanss.ibp.nonphs.ra.common">vlan_no</Name>
+						<Value xmlns:n32="java:com.sanss.ibp.nonphs.ra.common">SH-SH-LIL-MSE-1.MAN.M6000/255-0-25-0384-1226</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n33="java:com.sanss.ibp.nonphs.ra.common">whether_dslam_5200</Name>
+						<Value xmlns:n34="java:com.sanss.ibp.nonphs.ra.common">1</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n35="java:com.sanss.ibp.nonphs.ra.common">port_download_speed</Name>
+						<Value xmlns:n36="java:com.sanss.ibp.nonphs.ra.common">F</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n37="java:com.sanss.ibp.nonphs.ra.common">port_upload_speed</Name>
+						<Value xmlns:n38="java:com.sanss.ibp.nonphs.ra.common">D</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n39="java:com.sanss.ibp.nonphs.ra.common">root_download_speed</Name>
+						<Value xmlns:n40="java:com.sanss.ibp.nonphs.ra.common">F</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n41="java:com.sanss.ibp.nonphs.ra.common">root_upload_speed</Name>
+						<Value xmlns:n42="java:com.sanss.ibp.nonphs.ra.common">D</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n43="java:com.sanss.ibp.nonphs.ra.common">mdu</Name>
+						<Value xmlns:n44="java:com.sanss.ibp.nonphs.ra.common">ZQ/ZTE-ONT1443903/0/1/1(FE)</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n45="java:com.sanss.ibp.nonphs.ra.common">pin_no</Name>
+						<Value xmlns:n46="java:com.sanss.ibp.nonphs.ra.common">HUNGETNH</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n47="java:com.sanss.ibp.nonphs.ra.common">pop_connect_flag</Name>
+						<Value xmlns:n48="java:com.sanss.ibp.nonphs.ra.common">0</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n49="java:com.sanss.ibp.nonphs.ra.common">ip_type</Name>
+						<Value xmlns:n50="java:com.sanss.ibp.nonphs.ra.common">3</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n51="java:com.sanss.ibp.nonphs.ra.common">serv_ip_address_type</Name>
+						<Value xmlns:n52="java:com.sanss.ibp.nonphs.ra.common">3</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n53="java:com.sanss.ibp.nonphs.ra.common">old_is_onu_last_user</Name>
+						<Value xmlns:n54="java:com.sanss.ibp.nonphs.ra.common">N</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n55="java:com.sanss.ibp.nonphs.ra.common">contains_smart_family</Name>
+						<Value xmlns:n56="java:com.sanss.ibp.nonphs.ra.common">0</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n57="java:com.sanss.ibp.nonphs.ra.common">broad_num_of_same_address</Name>
+						<Value xmlns:n58="java:com.sanss.ibp.nonphs.ra.common">12</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n59="java:com.sanss.ibp.nonphs.ra.common">maintain_obd_id</Name>
+						<Value xmlns:n60="java:com.sanss.ibp.nonphs.ra.common">26027460</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n61="java:com.sanss.ibp.nonphs.ra.common">maintain_obd_port_id</Name>
+						<Value xmlns:n62="java:com.sanss.ibp.nonphs.ra.common">362926557</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n63="java:com.sanss.ibp.nonphs.ra.common">if_with_home_gateway</Name>
+						<Value xmlns:n64="java:com.sanss.ibp.nonphs.ra.common">3</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n65="java:com.sanss.ibp.nonphs.ra.common">is_onu_last_user</Name>
+						<Value xmlns:n66="java:com.sanss.ibp.nonphs.ra.common">Y</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n67="java:com.sanss.ibp.nonphs.ra.common">term_tele_port_used_count</Name>
+						<Value xmlns:n68="java:com.sanss.ibp.nonphs.ra.common">0</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n69="java:com.sanss.ibp.nonphs.ra.common">light</Name>
+						<Value xmlns:n70="java:com.sanss.ibp.nonphs.ra.common">ZQGF00875/0002/OBD01|003</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n71="java:com.sanss.ibp.nonphs.ra.common">olt_ip_address</Name>
+						<Value xmlns:n72="java:com.sanss.ibp.nonphs.ra.common">203.29.247.245</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n73="java:com.sanss.ibp.nonphs.ra.common">olt_device_code</Name>
+						<Value xmlns:n74="java:com.sanss.ibp.nonphs.ra.common">LLI2/T2/ZTEC300-OLT28</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n75="java:com.sanss.ibp.nonphs.ra.common">olt_mode</Name>
+						<Value xmlns:n76="java:com.sanss.ibp.nonphs.ra.common">1</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n77="java:com.sanss.ibp.nonphs.ra.common">is_10g_epon</Name>
+						<Value xmlns:n78="java:com.sanss.ibp.nonphs.ra.common">1</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n79="java:com.sanss.ibp.nonphs.ra.common">olt_pon_type</Name>
+						<Value xmlns:n80="java:com.sanss.ibp.nonphs.ra.common">0</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n81="java:com.sanss.ibp.nonphs.ra.common">olt_type</Name>
+						<Value xmlns:n82="java:com.sanss.ibp.nonphs.ra.common">ZXA10 C300</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n83="java:com.sanss.ibp.nonphs.ra.common">olt_type_id</Name>
+						<Value xmlns:n84="java:com.sanss.ibp.nonphs.ra.common">100000080</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n85="java:com.sanss.ibp.nonphs.ra.common">onu_logical_id</Name>
+						<Value xmlns:n86="java:com.sanss.ibp.nonphs.ra.common">0070134453</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n87="java:com.sanss.ibp.nonphs.ra.common">onu_nms_reg_id</Name>
+						<Value xmlns:n88="java:com.sanss.ibp.nonphs.ra.common">31</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n89="java:com.sanss.ibp.nonphs.ra.common">onu_name</Name>
+						<Value xmlns:n90="java:com.sanss.ibp.nonphs.ra.common">ZQ/ZTE-ONT1443903</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n91="java:com.sanss.ibp.nonphs.ra.common">onu_address</Name>
+						<Value xmlns:n92="java:com.sanss.ibp.nonphs.ra.common">柳林路158号5层509室</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n93="java:com.sanss.ibp.nonphs.ra.common">pin_no</Name>
+						<Value xmlns:n94="java:com.sanss.ibp.nonphs.ra.common">HUNGETNH</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n95="java:com.sanss.ibp.nonphs.ra.common">pon_no</Name>
+						<Value xmlns:n96="java:com.sanss.ibp.nonphs.ra.common">ZQ/ZTE-ONT1443903</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n97="java:com.sanss.ibp.nonphs.ra.common">pon_olt_device_id</Name>
+						<Value xmlns:n98="java:com.sanss.ibp.nonphs.ra.common">柳林T2/ZTEC300-OLT28</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n99="java:com.sanss.ibp.nonphs.ra.common">pon_olt_port_no</Name>
+						<Value xmlns:n100="java:com.sanss.ibp.nonphs.ra.common">1/15/n/05</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n101="java:com.sanss.ibp.nonphs.ra.common">pon_port_no</Name>
+						<Value xmlns:n102="java:com.sanss.ibp.nonphs.ra.common">ZQ/ZTE-ONT1443903/0/1/1(FE)</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n103="java:com.sanss.ibp.nonphs.ra.common">voip_vlan</Name>
+						<Value xmlns:n104="java:com.sanss.ibp.nonphs.ra.common">284</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n105="java:com.sanss.ibp.nonphs.ra.common">iptv_vlan_no</Name>
+						<Value xmlns:n106="java:com.sanss.ibp.nonphs.ra.common">SH-SH-LIL-MSE-1.MAN.M6000/255-0-25-0884-1226</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n107="java:com.sanss.ibp.nonphs.ra.common">olt_server_type_first</Name>
+						<Value xmlns:n108="java:com.sanss.ibp.nonphs.ra.common">Unknown</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n109="java:com.sanss.ibp.nonphs.ra.common">olt_server_type_first_id</Name>
+						<Value xmlns:n110="java:com.sanss.ibp.nonphs.ra.common">71</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n111="java:com.sanss.ibp.nonphs.ra.common">light_name_second</Name>
+						<Value xmlns:n112="java:com.sanss.ibp.nonphs.ra.common">ZQGF00445/0027/OBD06</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n113="java:com.sanss.ibp.nonphs.ra.common">light_port_no_second</Name>
+						<Value xmlns:n114="java:com.sanss.ibp.nonphs.ra.common">201</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n115="java:com.sanss.ibp.nonphs.ra.common">olt_server_type_second</Name>
+						<Value xmlns:n116="java:com.sanss.ibp.nonphs.ra.common">宽岱</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n117="java:com.sanss.ibp.nonphs.ra.common">olt_server_type_second_id</Name>
+						<Value xmlns:n118="java:com.sanss.ibp.nonphs.ra.common">53</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n119="java:com.sanss.ibp.nonphs.ra.common">olt_full_address_second</Name>
+						<Value xmlns:n120="java:com.sanss.ibp.nonphs.ra.common">人民路885号B1机房</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n121="java:com.sanss.ibp.nonphs.ra.common">oltf_proportion_first</Name>
+						<Value xmlns:n122="java:com.sanss.ibp.nonphs.ra.common">1:32光分路器</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n123="java:com.sanss.ibp.nonphs.ra.common">oltf_proportion_second</Name>
+						<Value xmlns:n124="java:com.sanss.ibp.nonphs.ra.common">1:32光分路器</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n125="java:com.sanss.ibp.nonphs.ra.common">pvc</Name>
+						<Value xmlns:n126="java:com.sanss.ibp.nonphs.ra.common">SH-SH-LIL-MSE-1.MAN.M6000/255-0-25-0384-1226</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n127="java:com.sanss.ibp.nonphs.ra.common">upstream_oxc_equip_port</Name>
+						<Value xmlns:n128="java:com.sanss.ibp.nonphs.ra.common">003</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n129="java:com.sanss.ibp.nonphs.ra.common">construction_share_flag</Name>
+						<Value xmlns:n130="java:com.sanss.ibp.nonphs.ra.common">1</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n131="java:com.sanss.ibp.nonphs.ra.common">is_pots_with_adsl</Name>
+						<Value xmlns:n132="java:com.sanss.ibp.nonphs.ra.common">0</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n133="java:com.sanss.ibp.nonphs.ra.common">is_dljs</Name>
+						<Value xmlns:n134="java:com.sanss.ibp.nonphs.ra.common">0</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n135="java:com.sanss.ibp.nonphs.ra.common">room</Name>
+						<Value xmlns:n136="java:com.sanss.ibp.nonphs.ra.common">柳林路158号5层信息化机房U1</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n137="java:com.sanss.ibp.nonphs.ra.common">custip_type</Name>
+						<Value xmlns:n138="java:com.sanss.ibp.nonphs.ra.common">0</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n139="java:com.sanss.ibp.nonphs.ra.common">reconfig_comment</Name>
+						<Value xmlns:n140="java:com.sanss.ibp.nonphs.ra.common">修订原因：</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n141="java:com.sanss.ibp.nonphs.ra.common">reconfigdate</Name>
+						<Value xmlns:n142="java:com.sanss.ibp.nonphs.ra.common">null</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n143="java:com.sanss.ibp.nonphs.ra.common">start_project_build</Name>
+						<Value xmlns:n144="java:com.sanss.ibp.nonphs.ra.common">否</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n145="java:com.sanss.ibp.nonphs.ra.common">user_name</Name>
+						<Value xmlns:n146="java:com.sanss.ibp.nonphs.ra.common">Test20191209</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n147="java:com.sanss.ibp.nonphs.ra.common">user_address</Name>
+						<Value xmlns:n148="java:com.sanss.ibp.nonphs.ra.common">柳林路158号5层509室</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n149="java:com.sanss.ibp.nonphs.ra.common">user_type</Name>
+						<Value xmlns:n150="java:com.sanss.ibp.nonphs.ra.common">普通住宅</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n151="java:com.sanss.ibp.nonphs.ra.common">userstate</Name>
+						<Value xmlns:n152="java:com.sanss.ibp.nonphs.ra.common">1</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n153="java:com.sanss.ibp.nonphs.ra.common">svlan</Name>
+						<Value xmlns:n154="java:com.sanss.ibp.nonphs.ra.common">0384</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n155="java:com.sanss.ibp.nonphs.ra.common">cvlan</Name>
+						<Value xmlns:n156="java:com.sanss.ibp.nonphs.ra.common">1226</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n157="java:com.sanss.ibp.nonphs.ra.common">olt_manufacturer</Name>
+						<Value xmlns:n158="java:com.sanss.ibp.nonphs.ra.common">中兴通讯</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n159="java:com.sanss.ibp.nonphs.ra.common">olt_manufacturer_id</Name>
+						<Value xmlns:n160="java:com.sanss.ibp.nonphs.ra.common">92</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n161="java:com.sanss.ibp.nonphs.ra.common">serial_flag</Name>
+						<Value xmlns:n162="java:com.sanss.ibp.nonphs.ra.common">1</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n163="java:com.sanss.ibp.nonphs.ra.common">ISPON</Name>
+						<Value xmlns:n164="java:com.sanss.ibp.nonphs.ra.common">1</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n165="java:com.sanss.ibp.nonphs.ra.common">tyt_flag</Name>
+						<Value xmlns:n166="java:com.sanss.ibp.nonphs.ra.common">0</Value>
+					</Properties>
+					<Properties>
+						<Name xmlns:n167="java:com.sanss.ibp.nonphs.ra.common">serviceAccount</Name>
+						<Value xmlns:n168="java:com.sanss.ibp.nonphs.ra.common">Test20191209</Value>
+					</Properties>
+					<Nm_inv_info>
+						<GroupName>nm_inv_info</GroupName>
+						<GroupProperty>
+							<GroupName>nm_a_port</GroupName>
+							<Properties>
+								<Name xmlns:n169="java:com.sanss.ibp.nonphs.ra.common">port_type</Name>
+								<Value xmlns:n170="java:com.sanss.ibp.nonphs.ra.common">光</Value>
+							</Properties>
+							<Properties>
+								<Name xmlns:n171="java:com.sanss.ibp.nonphs.ra.common">device_factory</Name>
+								<Value xmlns:n172="java:com.sanss.ibp.nonphs.ra.common">Unknown</Value>
+							</Properties>
+							<Properties>
+								<Name xmlns:n173="java:com.sanss.ibp.nonphs.ra.common">room_type</Name>
+								<Value xmlns:n174="java:com.sanss.ibp.nonphs.ra.common">用户机房U</Value>
+							</Properties>
+							<Properties>
+								<Name xmlns:n175="java:com.sanss.ibp.nonphs.ra.common">arriving_co</Name>
+								<Value xmlns:n176="java:com.sanss.ibp.nonphs.ra.common">柳林路158号5层信息化机房U1</Value>
+							</Properties>
+							<Properties>
+								<Name xmlns:n177="java:com.sanss.ibp.nonphs.ra.common">room_address</Name>
+								<Value xmlns:n178="java:com.sanss.ibp.nonphs.ra.common">柳林路158号5层信息化机房</Value>
+							</Properties>
+							<Properties>
+								<Name xmlns:n179="java:com.sanss.ibp.nonphs.ra.common">equipment</Name>
+								<Value xmlns:n180="java:com.sanss.ibp.nonphs.ra.common">ZQGF00875/0002/OBD01</Value>
+							</Properties>
+							<Properties>
+								<Name xmlns:n181="java:com.sanss.ibp.nonphs.ra.common">port_number</Name>
+								<Value xmlns:n182="java:com.sanss.ibp.nonphs.ra.common">003</Value>
+							</Properties>
+							<Properties>
+								<Name xmlns:n183="java:com.sanss.ibp.nonphs.ra.common">bandwidth</Name>
+								<Value xmlns:n184="java:com.sanss.ibp.nonphs.ra.common">未知</Value>
+							</Properties>
+							<Properties>
+								<Name xmlns:n185="java:com.sanss.ibp.nonphs.ra.common">region</Name>
+								<Value xmlns:n186="java:com.sanss.ibp.nonphs.ra.common">中区</Value>
+							</Properties>
+							<Properties>
+								<Name xmlns:n187="java:com.sanss.ibp.nonphs.ra.common">device_type</Name>
+								<Value xmlns:n188="java:com.sanss.ibp.nonphs.ra.common">1:32光分路器</Value>
+							</Properties>
+							<Properties>
+								<Name xmlns:n189="java:com.sanss.ibp.nonphs.ra.common">relate_fiber_no</Name>
+								<Value xmlns:n190="java:com.sanss.ibp.nonphs.ra.common">AC2012591213</Value>
+							</Properties>
+						</GroupProperty>
+						<GroupProperty>
+							<GroupName>nm_z_port</GroupName>
+							<Properties>
+								<Name xmlns:n191="java:com.sanss.ibp.nonphs.ra.common">room_type</Name>
+								<Value xmlns:n192="java:com.sanss.ibp.nonphs.ra.common">用户机房U</Value>
+							</Properties>
+							<Properties>
+								<Name xmlns:n193="java:com.sanss.ibp.nonphs.ra.common">arriving_co</Name>
+								<Value xmlns:n194="java:com.sanss.ibp.nonphs.ra.common">柳林路158号5层信息化机房U1</Value>
+							</Properties>
+							<Properties>
+								<Name xmlns:n195="java:com.sanss.ibp.nonphs.ra.common">room_address</Name>
+								<Value xmlns:n196="java:com.sanss.ibp.nonphs.ra.common">柳林路158号5层信息化机房</Value>
+							</Properties>
+							<Properties>
+								<Name xmlns:n197="java:com.sanss.ibp.nonphs.ra.common">equipment</Name>
+								<Value xmlns:n198="java:com.sanss.ibp.nonphs.ra.common">ZQ/ZTE-ONT1443903</Value>
+							</Properties>
+							<Properties>
+								<Name xmlns:n199="java:com.sanss.ibp.nonphs.ra.common">port_number</Name>
+								<Value xmlns:n200="java:com.sanss.ibp.nonphs.ra.common">1</Value>
+							</Properties>
+							<Properties>
+								<Name xmlns:n201="java:com.sanss.ibp.nonphs.ra.common">region</Name>
+								<Value xmlns:n202="java:com.sanss.ibp.nonphs.ra.common">中区</Value>
+							</Properties>
+							<Properties>
+								<Name xmlns:n203="java:com.sanss.ibp.nonphs.ra.common">relate_fiber_no</Name>
+								<Value xmlns:n204="java:com.sanss.ibp.nonphs.ra.common">AC2012591213</Value>
+							</Properties>
+						</GroupProperty>
+						<GroupProperty>
+							<GroupName>cable_jump</GroupName>
+							<Properties>
+								<Name xmlns:n205="java:com.sanss.ibp.nonphs.ra.common">room_address</Name>
+								<Value xmlns:n206="java:com.sanss.ibp.nonphs.ra.common">柳林路158号5层信息化机房</Value>
+							</Properties>
+							<Properties>
+								<Name xmlns:n207="java:com.sanss.ibp.nonphs.ra.common">room_desc</Name>
+								<Value xmlns:n208="java:com.sanss.ibp.nonphs.ra.common">柳林路158号5层信息化机房U1</Value>
+							</Properties>
+							<Properties>
+								<Name xmlns:n209="java:com.sanss.ibp.nonphs.ra.common">receiving_port</Name>
+								<Value xmlns:n210="java:com.sanss.ibp.nonphs.ra.common">ZQ/ZTE-ONT1443903 1</Value>
+							</Properties>
+							<Properties>
+								<Name xmlns:n211="java:com.sanss.ibp.nonphs.ra.common">receiving_ddf</Name>
+								<Value xmlns:n212="java:com.sanss.ibp.nonphs.ra.common">003---->1</Value>
+							</Properties>
+							<Properties>
+								<Name xmlns:n213="java:com.sanss.ibp.nonphs.ra.common">receiving_code</Name>
+								<Value xmlns:n214="java:com.sanss.ibp.nonphs.ra.common">100015855191</Value>
+							</Properties>
+							<Properties>
+								<Name xmlns:n215="java:com.sanss.ibp.nonphs.ra.common">sending_port</Name>
+								<Value xmlns:n216="java:com.sanss.ibp.nonphs.ra.common">ZQGF00875/0002/OBD01 003</Value>
+							</Properties>
+							<Properties>
+								<Name xmlns:n217="java:com.sanss.ibp.nonphs.ra.common">sending_ddf</Name>
+								<Value xmlns:n218="java:com.sanss.ibp.nonphs.ra.common">003&lt;----1</Value>
+							</Properties>
+							<Properties>
+								<Name xmlns:n219="java:com.sanss.ibp.nonphs.ra.common">sending_code</Name>
+								<Value xmlns:n220="java:com.sanss.ibp.nonphs.ra.common">100015855191</Value>
+							</Properties>
+							<Properties>
+								<Name xmlns:n221="java:com.sanss.ibp.nonphs.ra.common">maintenance_net_grid</Name>
+								<Value xmlns:n222="java:com.sanss.ibp.nonphs.ra.common">卢湾</Value>
+							</Properties>
+						</GroupProperty>
+						<GroupProperty>
+							<GroupName>fiber_info</GroupName>
+							<Properties>
+								<Name xmlns:n223="java:com.sanss.ibp.nonphs.ra.common">fiber_ttl_length</Name>
+								<Value xmlns:n224="java:com.sanss.ibp.nonphs.ra.common">0</Value>
+							</Properties>
+							<Properties>
+								<Name xmlns:n225="java:com.sanss.ibp.nonphs.ra.common">fiber_ttl_loss</Name>
+								<Value xmlns:n226="java:com.sanss.ibp.nonphs.ra.common">1310nm损耗:0;1550nm损耗:0</Value>
+							</Properties>
+							<Properties>
+								<Name xmlns:n227="java:com.sanss.ibp.nonphs.ra.common">start_port</Name>
+								<Value xmlns:n228="java:com.sanss.ibp.nonphs.ra.common">003</Value>
+							</Properties>
+							<Properties>
+								<Name xmlns:n229="java:com.sanss.ibp.nonphs.ra.common">end_port</Name>
+								<Value xmlns:n230="java:com.sanss.ibp.nonphs.ra.common">1</Value>
+							</Properties>
+						</GroupProperty>
+						<Properties>
+							<Name xmlns:n231="java:com.sanss.ibp.nonphs.ra.common">service_no</Name>
+							<Value xmlns:n232="java:com.sanss.ibp.nonphs.ra.common">AC2012591213</Value>
+						</Properties>
+					</Nm_inv_info>
+				</Product>
+				<EventId97 xmlns:java="java:com.sanss.ibp.nonphs.ra.system97">P7A10000000000114212</EventId97>
+				<WpResponseBasicInfo xmlns:java="java:com.sanss.ibp.nonphs.ra.system97">
+					<Note/>
+					<SerialNo/>
+					<UserId>KD2000025307</UserId>
+					<Result>1</Result>
+					<Nbnumber/>
+				</WpResponseBasicInfo>
+			</queryIntResServiceResponse>
+		</queryIntResServiceResponse>
+	</Body>
 </Envelope>

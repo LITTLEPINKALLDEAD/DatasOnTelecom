@@ -45,8 +45,12 @@ select CRM_ORDER_NUMBER from ra_workorder_request where USER_ID_97 like '%M13076
 
 select * from RA_WORKORDER_REQUEST where P_RESULT like '%Could%' and rownum<=10;
 
-select t.work_order_return from  ra_workorder_request t  where crm_order_number like '%(2019)/19065599%' and t.request_type='queryIntResService'
---验证资源信息中新增字段虚中继信息节点（vtrunkinfo）和分配号码信息节点(alloccodeinfo) IBP是否收到
+select aa.WORK_ORDER_RETURN from RA_WORKORDER_REQUEST aa where aa.CRM_ORDER_NUMBER = 'WMZ2019120900520389' and aa.REQUEST_TYPE like '%query%';
+--有线宽带，专线宽带报文查询，在WORK_ORDER_REQUEST查找start_project_build字段
+
+select pub_b2c(d.xmlinfo),D.* from t_Sf_Receive_Quene D WHERE D.SPS_APPLY_ID like '(2019)/19065595_0001PZ%';
+--验证客保收到IBP工单报文中是否含有新增字段虚中继信息节点（vtrunkinfo）和分配号码信息节点(alloccodeinfo)on在途表
+-- SN13新装：(2019)/19065595_0001PZ,(2019)/19065599_0001PC
 
 select p.work_order_request from pai_workorder_request p  where p.crm_order_number in ('2-30264173016'); 
 -- 拆机：2-30264222174，WMZ2019122500529376, 设备号： ACC400807650785(新CRM新装), WMZ2019122500531058（新CRM拆机）,WMZ2019122500529380  设备号： ACC400807650815（新CRM新装不带子产品）
@@ -101,5 +105,8 @@ select count(*) as count from ra_workorder_request where RECEIVE_TIME >= date '2
 
 select count(*) from ra_workorder_request where to_char(RECEIVE_TIME,'yyyy-mm-dd hh:mm:ss') between '2020-04-07 09:00:00' AND '2020-04-14 21:00:00'; 
 -- 统计从2020年4月7日早上9点到2020年4月14日晚上9点所有P7收到的订单
+
+select asap.CRM_ORDER_NUMBER,asap.request_type,asap.platform,asap.work_order_request from asap_workorder_request asap where asap.crm_order_number = 'WMX2020042305387122';
+-- 验证预付费鹏博士宽带产品是否派发了ONU工单
 
 --帐号：nonphs_aa    密码nophsq
