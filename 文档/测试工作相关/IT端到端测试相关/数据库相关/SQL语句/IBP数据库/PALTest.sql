@@ -106,7 +106,10 @@ select count(*) as count from ra_workorder_request where RECEIVE_TIME >= date '2
 select count(*) from ra_workorder_request where to_char(RECEIVE_TIME,'yyyy-mm-dd hh:mm:ss') between '2020-04-07 09:00:00' AND '2020-04-14 21:00:00'; 
 -- 统计从2020年4月7日早上9点到2020年4月14日晚上9点所有P7收到的订单
 
-select asap.CRM_ORDER_NUMBER,asap.request_type,asap.platform,asap.work_order_request from asap_workorder_request asap where asap.crm_order_number = 'WMX2020042305387122';
--- 验证预付费鹏博士宽带产品是否派发了ONU工单
+select asap.CRM_ORDER_NUMBER,asap.request_type,asap.platform,asap.work_order_request from asap_workorder_request asap where asap.crm_order_number in('WMX2020042705390546','WMX2020042705390547','WMX2020042705390821','WMX2020042705390832','WMX2020042705390877');
+-- 验证预付费鹏博士宽带产品是否派发了ONU工单,老单子：'WMX2020042605389540','WMX2020042605389690','WMX2020042605389737','WMX2020042605389972'
+
+select asap.CRM_ORDER_NUMBER,asap.request_type,asap.platform,asap.work_order_request from asap_workorder_request asap where asap.crm_order_number in('WMX2020042705390541','WMX2020042705390543','WMX2020042705390822','WMX2020042705390824','WMX2020042705390875');
+-- 验证后付费鹏博士宽带产品是否派发了ONU工单
 
 --帐号：nonphs_aa    密码nophsq
