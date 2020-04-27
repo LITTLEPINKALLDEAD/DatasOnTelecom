@@ -1,0 +1,34 @@
+<ONU_OrderRequest>
+	<order_type>1</order_type>
+	<serv_type>Z</serv_type>
+	<serv_sub_type>I31</serv_sub_type>
+	<service_id>PBS000002058</service_id>
+	<p6_order_id>51775</p6_order_id>
+	<crm_order_no>WMX2020042705390832</crm_order_no>
+	<sub_bureau_code>056</sub_bureau_code>
+	<serviceProperty_new>
+		<pon_type>FTTH</pon_type>
+		<voice>N</voice>
+		<onu_provider>HW</onu_provider>
+		<adsl_sp_flag>0</adsl_sp_flag>
+		<a_c_flag>C</a_c_flag>
+		<iptv_flag>Y</iptv_flag>
+		<voip_vlan>256</voip_vlan>
+		<olt_ip>203.29.207.242</olt_ip>
+		<olt_type>MA5800</olt_type>
+		<iptv_vlan>SH-SH-MC-MSE-3.MAN.M6000/255-0-23-0856-1710</iptv_vlan>
+		<home_gateway_flag>3</home_gateway_flag>
+		<account_price_type>12</account_price_type>
+		<olt_name>镇坪D1/HW5800-OLT62</olt_name>
+		<onu_logical_id>0070135248</onu_logical_id>
+		<olt_pon_port>0/07/n/03</olt_pon_port>
+		<onu_no>4</onu_no>
+		<onu_uni_no>XQ/HW-ONT2209294/0/1/1(FE)</onu_uni_no>
+		<vlan_no>SH-SH-MC-MSE-3.MAN.M6000/255-0-23-0356-1710</vlan_no>
+		<olt_location>0</olt_location>
+		<bureau_code>3</bureau_code>
+		<olt_mode>1</olt_mode>
+		<vdsl2_port_type>0</vdsl2_port_type>
+		<is_10g_epon>1</is_10g_epon>
+	</serviceProperty_new>
+</ONU_OrderRequest>

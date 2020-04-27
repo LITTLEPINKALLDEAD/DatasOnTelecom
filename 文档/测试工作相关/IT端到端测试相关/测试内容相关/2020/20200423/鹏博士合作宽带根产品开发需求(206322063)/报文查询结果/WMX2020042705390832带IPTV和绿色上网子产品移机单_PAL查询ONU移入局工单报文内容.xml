@@ -1,0 +1,35 @@
+<ONU_OrderRequest>
+	<order_type>1</order_type>
+	<serv_type>C</serv_type>
+	<serv_sub_type>I31</serv_sub_type>
+	<service_id>PBS000002058</service_id>
+	<p6_order_id>51775</p6_order_id>
+	<crm_order_no>WMX2020042705390832</crm_order_no>
+	<sub_bureau_code>056</sub_bureau_code>
+	<serviceProperty_old>
+		<pon_type>FTTH</pon_type>
+		<voice>N</voice>
+		<onu_provider>ZTE</onu_provider>
+		<adsl_sp_flag>0</adsl_sp_flag>
+		<a_c_flag>C</a_c_flag>
+		<iptv_flag>Y</iptv_flag>
+		<voip_vlan>202</voip_vlan>
+		<olt_ip>203.31.175.231</olt_ip>
+		<olt_type>ZXA10 C300</olt_type>
+		<iptv_vlan>SH-SH-XT-MSE-1.MAN.NE40E/3-2-21-0802-1340</iptv_vlan>
+		<home_gateway_flag>3</home_gateway_flag>
+		<account_price_type>12</account_price_type>
+		<olt_name>福建T1/ZTEC300-OLT46</olt_name>
+		<onu_logical_id>0070135244</onu_logical_id>
+		<olt_pon_port>1/06/n/03</olt_pon_port>
+		<onu_no>9</onu_no>
+		<onu_uni_no>ZQ/ZTE-ONT1444197/0/1/1(FE)</onu_uni_no>
+		<vlan_no>SH-SH-XT-MSE-1.MAN.NE40E/3-2-21-0302-1340</vlan_no>
+		<olt_location>0</olt_location>
+		<bureau_code>3</bureau_code>
+		<olt_pon_type>0</olt_pon_type>
+		<olt_mode>1</olt_mode>
+		<vdsl2_port_type>0</vdsl2_port_type>
+		<is_10g_epon>1</is_10g_epon>
+	</serviceProperty_old>
+</ONU_OrderRequest>
