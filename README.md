@@ -4,7 +4,7 @@ This repository include some internal documents which came from Telecom.
 
 The size of this repository about 3.5 gigabytes.  
 
-if you like that can feel free to clone it to your local. 
+If you like that can feel free to clone it to your local. 
 
 But I will pick some significant files then upload to other net disks platform.
 
