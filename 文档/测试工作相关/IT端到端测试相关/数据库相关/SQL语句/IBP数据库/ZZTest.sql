@@ -1,10 +1,11 @@
-select * from intf_requestlog where crmquotenumber='WMZ2020041305324142';--接口表，IBP发给综资的信息
--- intf_requestlog表中的TARGETMETHOD为订单配置状态，createService是创服务，checkService是资源审核
-SELECT * from c_serviceorder where crmquotenumber like 'WMZ2020032305208888'; --订单表
+select * from intf_requestlog where crmquotenumber='WMX2020050605412755';--接口表，IBP发给综资的信息
+-- intf_requestlog表中的TARGETMETHOD为订单配置状态，createService是创服务，checkService是资源审核，queryService是原资产查询,archiveService是完工归档
+-- TARGETMETHOD状态为createService创服务时需要查看REQUESTOBJECT字段的报文内容，checkService资源审核，queryService原资产查询时需要查看RESPONSEOBJECT字段的报文内容
+SELECT * from c_serviceorder where crmquotenumber like 'WMX2020050605412739'; --订单表
 -- c_serviceorder会有一条记录，其中SERVICE_ID为空，因为该项为主单。SERVICE_ID有值的为子单
 -- 在综资界面配置的时候，都是在子单中操作
-SELECT * from c_Servicecurrent WHERE globalserviceid='M2049021';--在途服务表,根据c_serviceorder的GLOBALSERVICEID查询,即设备编号
-SELECT * from intf_datafortelement where CRMQUOTENUMBER = 'WMZ2020032305208888';  
+SELECT * from c_Servicecurrent WHERE globalserviceid='400145365364';--在途服务表,根据c_serviceorder的GLOBALSERVICEID查询,即设备编号
+SELECT * from intf_datafortelement where CRMQUOTENUMBER = 'WMX2020050605412739';  
 --综资返回IBP是否收到的表
 
 select * from INTF_FAILEDREQLOG_IFCARCHIVE WHERE SERVICEID LIKE 'M2049022%'; -- 综资归档表

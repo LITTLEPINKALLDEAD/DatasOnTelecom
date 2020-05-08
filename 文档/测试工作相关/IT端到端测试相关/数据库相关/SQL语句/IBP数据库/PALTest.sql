@@ -1,5 +1,5 @@
 select * from ra_workorder_request where crm_order_number = '(2019)/19076533-0001'; --P7-综资
-select * from ra_workorder_request where crm_order_number = 'WMZ2020042005336888'
+select * from ra_workorder_request where crm_order_number = 'WMX2020050605412739'
 select * from ra_workorder_request where P_RESULT is NOT null and rownum < 11 order by RECEIVE_TIME DESC; --根据订单的接收时间从近到远选取最近10张有报错信息的订单
 select * from ra_workorder_request where crm_order_number = '2-30242684394'; --P7-综资，订单原资产报错
 select * from ra_workorder_request where ORDER_SEQ_ID = '28471' order by RA_COMPLELED_TIME DESC; --P7-综资，用P7号查询
@@ -45,7 +45,7 @@ select CRM_ORDER_NUMBER from ra_workorder_request where USER_ID_97 like '%M13076
 
 select * from RA_WORKORDER_REQUEST where P_RESULT like '%Could%' and rownum<=10;
 
-select aa.WORK_ORDER_RETURN from RA_WORKORDER_REQUEST aa where aa.CRM_ORDER_NUMBER = 'WMZ2019120900520389' and aa.REQUEST_TYPE like '%query%';
+select aa.WORK_ORDER_RETURN from RA_WORKORDER_REQUEST aa where aa.CRM_ORDER_NUMBER in ('WMX2020050605412739') and aa.REQUEST_TYPE like '%query%';
 --有线宽带，专线宽带报文查询，在WORK_ORDER_REQUEST查找start_project_build字段
 
 select pub_b2c(d.xmlinfo),D.* from t_Sf_Receive_Quene D WHERE D.SPS_APPLY_ID like '(2019)/19065595_0001PZ%';
@@ -111,5 +111,8 @@ select asap.CRM_ORDER_NUMBER,asap.request_type,asap.platform,asap.work_order_req
 
 select asap.CRM_ORDER_NUMBER,asap.request_type,asap.platform,asap.work_order_request from asap_workorder_request asap where asap.crm_order_number in('WMX2020042705390541','WMX2020042705390543','WMX2020042705390822','WMX2020042705390824','WMX2020042705390875');
 -- 验证后付费鹏博士宽带产品是否派发了ONU工单
+
+select aa.CRM_ORDER_NUMBER,aa.WORK_ORDER_RETURN from RA_WORKORDER_REQUEST aa where aa.CRM_ORDER_NUMBER in ('WMX2020050605412739','WMX2020050605412755','WMX2020050605412758') and aa.REQUEST_TYPE like '%query%';
+-- 查询固定电话移机单中的报文，ims_type的值为华为IMS
 
 --帐号：nonphs_aa    密码nophsq
