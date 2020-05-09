@@ -1,5 +1,5 @@
 select * from ra_workorder_request where crm_order_number = '(2019)/19076533-0001'; --P7-综资
-select * from ra_workorder_request where crm_order_number = 'WMX2020050605412739'
+select * from ra_workorder_request where crm_order_number = 'WMX2020050905428062'
 select * from ra_workorder_request where P_RESULT is NOT null and rownum < 11 order by RECEIVE_TIME DESC; --根据订单的接收时间从近到远选取最近10张有报错信息的订单
 select * from ra_workorder_request where crm_order_number = '2-30242684394'; --P7-综资，订单原资产报错
 select * from ra_workorder_request where ORDER_SEQ_ID = '28471' order by RA_COMPLELED_TIME DESC; --P7-综资，用P7号查询
@@ -112,7 +112,14 @@ select asap.CRM_ORDER_NUMBER,asap.request_type,asap.platform,asap.work_order_req
 select asap.CRM_ORDER_NUMBER,asap.request_type,asap.platform,asap.work_order_request from asap_workorder_request asap where asap.crm_order_number in('WMX2020042705390541','WMX2020042705390543','WMX2020042705390822','WMX2020042705390824','WMX2020042705390875');
 -- 验证后付费鹏博士宽带产品是否派发了ONU工单
 
+select asap.CRM_ORDER_NUMBER,asap.request_type,asap.platform,asap.work_order_request,asap.* from asap_workorder_request asap where asap.crm_order_number in('WMX2020050905428062');
+--查看固定电话非vims资产移机的报文，IBP派发vims装机单，老IMS的移拆工单
+
 select aa.CRM_ORDER_NUMBER,aa.WORK_ORDER_RETURN from RA_WORKORDER_REQUEST aa where aa.CRM_ORDER_NUMBER in ('WMX2020050605412739','WMX2020050605412755','WMX2020050605412758') and aa.REQUEST_TYPE like '%query%';
 -- 查询固定电话移机单中的报文，ims_type的值为华为IMS
+
+select aa.CRM_ORDER_NUMBER,aa.WORK_ORDER_RETURN,AA.WORK_ORDER_REQUEST,aa.request_type from RA_WORKORDER_REQUEST aa where aa.CRM_ORDER_NUMBER in ('WMZ2020050905427424','WMZ2020050905427428');
+-- 查询专线宽带订单中的报文，用户接入模式（user_access_mode）值为路由模式和交换模式
+
 
 --帐号：nonphs_aa    密码nophsq
