@@ -121,5 +121,10 @@ select aa.CRM_ORDER_NUMBER,aa.WORK_ORDER_RETURN from RA_WORKORDER_REQUEST aa whe
 select aa.CRM_ORDER_NUMBER,aa.WORK_ORDER_RETURN,AA.WORK_ORDER_REQUEST,aa.request_type from RA_WORKORDER_REQUEST aa where aa.CRM_ORDER_NUMBER in ('WMZ2020050905427424','WMZ2020050905427428','WMZ2020050905430717','WMZ2020050905430719');
 -- 查询专线宽带订单中的报文，用户接入模式（user_access_mode）值为路由模式和交换模式
 
+select t.CRM_ORDER_NUMBER,t.work_order_request from pai_workorder_request t  where t.crm_order_number in('WMZ2020051405443620') and t.platform='P002c';
+-- 查询专线宽带订单中的报文，验证参数名：user_access_mode （用户接入模式）, co_ip_info（局端IP信息）
+
+select * from P6_CRM_NOTIFICATION where CRM_ORDER_NUMBER = 'WMX2020051105433000';
+-- P6_CRM_NOTIFICATION是查询IBP返回CRM消息记录的表
 
 --帐号：nonphs_aa    密码nophsq

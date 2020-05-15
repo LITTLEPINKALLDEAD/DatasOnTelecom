@@ -1,4 +1,4 @@
-select * from intf_requestlog where crmquotenumber='WMX2020050905430273';--接口表，IBP发给综资的信息
+select * from intf_requestlog where crmquotenumber='WMZ2020051405443620';--接口表，IBP发给综资的信息
 -- intf_requestlog表中的TARGETMETHOD为订单配置状态，createService是创服务，checkService是资源审核，queryService是原资产查询,archiveService是完工归档
 -- TARGETMETHOD状态为createService创服务时需要查看REQUESTOBJECT字段的报文内容，checkService资源审核，queryService原资产查询时需要查看RESPONSEOBJECT字段的报文内容
 SELECT * from c_serviceorder where crmquotenumber like 'WMX2020050605412739'; --订单表
