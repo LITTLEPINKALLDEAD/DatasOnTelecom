@@ -27,6 +27,12 @@ I'm used to such work status starts from the first day to here. What a joke is t
 URL of net disk:
 Not available now.
 
+Note:
+The website of recommended download tool "Pandownload":
+http://pandownload.com/index.html
+
+Though the author has been "arrested" but the software is still working now and can be used!
+
 <a href="https://996.icu"><img src="https://img.shields.io/badge/link-996.icu-red.svg" alt="996.icu"></a>
 
 [![LICENSE](https://img.shields.io/badge/license-Anti%20996-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE)
