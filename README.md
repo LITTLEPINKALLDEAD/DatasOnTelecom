@@ -32,6 +32,7 @@ You can download the small capacity and simple files through the website. But if
 
 The official webstie of "PanDownload":
 http://pandownload.com/index.html
+https://www.lanzous.com/i8ua9na
 
 Though the author has been "arrested" but the software is still working now and can be used!
 
