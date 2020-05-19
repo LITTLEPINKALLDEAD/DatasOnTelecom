@@ -24,11 +24,13 @@ The lunkhead will do it ASAP. If he had no time, he also would write some docume
 
 I'm used to such work status starts from the first day to here. What a joke is that just risen by one thousand for salary in three years!
 
-URL of net disk:
+URL of net disk (It will be soon):
 Not available now.
 
 Note:
-The website of recommended download tool "Pandownload":
+You can download the small capacity and simple files through the website. But if you want download all files from project then recommend to use download tool "PanDownload".
+
+The official webstie of "PanDownload":
 http://pandownload.com/index.html
 
 Though the author has been "arrested" but the software is still working now and can be used!
