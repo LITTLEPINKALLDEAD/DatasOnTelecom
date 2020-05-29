@@ -14,6 +14,10 @@ Select t.*,t.rowid From intf_failedrequestlog_forifc t Where t.serviceid like 'M
 
 SELECT * FROM INTF_FAILEDREQUESTLOG_FORIFC where SERVICEID = 'M2049022'; --综资配置完发出去的表
 
+select * from C_CIRCUIT where rownum<11; --综资电路表
+
+select * from C_ADDRESS where rownum<11; --综资地址表
+
 select * from mm_dictionary where id in (SELECT PROCESSTYPE from c_serviceorder where crmquotenumber like 'WMZ2020032305208888');
  -- 从c_serviceorder表中查询PROCESSTYPE的为订单类型
 select * from mm_dictionary where id in (SELECT DOTYPE from c_serviceorder where crmquotenumber like 'WMZ2020032305208888');
