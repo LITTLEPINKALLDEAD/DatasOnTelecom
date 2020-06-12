@@ -27,7 +27,7 @@ ACTION_CD<>'现有的'
 
 
 select * from siebel.S_ORDER where ORDER_NUM='2-30335573161';
-update siebel.S_ORDER set STATUS_CD='通过合法性校验' where row_id='2-DXP0M21';
+update siebel.S_ORDER set STATUS_CD='通过合法性校验' where row_id='2-DX9DRJ1';
 commit;
 --改CRM状态为通过合法性校验
 

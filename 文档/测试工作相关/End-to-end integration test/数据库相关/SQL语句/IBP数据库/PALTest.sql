@@ -124,12 +124,13 @@ select aa.CRM_ORDER_NUMBER,aa.WORK_ORDER_RETURN,AA.WORK_ORDER_REQUEST,aa.request
 select t.CRM_ORDER_NUMBER,t.work_order_request from pai_workorder_request t  where t.crm_order_number in('WMZ2020052105492801','WMZ2020052105497728','WMZ2020052305520425','WMZ2020052305520424','WMZ2020052305520423','WMZ2020052305520426','WMZ2020052505536997','WMZ2020052505536827') and t.platform='P002c';
 -- 查询专线宽带订单中的报文，验证参数名：user_access_mode （用户接入模式）, co_ip_info（局端IP信息）
 
-select asap.CRM_ORDER_NUMBER,asap.request_type,asap.platform,asap.work_order_request,asap.* from asap_workorder_request asap where asap.crm_order_number in('WMX2020050905428062');
+select asap.CRM_ORDER_NUMBER,asap.request_type,asap.platform,asap.work_order_request,asap.* from asap_workorder_request asap where asap.crm_order_number in ('(2020)/404841383');
+select asap.CRM_ORDER_NUMBER,asap.request_type,asap.platform,asap.work_order_request,asap.* from asap_workorder_request asap where asap.crm_order_number in ('(2020)/404841397');
 --查看普通直线零星割接且新老项onu逻辑编号发生变化,需要派发：数字家庭移入局 修改单、数字家庭归属局拆单、Vims移入局装单、ims-hss/tel归属局拆单
 --若家庭网关类型=SDN，
 --派发：SDN移入局修改单，SDN归属局拆机单、外线移入局装单、外线归属局拆机单、ONU归属局拆单，ONU移入局装单、Enum施工确认 割接、Enum移入局修改单、SHLR施工确认 割接、SHLR移入局修改单
 
-select asap.CRM_ORDER_NUMBER,asap.request_type,asap.platform,asap.work_order_request,asap.* from asap_workorder_request asap where asap.crm_order_number in('WMX2020050905428062');
+select asap.CRM_ORDER_NUMBER,asap.request_type,asap.platform,asap.work_order_request,asap.* from asap_workorder_request asap where asap.crm_order_number in ('WMX2020050905428062');
 --查看普通直线零星割接且新老项onu逻辑编号无变化,需要派发：Vims移入局装单、Ims-hss/tel归属局拆单、SHLR移入局修改单、Enum移入局修改单、数字家庭移入局修改单
 --若家庭网关类型=SDN，
 --派发：SDN移入局修改单
