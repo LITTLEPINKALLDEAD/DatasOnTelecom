@@ -45,7 +45,7 @@ select CRM_ORDER_NUMBER from ra_workorder_request where USER_ID_97 like '%M13076
 
 select * from RA_WORKORDER_REQUEST where P_RESULT like '%Could%' and rownum<=10;
 
-select aa.WORK_ORDER_RETURN from RA_WORKORDER_REQUEST aa where aa.CRM_ORDER_NUMBER in ('WMX2020050605412739') and aa.REQUEST_TYPE like '%query%';
+select aa.WORK_ORDER_RETURN from RA_WORKORDER_REQUEST aa where aa.CRM_ORDER_NUMBER in ('WMX2020061905549500') and aa.REQUEST_TYPE like '%query%';
 --有线宽带，专线宽带报文查询，在WORK_ORDER_REQUEST查找start_project_build字段
 
 select pub_b2c(d.xmlinfo),D.* from t_Sf_Receive_Quene D WHERE D.SPS_APPLY_ID like '(2019)/19065595_0001PZ%';
@@ -134,6 +134,13 @@ select asap.CRM_ORDER_NUMBER,asap.request_type,asap.platform,asap.work_order_req
 --查看普通直线零星割接且新老项onu逻辑编号无变化,需要派发：Vims移入局装单、Ims-hss/tel归属局拆单、SHLR移入局修改单、Enum移入局修改单、数字家庭移入局修改单
 --若家庭网关类型=SDN，
 --派发：SDN移入局修改单
+
+select asap.CRM_ORDER_NUMBER,asap.request_type,asap.platform,asap.work_order_request from asap_workorder_request asap where asap.crm_order_number in('WMX2020061905549749');
+-- 验证预付费鹏博士宽带产品(补充需求)是否派发了ONU工单
+
+select asap.CRM_ORDER_NUMBER,asap.request_type,asap.platform,asap.work_order_request from asap_workorder_request asap where asap.crm_order_number in('WMX2020061905549744');
+-- 验证后付费鹏博士宽带产品(补充需求)是否派发了ONU工单
+
 
 select w.crm_order_number,w.user_id_97 from ra_workorder_request w where w.crm_order_number in ('2-30343454773','2-30343469276','2-30343471776','2-30343474275','2-30343475775');
 
