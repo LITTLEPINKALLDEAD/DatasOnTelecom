@@ -135,10 +135,10 @@ select asap.CRM_ORDER_NUMBER,asap.request_type,asap.platform,asap.work_order_req
 --若家庭网关类型=SDN，
 --派发：SDN移入局修改单
 
-select asap.CRM_ORDER_NUMBER,asap.request_type,asap.platform,asap.work_order_request from asap_workorder_request asap where asap.crm_order_number in('WMX2020061905549749');
+select asap.CRM_ORDER_NUMBER,asap.request_type,asap.platform,asap.work_order_request from asap_workorder_request asap where asap.crm_order_number in('WMX2020061905549863','WMX2020062005549866','WMX2020062005549868');
 -- 验证预付费鹏博士宽带产品(补充需求)是否派发了ONU工单
 
-select asap.CRM_ORDER_NUMBER,asap.request_type,asap.platform,asap.work_order_request from asap_workorder_request asap where asap.crm_order_number in('WMX2020061905549744');
+select asap.CRM_ORDER_NUMBER,asap.request_type,asap.platform,asap.work_order_request from asap_workorder_request asap where asap.crm_order_number in('WMX2020061905549744','WMX2020061905549864','WMX2020062005549865','WMX2020062005549867');
 -- 验证后付费鹏博士宽带产品(补充需求)是否派发了ONU工单
 
 
