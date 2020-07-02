@@ -141,6 +141,17 @@ select asap.CRM_ORDER_NUMBER,asap.request_type,asap.platform,asap.work_order_req
 select asap.CRM_ORDER_NUMBER,asap.request_type,asap.platform,asap.work_order_request from asap_workorder_request asap where asap.crm_order_number in('WMX2020061905549744','WMX2020061905549864','WMX2020062005549865','WMX2020062005549867');
 -- 验证后付费鹏博士宽带产品(补充需求)是否派发了ONU工单
 
+select work_order_request from  ra_workorder_request where crm_order_number in ('WMX2020070205552043','WMX2020070205552056') and request_type='createIntResService';
+--3.验证IBP发送综资创服务报文set_top_box_4k 为：18，验证方法登陆PAL数据库：
+
+select a.work_order_request from pai_workorder_request a  where crm_order_number in ('WMX2020070205552043','WMX2020070205552056') and a.platform='13';
+--4.验证IBP发送IPTV工单报文set_top_box_4k 为：18，验证方法登陆PAL数据库：
+
+select work_order_request from  ra_workorder_request where crm_order_number in ('WMX2020070205552043','WMX2020070205552056') and request_type='queryIntResService';
+--6.验证综资原资产查询返回时，返回的set_top_box_4k 为：18，验证方法登陆PAL数据库：
+
+select asap.CRM_ORDER_NUMBER,asap.request_type,asap.platform,asap.work_order_request from asap_workorder_request asap where asap.crm_order_number in ('WMX2020070205552043','WMX2020070205552056');
+-- 验证后付费宽带产品（带ITV子产品，且“4K机顶盒”属性：“无线播播宝盒”）是否派发了ONU工单
 
 select w.crm_order_number,w.user_id_97 from ra_workorder_request w where w.crm_order_number in ('2-30343454773','2-30343469276','2-30343471776','2-30343474275','2-30343475775');
 

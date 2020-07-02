@@ -1,28 +1,29 @@
-select c.STATUS,c.* from wp_srq c where p6_order_id in ('37186') and TASK_ID like '%kb%'; --å·¥å•å¤„ç†çŠ¶æ€ï¼Œå¯¹æ¥å®¢ä¿èƒ½çœ‹å‘é€å·¥å•æˆåŠŸï¼Œå¤±è´¥
---- wp_srqä¸­çš„
---- Statusï¼š101æœªå‘é€ï¼Œ102å·²æ´¾å‘ã€104å·²æ‰“å°ã€
---- 105å·²ç«£å·¥ã€255å·²æ’¤é”€ã€250å¾…æ’¤é”€ã€254é‡æ´¾ä¸­ã€253é€€å•ä¸­ã€251å¾…ä¿®æ”¹
---- TASK_IDä¸ºddxx:1æ˜¯WOPå·¥å•ï¼Œå¯åœ¨WOPç•Œé¢ä¸ŠæŸ¥è¯¢ï¼Œ2Mçš„WOPå·¥å•ï¼Œæµ‹è¯•ç¯å¢ƒä¸Šæ²¡æœ‰
+select c.STATUS,c.* from wp_srq c where p6_order_id in ('37186') and TASK_ID like '%kb%'; --¹¤µ¥´¦Àí×´Ì¬£¬¶Ô½Ó¿Í±£ÄÜ¿´·¢ËÍ¹¤µ¥³É¹¦£¬Ê§°Ü
+--- wp_srqÖĞµÄ
+--- Status£º101Î´·¢ËÍ£¬102ÒÑÅÉ·¢¡¢104ÒÑ´òÓ¡¡¢
+--- 105ÒÑ¿¢¹¤¡¢255ÒÑ³·Ïú¡¢250´ı³·Ïú¡¢254ÖØÅÉÖĞ¡¢253ÍËµ¥ÖĞ¡¢251´ıĞŞ¸Ä
+--- TASK_IDÎªddxx:1ÊÇWOP¹¤µ¥£¬¿ÉÔÚWOP½çÃæÉÏ²éÑ¯£¬2MµÄWOP¹¤µ¥£¬²âÊÔ»·¾³ÉÏÃ»ÓĞ
 
 
 -- order by receive_dts desc 
--- select ww.PROCESS_STATUS,ww.* from wp_p6_req ww where p6_order_id in('36234'); --äººå·¥å·¥å•å†…å®¹
---- wp_p6_reqä¸­çš„
---- PROCESS_STATUSï¼š101æœªå‘é€ï¼Œ102å·²æ´¾å‘ã€104å·²æ‰“å°ã€105å·²ç«£å·¥ã€
---- 255å·²æ’¤é”€ã€250å¾…æ’¤é”€ã€254é‡æ´¾ä¸­ã€253é€€å•ä¸­ã€251å¾…ä¿®æ”¹
---- wp_srqçš„process_flagï¼š02æˆåŠŸï¼Œ0Pï¼Œ0Eå¤±è´¥
---- éœ€è¦åœ¨å®¢ä¿ç•Œé¢ä¸­å¯¹å·¥å•è¿›è¡Œå›å•ï¼ŒçŠ¶æ€æ‰ä¼šå‘ç”Ÿå˜åŒ–
+-- select ww.PROCESS_STATUS,ww.* from wp_p6_req ww where p6_order_id in('36234'); --ÈË¹¤¹¤µ¥ÄÚÈİ
+--- wp_p6_reqÖĞµÄ
+--- PROCESS_STATUS£º101Î´·¢ËÍ£¬102ÒÑÅÉ·¢¡¢104ÒÑ´òÓ¡¡¢105ÒÑ¿¢¹¤¡¢
+--- 255ÒÑ³·Ïú¡¢250´ı³·Ïú¡¢254ÖØÅÉÖĞ¡¢253ÍËµ¥ÖĞ¡¢251´ıĞŞ¸Ä
+--- wp_srqµÄprocess_flag£º02³É¹¦£¬0P£¬0EÊ§°Ü
+--- ĞèÒªÔÚ¿Í±£½çÃæÖĞ¶Ô¹¤µ¥½øĞĞ»Øµ¥£¬×´Ì¬²Å»á·¢Éú±ä»¯
 
 
 
 -- order by CREATE_DTS desc 
 
---(2019)/19076225_0001PZçš„P6å·ä¸º15094
---(2019)/19076222_0001PZ,P6å·ä¸º15091
+--(2019)/19076225_0001PZµÄP6ºÅÎª15094
+--(2019)/19076222_0001PZ,P6ºÅÎª15091
 
 select a.p6_req_content from wp_p6_req a where a.crm_order_id in ('WMZ2020010900535453') and a.plane_type='111'
---éªŒè¯å­—æ®µï¼šâ€œdevice_serial_numâ€ã€â€œdevice_modelâ€ã€â€œsla_servcieâ€ã€â€œsafety_auditâ€ã€â€œintrusion_detection_defenseâ€ã€â€œfour_layer_firewallâ€ã€â€œweb_apply_protectâ€
+--ÑéÖ¤×Ö¶Î£º¡°device_serial_num¡±¡¢¡°device_model¡±¡¢¡°sla_servcie¡±¡¢¡°safety_audit¡±¡¢¡°intrusion_detection_defense¡±¡¢¡°four_layer_firewall¡±¡¢¡°web_apply_protect¡±
 
+select a.p6_req_content from wp_p6_req a where a.crm_order_id in ('WMX2020070205552043','WMX2020070205552056');
+--5.ÑéÖ¤IBP·¢ËÍ¿Í±£ÍâÏß¹¤µ¥¹¤µ¥±¨ÎÄset_top_box_4k Îª£º18£¬ÑéÖ¤·½·¨µÇÂ½WOPÊı¾İ¿â
 
-
---WOP å¸å·ï¼šwopdb     å¯†ç ï¼šnophsq
+--WOP ÕÊºÅ£ºwopdb     ÃÜÂë£ºnophsq
