@@ -23,7 +23,10 @@ select c.STATUS,c.* from wp_srq c where p6_order_id in ('37186') and TASK_ID lik
 select a.p6_req_content from wp_p6_req a where a.crm_order_id in ('WMZ2020010900535453') and a.plane_type='111'
 --验证字段：“device_serial_num”、“device_model”、“sla_servcie”、“safety_audit”、“intrusion_detection_defense”、“four_layer_firewall”、“web_apply_protect”
 
-select a.p6_req_content from wp_p6_req a where a.crm_order_id in ('WMX2020070205552043','WMX2020070205552056');
+select a.crm_order_id,a.p6_req_content from wp_p6_req a where a.crm_order_id in ('WMX2020070205552043','WMX2020070205552056','WMX2020070205552102','WMX2020070205552100','WMX2020070105552001','WMX2020070205552126','WMX2020070205552136','WMX2020070205552135');
 --5.验证IBP发送客保外线工单工单报文set_top_box_4k 为：18，验证方法登陆WOP数据库
+
+select a.crm_order_id,a.p6_req_content from wp_p6_req a where a.crm_order_id in ('WMX2020061905549744','WMX2020061905549864','WMX2020062005549865','WMX2020062005549867','WMX2020061905549863','WMX2020062005549866','WMX2020062005549868');
+--鹏博士需要发客保外线的订单
 
 --WOP 帐号：wopdb     密码：nophsq
