@@ -1,0 +1,37 @@
+<ONU_OrderRequest>
+	<order_type>1</order_type>
+	<serv_type>C</serv_type>
+	<serv_sub_type>C01</serv_sub_type>
+	<service_id>KD2003070464</service_id>
+	<p6_order_id>65674</p6_order_id>
+	<crm_order_no>WMX2020070205552100</crm_order_no>
+	<sub_bureau_code>162</sub_bureau_code>
+	<serviceProperty_old>
+		<pon_type>FTTH</pon_type>
+		<voice>N</voice>
+		<onu_provider>HW</onu_provider>
+		<adsl_sp_flag>0</adsl_sp_flag>
+		<a_c_flag>C</a_c_flag>
+		<iptv_flag>Y</iptv_flag>
+		<voip_vlan>213</voip_vlan>
+		<olt_ip>203.31.167.235</olt_ip>
+		<olt_type>MA5800</olt_type>
+		<iptv_vlan>SH-SH-NJ-MSE-2.MAN.M6000/255-0-25-0813-2074</iptv_vlan>
+		<home_gateway_flag>3</home_gateway_flag>
+		<account_price_type>12</account_price_type>
+		<olt_name>政立D1/HW5800-OLT35</olt_name>
+		<onu_logical_id>0070135852</onu_logical_id>
+		<olt_pon_port>0/04/n/03</olt_pon_port>
+		<onu_no>20</onu_no>
+		<onu_uni_no>DQ/HW-ONT5259646/0/1/1(FE)</onu_uni_no>
+		<vlan_no>SH-SH-NJ-MSE-2.MAN.M6000/255-0-25-0313-2074</vlan_no>
+		<olt_location>0</olt_location>
+		<bureau_code>2</bureau_code>
+		<olt_mode>1</olt_mode>
+		<vdsl2_port_type>0</vdsl2_port_type>
+		<download_speed>F</download_speed>
+		<upload_speed>D</upload_speed>
+		<is_10g_epon>1</is_10g_epon>
+		<slim_ap_vlan>SH-SH-NJ-MSE-2.MAN.M6000/255-0-25-0713-2074</slim_ap_vlan>
+	</serviceProperty_old>
+</ONU_OrderRequest>

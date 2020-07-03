@@ -41,8 +41,13 @@ http://10.145.206.7:9082/baf/jsp/uiframe/login.xhtml
 旧密码：888888
 新密码：CcSs0Ft2019
 
-p7
+P7
 http://10.145.206.49:5001/OrderManagement/control/runPFVQuery
+用户名：oms-automation
+密码：passw0rd
+
+P7 仿真
+http://10.145.198.156:5001/OrderManagement/Login.jsp
 用户名：oms-automation
 密码：passw0rd
 
