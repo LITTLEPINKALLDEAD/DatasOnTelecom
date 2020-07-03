@@ -71,7 +71,8 @@ select a.p6_req_content from wp_p6_req a where a.crm_order_id='WMX20200703055523
 IBP派发热线网管、ONU、数字家庭、IPTV、SDN、客保外线工单
 订单号：WMX2020070305552345，设备号：KD2003070491 (Pass完工)
 
-set_top_box_4k = 18
+新项：set_top_box_4k = 18
+老项：set_top_box_4k = 0
 
 IBP发送综资创服务报文（PAL）：
 select work_order_request from  ra_workorder_request where crm_order_number='WMX2020070305552345' and request_type='createIntResService';
