@@ -1,0 +1,43 @@
+POST http://test.sh.ctc.com/jchj/openApi/gis/addressBelong/addressBelong HTTP/1.1
+Host: test.sh.ctc.com
+Connection: keep-alive
+Content-Length: 287
+X-App-Id: 07fa46701bf579d23fc6ff17d7cba662
+x-paas-frontend-user: HEBING
+Origin: http://test.sh.ctc.com
+virtualOrderId: 
+X-App-Key: 4ce394ef6dddfa627f7ca32f244826a2
+User-Agent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36 UniteBrowser/1.0
+Content-Type: application/json;charset=UTF-8
+Access-Control-Allow-Origin: *
+Accept: application/json, text/plain, */*
+sessionId: NGU2MjY4ODgtNDJiNS00OTA3LTg2YWQtZTdjMjJlZjhkNDZi
+Referer: http://test.sh.ctc.com/jchj/
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN
+Cookie: ZUUL-SESSION-ID=NGU2MjY4ODgtNDJiNS00OTA3LTg2YWQtZTdjMjJlZjhkNDZi; warning=1; loged=4_GxHJrxRbFNFQ3+Q4FaerGsQP2nPYEgVq6wCupgD8Gg1XUeKQ; tips=1; ltpacreatetime=0; logintype=1; AMWEBJCT!%2Fpwdexpi!JSESSIONID=0000NpXoZjOSYVvKWdZvvTAJRU_:-1; auth_flag=true; PD-H-SESSION-ID=4_I0mqu5eBWzNVejlosjNJyMsKo4MyaFifmzVCzyCvFA+i9MMa; AMWEBJCT!%2Fportalserver!JSESSIONID=0000nq1sqdce9QJrz2z4rpMu0Rh:1arujvhvs; updatesessiontime=1594360903; goto_url=/; AMWEBJCT!%2Fportalserverqy!JSESSIONID=0000a1gT0hMdUtQlCbycOBIGwkG:1a16bn5f8; MssSsoToken=; LtpaToken=fyKd59ZLFq7GXjSmSn1zCYJXIKFtZS6h8Uq5r7c/zW6xzJJZYOvecVujsNov7v93KSvzqyXpSbi1mZv36+D1ORtxEjdMclIg1AaBc14P5/ZmyGtVfBOHcJUOqIXK6mJ6y5byey6Z5jkNBqNAUawd3CBcEsh7MwxuqjZjAS26POytckkkeJyJ9UwQTpYJM0AoP5kkbjKB3ZjodRsLk6gAIh36U/3Bme5VIuxlKREowHSPtI31VbFOr7wQElwCWrR4KhhIHNwPFUofeibClaZHjLs9NMxYMAt6hOUm5JDDg2d17ENwDH5Hywh1gQM/TJs9NLRZFIswkQSVmYVkuWpifI3QZtqTQ98q; updatesessiontime; ReqStageEnv=0; regionId=8310100; sessionId=NGU2MjY4ODgtNDJiNS00OTA3LTg2YWQtZTdjMjJlZjhkNDZi; orgCode=3101001003124; ReqUserId=21134260
+
+{"address_full":"上海市普陀区长征镇武宁路2525号旁边的电线杆","contact_id":"","employee_id":"HEBING","address_id":41919710,"address_desc":"上海市普陀区长征镇武宁路2525号","address_manualinput":{"addr_description":"旁边的电线杆"},"source_flag":"5008"}
+HTTP/1.1 200
+content-type: application/json;charset=UTF-8
+date: Fri, 10 Jul 2020 06:06:09 GMT
+p3p: CP="NON CUR OTPi OUR NOR UNI"
+server: nginx/1.11.0
+vary: Accept-Encoding, Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+x-content-type-options: nosniff
+verno: 1.0
+x-paas-frontend-user: HEBING
+repservunitname: gisgateway
+repservunitversion: app$de$1.0,lbtable
+x-frame-options: DENY
+access-control-allow-origin: *
+reptimestamp: 2020-07-10 14:06:09.733
+pragma: no-cache
+cache-control: no-cache, no-store, max-age=0, must-revalidate
+x-xss-protection: 1; mode=block
+repdockerip: 10.233.96.6
+expires: 0
+x-original-http-status-code: 200
+Content-Length: 750
+
+{"success":true,"status":0,"msg":"操作成功！","queryResult":{"addr_4273":null,"addr_4274":null,"addr_4271":"2525号","addr_4272":null,"addr_floor":null,"bureau_id":"222123354117","bureau_name":"西区","addr_street":"长征镇","addr_commu":null,"addr_area":"普陀区","mark_add":1,"addr_full":"上海市普陀区长征镇武宁路2525号","addr_room_outside":null,"road_name":"武宁路","addr_room":null,"sub_bureau_id":"222123354542","address_type":"Y","addr_road":"武宁路","address_id":41919710,"postcode":200062,"bureau_code":"3","sub_bureau_code":"145","sub_bureau_name":"梅川","crm_id":null,"addr_description":"上海市普陀区长征镇武宁路2525号旁边的电线杆","addr_city":"上海市","addr_description_id":1040373082}}
