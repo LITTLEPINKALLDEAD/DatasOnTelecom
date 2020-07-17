@@ -1,0 +1,51 @@
+验证IBP工单派发逻辑改造:
+1.IBP施工派发规则修改，当产品类型为普通直线(有线宽带)，操作类型为零星割接时，
+
+对应场景：(固定电话割接（onu逻辑号变化），有线宽带割接（onu逻辑号变化）)
+
+判断若新老项为ims用户，
+且新项ims用户为：华为ims,老项ims用户非华为ims用户，且新老项onu逻辑编号发生变化，
+
+需要派发：数字家庭移入局新装单、数字家庭归属局拆单、Vims移入局装单、ims-hss/mmtel归属局拆单
+
+若家庭网关类型=SDN，
+派发：SDN移入局修改单，SDN归属局拆机单、外线移入局装单、外线归属局拆机单、ONU归属局拆单，ONU移入局装单、Enum施工确认 割接、Enum移入局修改单、SHLR施工确认 割接、SHLR移入局修改单。
+
+验证IBP发送报文新项ims_type的值为华为IMS，验证方法登陆PAL数据库：
+select aa.WORK_ORDER_RETURN from RA_WORKORDER_REQUEST aa where aa.CRM_ORDER_NUMBER like '%订单号%' and aa.REQUEST_TYPE like '%query%';
+
+验证割接单中IBP派发了vims工单，验证方法登陆PAL数据库：
+select t.*,t.rowid from asap_workorder_request t where crm_order_number like '订单号' and request_type='VIMS_OrderRequest' order by hist_seq_id;
+
+验证割接单中IBP派发了vims工单，Enum工单，SHLR工单等，验证方法登陆PAL数据库：
+select asap.CRM_ORDER_NUMBER,asap.request_type,asap.platform,asap.work_order_request,asap.* from asap_workorder_request asap where asap.crm_order_number like '%订单号%';
+
+=============================================================================================
+
+2.IBP施工派发规则修改，当产品类型为普通直线(有线宽带)，操作类型为零星割接时，
+
+对应场景：(固定电话割接（onu逻辑号无变化），有线宽带割接（onu逻辑号无变化）)
+
+判断若新老项为ims用户，
+且新项ims用户为：华为ims,老项ims用户非华为ims用户，且新老项onu逻辑编号无变化时，
+
+需要派发：Vims移入局装单、Ims-hss/mmtel归属局拆单、SHLR移入局修改单、Enum移入局修改单、数字家庭移入局修改单
+
+若家庭网关类型=SDN，派发：SDN移入局修改单。
+
+验证割接单中IBP派发了vims工单，验证方法登陆PAL数据库：
+select t.*,t.rowid from asap_workorder_request t where crm_order_number like '订单号' and request_type='VIMS_OrderRequest' order by hist_seq_id;
+
+验证割接单中IBP派发了vims工单，Enum工单，SHLR工单等，验证方法登陆PAL数据库：
+select asap.CRM_ORDER_NUMBER,asap.request_type,asap.platform,asap.work_order_request,asap.* from asap_workorder_request asap where asap.crm_order_number like '%订单号%';
+
+=============================================================================================
+WOP操作：
+1. 这个就是正常的，vims的装已经有了，SHLR和IMS的人工施工确认你要在wop上操作才行，操作好了才会有SHLR和ENUM的工单
+
+2. 刚刚两张工单施工确认完毕后，看到是多了SHLR和IMS工单了
+
+3. 确认完之后等p7上人工施工任务自动结束就可以继续做下去了
+
+4. 然后你做到归属局应该可以看到hss的拆
+

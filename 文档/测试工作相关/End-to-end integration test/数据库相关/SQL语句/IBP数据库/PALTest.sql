@@ -155,6 +155,19 @@ select asap.CRM_ORDER_NUMBER,asap.request_type,asap.platform,asap.work_order_req
 
 select w.crm_order_number,w.user_id_97 from ra_workorder_request w where w.crm_order_number in ('2-30343454773','2-30343469276','2-30343471776','2-30343474275','2-30343475775');
 
+select aa.CRM_ORDER_NUMBER,aa.WORK_ORDER_RETURN from RA_WORKORDER_REQUEST aa where aa.CRM_ORDER_NUMBER like '%(2020)/404841570%' and aa.REQUEST_TYPE like '%query%';
+-- 查询割接单中的报文，ims_type的值为华为IMS
+
+select asap.CRM_ORDER_NUMBER,asap.request_type,asap.platform,asap.work_order_request,asap.* from asap_workorder_request asap where asap.crm_order_number in ('(2020)/404841397');
+--查看普通直线零星割接且新老项onu逻辑编号发生变化,需要派发：数字家庭移入局 修改单、数字家庭归属局拆单、Vims移入局装单、ims-hss/tel归属局拆单
+--若家庭网关类型=SDN，
+--派发：SDN移入局修改单，SDN归属局拆机单、外线移入局装单、外线归属局拆机单、ONU归属局拆单，ONU移入局装单、Enum施工确认 割接、Enum移入局修改单、SHLR施工确认 割接、SHLR移入局修改单
+
+select asap.CRM_ORDER_NUMBER,asap.request_type,asap.platform,asap.work_order_request,asap.* from asap_workorder_request asap where asap.crm_order_number in ('WMX2020050905428062');
+--查看普通直线零星割接且新老项onu逻辑编号无变化,需要派发：Vims移入局装单、Ims-hss/tel归属局拆单、SHLR移入局修改单、Enum移入局修改单、数字家庭移入局修改单
+--若家庭网关类型=SDN，
+--派发：SDN移入局修改单
+
 select * from P6_CRM_NOTIFICATION where CRM_ORDER_NUMBER = 'WMX2020051105433000';
 -- P6_CRM_NOTIFICATION是查询IBP返回CRM消息记录的表
 

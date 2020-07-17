@@ -141,19 +141,32 @@ select asap.CRM_ORDER_NUMBER,asap.request_type,asap.platform,asap.work_order_req
 select asap.CRM_ORDER_NUMBER,asap.request_type,asap.platform,asap.work_order_request from asap_workorder_request asap where asap.crm_order_number in('WMX2020061905549744','WMX2020061905549864','WMX2020062005549865','WMX2020062005549867');
 -- 验证后付费鹏博士宽带产品(补充需求)是否派发了ONU工单
 
-select crm_order_number,work_order_request from  ra_workorder_request where crm_order_number in ('WMX2020070205552043','WMX2020070205552056','WMX2020070205552102','WMX2020070205552100','WMX2020070205552126','WMX2020070205552136','WMX2020070205552135') and request_type='createIntResService';
+select crm_order_number,work_order_request from  ra_workorder_request where crm_order_number in ('WMX2020070205552043','WMX2020070205552056','WMX2020070205552102','WMX2020070205552100','WMX2020070105552001','WMX2020070205552126','WMX2020070205552136','WMX2020070205552135') and request_type='createIntResService';
 --3.验证IBP发送综资创服务报文set_top_box_4k 为：18，验证方法登陆PAL数据库：
 
-select a.crm_order_number,a.work_order_request from pai_workorder_request a  where crm_order_number in ('WMX2020070205552043','WMX2020070205552056','WMX2020070205552102','WMX2020070205552100','WMX2020070205552126','WMX2020070205552136','WMX2020070205552135') and a.platform='13';
+select a.crm_order_number,a.work_order_request from pai_workorder_request a  where crm_order_number in ('WMX2020070205552043','WMX2020070205552056','WMX2020070205552102','WMX2020070205552100','WMX2020070105552001','WMX2020070205552126','WMX2020070205552136','WMX2020070205552135') and a.platform='13';
 --4.验证IBP发送IPTV工单报文set_top_box_4k 为：18，验证方法登陆PAL数据库：
 
-select crm_order_number,work_order_request from  ra_workorder_request where crm_order_number in ('WMX2020070205552043','WMX2020070205552056','WMX2020070205552102','WMX2020070205552100','WMX2020070205552126','WMX2020070205552136','WMX2020070205552135') and request_type='queryIntResService';
+select crm_order_number,work_order_request from  ra_workorder_request where crm_order_number in ('WMX2020070205552043','WMX2020070205552056','WMX2020070205552102','WMX2020070205552100','WMX2020070105552001','WMX2020070205552126','WMX2020070205552136','WMX2020070205552135') and request_type='queryIntResService';
 --6.验证综资原资产查询返回时，返回的set_top_box_4k 为：18，验证方法登陆PAL数据库：
 
-select asap.CRM_ORDER_NUMBER,asap.request_type,asap.platform,asap.work_order_request from asap_workorder_request asap where asap.crm_order_number in ('WMX2020070205552043','WMX2020070205552056','WMX2020070205552102','WMX2020070205552100','WMX2020070205552126','WMX2020070205552136','WMX2020070205552135');
+select asap.CRM_ORDER_NUMBER,asap.request_type,asap.platform,asap.work_order_request from asap_workorder_request asap where asap.crm_order_number in ('WMX2020070205552043','WMX2020070205552056','WMX2020070205552102','WMX2020070205552100','WMX2020070105552001','WMX2020070205552126','WMX2020070205552136','WMX2020070205552135');
 -- 验证后付费宽带产品（带ITV子产品，且“4K机顶盒”属性：“无线播播宝盒”）是否派发了ONU工单
 
 select w.crm_order_number,w.user_id_97 from ra_workorder_request w where w.crm_order_number in ('2-30343454773','2-30343469276','2-30343471776','2-30343474275','2-30343475775');
+
+select aa.CRM_ORDER_NUMBER,aa.WORK_ORDER_RETURN from RA_WORKORDER_REQUEST aa where aa.CRM_ORDER_NUMBER like '%(2020)/404841570%' and aa.REQUEST_TYPE like '%query%';
+-- 查询割接单中的报文，ims_type的值为华为IMS
+
+select asap.CRM_ORDER_NUMBER,asap.request_type,asap.platform,asap.work_order_request,asap.* from asap_workorder_request asap where asap.crm_order_number in ('(2020)/404841397');
+--查看普通直线零星割接且新老项onu逻辑编号发生变化,需要派发：数字家庭移入局 修改单、数字家庭归属局拆单、Vims移入局装单、ims-hss/tel归属局拆单
+--若家庭网关类型=SDN，
+--派发：SDN移入局修改单，SDN归属局拆机单、外线移入局装单、外线归属局拆机单、ONU归属局拆单，ONU移入局装单、Enum施工确认 割接、Enum移入局修改单、SHLR施工确认 割接、SHLR移入局修改单
+
+select asap.CRM_ORDER_NUMBER,asap.request_type,asap.platform,asap.work_order_request,asap.* from asap_workorder_request asap where asap.crm_order_number in ('WMX2020050905428062');
+--查看普通直线零星割接且新老项onu逻辑编号无变化,需要派发：Vims移入局装单、Ims-hss/tel归属局拆单、SHLR移入局修改单、Enum移入局修改单、数字家庭移入局修改单
+--若家庭网关类型=SDN，
+--派发：SDN移入局修改单
 
 select * from P6_CRM_NOTIFICATION where CRM_ORDER_NUMBER = 'WMX2020051105433000';
 -- P6_CRM_NOTIFICATION是查询IBP返回CRM消息记录的表
