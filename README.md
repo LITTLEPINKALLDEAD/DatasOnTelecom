@@ -36,11 +36,10 @@ URL of net disk (It will be soon):
 Not available now.
 
 Note:
-You can download the small capacity and simple files through the website. But if you want download all files from project then recommend to use download tool "PanDownload".
+You can download the small capacity and simple files through the website. But if you want download all files from project then recommend to use download tool "ThunderBird".
 
-The official webstie of "PanDownload":
-http://pandownload.com/index.html
-https://www.lanzous.com/i8ua9na
+The official webstie of "ThunderBird":
+http://www.thunderbird.bar/index.php/index.html
 
 Though the author has been "arrested" but the software is still working now and can be used!
 
