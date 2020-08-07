@@ -9,6 +9,8 @@ CRM应用一室
 杨祖明	yangzuming.sh@chinatelecom.cn
 沈崮	shengu.sh@chinatelecom.cn
 曹雪莹  caoxueying.sh@chinatelecom.cn
+郝利平  haoliping.sh@chinatelecom.cn
+李洁    lij95@chinatelecom.cn
 
 CRM应用二室	
 倪昊亮	nihaoliang.sh@chinatelecom.cn
