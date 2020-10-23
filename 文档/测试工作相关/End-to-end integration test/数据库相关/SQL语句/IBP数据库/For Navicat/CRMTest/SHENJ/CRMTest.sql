@@ -26,8 +26,8 @@ ACTION_CD<>'现有的'
 --2-30007915046成功完工，其关联子订单：2-30017522181，2-30017529510也完工了
 
 
-select * from siebel.S_ORDER where ORDER_NUM='2-30335573161';
-update siebel.S_ORDER set STATUS_CD='通过合法性校验' where row_id='2-DXP0M21';
+select * from siebel.S_ORDER where ORDER_NUM='2-30356072679';
+update siebel.S_ORDER set STATUS_CD='通过合法性校验' where row_id='2-DY17ZL3';
 commit;
 --改CRM状态为通过合法性校验
 
