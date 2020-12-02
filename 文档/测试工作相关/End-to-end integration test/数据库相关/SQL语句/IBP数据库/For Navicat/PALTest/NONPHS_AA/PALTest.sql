@@ -4,7 +4,7 @@ select * from ra_workorder_request where P_RESULT is NOT null and rownum < 11 or
 select * from ra_workorder_request where crm_order_number = '2-30242684394'; --P7-综资，订单原资产报错
 select * from ra_workorder_request where ORDER_SEQ_ID = '28471' order by RA_COMPLELED_TIME DESC; --P7-综资，用P7号查询
 select * from ra_workorder_request where ORDER_SEQ_ID = '35174' order by RECEIVE_TIME DESC; --P7-综资，用P7号查询
-select * from ra_workorder_request where crm_order_number like 'WMZ2020032305208888%' order by RECEIVE_TIME DESC;
+select * from ra_workorder_request where crm_order_number like 'WMX2020120205603893%' order by RECEIVE_TIME DESC;
 select * from ra_workorder_request where crm_order_number in ('WMZ2019120500516845','WMZ2019120500519229') order by RECEIVE_TIME DESC;
 select * from ra_workorder_request where USER_ID_97 like '%M1323110%' order by RECEIVE_TIME DESC;--(Servrice ID，设备号，工程单编号)等97ID查询
 
