@@ -1,0 +1,16 @@
+AdblockPlus规则官方更新地址
+
+Adblock Warning Removal List
+https://easylist-downloads.adblockplus.org/antiadblockfilters.txt
+
+EasyList China+EasyList
+https://easylist-downloads.adblockplus.org/easylistchina+easylist.txt
+
+Malware Domains
+https://easylist-downloads.adblockplus.org/malwaredomains_full.txt
+
+Fanboy's Social Blocking List
+https://easylist-downloads.adblockplus.org/fanboy-social.txt
+
+EasyPrivacy
+https://easylist-downloads.adblockplus.org/easyprivacy.txt
