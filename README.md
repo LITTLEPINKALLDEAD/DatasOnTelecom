@@ -2,7 +2,7 @@
 
 This repository include some internal documents which came from Telecom. 
 
-The size of this repository about 3.5 gigabytes.  
+The size of this repository about 4.6 gigabytes.  
 
 If you like that can feel free to clone it to your local. 
 
@@ -32,14 +32,13 @@ I won't tell anyone on Telecom (Include the idiot leader and lunkhead) that I wi
 
 One day I would left the Telecom that I also won't tell them and only say it to HR of the signed company.
 
-URL of net disk (It will be soon):
-Not available now.
+URL of net disk:
 
-Note:
-You can download the small capacity and simple files through the website. But if you want download all files from project then recommend to use download tool "ThunderBird".
+123 Netdisk (For Chinese Users): 
+https://www.123pan.com/s/ALGuVv-3xEBh.html
 
-The official webstie of "ThunderBird":
-http://www.thunderbird.bar/index.php/index.html
+Google Drive (For Non-Chinese Users): 
+https://drive.google.com/drive/folders/1l_hQQtywPnO--BJANzuC8ZISlXCrPLkr?usp=sharing
 
 <a href="https://996.icu"><img src="https://img.shields.io/badge/link-996.icu-red.svg" alt="996.icu"></a>
 
