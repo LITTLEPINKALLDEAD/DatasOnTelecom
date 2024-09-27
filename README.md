@@ -32,6 +32,8 @@ I won't tell anyone on Telecom (Include the idiot leader and lunkhead) that I wi
 
 One day I would left the Telecom that I also won't tell them and only say it to HR of the signed company.
 
+I am sure about that little pinks should be all die!!!!!
+
 URL of net disk:
 
 123 Netdisk (For Chinese Users): 
