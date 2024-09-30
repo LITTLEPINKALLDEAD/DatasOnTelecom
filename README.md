@@ -34,6 +34,8 @@ One day I would left the Telecom that I also won't tell them and only say it to 
 
 I am sure about that little pinks should be all die!!!!!
 
+Warmly welcome to fork this repository!!!!
+
 URL of net disk:
 
 123 Netdisk (For Chinese Users): 
